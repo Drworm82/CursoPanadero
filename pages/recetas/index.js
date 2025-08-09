@@ -5,12 +5,14 @@ import Link from 'next/link';
 export default function RecetasPage() {
   const [recetas, setRecetas] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [hasAccess, setHasAccess] = useState(false);
 
   useEffect(() => {
     const fetchRecetas = async () => {
-      // 1. Verificar si el usuario tiene acceso al curso
+      // 1. Obtener la sesión del usuario
       const { data: { session } } = await supabase.auth.getSession();
+      
+      // 2. Verificar si el usuario está en la lista de acceso
+      let hasAccess = false;
       if (session) {
         const { data: userAccess } = await supabase
           .from('users_with_access')
@@ -18,11 +20,11 @@ export default function RecetasPage() {
           .eq('user_id', session.user.id)
           .single();
         if (userAccess) {
-          setHasAccess(true);
+          hasAccess = true;
         }
       }
 
-      // 2. Traer las recetas según el acceso
+      // 3. Traer las recetas según el acceso
       let query = supabase.from('recetas_usuario').select('*');
       
       if (!hasAccess) {
@@ -40,7 +42,7 @@ export default function RecetasPage() {
     };
 
     fetchRecetas();
-  }, [hasAccess]);
+  }, []); // El array de dependencias está vacío, se ejecuta una sola vez al cargar.
 
   if (loading) {
     return (
