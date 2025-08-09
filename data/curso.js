@@ -128,7 +128,7 @@ export const modulos = [
         ]
       },
       {
-        titulo: "Masa madre, Poolish, biga, masa vieja",
+        titulo: "Masa madre, poolish, biga, masa vieja",
         slug: "masas-pre-fermentos",
         contenido: [
           "**Masa madre:** Fermento natural de harina y agua.",
