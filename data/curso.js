@@ -22,91 +22,91 @@ export const modulos = [
   },
   {
     id: 4,
-    titulo: "STREUSEL",
+    titulo: "Streusel",
     descripcion: "Cómo preparar el streusel, una cobertura crujiente para postres.",
     lecciones: []
   },
   {
     id: 5,
-    titulo: "MACARRÓN DE ALMENDRA",
+    titulo: "Macarrón de almedra",
     descripcion: "Técnica para elaborar macarrones perfectos.",
     lecciones: []
   },
   {
     id: 6,
-    titulo: "HIDRATACIÓN DE LA GRENETINA",
+    titulo: "Hidratación de la grenetina",
     descripcion: "Proceso para hidratar correctamente la grenetina en polvo y en hoja.",
     lecciones: []
   },
   {
     id: 7,
-    titulo: "TRES PROCESOS PARA LEVADAR UN PRODUCTO",
+    titulo: "Tres procesos para leudar un producto",
     descripcion: "Exploración de los métodos de levado: químico, físico y biológico.",
     lecciones: []
   },
   {
     id: 8,
-    titulo: "TIPOS DE MERENGUE",
-    descripcion: "Diferencias entre merengue francés, suizo e italiano.",
+    titulo: "Tipos de merengue",
+    descripcion: "Diferencias entre merengue francés, italiano y suizo.",
     lecciones: []
   },
   {
     id: 9,
-    titulo: "GANACHE",
+    titulo: "Ganache",
     descripcion: "Preparación y usos de la ganache de chocolate.",
     lecciones: []
   },
   {
     id: 10,
-    titulo: "CREMA INGLESA",
+    titulo: "Crema inglesa",
     descripcion: "Elaboración de la base de muchas cremas y helados.",
     lecciones: []
   },
   {
     id: 11,
-    titulo: "SABAYÓN",
+    titulo: "Sabayón",
     descripcion: "Técnica para crear una emulsión ligera y espumosa a base de yemas.",
     lecciones: []
   },
   {
     id: 12,
-    titulo: "MOUSSE",
+    titulo: "Mousse",
     descripcion: "Cómo crear una mousse ligera y aireada.",
     lecciones: []
   },
   {
     id: 13,
-    titulo: "BAVAROISE",
+    titulo: "Bavaroise",
     descripcion: "Técnica para preparar un postre frío a base de crema inglesa y gelatina.",
     lecciones: []
   },
   {
     id: 14,
-    titulo: "DAQUOISE",
+    titulo: "Daquoise",
     descripcion: "Preparación del bizcocho de almendras o avellanas.",
     lecciones: []
   },
   {
     id: 15,
-    titulo: "GELÉE",
+    titulo: "Gelée",
     descripcion: "Técnica para crear gelatinas de frutas o líquidos saborizados.",
     lecciones: []
   },
   {
     id: 16,
-    titulo: "MASAS DE COCCIÓN MIXTA",
+    titulo: "Masas de cocción mixta",
     descripcion: "Masas que combinan diferentes métodos de cocción, como la masa choux.",
     lecciones: []
   },
   {
     id: 17,
-    titulo: "CHOCOLATERÍA",
+    titulo: "Chocolatería",
     descripcion: "Técnicas de temperado y manejo del chocolate.",
     lecciones: []
   },
   {
     id: 18,
-    titulo: "PANIFICACIÓN",
+    titulo: "Panificación",
     descripcion: "Procesos y técnicas básicas para elaborar pan.",
     lecciones: [
       {
