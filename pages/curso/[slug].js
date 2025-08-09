@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '../../lib/supabase';
-import Layout from '/components/Layout';
+import Layout from '../../components/Layout';
 import { modulos } from '../../data/curso';
 
 export default function LeccionPage() {
@@ -11,7 +11,6 @@ export default function LeccionPage() {
   const [hasAccess, setHasAccess] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Busca la lección y su módulo correspondiente
   const leccion = modulos.flatMap(m => m.lecciones).find(l => l.slug === slug);
   const modulo = leccion ? modulos.find(m => m.lecciones.some(l => l.slug === slug)) : null;
 
