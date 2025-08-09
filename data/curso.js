@@ -1,20 +1,23 @@
 export const modulos = [
-  {
-    id: 1,
-    titulo: "Masas batidas pesadas",
-    descripcion: "Introducción a masas batidas densas, como panqués y roscas.",
-    lecciones: [
-      { titulo: "La técnica de acremado", slug: "tecnica-acremado", contenido: ["El acremado es fundamental en repostería para obtener masas ligeras y esponjosas. Se basa en batir la mantequilla con el azúcar hasta que la mezcla se vuelva pálida y con una consistencia esponjosa. Este proceso incorpora aire, que es lo que le da al producto su textura final."] },
-      { titulo: "Receta: Rosca de Piña Colada", slug: "rosca-pinacolada", contenido: ["La Rosca de Piña Colada es un ejemplo perfecto de una Masa Batida Pesada que utiliza la técnica de acremado. Sigue la receta para aplicar la técnica."] }
-    ]
-  },
-  {
-    id: 2,
-    titulo: "Masas batidas ligeras",
-    descripcion: "Técnicas para masas esponjosas como bizcochos y merengues.",
-    lecciones: []
-  },
-  {
+    {
+      id: 1,
+      titulo: 'Módulo 1: Introducción a la Panadería',
+      descripcion: 'Aprende los fundamentos de la panadería, desde los ingredientes básicos hasta las herramientas esenciales.',
+      lecciones: [
+        { slug: 'leccion-1-ingredientes', titulo: 'Lección 1: Ingredientes clave' },
+        { slug: 'leccion-2-herramientas', titulo: 'Lección 2: Herramientas del panadero' },
+      ],
+    },
+    {
+      id: 2,
+      titulo: 'Módulo 2: Masa Madre',
+      descripcion: 'Domina el arte de la masa madre, su creación y mantenimiento.',
+      lecciones: [
+        { slug: 'leccion-1-creacion-masa-madre', titulo: 'Lección 1: Creación de masa madre' },
+        { slug: 'leccion-2-cuidado-masa-madre', titulo: 'Lección 2: Cuidado y alimentación' },
+      ],
+    },
+     {
     id: 3,
     titulo: "Masas friables",
     descripcion: "Manejo de masas que se desmenuzan, como las pastas sablée y sucrée.",
