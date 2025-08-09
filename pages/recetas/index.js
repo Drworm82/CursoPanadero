@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { supabase } from '../../lib/supabase';
 import Link from 'next/link';
 
 export default function RecetasPage() {
   const [recetas, setRecetas] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchRecetas = async () => {
-      // 1. Obtener la sesión del usuario
       const { data: { session } } = await supabase.auth.getSession();
       
-      // 2. Verificar si el usuario está en la lista de acceso
       let hasAccess = false;
       if (session) {
         const { data: userAccess } = await supabase
@@ -24,11 +23,9 @@ export default function RecetasPage() {
         }
       }
 
-      // 3. Traer las recetas según el acceso
       let query = supabase.from('recetas_usuario').select('*');
       
       if (!hasAccess) {
-        // Si no tiene acceso, solo mostrar las recetas públicas
         query = query.eq('is_public', true);
       }
 
@@ -42,31 +39,42 @@ export default function RecetasPage() {
     };
 
     fetchRecetas();
-  }, []); // El array de dependencias está vacío, se ejecuta una sola vez al cargar.
+  }, []);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <h1 className="text-2xl">Cargando recetas...</h1>
-      </div>
+  // Filtrar las recetas en base al término de búsqueda
+  const filteredRecetas = useMemo(() => {
+    if (!searchTerm) {
+      return recetas;
+    }
+    return recetas.filter(receta =>
+      receta.titulo.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  }
+  }, [recetas, searchTerm]);
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
         <h1 className="text-3xl font-bold">Recetas</h1>
-        <Link href="/recetas/nueva">
-          <a className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors duration-300">
-            Añadir Receta
-          </a>
-        </Link>
+        <div className="flex items-center gap-4">
+          <input
+            type="text"
+            placeholder="Buscar recetas por título..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          />
+          <Link href="/recetas/nueva">
+            <a className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors duration-300">
+              Añadir Receta
+            </a>
+          </Link>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {recetas.length === 0 ? (
+        {filteredRecetas.length === 0 ? (
           <p className="col-span-3 text-center text-gray-500">No hay recetas disponibles.</p>
         ) : (
-          recetas.map((receta) => (
+          filteredRecetas.map((receta) => (
             <Link key={receta.id} href={`/recetas/${receta.id}`}>
               <a className="block border p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <h2 className="text-xl font-semibold">{receta.titulo}</h2>
