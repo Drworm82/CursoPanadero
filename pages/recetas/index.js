@@ -41,7 +41,6 @@ export default function RecetasPage() {
     fetchRecetas();
   }, []);
 
-  // Filtrar las recetas en base al término de búsqueda
   const filteredRecetas = useMemo(() => {
     if (!searchTerm) {
       return recetas;
