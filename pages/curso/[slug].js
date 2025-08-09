@@ -1,43 +1,110 @@
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { supabase } from '../../lib/supabase';
+import Layout from '../../components/Layout';
 import { modulos } from '../../data/curso';
 
 export default function LeccionPage() {
   const router = useRouter();
   const { slug } = router.query;
+  const [session, setSession] = useState(null);
+  const [hasAccess, setHasAccess] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  if (!slug) return <p>Cargando...</p>;
+  // Busca la lección y su módulo correspondiente
+  const leccion = modulos.flatMap(m => m.lecciones).find(l => l.slug === slug);
+  const modulo = leccion ? modulos.find(m => m.lecciones.some(l => l.slug === slug)) : null;
 
-  // Buscar la lección con ese slug
-  let leccionEncontrada = null;
-  for (const modulo of modulos) {
-    const leccion = modulo.lecciones.find(l => l.slug === slug);
-    if (leccion) {
-      leccionEncontrada = {
-        ...leccion,
-        moduloTitulo: modulo.titulo,
-      };
-      break;
-    }
+  useEffect(() => {
+    const getSessionAndAccess = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setSession(session);
+
+      if (!session) {
+        router.push('/acceso');
+        return;
+      }
+
+      const { data: userAccess, error } = await supabase
+        .from('users_with_access')
+        .select('user_id')
+        .eq('user_id', session.user.id)
+        .single();
+      
+      if (userAccess) {
+        setHasAccess(true);
+      }
+      setLoading(false);
+    };
+
+    getSessionAndAccess();
+
+    const { data: authListener } = supabase.auth.onAuthStateChange(
+      (event, newSession) => {
+        if (newSession) {
+          setSession(newSession);
+        } else {
+          router.push('/acceso');
+        }
+      }
+    );
+
+    return () => {
+      authListener.subscription.unsubscribe();
+    };
+  }, [router]);
+
+  if (loading) {
+    return (
+      <Layout>
+        <div className="flex justify-center items-center h-screen">
+          <p>Cargando...</p>
+        </div>
+      </Layout>
+    );
   }
 
-  if (!leccionEncontrada) {
-    return <p>Lección no encontrada.</p>;
+  if (!hasAccess) {
+    return (
+      <Layout>
+        <div className="flex justify-center items-center h-screen">
+          <p className="text-2xl font-bold">Acceso Denegado</p>
+        </div>
+      </Layout>
+    );
   }
 
-  // Mostrar contenido si existe (en tu data algunos tienen contenido, otros no)
+  if (!leccion) {
+    return (
+      <Layout>
+        <div className="max-w-4xl mx-auto p-4">
+          <h1 className="text-4xl font-bold mb-4">Lección no encontrada</h1>
+          <a href="/curso" className="text-blue-500 hover:underline">
+            Volver a los módulos
+          </a>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">{leccionEncontrada.titulo}</h1>
-      <h2 className="text-xl font-semibold mb-4">{leccionEncontrada.moduloTitulo}</h2>
-      {leccionEncontrada.contenido ? (
-        <div className="space-y-2">
-          {leccionEncontrada.contenido.map((item, i) => (
-            <p key={i} dangerouslySetInnerHTML={{ __html: item }} />
+    <Layout>
+      <div className="max-w-4xl mx-auto p-4">
+        <a href="/curso" className="text-blue-500 hover:underline">
+          &larr; Volver a los módulos
+        </a>
+        <h1 className="text-4xl font-bold mt-4 text-gray-800">{leccion.titulo}</h1>
+        {modulo && (
+          <p className="text-lg text-gray-600 mt-2">
+            **Módulo:** {modulo.titulo}
+          </p>
+        )}
+        <div className="prose prose-lg mt-6">
+          {leccion.contenido && leccion.contenido.map((parrafo, index) => (
+            <p key={index} dangerouslySetInnerHTML={{ __html: parrafo }}></p>
           ))}
         </div>
-      ) : (
-        <p>Contenido no disponible todavía.</p>
-      )}
-    </div>
+      </div>
+    </Layout>
   );
 }
