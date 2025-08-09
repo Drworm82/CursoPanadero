@@ -1,34 +1,96 @@
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { recetas } from '../../data/recetas';
+import { supabase } from '../../lib/supabase';
+import { getSession } from '../../lib/supabase';
 
-export default function RecetaPage() {
+export default function RecetaDetallePage() {
   const router = useRouter();
   const { id } = router.query;
-  const receta = recetas.find((r) => r.id === id);
+  const [receta, setReceta] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  if (!receta) return <p>Cargando...</p>;
+  useEffect(() => {
+    const fetchReceta = async () => {
+      if (!id) return;
+
+      // Obtener la receta
+      const { data: recetaData, error } = await supabase
+        .from('recetas_usuario')
+        .select('*')
+        .eq('id', id)
+        .single();
+      
+      if (error) {
+        console.error('Error fetching recipe:', error);
+        setLoading(false);
+        return;
+      }
+      
+      // Si la receta no es pública, verificar el acceso del usuario
+      if (!recetaData.is_public) {
+        const { data: { session } } = await supabase.auth.getSession();
+        let hasAccess = false;
+        
+        if (session) {
+          const { data: userAccess } = await supabase
+            .from('users_with_access')
+            .select('user_id')
+            .eq('user_id', session.user.id)
+            .single();
+          if (userAccess) {
+            hasAccess = true;
+          }
+        }
+
+        if (!hasAccess) {
+          // Si no tiene acceso, redirigir a la página de recetas
+          router.push('/recetas');
+          return;
+        }
+      }
+      
+      setReceta(recetaData);
+      setLoading(false);
+    };
+
+    fetchReceta();
+  }, [id, router]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <h1 className="text-2xl">Cargando receta...</h1>
+      </div>
+    );
+  }
+
+  if (!receta) {
+    return (
+      <div className="max-w-4xl mx-auto p-6 text-center">
+        <h1 className="text-3xl font-bold">Receta no encontrada</h1>
+      </div>
+    );
+  }
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-4">{receta.titulo}</h1>
-      <img src={receta.imagen} alt={receta.titulo} className="mb-4 rounded" />
-      <h2 className="text-xl font-semibold mb-2">Ingredientes</h2>
-      <ul className="list-disc pl-6 mb-4">
-        {receta.ingredientes.map((ing, idx) => (
-          <li key={idx}>{ing}</li>
-        ))}
-      </ul>
-      <h2 className="text-xl font-semibold mb-2">Pasos</h2>
-      <ol className="list-decimal pl-6 mb-4">
-        {receta.pasos.map((paso, idx) => (
-          <li key={idx}>{paso}</li>
-        ))}
-      </ol>
-      {receta.fuente && (
-        <p className="mt-4 text-sm">
-          Fuente: <a href={receta.fuente} target="_blank" rel="noreferrer" className="text-blue-600 underline">{receta.fuente}</a>
-        </p>
-      )}
+      <div className="bg-gray-100 p-6 rounded-lg shadow-sm mb-6">
+        <h2 className="text-2xl font-semibold mb-2">Ingredientes</h2>
+        <ul className="list-disc list-inside space-y-1 text-gray-700">
+          {receta.ingredientes.map((ingrediente, index) => (
+            <li key={index}>{ingrediente}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="bg-gray-100 p-6 rounded-lg shadow-sm">
+        <h2 className="text-2xl font-semibold mb-2">Pasos</h2>
+        <ol className="list-decimal list-inside space-y-2 text-gray-700">
+          {receta.pasos.map((paso, index) => (
+            <li key={index}>{paso}</li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 }
