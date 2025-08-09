@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { modulos } from '../../data/curso';
-import { supabase } from '../../lib/supabase';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { supabase } from '../../lib/supabase';
+import Layout from '../../components/Layout';
+import { modulos } from '../../data/curso';
 
 export default function CursoPage() {
   const [session, setSession] = useState(null);
@@ -12,17 +12,14 @@ export default function CursoPage() {
 
   useEffect(() => {
     const getSessionAndAccess = async () => {
-      // 1. Obtener la sesión del usuario
       const { data: { session } } = await supabase.auth.getSession();
       setSession(session);
 
       if (!session) {
-        // Si no hay sesión, redirigir a la página de acceso
         router.push('/acceso');
         return;
       }
 
-      // 2. Si hay sesión, verificar si el usuario está en la lista de acceso
       const { data: userAccess, error } = await supabase
         .from('users_with_access')
         .select('user_id')
@@ -37,7 +34,6 @@ export default function CursoPage() {
 
     getSessionAndAccess();
 
-    // Suscribirse a los cambios de autenticación
     const { data: authListener } = supabase.auth.onAuthStateChange(
       (event, newSession) => {
         if (newSession) {
@@ -55,49 +51,51 @@ export default function CursoPage() {
 
   if (loading) {
     return (
-      <div className="max-w-4xl mx-auto p-6 text-center">
-        <h1 className="text-3xl font-bold">Cargando...</h1>
-        <p className="mt-4">Verificando tu acceso al curso.</p>
-      </div>
+      <Layout>
+        <div className="flex justify-center items-center h-screen">
+          <p>Cargando...</p>
+        </div>
+      </Layout>
     );
   }
 
-  // Mostrar el contenido si el usuario tiene acceso
-  if (hasAccess) {
+  if (!hasAccess) {
     return (
-      <div className="max-w-4xl mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-6">Módulos del Curso</h1>
+      <Layout>
+        <div className="flex justify-center items-center h-screen">
+          <p className="text-2xl font-bold">Acceso Denegado</p>
+        </div>
+      </Layout>
+    );
+  }
+
+  return (
+    <Layout>
+      <div className="max-w-4xl mx-auto p-4">
+        <h1 className="text-4xl font-bold mb-8 text-center">Curso de Panadería</h1>
         <div className="space-y-6">
           {modulos.map((modulo) => (
-            <div key={modulo.id} className="border p-4 rounded-lg shadow-sm">
-              <h2 className="text-xl font-semibold">{modulo.titulo}</h2>
-              <p className="text-gray-600 mt-1">{modulo.descripcion}</p>
-              <div className="mt-4 space-y-2">
-                {modulo.lecciones.length > 0 ? (
-                  modulo.lecciones.map((leccion) => (
-                    <Link key={leccion.slug} href={`/curso/${leccion.slug}`}>
-                      <a className="block p-2 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-300">
-                        {leccion.titulo}
-                      </a>
-                    </Link>
-                  ))
-                ) : (
-                  <p className="text-sm text-gray-500">Próximamente...</p>
-                )}
-              </div>
+            <div key={modulo.id} className="bg-white shadow-lg rounded-lg p-6">
+              <h2 className="text-2xl font-semibold text-gray-800">{modulo.titulo}</h2>
+              <p className="mt-2 text-gray-600">{modulo.descripcion}</p>
+              {modulo.lecciones.length > 0 && (
+                <div className="mt-4">
+                  <h3 className="text-xl font-medium text-gray-700">Lecciones:</h3>
+                  <ul className="mt-2 space-y-2">
+                    {modulo.lecciones.map((leccion) => (
+                      <li key={leccion.slug}>
+                        <a href={`/curso/${leccion.slug}`} className="text-blue-500 hover:underline">
+                          {leccion.titulo}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
-    );
-  }
-
-  // Mostrar mensaje si el usuario no tiene acceso
-  return (
-    <div className="max-w-4xl mx-auto p-6 text-center">
-      <h1 className="text-3xl font-bold text-red-500">Acceso Denegado</h1>
-      <p className="mt-4 text-gray-700">Parece que no tienes acceso a este curso.</p>
-      <p className="mt-2 text-gray-700">Si ya has pagado, por favor contacta con soporte para que te incluyan en la lista de acceso.</p>
-    </div>
+    </Layout>
   );
 }
