@@ -4,10 +4,12 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useUser } from '@supabase/auth-helpers-react';
 import Layout from '../components/Layout';
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
 
 export default function AccesoPage() {
   const user = useUser();
   const router = useRouter();
+  const supabase = useSupabaseClient(); // Obtiene el cliente desde el contexto
 
   useEffect(() => {
     if (user) {
