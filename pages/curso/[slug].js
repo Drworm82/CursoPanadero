@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '../../lib/supabase';
-import Layout from '../../components/Layout';
 import { modulos } from '../../data/curso';
 
 export default function LeccionPage() {
@@ -55,55 +54,47 @@ export default function LeccionPage() {
 
   if (loading) {
     return (
-      <Layout>
-        <div className="flex justify-center items-center h-screen">
-          <p>Cargando...</p>
-        </div>
-      </Layout>
+      <div className="flex justify-center items-center h-screen">
+        <p>Cargando...</p>
+      </div>
     );
   }
 
   if (!hasAccess) {
     return (
-      <Layout>
-        <div className="flex justify-center items-center h-screen">
-          <p className="text-2xl font-bold">Acceso Denegado</p>
-        </div>
-      </Layout>
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-2xl font-bold">Acceso Denegado</p>
+      </div>
     );
   }
 
   if (!leccion) {
     return (
-      <Layout>
-        <div className="max-w-4xl mx-auto p-4">
-          <h1 className="text-4xl font-bold mb-4">Lección no encontrada</h1>
-          <a href="/curso" className="text-blue-500 hover:underline">
-            Volver a los módulos
-          </a>
-        </div>
-      </Layout>
+      <div className="max-w-4xl mx-auto p-4">
+        <h1 className="text-4xl font-bold mb-4">Lección no encontrada</h1>
+        <a href="/curso" className="text-blue-500 hover:underline">
+          Volver a los módulos
+        </a>
+      </div>
     );
   }
 
   return (
-    <Layout>
-      <div className="max-w-4xl mx-auto p-4">
-        <a href="/curso" className="text-blue-500 hover:underline">
-          &larr; Volver a los módulos
-        </a>
-        <h1 className="text-4xl font-bold mt-4 text-gray-800">{leccion.titulo}</h1>
-        {modulo && (
-          <p className="text-lg text-gray-600 mt-2">
-            **Módulo:** {modulo.titulo}
-          </p>
-        )}
-        <div className="prose prose-lg mt-6">
-          {leccion.contenido && leccion.contenido.map((parrafo, index) => (
-            <p key={index} dangerouslySetInnerHTML={{ __html: parrafo }}></p>
-          ))}
-        </div>
+    <div className="max-w-4xl mx-auto p-4">
+      <a href="/curso" className="text-blue-500 hover:underline">
+        &larr; Volver a los módulos
+      </a>
+      <h1 className="text-4xl font-bold mt-4 text-gray-800">{leccion.titulo}</h1>
+      {modulo && (
+        <p className="text-lg text-gray-600 mt-2">
+          **Módulo:** {modulo.titulo}
+        </p>
+      )}
+      <div className="prose prose-lg mt-6">
+        {leccion.contenido && leccion.contenido.map((parrafo, index) => (
+          <p key={index} dangerouslySetInnerHTML={{ __html: parrafo }}></p>
+        ))}
       </div>
-    </Layout>
+    </div>
   );
 }
