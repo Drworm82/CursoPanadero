@@ -62,7 +62,6 @@ export default function RecetasPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
-          {/* Aquí está el primer error corregido */}
           <Link href="/recetas/nueva" className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors duration-300">
             Añadir Receta
           </Link>
@@ -73,7 +72,6 @@ export default function RecetasPage() {
           <p className="col-span-3 text-center text-gray-500">No hay recetas disponibles.</p>
         ) : (
           filteredRecetas.map((receta) => (
-            {/* Aquí está el segundo error corregido */}
             <Link key={receta.id} href={`/recetas/${receta.id}`} className="block border p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
               <h2 className="text-xl font-semibold">{receta.titulo}</h2>
             </Link>
