@@ -6,16 +6,15 @@ import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
   const [supabaseClient] = useState(() => createPagesBrowserClient());
-
   return (
-    <SessionContextProvider
-      supabaseClient={supabaseClient}
-      initialSession={pageProps.initialSession}
-    >
-      <Layout>
+    <Layout>
+      <SessionContextProvider
+        supabaseClient={supabaseClient}
+        initialSession={pageProps.initialSession}
+      >
         <Component {...pageProps} />
-      </Layout>
-    </SessionContextProvider>
+      </SessionContextProvider>
+    </Layout>
   );
 }
 
