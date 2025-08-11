@@ -3,7 +3,6 @@ import { ThemeSupa } from '@supabase/auth-ui-shared';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useUser } from '@supabase/auth-helpers-react';
-import Layout from '../components/Layout';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 
 export default function AccesoPage() {
@@ -22,16 +21,14 @@ export default function AccesoPage() {
   }
 
   return (
-    <Layout>
-      <div className="flex justify-center items-center p-8">
-        <div className="w-full max-w-md">
-          <Auth
-            supabaseClient={supabase}
-            appearance={{ theme: ThemeSupa }}
-            providers={['google']}
-          />
-        </div>
+    <div className="flex justify-center items-center p-8">
+      <div className="w-full max-w-md">
+        <Auth
+          supabaseClient={supabase}
+          appearance={{ theme: ThemeSupa }}
+          providers={['google']}
+        />
       </div>
-    </Layout>
+    </div>
   );
 }
