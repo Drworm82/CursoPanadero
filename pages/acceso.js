@@ -1,22 +1,24 @@
+import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
-import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useUser } from '@supabase/auth-helpers-react';
 import Layout from '../components/Layout';
 
+const supabase = createPagesBrowserClient();
+
 export default function AccesoPage() {
-  const session = useSession();
-  const supabase = useSupabaseClient();
+  const user = useUser();
   const router = useRouter();
 
   useEffect(() => {
-    if (session) {
-      router.push('/');
+    if (user) {
+      router.push('/curso');
     }
-  }, [session, router]);
+  }, [user, router]);
 
-  if (session) {
+  if (user) {
     return null;
   }
 
