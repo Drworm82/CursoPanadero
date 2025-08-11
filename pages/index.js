@@ -11,15 +11,11 @@ export default function Home() {
           Aprende panadería y pastelería desde cero, paso a paso, y guarda tus recetas favoritas para siempre.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/curso">
-            <a className="bg-yellow-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300">
-              Ir al curso
-            </a>
+          <Link href="/curso" className="bg-yellow-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300">
+            Ir al curso
           </Link>
-          <Link href="/recetas">
-            <a className="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
-              Ver recetas
-            </a>
+          <Link href="/recetas" className="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+            Ver recetas
           </Link>
         </div>
       </div>
