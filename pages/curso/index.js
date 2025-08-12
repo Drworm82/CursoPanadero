@@ -3,38 +3,23 @@ import { supabase } from '../../lib/supabase';
 import Link from 'next/link';
 
 export default function CursoPage() {
-  const [temario, setTemario] = useState([]);
+  const [modulos, setModulos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [hasAccess, setHasAccess] = useState(false);
 
   useEffect(() => {
-    const fetchTemario = async () => {
-      // Corrected line: removed the '.order('orden')' clause
-      const { data, error } = await supabase.from('temario_curso').select('*');
+    const fetchModulos = async () => {
+      // Obtener todos los módulos del curso
+      const { data, error } = await supabase.from('modulos_curso').select('*').order('orden');
       
       if (error) {
-        console.error('Error fetching course topics:', error);
+        console.error('Error fetching modules:', error);
       } else {
-        setTemario(data);
+        setModulos(data);
       }
-      
-      const { data: { session } } = await supabase.auth.getSession();
-      let userHasAccess = false;
-      if (session) {
-        const { data: userAccess } = await supabase
-          .from('users_with_access')
-          .select('user_id')
-          .eq('user_id', session.user.id)
-          .single();
-        if (userAccess) {
-          userHasAccess = true;
-        }
-      }
-      setHasAccess(userHasAccess);
       setLoading(false);
     };
 
-    fetchTemario();
+    fetchModulos();
   }, []);
 
   if (loading) {
@@ -48,20 +33,18 @@ export default function CursoPage() {
   return (
     <div className="max-w-4xl mx-auto p-4">
       <h1 className="text-4xl font-bold mb-8 text-center">Temario del Curso</h1>
-      {!hasAccess && (
-        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6" role="alert">
-          <p className="font-bold">Acceso a contenido restringido</p>
-          <p>Puedes ver el temario completo, pero solo los usuarios con acceso podrán ver el contenido de las recetas. Si aún no eres parte, contáctanos.</p>
-        </div>
-      )}
+      <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6" role="alert">
+        <p className="font-bold">Acceso a contenido restringido</p>
+        <p>Puedes ver los módulos, pero solo los usuarios con acceso podrán ver las clases.</p>
+      </div>
       <div className="space-y-6">
-        {temario.length === 0 ? (
-          <p className="text-center text-gray-500">No hay temas disponibles.</p>
+        {modulos.length === 0 ? (
+          <p className="text-center text-gray-500">No hay módulos disponibles.</p>
         ) : (
-          temario.map((tema) => (
-            <Link key={tema.id} href={`/curso/${tema.id}`} className="block bg-white shadow-lg rounded-lg p-6 hover:bg-gray-50 transition-colors duration-300">
-              <h2 className="text-2xl font-semibold text-gray-800">{tema.titulo}</h2>
-              <p className="mt-2 text-gray-600">{tema.descripcion}</p>
+          modulos.map((modulo) => (
+            <Link key={modulo.id} href={`/curso/${modulo.id}`} className="block bg-white shadow-lg rounded-lg p-6 hover:bg-gray-50 transition-colors duration-300">
+              <h2 className="text-2xl font-semibold text-gray-800">{modulo.titulo}</h2>
+              <p className="mt-2 text-gray-600">{modulo.descripcion}</p>
             </Link>
           ))
         )}
