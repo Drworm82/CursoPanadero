@@ -9,8 +9,17 @@ export default function CursoPage() {
 
   useEffect(() => {
     const fetchTemario = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
+      // Obtener todos los temas del curso sin filtros
+      const { data, error } = await supabase.from('temario_curso').select('*').order('orden');
       
+      if (error) {
+        console.error('Error fetching course topics:', error);
+      } else {
+        setTemario(data);
+      }
+      
+      // Verificar si el usuario actual tiene acceso
+      const { data: { session } } = await supabase.auth.getSession();
       let userHasAccess = false;
       if (session) {
         const { data: userAccess } = await supabase
@@ -23,19 +32,6 @@ export default function CursoPage() {
         }
       }
       setHasAccess(userHasAccess);
-
-      let query = supabase.from('temario_curso').select('*').order('orden');
-      
-      if (!userHasAccess) {
-        query = query.eq('is_public', true);
-      }
-
-      const { data, error } = await query;
-      if (error) {
-        console.error('Error fetching course topics:', error);
-      } else {
-        setTemario(data);
-      }
       setLoading(false);
     };
 
@@ -55,8 +51,8 @@ export default function CursoPage() {
       <h1 className="text-4xl font-bold mb-8 text-center">Temario del Curso</h1>
       {!hasAccess && (
         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6" role="alert">
-          <p className="font-bold">Acceso restringido</p>
-          <p>Solo puedes ver los temas públicos. Para acceder al contenido completo, por favor, inicia sesión con un usuario con acceso.</p>
+          <p className="font-bold">Acceso a contenido restringido</p>
+          <p>Puedes ver el temario completo, pero solo los usuarios con acceso podrán ver el contenido de las recetas. Si aún no eres parte, contáctanos.</p>
         </div>
       )}
       <div className="space-y-6">
