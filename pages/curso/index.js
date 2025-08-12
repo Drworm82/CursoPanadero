@@ -9,7 +9,7 @@ export default function CursoPage() {
 
   useEffect(() => {
     const fetchTemario = async () => {
-      // Obtener todos los temas del curso sin filtros
+      // Obtener todos los temas del curso
       const { data, error } = await supabase.from('temario_curso').select('*').order('orden');
       
       if (error) {
