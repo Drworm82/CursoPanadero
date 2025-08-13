@@ -38,9 +38,8 @@ export default function CursoDetallePage() {
       const { data, error } = await supabase
         .from('recetas_usuario')
         .select(`
-          *,
-          autor_id
-        `)
+          *
+        `) // Se simplificó la consulta para evitar el error de la relación de la base de datos
         .eq('id', id)
         .single();
 
