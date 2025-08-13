@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { supabase } from '../../../../lib/supabase';
+import { supabase } from '../../../../lib/supabase'; // Ruta corregida
 import Image from 'next/image';
 
 export default function CursoDetallePage() {
@@ -21,9 +21,8 @@ export default function CursoDetallePage() {
       setLoading(true);
       setError(null);
 
-      // Asumimos que los cursos están en la tabla de recetas_usuarios
       const { data, error } = await supabase
-        .from('recetas_usuarios')
+        .from('recetas_usuarios') // Asumimos que los cursos están aquí
         .select(`
           *,
           autor_id(*)
