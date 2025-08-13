@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { supabase } from '../../../../lib/supabase'; // Esta es la ruta correcta
+import { supabase } from '../../../lib/supabase'; // ¡Ruta corregida!
 import Image from 'next/image';
 
 export default function CursoDetallePage() {
