@@ -15,19 +15,57 @@ export default function RecetasPage() {
       const currentSession = await getSession();
       setSession(currentSession);
 
-      const { data, error } = await supabase
+      let allRecetas = [];
+      
+      // Consulta para recetas públicas
+      let publicQuery = supabase
         .from('recetas_usuarios')
-        .select('*')
+        .select('*, autor_id(*)') 
+        .eq('is_public', true)
         .order('created_at', { ascending: false });
 
-      if (error) {
-        console.error('Error fetching recipes:', error);
-        setRecetas([]);
+      const { data: publicData, error: publicError } = await publicQuery;
+
+      if (publicError) {
+        console.error('Error fetching public recipes:', publicError);
       } else {
-        setRecetas(data);
+        allRecetas = publicData;
       }
+
+      // Si el usuario ha iniciado sesión, comprueba si está en la whitelist
+      if (currentSession) {
+        const { data: userAccess } = await supabase
+          .from('users_with_access')
+          .select('user_id')
+          .eq('user_id', currentSession.user.id)
+          .single();
+
+        if (userAccess) {
+          // Si está en la whitelist, busca recetas privadas
+          const { data: privateData, error: privateError } = await supabase
+            .from('recetas_usuarios')
+            .select('*, autor_id(*)')
+            .eq('is_public', false)
+            .order('created_at', { ascending: false });
+
+          if (privateError) {
+            console.error('Error fetching private recipes:', privateError);
+          } else {
+            // Combina las recetas públicas y privadas
+            allRecetas = [...allRecetas, ...privateData];
+          }
+        }
+      }
+      
+      // Elimina duplicados si una receta es pública y privada por error
+      const uniqueRecetas = allRecetas.filter(
+        (receta, index, self) => index === self.findIndex((r) => r.id === receta.id)
+      );
+
+      setRecetas(uniqueRecetas);
       setLoading(false);
     };
+
     fetchRecetas();
   }, []);
 
@@ -68,6 +106,7 @@ export default function RecetasPage() {
           filteredRecetas.map((receta) => (
             <Link key={receta.id} href={`/recetas/${receta.id}`} className="block border p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
               <h2 className="text-xl font-semibold">{receta.titulo}</h2>
+              <p className="mt-2 text-gray-600">{receta.descripcion}</p>
             </Link>
           ))
         )}
