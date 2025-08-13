@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 // Función para validar si una cadena es un UUID válido.
 const isUUID = (uuid) => {
@@ -20,9 +21,9 @@ export default function CursosPage() {
       setLoading(true);
       setError(null);
       
-      // Asegúrate de que el nombre de la tabla sea correcto para tus cursos
+      // Asegúrate de que el nombre de la tabla sea 'cursos' o el que uses.
       const { data, error } = await supabase
-        .from('cursos') // Revisa si tu tabla se llama 'cursos' o de otra forma
+        .from('cursos') 
         .select('*');
 
       if (error) {
@@ -31,6 +32,7 @@ export default function CursosPage() {
         setCursos([]);
       } else {
         // Filtramos los cursos para asegurarnos de que solo mostramos aquellos con un ID válido (UUID)
+        // This is the key change to prevent the 'ID inválido' error.
         const validCursos = data.filter(curso => isUUID(curso.id));
         setCursos(validCursos);
       }
@@ -61,6 +63,17 @@ export default function CursosPage() {
               className="bg-white shadow-lg rounded-lg p-4 cursor-pointer hover:shadow-xl transition-shadow"
               onClick={() => router.push(`/curso/${curso.id}`)}
             >
+              {curso.imagen_url && (
+                <div className="w-full h-40 relative mb-4">
+                  <Image 
+                    src={curso.imagen_url} 
+                    alt={curso.titulo} 
+                    layout="fill" 
+                    objectFit="cover" 
+                    className="rounded-lg"
+                  />
+                </div>
+              )}
               <h2 className="text-xl font-semibold">{curso.titulo}</h2>
               <p className="text-gray-600 mt-2">{curso.descripcion}</p>
             </div>
