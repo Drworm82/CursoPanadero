@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { supabase } from '../../lib/supabase'; // ¡Esta es la ruta correcta!
+import { supabase } from '../../lib/supabase';
 import Image from 'next/image';
 
 export default function CursoDetallePage() {
@@ -14,12 +14,14 @@ export default function CursoDetallePage() {
     // Si no hay ID en la URL, no se hace nada
     if (!id) {
       setLoading(false);
+      console.log("No hay ID en la URL, se detiene la búsqueda.");
       return;
     }
 
     const fetchCurso = async () => {
       setLoading(true);
       setError(null);
+      console.log(`Buscando curso con ID: ${id}`);
 
       const { data, error } = await supabase
         .from('recetas_usuarios') // Asumimos que los cursos están aquí
@@ -31,13 +33,16 @@ export default function CursoDetallePage() {
         .single();
 
       if (error) {
+        // A diferencia del código anterior, aquí mostramos el objeto de error completo
         console.error('Error fetching course details:', error);
         setError('No se pudo cargar el curso. Por favor, inténtalo de nuevo.');
         setCurso(null);
       } else if (!data) {
+        console.log('Curso no encontrado para el ID:', id);
         setError('Curso no encontrado.');
         setCurso(null);
       } else {
+        console.log('Curso cargado exitosamente:', data);
         setCurso(data);
       }
       setLoading(false);
