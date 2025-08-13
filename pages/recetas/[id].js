@@ -37,7 +37,7 @@ export default function RecetaDetallePage() {
       setError(null);
       
       const { data, error } = await supabase
-        .from('recetas_usuario') // Correct table name
+        .from('recetas_usuario') // ¡Nombre de la tabla corregido!
         .select(`
           *,
           autor_id(*) // Try to get the author's information (this requires a foreign key relationship).
