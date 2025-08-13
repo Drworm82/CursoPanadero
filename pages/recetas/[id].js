@@ -3,6 +3,13 @@ import { useRouter } from 'next/router';
 import { supabase } from '../../lib/supabase';
 import Image from 'next/image';
 
+// Función para validar si una cadena es un UUID válido
+// This function validates if a string is a valid UUID to prevent database errors.
+const isUUID = (uuid) => {
+  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  return uuidRegex.test(uuid);
+};
+
 export default function RecetaDetallePage() {
   const router = useRouter();
   const { id } = router.query;
@@ -11,37 +18,41 @@ export default function RecetaDetallePage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Si no hay ID en la URL, no se hace nada
+    // If there is no ID in the URL, do nothing.
     if (!id) {
-      console.log('No se encontró ID en la URL.');
+      setLoading(false);
+      return;
+    }
+
+    // Check if the ID is a valid UUID before making the database query.
+    if (!isUUID(id)) {
+      console.error('ID inválido:', id);
+      setError('El ID de la receta no es válido. Por favor, revisa la URL.');
       setLoading(false);
       return;
     }
 
     const fetchReceta = async () => {
-      console.log('Buscando receta con ID:', id); // Mensaje de depuración
       setLoading(true);
       setError(null);
-
+      
       const { data, error } = await supabase
-        .from('recetas_usuarios')
+        .from('recetas_usuario') // Correct table name
         .select(`
           *,
-          autor_id(*)
+          autor_id(*) // Try to get the author's information (this requires a foreign key relationship).
         `)
         .eq('id', id)
         .single();
 
       if (error) {
-        console.error('Error fetching recipe details:', error); // Mensaje de error detallado
+        console.error('Error fetching recipe details:', error);
         setError('No se pudo cargar la receta. Por favor, inténtalo de nuevo.');
         setReceta(null);
       } else if (!data) {
-        console.log('Receta no encontrada para el ID:', id); // Mensaje de no encontrado
         setError('Receta no encontrada.');
         setReceta(null);
       } else {
-        console.log('Receta cargada exitosamente:', data); // Mensaje de éxito
         setReceta(data);
       }
       setLoading(false);
@@ -82,10 +93,10 @@ export default function RecetaDetallePage() {
             
             <div className="space-y-6 text-gray-700">
               <div>
-                <h2 className="text-2xl font-semibold border-b-2 border-orange-500 pb-1 mb-2">Contenido</h2>
-                {receta.contenido && (
+                <h2 className="text-2xl font-semibold border-b-2 border-orange-500 pb-1 mb-2">Ingredientes</h2>
+                {receta.ingredientes && (
                   <ul className="list-disc list-inside space-y-1">
-                    {receta.contenido.map((item, index) => (
+                    {receta.ingredientes.map((item, index) => (
                       <li key={index}>{item}</li>
                     ))}
                   </ul>
