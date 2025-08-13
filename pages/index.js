@@ -1,38 +1,53 @@
-// pages/index.js
-
 import { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
 import { useRouter } from 'next/router';
+import { supabase } from '../lib/supabase';
 
-// Este componente ahora se basa únicamente en el escuchador de estado de autenticación de Supabase.
-// Esto evita la condición de carrera y el error de navegación.
+// Componente para la página de inicio, con lógica de redirección segura.
 export default function IndexPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Escuchamos los cambios en el estado de autenticación de Supabase.
-    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
-      // El estado ya ha sido verificado, por lo que podemos dejar de mostrar el estado de carga.
-      setLoading(false);
-
-      if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION') {
-        // Redirige a la página de recetas si el usuario ha iniciado sesión.
-        // `INITIAL_SESSION` se usa para la primera carga de la página.
-        router.push('/recetas');
-      } else if (event === 'SIGNED_OUT') {
-        // Redirige a la página de login si el usuario ha cerrado sesión.
+    // Definimos una función asíncrona para manejar la sesión inicial.
+    const handleSession = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        
+        // Si el usuario está autenticado, lo redirigimos a la página de recetas.
+        if (session) {
+          if (router.pathname !== '/recetas') {
+            router.push('/recetas');
+          }
+        } else {
+          // Si no hay sesión, redirigimos a la página de inicio de sesión.
+          if (router.pathname !== '/login') {
+            router.push('/login');
+          }
+        }
+      } catch (error) {
+        console.error('Error al obtener la sesión:', error);
         router.push('/login');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    handleSession();
+
+    // Escuchamos cambios en el estado de autenticación para manejar los casos de
+    // inicio o cierre de sesión posteriores a la carga.
+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_OUT' && router.pathname !== '/login') {
+        router.push('/login');
+      } else if (event === 'SIGNED_IN' && router.pathname !== '/recetas') {
+        router.push('/recetas');
       }
     });
 
-    // Limpiamos el escuchador cuando el componente se desmonte para evitar fugas de memoria.
+    // Limpiamos el escuchador cuando el componente se desmonte.
     return () => {
       authListener.subscription.unsubscribe();
     };
-
-  // Se añade `router` como dependencia para que el efecto se ejecute si el objeto router cambia,
-  // aunque en este caso es poco probable que lo haga.
   }, [router]);
 
   if (loading) {
@@ -43,7 +58,5 @@ export default function IndexPage() {
     );
   }
 
-  // No renderizamos nada si el estado de carga es falso y el usuario aún no ha sido redirigido.
-  // Esto previene que se muestre una página en blanco por un instante.
   return null;
 }
