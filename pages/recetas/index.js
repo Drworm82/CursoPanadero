@@ -27,7 +27,6 @@ export default function Recetas() {
       const { data, error } = await supabase
         .from('recetas_usuarios')
         .select('*')
-        .eq('is_public', true) // Filtro para mostrar solo recetas públicas
         .order('created_at', { ascending: false });
 
       if (error) {
