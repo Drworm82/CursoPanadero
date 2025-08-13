@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function CursoDetallePage() {
   const router = useRouter();
-  const { slug } = router.query; // Ahora se usa 'slug' en lugar de 'id'
+  const { slug } = router.query;
   const [curso, setCurso] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,11 +22,11 @@ export default function CursoDetallePage() {
       setLoading(true);
       setError(null);
 
-      // Consulta a la base de datos para obtener los detalles del curso.
-      // Se utiliza .eq('slug', slug) para filtrar por el slug en lugar del ID.
-      // ¡Asegúrate de que tu tabla 'cursos_usuarios' tenga una columna llamada 'slug'!
+      // CORRECCIÓN: Se cambió el nombre de la tabla a 'recetas_usuario'
+      // según la sugerencia de error de Supabase.
+      // Revisa tu base de datos para confirmar el nombre de tu tabla de cursos.
       const { data, error } = await supabase
-        .from('cursos_usuarios')
+        .from('recetas_usuario')
         .select(`
           *,
           autor_id(*)
