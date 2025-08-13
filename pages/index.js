@@ -1,79 +1,113 @@
-import { useState, useEffect } from 'react';
-import { supabase } from '../lib/supabase'; // Ruta corregida
-import { useRouter } from 'next/router';
-import Image from 'next/image';
+import { useState, useEffect, useMemo } from 'react';
+import { supabase } from '../../lib/supabase';
+import { getSession } from '../../lib/supabaseAuth';
+import Link from 'next/link';
 
-// Función para validar si una cadena es un UUID válido.
-const isUUID = (uuid) => {
-  if (typeof uuid !== 'string') return false;
-  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-  return uuidRegex.test(uuid);
-};
-
-export default function HomePage() {
-  const [items, setItems] = useState([]);
+export default function RecetasPage() {
+  const [recetas, setRecetas] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [session, setSession] = useState(null);
 
   useEffect(() => {
-    const fetchItems = async () => {
+    const fetchRecetas = async () => {
       setLoading(true);
-      setError(null);
-      
-      const { data, error } = await supabase
-        .from('recetas_usuario') // Asumo que esta es la tabla principal que quieres mostrar
-        .select('*');
+      const currentSession = await getSession();
+      setSession(currentSession);
 
-      if (error) {
-        console.error('Error fetching items:', error);
-        setError('No se pudieron cargar los elementos.');
-        setItems([]);
+      let allRecetas = [];
+      
+      // Consulta para recetas públicas
+      let publicQuery = supabase
+        .from('recetas_usuarios')
+        .select('*, autor_id(*)') 
+        .eq('is_public', true)
+        .order('created_at', { ascending: false });
+
+      const { data: publicData, error: publicError } = await publicQuery;
+
+      if (publicError) {
+        console.error('Error fetching public recipes:', publicError);
       } else {
-        const validItems = data.filter(item => isUUID(item.id));
-        setItems(validItems);
+        allRecetas = publicData;
       }
+
+      // Si el usuario ha iniciado sesión, comprueba si está en la whitelist
+      if (currentSession) {
+        const { data: userAccess } = await supabase
+          .from('users_with_access')
+          .select('user_id')
+          .eq('user_id', currentSession.user.id)
+          .single();
+
+        if (userAccess) {
+          // Si está en la whitelist, busca recetas privadas
+          const { data: privateData, error: privateError } = await supabase
+            .from('recetas_usuarios')
+            .select('*, autor_id(*)')
+            .eq('is_public', false)
+            .order('created_at', { ascending: false });
+
+          if (privateError) {
+            console.error('Error fetching private recipes:', privateError);
+          } else {
+            // Combina las recetas públicas y privadas
+            allRecetas = [...allRecetas, ...privateData];
+          }
+        }
+      }
+      
+      // Elimina duplicados si una receta es pública y privada por error
+      const uniqueRecetas = allRecetas.filter(
+        (receta, index, self) => index === self.findIndex((r) => r.id === receta.id)
+      );
+
+      setRecetas(uniqueRecetas);
       setLoading(false);
     };
 
-    fetchItems();
+    fetchRecetas();
   }, []);
 
-  if (loading) {
-    return <div className="max-w-4xl mx-auto p-6 text-center">Cargando elementos...</div>;
-  }
-
-  if (error) {
-    return <div className="max-w-4xl mx-auto p-6 text-center text-red-500">{error}</div>;
-  }
+  const filteredRecetas = useMemo(() => {
+    if (!searchTerm) {
+      return recetas;
+    }
+    return recetas.filter(receta =>
+      receta.titulo.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [recetas, searchTerm]);
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Últimas recetas</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.length === 0 ? (
-          <p>No hay elementos disponibles.</p>
+      <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
+        <h1 className="text-3xl font-bold">Recetas</h1>
+        <div className="flex items-center gap-4">
+          <input
+            type="text"
+            placeholder="Buscar recetas por título..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          />
+          {session && (
+            <Link href="/recetas/nueva" className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors duration-300">
+              Añadir Receta
+            </Link>
+          )}
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {loading ? (
+          <p className="col-span-full text-center">Cargando recetas...</p>
+        ) : filteredRecetas.length === 0 ? (
+          <p className="col-span-3 text-center text-gray-500">No hay recetas disponibles.</p>
         ) : (
-          items.map((item) => (
-            <div 
-              key={item.id} 
-              className="bg-white shadow-lg rounded-lg p-4 cursor-pointer hover:shadow-xl transition-shadow"
-              onClick={() => router.push(`/recetas/${item.id}`)}
-            >
-              {item.imagen_url && (
-                <div className="w-full h-40 relative mb-4">
-                  <Image 
-                    src={item.imagen_url} 
-                    alt={item.titulo} 
-                    layout="fill" 
-                    objectFit="cover" 
-                    className="rounded-lg"
-                  />
-                </div>
-              )}
-              <h2 className="text-xl font-semibold">{item.titulo}</h2>
-              <p className="text-gray-600 mt-2">{item.descripcion}</p>
-            </div>
+          filteredRecetas.map((receta) => (
+            <Link key={receta.id} href={`/recetas/${receta.id}`} className="block border p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h2 className="text-xl font-semibold">{receta.titulo}</h2>
+              <p className="mt-2 text-gray-600">{receta.descripcion}</p>
+            </Link>
           ))
         )}
       </div>
