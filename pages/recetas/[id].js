@@ -12,9 +12,14 @@ export default function RecetaDetallePage() {
 
   useEffect(() => {
     // Si no hay ID en la URL, no se hace nada
-    if (!id) return;
+    if (!id) {
+      console.log('No se encontró ID en la URL.');
+      setLoading(false);
+      return;
+    }
 
     const fetchReceta = async () => {
+      console.log('Buscando receta con ID:', id); // Mensaje de depuración
       setLoading(true);
       setError(null);
 
@@ -28,13 +33,15 @@ export default function RecetaDetallePage() {
         .single();
 
       if (error) {
-        console.error('Error fetching recipe details:', error);
+        console.error('Error fetching recipe details:', error); // Mensaje de error detallado
         setError('No se pudo cargar la receta. Por favor, inténtalo de nuevo.');
         setReceta(null);
       } else if (!data) {
+        console.log('Receta no encontrada para el ID:', id); // Mensaje de no encontrado
         setError('Receta no encontrada.');
         setReceta(null);
       } else {
+        console.log('Receta cargada exitosamente:', data); // Mensaje de éxito
         setReceta(data);
       }
       setLoading(false);
