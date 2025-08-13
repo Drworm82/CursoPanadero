@@ -17,7 +17,7 @@ export default function Recetas() {
       let allRecetas = [];
       let error = null;
 
-      // 1. Obtener recetas públicas
+      // 1. Obtener recetas públicas de la comunidad
       const { data: publicData, error: publicError } = await supabase
         .from('recetas_usuarios')
         .select('*')
@@ -31,10 +31,10 @@ export default function Recetas() {
         allRecetas = publicData;
       }
 
-      // 2. Si el usuario está en la whitelist, obtener las recetas del curso
-      // La lógica de la whitelist puede ser más compleja, aquí asumimos una simple verificación
+      // 2. Si el usuario está autenticado (y en la whitelist), obtener las recetas del curso
+      // Nota: Aquí se asume que todo usuario logueado tiene acceso al curso. 
+      // Puedes modificar esta lógica si tienes una tabla de "whitelist" en tu base de datos.
       if (currentSession) {
-        // En este ejemplo, asumimos que todos los usuarios autenticados son de la whitelist
         const { data: courseData, error: courseError } = await supabase
           .from('recetas_curso')
           .select('*')
