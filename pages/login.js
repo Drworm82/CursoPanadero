@@ -25,7 +25,7 @@ export default function AuthPage() {
     if (authResponse.error) {
       setError(authResponse.error.message);
     } else {
-      router.push('/recetas-publicas'); // Redirige al usuario a las recetas públicas después de iniciar sesión
+      router.push('/recetas'); // Redirige al usuario a las recetas públicas después de iniciar sesión
     }
     setLoading(false);
   };
