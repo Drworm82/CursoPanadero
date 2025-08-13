@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { supabase } from '../../lib/supabase';
 import { useRouter } from 'next/router';
-import { getSession } from '../../lib/supabaseAuth';
+import { useSupabaseClient, useSession } from '@supabase/auth-helpers-react'; // Importamos los hooks correctos
 
 export default function NuevaRecetaPage() {
+  const supabase = useSupabaseClient(); // Obtenemos el cliente de Supabase desde el contexto
+  const session = useSession(); // Obtenemos la sesión del usuario del contexto
   const router = useRouter();
+  
   const [titulo, setTitulo] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [contenido, setContenido] = useState('');
@@ -21,7 +23,6 @@ export default function NuevaRecetaPage() {
     setSubmitting(true);
     setFormError(null);
 
-    const { data: { session } } = await supabase.auth.getSession();
     const user_id = session?.user?.id;
 
     if (!user_id) {
@@ -58,7 +59,7 @@ export default function NuevaRecetaPage() {
           contenido: contenido.split('\n').filter(line => line.trim() !== ''),
           imagen_url: imagenUrl,
           autor_id: user_id,
-          is_public: true, // Todas las recetas añadidas por el usuario son públicas por defecto
+          is_public: true,
         },
       ]);
 
