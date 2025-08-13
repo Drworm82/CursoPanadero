@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { supabase } from '../../lib/supabase'; // Asegúrate de que la ruta sea correcta.
+import { supabase } from '../../lib/supabase'; // Asegúrate de que la ruta de importación sea correcta.
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CursoDetallePage() {
   const router = useRouter();
-  const { slug } = router.query; // Ahora se usa 'slug' en lugar de 'id'
+  const { slug } = router.query;
   const [curso, setCurso] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,11 +22,10 @@ export default function CursoDetallePage() {
       setLoading(true);
       setError(null);
 
-      // Consulta a la base de datos para obtener los detalles del curso.
-      // Se utiliza .eq('slug', slug) para filtrar por el slug en lugar del ID.
-      // ¡Asegúrate de que tu tabla se llame 'cursos_usuarios' y tenga una columna 'slug'!
+      // CORRECCIÓN: Se cambió el nombre de la tabla a 'recetas_usuarios' (en plural)
+      // para que coincida con la tabla utilizada en otras partes de tu proyecto.
       const { data, error } = await supabase
-        .from('cursos_usuarios')
+        .from('recetas_usuarios') // <-- La corrección clave está aquí
         .select(`
           *,
           autor_id(*)
