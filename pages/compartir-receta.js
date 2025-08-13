@@ -22,7 +22,6 @@ export default function CompartirReceta() {
 
     let imagenUrl = '';
 
-    // Subir la imagen a Supabase Storage
     if (imagen) {
       const { data, error: uploadError } = await supabase.storage
         .from('recetas-publicas-fotos')
@@ -34,7 +33,6 @@ export default function CompartirReceta() {
         return;
       }
       
-      // Obtener la URL pública de la imagen subida
       const { data: { publicUrl } } = supabase.storage
         .from('recetas-publicas-fotos')
         .getPublicUrl(data.path);
@@ -42,7 +40,6 @@ export default function CompartirReceta() {
       imagenUrl = publicUrl;
     }
 
-    // Insertar la receta en la base de datos
     const { data: { user } } = await supabase.auth.getSession();
 
     const { error: insertError } = await supabase
