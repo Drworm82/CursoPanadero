@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { supabase } from '../../lib/supabase';
 import Image from 'next/image';
 
-// Función para validar si una cadena es un UUID válido
+// Función para validar si una cadena es un UUID válido.
 // This function validates if a string is a valid UUID to prevent database errors.
 const isUUID = (uuid) => {
   const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -18,13 +18,13 @@ export default function RecetaDetallePage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // If there is no ID in the URL, do nothing.
+    // Si no hay ID en la URL, no se hace nada.
     if (!id) {
       setLoading(false);
       return;
     }
 
-    // Check if the ID is a valid UUID before making the database query.
+    // Verificar si el ID es un UUID válido antes de hacer la consulta.
     if (!isUUID(id)) {
       console.error('ID inválido:', id);
       setError('El ID de la receta no es válido. Por favor, revisa la URL.');
@@ -37,10 +37,10 @@ export default function RecetaDetallePage() {
       setError(null);
       
       const { data, error } = await supabase
-        .from('recetas_usuario') // Correct table name
+        .from('recetas_usuario') // Nombre de la tabla corregido.
         .select(`
           *
-        `) // The foreign key join was removed to fix the database error.
+        `) // La unión con 'autor_id' se eliminó para arreglar el error de la base de datos.
         .eq('id', id)
         .single();
 
