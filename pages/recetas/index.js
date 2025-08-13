@@ -2,6 +2,14 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import { useRouter } from 'next/router';
 
+// Función para validar si una cadena es un UUID válido.
+// This function is used to filter out any recipes with invalid IDs from the list.
+const isUUID = (uuid) => {
+  if (typeof uuid !== 'string') return false;
+  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  return uuidRegex.test(uuid);
+};
+
 export default function RecetasPage() {
   const [recetas, setRecetas] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,15 +22,17 @@ export default function RecetasPage() {
       setError(null);
       
       const { data, error } = await supabase
-        .from('recetas_usuario') // Nombre de la tabla corregido
-        .select('*'); // Se eliminó el .order() para evitar el error de columna inexistente
+        .from('recetas_usuario')
+        .select('*');
 
       if (error) {
         console.error('Error fetching recipes:', error);
         setError('No se pudieron cargar las recetas.');
         setRecetas([]);
       } else {
-        setRecetas(data);
+        // Filtramos las recetas para asegurarnos de que solo mostramos aquellas con un ID válido (UUID)
+        const validRecetas = data.filter(receta => isUUID(receta.id));
+        setRecetas(validRecetas);
       }
       setLoading(false);
     };
