@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { supabase } from '../../lib/supabase'; // La ruta de importación corregida
+import { supabase } from '../../lib/supabase'; // Asegúrate de que la ruta sea correcta.
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CursoDetallePage() {
   const router = useRouter();
-  const { slug } = router.query;
+  const { slug } = router.query; // Ahora se usa 'slug' en lugar de 'id'
   const [curso, setCurso] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,11 +22,11 @@ export default function CursoDetallePage() {
       setLoading(true);
       setError(null);
 
-      // CORRECCIÓN: Se cambió el nombre de la tabla a 'recetas_usuario'
-      // según la sugerencia de error de Supabase.
-      // Revisa tu base de datos para confirmar el nombre de tu tabla de cursos.
+      // Consulta a la base de datos para obtener los detalles del curso.
+      // Se utiliza .eq('slug', slug) para filtrar por el slug en lugar del ID.
+      // ¡Asegúrate de que tu tabla se llame 'cursos_usuarios' y tenga una columna 'slug'!
       const { data, error } = await supabase
-        .from('recetas_usuario')
+        .from('cursos_usuarios')
         .select(`
           *,
           autor_id(*)
