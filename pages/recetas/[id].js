@@ -37,11 +37,10 @@ export default function RecetaDetallePage() {
       setError(null);
       
       const { data, error } = await supabase
-        .from('recetas_usuario') // ¡Nombre de la tabla corregido!
+        .from('recetas_usuario') // Correct table name
         .select(`
-          *,
-          autor_id(*) // Try to get the author's information (this requires a foreign key relationship).
-        `)
+          *
+        `) // The foreign key join was removed to fix the database error.
         .eq('id', id)
         .single();
 
@@ -87,7 +86,7 @@ export default function RecetaDetallePage() {
           <div className="p-6">
             <h1 className="text-4xl font-bold text-gray-800 mb-2">{receta.titulo}</h1>
             <p className="text-sm text-gray-500 mb-4">
-              Por: {receta.autor_id?.email || 'Desconocido'}
+              Por: {receta.autor_id || 'Desconocido'}
             </p>
             <p className="text-xl text-gray-700 mb-6">{receta.descripcion}</p>
             
