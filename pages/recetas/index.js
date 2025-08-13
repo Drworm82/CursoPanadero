@@ -6,8 +6,8 @@ import Link from 'next/link';
 export default function RecetasPage() {
   const [recetas, setRecetas] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [session, setSession] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [session, setSession] = useState(null);
 
   useEffect(() => {
     const fetchRecetas = async () => {
@@ -15,8 +15,7 @@ export default function RecetasPage() {
       const currentSession = await getSession();
       setSession(currentSession);
 
-      // Usamos el nombre de la tabla correcto: 'recetas_usuarios'
-      // Y consultamos todas las recetas sin filtros complejos
+      // Usamos el nombre de tabla 'recetas_usuarios'
       const { data, error } = await supabase
         .from('recetas_usuarios')
         .select('*')
@@ -24,12 +23,12 @@ export default function RecetasPage() {
 
       if (error) {
         console.error('Error fetching recipes:', error);
+        setRecetas([]);
       } else {
         setRecetas(data);
       }
       setLoading(false);
     };
-
     fetchRecetas();
   }, []);
 
@@ -70,7 +69,6 @@ export default function RecetasPage() {
           filteredRecetas.map((receta) => (
             <Link key={receta.id} href={`/recetas/${receta.id}`} className="block border p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
               <h2 className="text-xl font-semibold">{receta.titulo}</h2>
-              <p className="mt-2 text-gray-600">{receta.descripcion}</p>
             </Link>
           ))
         )}
