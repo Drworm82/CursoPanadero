@@ -24,7 +24,7 @@ export default function CursoDetallePage() {
       console.log(`Buscando curso con ID: ${id}`);
 
       const { data, error } = await supabase
-        .from('recetas_usuarios') // Asumimos que los cursos están aquí
+        .from('recetas_usuario') // ¡Nombre de la tabla corregido!
         .select(`
           *,
           autor_id(*)
@@ -33,7 +33,6 @@ export default function CursoDetallePage() {
         .single();
 
       if (error) {
-        // A diferencia del código anterior, aquí mostramos el objeto de error completo
         console.error('Error fetching course details:', error);
         setError('No se pudo cargar el curso. Por favor, inténtalo de nuevo.');
         setCurso(null);
