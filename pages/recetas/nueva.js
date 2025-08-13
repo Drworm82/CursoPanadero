@@ -1,18 +1,32 @@
-import { useState } from 'react';
+// pages/recetas/nueva.js
+
+import { useState, useEffect } from 'react';
+import { supabase } from '../../lib/supabase';
 import { useRouter } from 'next/router';
-import { useSupabaseClient, useSession } from '@supabase/auth-helpers-react'; // Importamos los hooks correctos
 
 export default function NuevaRecetaPage() {
-  const supabase = useSupabaseClient(); // Obtenemos el cliente de Supabase desde el contexto
-  const session = useSession(); // Obtenemos la sesión del usuario del contexto
   const router = useRouter();
-  
   const [titulo, setTitulo] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [contenido, setContenido] = useState('');
   const [imagen, setImagen] = useState(null);
   const [formError, setFormError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [session, setSession] = useState(null);
+
+  useEffect(() => {
+    const fetchSession = async () => {
+      const { data: { session: initialSession } } = await supabase.auth.getSession();
+      setSession(initialSession);
+      if (!initialSession) {
+        // Si no hay sesión, redirigir al usuario al inicio de sesión
+        router.push('/login');
+      }
+      setLoading(false);
+    };
+    fetchSession();
+  }, [router]);
 
   const handleFileChange = (e) => {
     setImagen(e.target.files[0]);
@@ -33,9 +47,11 @@ export default function NuevaRecetaPage() {
 
     let imagenUrl = '';
     if (imagen) {
-      const { data, error: uploadError } = await supabase.storage
-        .from('recetas-publicas-fotos') // Reemplaza con el nombre de tu bucket
-        .upload(`${Date.now()}_${imagen.name}`, imagen);
+      const fileExt = imagen.name.split('.').pop();
+      const fileName = `${Math.random()}.${fileExt}`;
+      const { data: uploadData, error: uploadError } = await supabase.storage
+        .from('recetas-publicas-fotos')
+        .upload(fileName, imagen);
 
       if (uploadError) {
         setFormError('Error al subir la imagen. Inténtalo de nuevo.');
@@ -44,14 +60,14 @@ export default function NuevaRecetaPage() {
       }
       
       const { data: { publicUrl } } = supabase.storage
-        .from('recetas-publicas-fotos') // Reemplaza con el nombre de tu bucket
-        .getPublicUrl(data.path);
+        .from('recetas-publicas-fotos')
+        .getPublicUrl(uploadData.path);
 
       imagenUrl = publicUrl;
     }
 
     const { error: insertError } = await supabase
-      .from('recetas_usuarios')
+      .from('recetas_usuario')
       .insert([
         {
           titulo,
@@ -59,7 +75,7 @@ export default function NuevaRecetaPage() {
           contenido: contenido.split('\n').filter(line => line.trim() !== ''),
           imagen_url: imagenUrl,
           autor_id: user_id,
-          is_public: true,
+          is_public: true, // Todas las recetas añadidas por el usuario son públicas por defecto
         },
       ]);
 
@@ -71,6 +87,10 @@ export default function NuevaRecetaPage() {
     }
     setSubmitting(false);
   };
+
+  if (loading) {
+    return <div className="max-w-xl mx-auto p-6 text-center text-gray-500">Verificando sesión...</div>;
+  }
 
   return (
     <div className="max-w-xl mx-auto p-6">
