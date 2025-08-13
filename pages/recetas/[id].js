@@ -4,7 +4,6 @@ import { supabase } from '../../lib/supabase';
 import Image from 'next/image';
 
 // Función para validar si una cadena es un UUID válido.
-// This function validates if a string is a valid UUID to prevent database errors.
 const isUUID = (uuid) => {
   const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   return uuidRegex.test(uuid);
@@ -37,10 +36,10 @@ export default function RecetaDetallePage() {
       setError(null);
       
       const { data, error } = await supabase
-        .from('recetas_usuario') // Nombre de la tabla corregido.
+        .from('recetas_usuario')
         .select(`
           *
-        `) // La unión con 'autor_id' se eliminó para arreglar el error de la base de datos.
+        `)
         .eq('id', id)
         .single();
 
