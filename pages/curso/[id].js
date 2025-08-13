@@ -26,7 +26,7 @@ export default function CursoDetallePage() {
         .select(`
           *,
           autor_id
-        `) // ¡Hemos quitado el asterisco para que no falle la consulta!
+        `) // Quitamos el asterisco para que no falle la consulta de relación.
         .eq('id', id)
         .single();
 
