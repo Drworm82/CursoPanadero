@@ -12,6 +12,7 @@ export default function CursoDetallePage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // Si no hay slug en la URL, no se hace nada
     if (!slug) {
       setLoading(false);
       return;
@@ -21,9 +22,9 @@ export default function CursoDetallePage() {
       setLoading(true);
       setError(null);
 
-      // CORRECCIÓN: Se cambió el nombre de la tabla a 'recetas_usuario' (en singular)
+      // CORRECCIÓN: La tabla se llama 'recetas_usuario' (en singular)
       const { data, error } = await supabase
-        .from('recetas_usuario') // <-- La corrección clave está aquí, es en singular.
+        .from('recetas_usuario') // <-- El nombre de la tabla ahora es singular
         .select(`
           *,
           autor_id(*)
