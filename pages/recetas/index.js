@@ -15,7 +15,6 @@ export default function RecetasPage() {
       const currentSession = await getSession();
       setSession(currentSession);
 
-      // Usamos el nombre de tabla 'recetas_usuarios'
       const { data, error } = await supabase
         .from('recetas_usuarios')
         .select('*')
