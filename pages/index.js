@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { getSession } from '../lib/supabaseAuth';
+import { supabase } from '../lib/supabase'; // Ruta corregida
+import { getSession } from '../lib/supabaseAuth'; // Ruta corregida
 import Link from 'next/link';
 
 export default function HomePage() {
