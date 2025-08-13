@@ -1,66 +1,47 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { supabase } from '../../lib/supabase';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-// Función para validar si una cadena es un UUID válido
+// Función para validar si una cadena es un UUID válido.
 const isUUID = (uuid) => {
+  if (typeof uuid !== 'string') return false;
   const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   return uuidRegex.test(uuid);
 };
 
-export default function CursoDetallePage() {
-  const router = useRouter();
-  const { id } = router.query;
-  const [curso, setCurso] = useState(null);
+export default function CursosPage() {
+  const [cursos, setCursos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
-    // Si no hay ID en la URL, no se hace nada
-    if (!id) {
-      setLoading(false);
-      return;
-    }
-
-    // Verificar si el ID es un UUID válido antes de hacer la consulta
-    if (!isUUID(id)) {
-      console.error('ID inválido:', id);
-      setError('El ID del curso no es válido. Por favor, revisa la URL.');
-      setLoading(false);
-      return; // Detener la ejecución si el ID es inválido
-    }
-
-    const fetchCurso = async () => {
+    const fetchCursos = async () => {
       setLoading(true);
       setError(null);
       
+      // Asegúrate de que el nombre de la tabla sea correcto para tus cursos
       const { data, error } = await supabase
-        .from('recetas_usuario')
-        .select(`
-          *
-        `) // Se simplificó la consulta para evitar el error de la relación de la base de datos
-        .eq('id', id)
-        .single();
+        .from('cursos') // Revisa si tu tabla se llama 'cursos' o de otra forma
+        .select('*');
 
       if (error) {
-        console.error('Error fetching course details:', error);
-        setError('No se pudo cargar el curso. Por favor, inténtalo de nuevo.');
-        setCurso(null);
-      } else if (!data) {
-        setError('Curso no encontrado.');
-        setCurso(null);
+        console.error('Error fetching courses:', error);
+        setError('No se pudieron cargar los cursos.');
+        setCursos([]);
       } else {
-        setCurso(data);
+        // Filtramos los cursos para asegurarnos de que solo mostramos aquellos con un ID válido (UUID)
+        const validCursos = data.filter(curso => isUUID(curso.id));
+        setCursos(validCursos);
       }
       setLoading(false);
     };
 
-    fetchCurso();
-  }, [id]);
+    fetchCursos();
+  }, []);
 
   if (loading) {
-    return <div className="max-w-4xl mx-auto p-6 text-center text-gray-500">Cargando curso...</div>;
+    return <div className="max-w-4xl mx-auto p-6 text-center">Cargando cursos...</div>;
   }
 
   if (error) {
@@ -69,41 +50,23 @@ export default function CursoDetallePage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      {curso && (
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          {curso.imagen_url && (
-            <div className="w-full h-80 relative">
-              <Image 
-                src={curso.imagen_url} 
-                alt={curso.titulo} 
-                layout="fill" 
-                objectFit="cover" 
-                className="rounded-t-lg"
-              />
+      <h1 className="text-3xl font-bold mb-6">Cursos de la comunidad</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cursos.length === 0 ? (
+          <p>No hay cursos disponibles.</p>
+        ) : (
+          cursos.map((curso) => (
+            <div 
+              key={curso.id} 
+              className="bg-white shadow-lg rounded-lg p-4 cursor-pointer hover:shadow-xl transition-shadow"
+              onClick={() => router.push(`/curso/${curso.id}`)}
+            >
+              <h2 className="text-xl font-semibold">{curso.titulo}</h2>
+              <p className="text-gray-600 mt-2">{curso.descripcion}</p>
             </div>
-          )}
-          <div className="p-6">
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">{curso.titulo}</h1>
-            <p className="text-sm text-gray-500 mb-4">
-              Por: {curso.autor_id || 'Desconocido'}
-            </p>
-            <p className="text-xl text-gray-700 mb-6">{curso.descripcion}</p>
-            
-            <div className="space-y-6 text-gray-700">
-              <div>
-                <h2 className="text-2xl font-semibold border-b-2 border-orange-500 pb-1 mb-2">Contenido del curso</h2>
-                {curso.contenido && (
-                  <ul className="list-disc list-inside space-y-1">
-                    {curso.contenido.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+          ))
+        )}
+      </div>
     </div>
   );
 }
