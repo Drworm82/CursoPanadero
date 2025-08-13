@@ -159,14 +159,9 @@ export default function Recetas() {
           </form>
         </div>
       ) : (
-        <p className="text-center text-gray-500 mb-6">
-          <Link href="/login" className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
-            Inicia sesión para compartir tus recetas
-          </Link>
-        </p>
+        <p className="text-center text-gray-500 mb-6">Inicia sesión para compartir tus recetas.</p>
       )}
 
-      {/* Este div muestra las recetas en todo momento */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {recetas.length === 0 ? (
           <p className="text-center text-gray-500 col-span-full">Aún no hay recetas disponibles.</p>
