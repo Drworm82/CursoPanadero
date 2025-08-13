@@ -14,9 +14,8 @@ export default function RecetasPage() {
       setError(null);
       
       const { data, error } = await supabase
-        .from('recetas_usuario') // ¡Nombre de la tabla corregido a 'recetas_usuario'!
-        .select('*')
-        .order('created_at', { ascending: false });
+        .from('recetas_usuario') // Nombre de la tabla corregido
+        .select('*'); // Se eliminó el .order() para evitar el error de columna inexistente
 
       if (error) {
         console.error('Error fetching recipes:', error);
