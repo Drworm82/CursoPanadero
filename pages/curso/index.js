@@ -21,9 +21,9 @@ export default function CursosPage() {
       setLoading(true);
       setError(null);
       
-      // Asegúrate de que el nombre de la tabla sea 'cursos' o el que uses.
+      // Se corrigió el nombre de la tabla de 'cursos' a 'clases_curso' según la pista del error.
       const { data, error } = await supabase
-        .from('cursos') 
+        .from('clases_curso') 
         .select('*');
 
       if (error) {
@@ -32,7 +32,6 @@ export default function CursosPage() {
         setCursos([]);
       } else {
         // Filtramos los cursos para asegurarnos de que solo mostramos aquellos con un ID válido (UUID)
-        // This is the key change to prevent the 'ID inválido' error.
         const validCursos = data.filter(curso => isUUID(curso.id));
         setCursos(validCursos);
       }
