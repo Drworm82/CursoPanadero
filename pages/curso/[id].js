@@ -3,6 +3,12 @@ import { useRouter } from 'next/router';
 import { supabase } from '../../lib/supabase';
 import Image from 'next/image';
 
+// Función para validar si una cadena es un UUID válido
+const isUUID = (uuid) => {
+  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  return uuidRegex.test(uuid);
+};
+
 export default function CursoDetallePage() {
   const router = useRouter();
   const { id } = router.query;
@@ -17,6 +23,14 @@ export default function CursoDetallePage() {
       return;
     }
 
+    // Verificar si el ID es un UUID válido antes de hacer la consulta
+    if (!isUUID(id)) {
+      console.error('ID inválido:', id);
+      setError('El ID del curso no es válido. Por favor, revisa la URL.');
+      setLoading(false);
+      return; // Detener la ejecución si el ID es inválido
+    }
+
     const fetchCurso = async () => {
       setLoading(true);
       setError(null);
@@ -26,7 +40,7 @@ export default function CursoDetallePage() {
         .select(`
           *,
           autor_id
-        `) // Quitamos el asterisco para que no falle la consulta de relación.
+        `)
         .eq('id', id)
         .single();
 
