@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../../lib/supabase';
+import { supabase } from '../lib/supabase'; // Ruta corregida
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
@@ -10,39 +10,37 @@ const isUUID = (uuid) => {
   return uuidRegex.test(uuid);
 };
 
-export default function CursosPage() {
-  const [cursos, setCursos] = useState([]);
+export default function HomePage() {
+  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
-    const fetchCursos = async () => {
+    const fetchItems = async () => {
       setLoading(true);
       setError(null);
       
-      // Se corrigió el nombre de la tabla de 'cursos' a 'clases_curso' según la pista del error.
       const { data, error } = await supabase
-        .from('clases_curso') 
+        .from('recetas_usuario') // Asumo que esta es la tabla principal que quieres mostrar
         .select('*');
 
       if (error) {
-        console.error('Error fetching courses:', error);
-        setError('No se pudieron cargar los cursos.');
-        setCursos([]);
+        console.error('Error fetching items:', error);
+        setError('No se pudieron cargar los elementos.');
+        setItems([]);
       } else {
-        // Filtramos los cursos para asegurarnos de que solo mostramos aquellos con un ID válido (UUID)
-        const validCursos = data.filter(curso => isUUID(curso.id));
-        setCursos(validCursos);
+        const validItems = data.filter(item => isUUID(item.id));
+        setItems(validItems);
       }
       setLoading(false);
     };
 
-    fetchCursos();
+    fetchItems();
   }, []);
 
   if (loading) {
-    return <div className="max-w-4xl mx-auto p-6 text-center">Cargando cursos...</div>;
+    return <div className="max-w-4xl mx-auto p-6 text-center">Cargando elementos...</div>;
   }
 
   if (error) {
@@ -51,30 +49,30 @@ export default function CursosPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Cursos de la comunidad</h1>
+      <h1 className="text-3xl font-bold mb-6">Últimas recetas</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cursos.length === 0 ? (
-          <p>No hay cursos disponibles.</p>
+        {items.length === 0 ? (
+          <p>No hay elementos disponibles.</p>
         ) : (
-          cursos.map((curso) => (
+          items.map((item) => (
             <div 
-              key={curso.id} 
+              key={item.id} 
               className="bg-white shadow-lg rounded-lg p-4 cursor-pointer hover:shadow-xl transition-shadow"
-              onClick={() => router.push(`/curso/${curso.id}`)}
+              onClick={() => router.push(`/recetas/${item.id}`)}
             >
-              {curso.imagen_url && (
+              {item.imagen_url && (
                 <div className="w-full h-40 relative mb-4">
                   <Image 
-                    src={curso.imagen_url} 
-                    alt={curso.titulo} 
+                    src={item.imagen_url} 
+                    alt={item.titulo} 
                     layout="fill" 
                     objectFit="cover" 
                     className="rounded-lg"
                   />
                 </div>
               )}
-              <h2 className="text-xl font-semibold">{curso.titulo}</h2>
-              <p className="text-gray-600 mt-2">{curso.descripcion}</p>
+              <h2 className="text-xl font-semibold">{item.titulo}</h2>
+              <p className="text-gray-600 mt-2">{item.descripcion}</p>
             </div>
           ))
         )}
