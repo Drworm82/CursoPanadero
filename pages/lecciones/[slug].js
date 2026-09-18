@@ -3,7 +3,7 @@ import CourseShell from '../../components/course/CourseShell';
 import { requireCourseAuth } from '../../lib/course';
 import LessonProgress from '../../components/course/LessonProgress';
 
-export default function LessonPage({ lesson, recipes }) {
+export default function LessonPage({ lesson, recipes, progress }) {
   return (
     <CourseShell eyebrow={`Lección ${lesson.sort_order}`} title={lesson.title} description={lesson.objective}>
       <div className="grid gap-5 lg:grid-cols-[1.4fr_.6fr]">
@@ -31,8 +31,8 @@ export default function LessonPage({ lesson, recipes }) {
         <aside className="space-y-5">
           <LessonProgress lessonId={lesson.id} initialProgress={progress} />
           <div className="rounded-2xl border border-stone-200 bg-white p-6">
-          <p className="text-sm font-medium text-stone-500">Aprendizaje</p>
-          <p className="mt-2 leading-7 text-stone-700">{lesson.objective || 'Esta lección prepara el siguiente paso de la ruta.'}</p>
+            <p className="text-sm font-medium text-stone-500">Aprendizaje</p>
+            <p className="mt-2 leading-7 text-stone-700">{lesson.objective || 'Esta lección prepara el siguiente paso de la ruta.'}</p>
           </div>
         </aside>
       </div>
@@ -54,10 +54,10 @@ export async function getServerSideProps({ req, res, params }) {
 
   const [{ data: links, error: linksError }, { data: progress }] = await Promise.all([
     supabase
-    .from('lesson_recipes')
-    .select('sort_order, recipes (id, slug, title, pedagogical_role)')
-    .eq('lesson_id', lesson.id)
-    .order('sort_order'),
+      .from('lesson_recipes')
+      .select('sort_order, recipes (id, slug, title, pedagogical_role)')
+      .eq('lesson_id', lesson.id)
+      .order('sort_order'),
     supabase.from('lesson_progress').select('status, started_at, completed_at').eq('lesson_id', lesson.id).eq('user_id', user.sub).maybeSingle(),
   ]);
 
