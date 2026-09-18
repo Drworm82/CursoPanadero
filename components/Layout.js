@@ -20,9 +20,6 @@ export default function Layout({ children }) {
             <Link href="/curso" className="hover:underline">
               Curso
             </Link>
-            <Link href="/recetas" className="hover:underline">
-              Recetas
-            </Link>
             <AuthStatus />
           </div>
         </nav>
