@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import CourseShell from '../../components/course/CourseShell';
 import { requireCourseAuth } from '../../lib/course';
+import RecipeProgress from '../../components/course/RecipeProgress';
 
 export default function RecipePage({ recipe, ingredients, steps }) {
   return (
@@ -59,6 +60,7 @@ export default function RecipePage({ recipe, ingredients, steps }) {
             </ol>
           </div>
 
+          <RecipeProgress recipeId={recipe.id} stepCount={steps.length} initialProgress={progress} />
           <Link href="/progreso" className="inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white">Ir a mi progreso</Link>
         </section>
       </div>
@@ -78,12 +80,13 @@ export async function getServerSideProps({ req, res, params }) {
 
   if (error || !recipe) return { notFound: true };
 
-  const [{ data: ingredients, error: ingredientsError }, { data: steps, error: stepsError }] = await Promise.all([
+  const [{ data: ingredients, error: ingredientsError }, { data: steps, error: stepsError }, { data: progress }] = await Promise.all([
     supabase.from('recipe_ingredients').select('id, sort_order, name, quantity, unit, notes').eq('recipe_id', recipe.id).order('sort_order'),
     supabase.from('recipe_steps').select('id, sort_order, title, instruction, observation, time_text, temperature_text').eq('recipe_id', recipe.id).order('sort_order'),
+    supabase.from('recipe_progress').select('status, current_step, completed_at').eq('recipe_id', recipe.id).eq('user_id', user.sub).maybeSingle(),
   ]);
 
   if (ingredientsError || stepsError) return { notFound: true };
 
-  return { props: { recipe, ingredients: ingredients || [], steps: steps || [] } };
+  return { props: { recipe, ingredients: ingredients || [], steps: steps || [], progress: progress || null } };
 }
