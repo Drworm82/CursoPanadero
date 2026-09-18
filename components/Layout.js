@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import AuthStatus from './AuthStatus';
 
 export default function Layout({ children }) {
   return (
@@ -10,17 +11,19 @@ export default function Layout({ children }) {
       </Head>
 
       <header className="bg-gray-800 text-white p-4">
-        <nav className="max-w-4xl mx-auto flex justify-between">
+        <nav className="max-w-4xl mx-auto flex justify-between items-center">
           <Link href="/">
             <p className="font-bold text-xl">Mi Panadería</p>
           </Link>
-          <div>
-            <Link href="/curso" className="mr-4 hover:underline">
+
+          <div className="flex items-center gap-4">
+            <Link href="/curso" className="hover:underline">
               Curso
             </Link>
             <Link href="/recetas" className="hover:underline">
               Recetas
             </Link>
+            <AuthStatus />
           </div>
         </nav>
       </header>
@@ -30,7 +33,7 @@ export default function Layout({ children }) {
       </main>
 
       <footer className="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; 2025 Mi Panadería. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Mi Panadería. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
