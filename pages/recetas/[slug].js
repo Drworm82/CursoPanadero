@@ -3,7 +3,7 @@ import CourseShell from '../../components/course/CourseShell';
 import { requireCourseAuth } from '../../lib/course';
 import RecipeProgress from '../../components/course/RecipeProgress';
 
-export default function RecipePage({ recipe, ingredients, steps }) {
+export default function RecipePage({ recipe, ingredients, steps, progress }) {
   return (
     <CourseShell eyebrow="Receta" title={recipe.title} description={recipe.source_objective}>
       <div className="grid gap-6 lg:grid-cols-[.65fr_1.35fr]">
@@ -25,6 +25,8 @@ export default function RecipePage({ recipe, ingredients, steps }) {
         </aside>
 
         <section className="space-y-8">
+          <RecipeProgress recipeId={recipe.id} stepCount={steps.length} initialProgress={progress} />
+
           <div>
             <h2 className="mb-4 text-2xl font-semibold text-stone-900">Ingredientes</h2>
             <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
@@ -60,7 +62,6 @@ export default function RecipePage({ recipe, ingredients, steps }) {
             </ol>
           </div>
 
-          <RecipeProgress recipeId={recipe.id} stepCount={steps.length} initialProgress={progress} />
           <Link href="/progreso" className="inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white">Ir a mi progreso</Link>
         </section>
       </div>
