@@ -17,10 +17,7 @@ export async function middleware(request) {
             request.cookies.set(name, value);
             supabaseResponse.cookies.set(name, value, options);
           });
-
-          Object.entries(headers).forEach(([key, value]) => {
-            supabaseResponse.headers.set(key, value);
-          });
+          Object.entries(headers).forEach(([key, value]) => supabaseResponse.headers.set(key, value));
         },
       },
     }
@@ -29,10 +26,15 @@ export async function middleware(request) {
   const { data } = await supabase.auth.getClaims();
   const user = data?.claims;
 
-  if (
-    request.nextUrl.pathname.startsWith('/curso') &&
-    !user
-  ) {
+  const protectedPath =
+    request.nextUrl.pathname.startsWith('/curso') ||
+    request.nextUrl.pathname.startsWith('/ruta') ||
+    request.nextUrl.pathname.startsWith('/modulos') ||
+    request.nextUrl.pathname.startsWith('/lecciones') ||
+    request.nextUrl.pathname.startsWith('/recetas') ||
+    request.nextUrl.pathname.startsWith('/progreso');
+
+  if (protectedPath && !user) {
     const url = request.nextUrl.clone();
     url.pathname = '/acceso';
     url.searchParams.set('redirectedFrom', request.nextUrl.pathname);
@@ -45,6 +47,11 @@ export async function middleware(request) {
 export const config = {
   matcher: [
     '/curso/:path*',
+    '/ruta/:path*',
+    '/modulos/:path*',
+    '/lecciones/:path*',
+    '/recetas/:path*',
+    '/progreso',
     '/acceso',
   ],
 };
