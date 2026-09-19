@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import CourseShell from '../../components/course/CourseShell';
-import { requireCourseAuth } from '../../lib/course';
 
 export default function ModulePage({ module, lessons }) {
   return (
@@ -19,7 +17,7 @@ export default function ModulePage({ module, lessons }) {
             <h2 className="mb-4 text-2xl font-semibold text-stone-900">Lecciones</h2>
             <div className="space-y-3">
               {lessons.map((lesson) => (
-                <Link key={lesson.id} href={`/lecciones/${lesson.slug}`} className="block rounded-2xl border border-stone-200 bg-white p-5 hover:border-stone-400">
+                <a key={lesson.id} href={`/lecciones/${lesson.slug}`} className="block rounded-2xl border border-stone-200 bg-white p-5 hover:border-stone-400">
                   <div className="flex gap-4">
                     <span className="text-sm font-medium text-stone-400">{lesson.sort_order}</span>
                     <div>
@@ -27,7 +25,7 @@ export default function ModulePage({ module, lessons }) {
                       {lesson.objective && <p className="mt-1 text-sm leading-6 text-stone-600">{lesson.objective}</p>}
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -42,9 +40,12 @@ export default function ModulePage({ module, lessons }) {
   );
 }
 
-export async function getServerSideProps({ req, res, params }) {
-  const { supabase, user } = await requireCourseAuth(req, res);
-  if (!user) return { redirect: { destination: '/acceso', permanent: false } };
+export async function getServerSideProps({ params }) {
+  const { createClient } = await import('@supabase/supabase-js');
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+  );
 
   const { data: module, error } = await supabase
     .from('modules')
@@ -62,5 +63,5 @@ export async function getServerSideProps({ req, res, params }) {
 
   if (lessonsError) return { notFound: true };
 
-  return { props: { module, lessons } };
+  return { props: { module, lessons: lessons || [] } };
 }
