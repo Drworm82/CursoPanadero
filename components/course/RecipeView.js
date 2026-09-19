@@ -2,7 +2,7 @@ import CourseShell from './CourseShell';
 
 export default function RecipeView({ recipe, ingredients, steps }) {
   return (
-    <CourseShell eyebrow="Preparación" title={recipe.title} description={recipe.source_objective}>
+    <CourseShell eyebrow="Preparación" title={recipe.title} description={recipe.source_objective} backHref="/modulo-1" backLabel="Volver al módulo">
       <div className="grid gap-6 lg:grid-cols-[.65fr_1.35fr]">
         <aside className="space-y-5">
           <div className="rounded-2xl border border-stone-200 bg-white p-6">
