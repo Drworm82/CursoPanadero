@@ -17,13 +17,16 @@ export async function middleware(request) {
             request.cookies.set(name, value);
             supabaseResponse.cookies.set(name, value, options);
           });
-          Object.entries(headers).forEach(([key, value]) => supabaseResponse.headers.set(key, value));
+
+          Object.entries(headers).forEach(([key, value]) => {
+            supabaseResponse.headers.set(key, value);
+          });
         },
       },
     }
   );
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const { data: { claims } } = await supabase.auth.getClaims();
 
   const protectedPath =
     request.nextUrl.pathname.startsWith('/curso') ||
@@ -33,11 +36,25 @@ export async function middleware(request) {
     request.nextUrl.pathname.startsWith('/recetas') ||
     request.nextUrl.pathname.startsWith('/progreso');
 
-  if (protectedPath && !user) {
+  if (protectedPath && !claims) {
     const url = request.nextUrl.clone();
     url.pathname = '/acceso';
     url.searchParams.set('redirectedFrom', request.nextUrl.pathname);
-    return NextResponse.redirect(url);
+
+    const redirectResponse = NextResponse.redirect(url);
+
+    // Supabase may refresh the auth session in middleware. The refreshed
+    // cookies must also reach the browser when we return a redirect.
+    redirectResponse.cookies.setAll(supabaseResponse.cookies.getAll());
+
+    for (const header of ['cache-control', 'expires', 'pragma']) {
+      const value = supabaseResponse.headers.get(header);
+      if (value) {
+        redirectResponse.headers.set(header, value);
+      }
+    }
+
+    return redirectResponse;
   }
 
   return supabaseResponse;
