@@ -8,12 +8,12 @@ const module = {
 };
 
 const lessons = [
-  ['1', 'Entrar a la panadería'],
-  ['2', 'Primer panqué: acremado'],
-  ['3', 'Segunda ruta: aceite'],
-  ['4', 'Repetición con criterio'],
-  ['5', 'El horno también es parte'],
-  ['6', 'Mini reto: ¿qué cambió?'],
+  ['1', 'Entrar a la panadería', '/leccion-entrar-a-la-panaderia'],
+  ['2', 'Primer panqué: acremado', '/leccion-primer-panque-acremado'],
+  ['3', 'Segunda ruta: aceite', '/leccion-segunda-ruta-aceite'],
+  ['4', 'Repetición con criterio', '/leccion-repeticion-con-criterio'],
+  ['5', 'El horno también es parte', '/leccion-el-horno-tambien-es-parte'],
+  ['6', 'Mini reto: ¿qué cambió?', '/leccion-mini-reto-que-cambio'],
 ];
 
 export default function ModuleOnePage() {
@@ -31,11 +31,11 @@ export default function ModuleOnePage() {
         <div>
           <h2 className="mb-4 text-2xl font-semibold text-stone-900">Lecciones</h2>
           <div className="space-y-3">
-            {lessons.map(([number, title]) => (
-              <div key={number} className="rounded-2xl border border-stone-200 bg-white p-5">
+            {lessons.map(([number, title, href]) => (
+              <a href={href} key={number} className="rounded-2xl border border-stone-200 bg-white p-5">
                 <span className="text-sm font-medium text-stone-400">{number}</span>
                 <h3 className="mt-1 font-semibold text-stone-900">{title}</h3>
-              </div>
+              </a>
             ))}
           </div>
         </div>
