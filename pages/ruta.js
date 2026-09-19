@@ -1,6 +1,6 @@
+import { createClient } from '@supabase/supabase-js';
 import CourseShell from '../components/course/CourseShell';
 import ModuleCard from '../components/course/ModuleCard';
-import { getCourseRouteData, createCourseServerClient } from '../lib/course';
 
 export default function RutaPage({ course, modules }) {
   return (
@@ -22,17 +22,30 @@ export default function RutaPage({ course, modules }) {
   );
 }
 
-export async function getServerSideProps({ req, res }) {
-  // Course content is public/read-only. Authentication is handled by the
-  // browser client after sign-in; keeping this data request independent of
-  // SSR auth prevents a client/SSR session redirect loop.
-  const supabase = createCourseServerClient(req, res);
+export async function getServerSideProps() {
+  // Course structure is public/read-only. Do not involve the auth-cookie
+  // layer here; auth is a separate concern from loading course content.
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+  );
 
-  try {
-    const { course, modules } = await getCourseRouteData(supabase);
-    return { props: { course, modules } };
-  } catch (error) {
-    console.error('Route data error:', error);
+  const { data: course, error: courseError } = await supabase
+    .from('courses')
+    .select('id, slug, title, description')
+    .eq('slug', 'curso-panaderia')
+    .single();
+
+  const { data: modules, error: modulesError } = await supabase
+    .from('modules')
+    .select('id, course_id, slug, title, sort_order, guiding_question, expected_result')
+    .eq('course_id', course?.id)
+    .order('sort_order');
+
+  if (courseError || modulesError || !course) {
+    console.error('Route content error:', courseError || modulesError);
     return { notFound: true };
   }
+
+  return { props: { course, modules: modules || [] } };
 }
