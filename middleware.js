@@ -23,8 +23,7 @@ export async function middleware(request) {
     }
   );
 
-  const { data } = await supabase.auth.getClaims();
-  const user = data?.claims;
+  const { data: { user } } = await supabase.auth.getUser();
 
   const protectedPath =
     request.nextUrl.pathname.startsWith('/curso') ||
