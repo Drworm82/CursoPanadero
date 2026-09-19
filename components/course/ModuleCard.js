@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 export default function ModuleCard({ module }) {
   return (
@@ -11,12 +10,12 @@ export default function ModuleCard({ module }) {
       {module.guiding_question && (
         <p className="mt-3 text-stone-600">{module.guiding_question}</p>
       )}
-      <Link
+      <a
         href={module.slug === 'modulo-1-masas-batidas-pesadas' ? '/modulos/modulo-1-masas-batidas-pesadas' : '#'}
         className="mt-6 inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white hover:bg-stone-700"
       >
         Ver módulo
-      </Link>
+      </a>
     </article>
   );
 }
