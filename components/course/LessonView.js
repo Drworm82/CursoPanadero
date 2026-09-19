@@ -2,7 +2,7 @@ import CourseShell from './CourseShell';
 
 export default function LessonView({ lesson, recipes }) {
   return (
-    <CourseShell eyebrow={`Lección ${lesson.sort_order}`} title={lesson.title} description={lesson.objective}>
+    <CourseShell eyebrow={`Lección ${lesson.sort_order}`} title={lesson.title} description={lesson.objective} backHref="/modulo-1" backLabel="Volver al módulo">
       <div className="grid gap-6 lg:grid-cols-[1.4fr_.6fr]">
         <section>
           <h2 className="mb-4 text-2xl font-semibold text-stone-900">Preparaciones</h2>
