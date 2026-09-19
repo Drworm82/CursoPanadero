@@ -14,8 +14,8 @@ export default function Layout({ children }) {
         <nav className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
           <Link href="/" className="font-semibold tracking-tight">Curso Panadero</Link>
           <div className="flex items-center gap-5 text-sm">
-            <Link href="/ruta" className="hover:text-amber-700">Ruta</Link>
-            <Link href="/progreso" className="hover:text-amber-700">Progreso</Link>
+            <Link href="/ruta" prefetch={false} className="hover:text-amber-700">Ruta</Link>
+            <Link href="/progreso" prefetch={false} className="hover:text-amber-700">Progreso</Link>
             <AuthStatus />
           </div>
         </nav>
