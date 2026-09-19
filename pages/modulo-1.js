@@ -18,7 +18,7 @@ const lessons = [
 
 export default function ModuleOnePage() {
   return (
-    <CourseShell eyebrow="Módulo 1" title={module.title}>
+    <CourseShell eyebrow="Módulo 1" title={module.title} backHref="/ruta" backLabel="Volver a la ruta">
       <div className="space-y-8">
         <div className="grid gap-4 md:grid-cols-2">
           <section className="rounded-2xl border border-stone-200 bg-white p-6">
