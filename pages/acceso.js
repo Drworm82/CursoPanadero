@@ -15,14 +15,14 @@ export default function AccesoPage() {
 
     supabase.auth.getClaims().then(({ data }) => {
       if (mounted && data?.claims) {
-        router.replace('/curso');
+        window.location.replace('/ruta');
       }
     });
 
     return () => {
       mounted = false;
     };
-  }, [router]);
+  }, []);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -46,7 +46,9 @@ export default function AccesoPage() {
       return;
     }
 
-    await router.replace('/curso');
+    // Do a full navigation only after the browser client has persisted
+    // the session cookies. This avoids Next.js route-prefetch races.
+    window.location.replace('/ruta');
   }
 
   return (
