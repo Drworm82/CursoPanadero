@@ -1,0 +1,59 @@
+import CourseShell from './CourseShell';
+
+export default function RecipeView({ recipe, ingredients, steps }) {
+  return (
+    <CourseShell eyebrow="Preparación" title={recipe.title} description={recipe.source_objective}>
+      <div className="grid gap-6 lg:grid-cols-[.65fr_1.35fr]">
+        <aside className="space-y-5">
+          <div className="rounded-2xl border border-stone-200 bg-white p-6">
+            <p className="text-sm font-medium text-stone-500">Ficha</p>
+            <dl className="mt-4 space-y-3 text-sm">
+              <div className="flex justify-between gap-4"><dt className="text-stone-500">Dificultad</dt><dd>{recipe.difficulty || '—'}</dd></div>
+              <div className="flex justify-between gap-4"><dt className="text-stone-500">Tiempo</dt><dd>{recipe.source_time || '—'}</dd></div>
+              <div className="flex justify-between gap-4"><dt className="text-stone-500">Rendimiento</dt><dd className="text-right">{recipe.source_yield || '—'}</dd></div>
+            </dl>
+          </div>
+          <div className="rounded-2xl bg-amber-50 p-6">
+            <p className="text-sm font-medium text-amber-900">Observa antes de continuar</p>
+            <p className="mt-2 text-sm leading-6 text-amber-950">Compara el aspecto de la preparación con lo que describe cada paso.</p>
+          </div>
+        </aside>
+        <section className="space-y-8">
+          <div>
+            <h2 className="mb-4 text-2xl font-semibold text-stone-900">Ingredientes</h2>
+            <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
+              {ingredients.map(item => (
+                <div key={item.id} className="grid grid-cols-[1fr_auto_auto] gap-4 border-b border-stone-100 px-5 py-3 text-sm last:border-0">
+                  <span>{item.name}{item.notes ? ` — ${item.notes}` : ''}</span><span>{item.quantity ?? ''}</span><span className="text-stone-500">{item.unit || ''}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h2 className="mb-4 text-2xl font-semibold text-stone-900">Proceso</h2>
+            <ol className="space-y-4">
+              {steps.map((step,index) => (
+                <li key={step.id} className="rounded-2xl border border-stone-200 bg-white p-6">
+                  <div className="flex gap-4">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-stone-900 text-sm font-semibold text-white">{index+1}</span>
+                    <div>
+                      <p className="leading-7 text-stone-700">{step.instruction}</p>
+                      {(step.observation || step.time_text || step.temperature_text) && (
+                        <div className="mt-4 rounded-xl bg-stone-50 p-4 text-sm text-stone-600">
+                          {step.observation && <p>{step.observation}</p>}
+                          {step.time_text && <p className="mt-1">Tiempo: {step.time_text}</p>}
+                          {step.temperature_text && <p className="mt-1">Temperatura: {step.temperature_text}</p>}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <a href="/modulo-1" className="inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white">Volver al módulo</a>
+        </section>
+      </div>
+    </CourseShell>
+  );
+}
