@@ -43,9 +43,11 @@ export async function middleware(request) {
 
     const redirectResponse = NextResponse.redirect(url);
 
-    // Supabase may refresh the auth session in middleware. The refreshed
-    // cookies must also reach the browser when we return a redirect.
-    redirectResponse.cookies.setAll(supabaseResponse.cookies.getAll());
+    // Next.js 13 does not expose cookies.setAll() on NextResponse.
+    // Copy the refreshed Supabase cookies individually.
+    for (const cookie of supabaseResponse.cookies.getAll()) {
+      redirectResponse.cookies.set(cookie);
+    }
 
     for (const header of ['cache-control', 'expires', 'pragma']) {
       const value = supabaseResponse.headers.get(header);
