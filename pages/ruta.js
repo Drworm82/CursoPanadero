@@ -1,6 +1,6 @@
 import CourseShell from '../components/course/CourseShell';
 import ModuleCard from '../components/course/ModuleCard';
-import { getCourseRouteData, requireCourseAuth } from '../lib/course';
+import { getCourseRouteData, createCourseServerClient } from '../lib/course';
 
 export default function RutaPage({ course, modules }) {
   return (
@@ -23,14 +23,16 @@ export default function RutaPage({ course, modules }) {
 }
 
 export async function getServerSideProps({ req, res }) {
-  const { supabase, user } = await requireCourseAuth(req, res);
-  if (!user) return { redirect: { destination: '/acceso', permanent: false } };
+  // Course content is public/read-only. Authentication is handled by the
+  // browser client after sign-in; keeping this data request independent of
+  // SSR auth prevents a client/SSR session redirect loop.
+  const supabase = createCourseServerClient(req, res);
 
   try {
     const { course, modules } = await getCourseRouteData(supabase);
     return { props: { course, modules } };
   } catch (error) {
-    console.error(error);
+    console.error('Route data error:', error);
     return { notFound: true };
   }
 }
