@@ -1,8 +1,24 @@
 import CourseShell from '../../components/course/CourseShell';
 
-export default function ModulePage({ module, lessons }) {
+const module = {
+  sort_order: 1,
+  title: 'Entrar a la panadería: masas batidas pesadas',
+  guiding_question: '¿Qué estoy haciendo cuando mezclo una masa y cómo sé cuándo dejar de trabajarla?',
+  expected_result: 'Ejecutar tres masas batidas pesadas con distintos métodos y describir lo observado.',
+};
+
+const lessons = [
+  { id: '1', sort_order: 1, slug: 'entrar-a-la-panaderia', title: 'Entrar a la panadería', objective: 'Conocer la lógica de la ruta y perder el miedo a empezar.' },
+  { id: '2', sort_order: 2, slug: 'primer-panque-acremado', title: 'Primer panqué: acremado', objective: 'Observar qué ocurre al trabajar una masa batida pesada.' },
+  { id: '3', sort_order: 3, slug: 'segunda-ruta-aceite', title: 'Segunda ruta: aceite', objective: 'Comparar otro método de mezcla.' },
+  { id: '4', sort_order: 4, slug: 'repeticion-con-criterio', title: 'Repetición con criterio', objective: 'Repetir con atención a los cambios.' },
+  { id: '5', sort_order: 5, slug: 'el-horno-tambien-es-parte', title: 'El horno también es parte', objective: 'Entender que el horneado también forma parte del proceso.' },
+  { id: '6', sort_order: 6, slug: 'mini-reto-que-cambio', title: 'Mini reto: ¿qué cambió?', objective: 'Comparar resultados y describir lo observado.' },
+];
+
+export default function ModulePage() {
   return (
-    <CourseShell eyebrow={`Módulo ${module.sort_order}`} title={module.title}>
+    <CourseShell eyebrow="Módulo 1" title={module.title}>
       <div className="grid gap-5 lg:grid-cols-[1.4fr_.6fr]">
         <section className="space-y-5">
           <div className="rounded-2xl border border-stone-200 bg-white p-6">
@@ -22,7 +38,7 @@ export default function ModulePage({ module, lessons }) {
                     <span className="text-sm font-medium text-stone-400">{lesson.sort_order}</span>
                     <div>
                       <h3 className="font-semibold text-stone-900">{lesson.title}</h3>
-                      {lesson.objective && <p className="mt-1 text-sm leading-6 text-stone-600">{lesson.objective}</p>}
+                      <p className="mt-1 text-sm leading-6 text-stone-600">{lesson.objective}</p>
                     </div>
                   </div>
                 </a>
@@ -33,35 +49,8 @@ export default function ModulePage({ module, lessons }) {
         <aside className="rounded-2xl bg-stone-900 p-6 text-white">
           <p className="text-sm font-medium text-stone-300">Progreso</p>
           <p className="mt-2 text-3xl font-semibold">0 / {lessons.length}</p>
-          <p className="mt-2 text-sm leading-6 text-stone-300">Todavía no hay progreso registrado para este módulo.</p>
         </aside>
       </div>
     </CourseShell>
   );
-}
-
-export async function getServerSideProps({ params }) {
-  const { createClient } = await import('@supabase/supabase-js');
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-  );
-
-  const { data: module, error } = await supabase
-    .from('modules')
-    .select('id, slug, title, sort_order, guiding_question, expected_result')
-    .eq('slug', params.slug)
-    .single();
-
-  if (error || !module) return { notFound: true };
-
-  const { data: lessons, error: lessonsError } = await supabase
-    .from('lessons')
-    .select('id, module_id, slug, title, sort_order, lesson_type, objective')
-    .eq('module_id', module.id)
-    .order('sort_order');
-
-  if (lessonsError) return { notFound: true };
-
-  return { props: { module, lessons: lessons || [] } };
 }
