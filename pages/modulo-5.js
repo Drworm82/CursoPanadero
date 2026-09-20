@@ -10,7 +10,7 @@ const module = {
 const lessons = [
   ['35', 'Entrar al pan mexicano', 'Identifica qué productos mexicanos están realmente documentados y qué aspectos de su elaboración pueden compararse.', '/leccion-entrar-al-pan-mexicano', true],
   ['36', 'Conchas: una masa, dos preparaciones', 'Analiza la masa fermentada y la pasta de cobertura de las conchas como partes distintas del mismo producto.', '/leccion-conchas-una-masa-dos-preparaciones', true],
-  ['37', 'Pan de pulque: otra ruta de fermentación', 'Reconoce la secuencia particular del pan de pulque y compara su fórmula con otras masas enriquecidas.', '#', false],
+  ['37', 'Pan de pulque: otra ruta de fermentación', 'Reconoce la secuencia particular del pan de pulque y compara su fórmula con otras masas enriquecidas.', '/leccion-pan-de-pulque-otra-ruta-fermentacion', true],
   ['38', 'Garibaldis: estructura, acabado e identidad', 'Observa cómo una preparación horneada se completa con mermelada y gragea blanca.', '#', false],
   ['39', 'Comparar para reconocer', 'Integra conchas, pan de pulque y garibaldis y distingue qué cambia en ingredientes, proceso, formado y acabado.', '#', false],
 ];
