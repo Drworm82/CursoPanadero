@@ -58,11 +58,10 @@ const modules = [
   {
     id: 'modulo-7',
     sort_order: 7,
-    href: '#',
+    href: '/modulo-7',
     title: 'Chocolatería',
     guiding_question: '¿Qué cambia cuando controlamos la cristalización del chocolate?',
     expected_result: 'Comprender el temperado y sus aplicaciones en piezas moldeadas, rellenas y decorativas.',
-    comingSoon: true,
   },
   {
     id: 'modulo-8',
