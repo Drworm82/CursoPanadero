@@ -5,7 +5,7 @@ export default function LessonNineteenPage() {
     <CourseShell
       eyebrow="Lección 19"
       title="El vapor construye el interior"
-      backHref="/modulo-4"
+      backHref="/modulo-3"
       backLabel="Volver al módulo"
     >
       <div className="space-y-8">
