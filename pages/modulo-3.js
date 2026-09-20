@@ -18,7 +18,7 @@ const lessons = [
   ['20', 'De una masa salen varios productos', 'Lleva la misma base técnica a profiteroles, éclairs, cisnes y religiosas y entiende qué cambia al convertir una masa en productos distintos.', '/leccion-de-una-masa-salen-varios-productos'],
   ['21', 'Crema y relleno también construyen el producto', 'Integra las preparaciones de crema y relleno que acompañan a las piezas de choux.', '/leccion-crema-y-relleno'],
   ['22', 'La consistencia también construye el acabado', 'Relaciona la consistencia de una preparación con su uso para rellenar, cubrir o decorar.', '/leccion-montar-y-decorar'],
-  ['23', 'Cuando una estructura necesita frío', 'Introduce la lógica de los cheesecakes horneados y fríos y el papel del montaje y la refrigeración.', '#'],
+  ['23', 'Cuando una estructura necesita frío', 'Compara cómo un cheesecake horneado y uno frío llegan a una estructura estable mediante rutas distintas.', '/leccion-cuando-una-estructura-necesita-frio'],
   ['24', 'Cerrar un pastel: estructura, humedad y acabado', 'Integra las decisiones de masa, crema, humedad y acabado antes de pasar a la panadería fermentada.', '#'],
 ];
 
