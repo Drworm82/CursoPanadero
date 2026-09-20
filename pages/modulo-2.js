@@ -12,7 +12,7 @@ const lessons = [
   ['8', 'Sablée y sucrée', 'Conoce el método de arenado y compara dos pastas friables de la fuente.', '/leccion-sablee-y-sucree'],
   ['9', 'De la pasta a la tarta', 'Aplica la pasta, cocínala, impermeabilízala y entiende cómo se construye una tarta de frutas.', '/leccion-de-la-pasta-a-la-tarta'],
   ['10', 'Pay de limón', 'Integra una pasta sucrée con crema de limón y merengue suizo.', '/leccion-pay-de-limon'],
-  ['11', 'Lo que cambia cuando cambia el objetivo', 'Cierra el módulo relacionando gluten, grasa, reposo y método.', '#'],
+  ['11', 'Lo que cambia cuando cambia el objetivo', 'Cierra el módulo relacionando gluten, grasa, reposo y método.', '/leccion-lo-que-cambia-el-objetivo'],
 ];
 
 const sourceNote = 'La secuencia reorganiza los contenidos de la Clase 4 para que primero se entienda el principio técnico y después se practiquen sus aplicaciones.';
