@@ -1,4 +1,4 @@
-import LessonShell from '../components/course/LessonShell';
+import CourseShell from '../components/course/CourseShell';
 
 const lesson = {
   number: '38',
@@ -21,7 +21,7 @@ const ingredients = [
 
 export default function LessonGaribaldisPage() {
   return (
-    <LessonShell
+    <CourseShell
       eyebrow="Módulo 5 · Lección 38"
       title={lesson.title}
       subtitle={lesson.subtitle}
@@ -142,6 +142,6 @@ export default function LessonGaribaldisPage() {
           </p>
         </section>
       </div>
-    </LessonShell>
+    </CourseShell>
   );
 }
