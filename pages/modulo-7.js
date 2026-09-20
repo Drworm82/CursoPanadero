@@ -8,13 +8,13 @@ const moduleInfo = {
 };
 
 const lessons = [
-  ['51', 'El chocolate como materia prima', 'Reconoce los tipos de chocolate que aparecen en la fuente y qué cambia al trabajar con esta materia prima.', '/leccion-chocolate-como-materia-prima', false],
-  ['52', 'Temperado: controlar la cristalización', 'Comprende la secuencia del temperado y su relación con el trabajo del chocolate.', '/leccion-temperado-cristalizacion', false],
-  ['53', 'Chocolate moldeado', 'Relaciona el chocolate temperado con moldes y piezas moldeadas documentadas.', '/leccion-chocolate-moldeado', false],
-  ['54', 'Rellenos y ganaches', 'Observa cómo el chocolate pasa de cobertura o pieza a preparación para relleno.', '/leccion-rellenos-y-ganaches', false],
-  ['55', 'Bombonería, trufas, rochers y cortes', 'Distingue diferentes formas de trabajar, porcionar y terminar preparaciones de chocolate documentadas.', '/leccion-bomboneria-trufas-rochers-cortes', false],
-  ['56', 'Transfer y acabado', 'Reconoce el uso del transfer y otras operaciones de acabado documentadas en la fuente.', '/leccion-transfer-y-acabado', false],
-  ['57', 'Ganaches avanzadas: trimolina, sorbitol y emulsión', 'Integra los ingredientes y operaciones específicos de las ganaches avanzadas que aparecen en la fuente.', '/leccion-ganaches-avanzadas', false],
+  ['51', 'El chocolate como materia prima', 'Reconoce los tipos de chocolate que aparecen en la fuente y qué cambia al trabajar con esta materia prima.', '/leccion-chocolate-como-materia-prima', true],
+  ['52', 'Temperado: controlar la cristalización', 'Comprende la secuencia del temperado y su relación con el trabajo del chocolate.', '/leccion-temperado-cristalizacion', true],
+  ['53', 'Chocolate moldeado', 'Relaciona el chocolate temperado con moldes y piezas moldeadas documentadas.', '/leccion-chocolate-moldeado', true],
+  ['54', 'Rellenos y ganaches', 'Observa cómo el chocolate pasa de cobertura o pieza a preparación para relleno.', '/leccion-rellenos-y-ganaches', true],
+  ['55', 'Bombonería, trufas, rochers y cortes', 'Distingue diferentes formas de trabajar, porcionar y terminar preparaciones de chocolate documentadas.', '/leccion-bomboneria-trufas-rochers-cortes', true],
+  ['56', 'Transfer y acabado', 'Reconoce el uso del transfer y otras operaciones de acabado documentadas en la fuente.', '/leccion-transfer-y-acabado', true],
+  ['57', 'Ganaches avanzadas: trimolina, sorbitol y emulsión', 'Integra los ingredientes y operaciones específicos de las ganaches avanzadas que aparecen en la fuente.', '/leccion-ganaches-avanzadas', true],
 ];
 
 export default function ModuleSevenPage() {
