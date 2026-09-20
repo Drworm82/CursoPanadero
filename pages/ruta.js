@@ -50,11 +50,10 @@ const modules = [
   {
     id: 'modulo-6',
     sort_order: 6,
-    href: '#',
+    href: '/modulo-6',
     title: 'Laminados',
     guiding_question: '¿Cómo se construyen capas de masa y grasa y qué hace que se separen durante el horneado?',
-    expected_result: 'Comprender el principio de laminación y reconocer sus aplicaciones en hojaldre, croissant y piezas danesas.',
-    comingSoon: true,
+    expected_result: 'Reconocer el empaste, la refrigeración y las vueltas documentadas en croissant y pan danés, y comparar cómo esas operaciones se integran en cada receta.',
   },
   {
     id: 'modulo-7',
