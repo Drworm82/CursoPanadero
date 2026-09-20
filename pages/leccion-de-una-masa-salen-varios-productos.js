@@ -28,7 +28,7 @@ export default function LessonTwentyPage() {
     <CourseShell
       eyebrow="Lección 20"
       title="De una masa salen varios productos"
-      backHref="/modulo-4"
+      backHref="/modulo-3"
       backLabel="Volver al módulo"
     >
       <div className="space-y-8">
