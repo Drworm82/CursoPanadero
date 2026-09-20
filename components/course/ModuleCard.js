@@ -11,7 +11,7 @@ export default function ModuleCard({ module }) {
         <p className="mt-3 text-stone-600">{module.guiding_question}</p>
       )}
       <a
-        href={module.slug === 'modulo-1-masas-batidas-pesadas' ? '/modulo-1' : '#'}
+        href={module.href || '#'}
         className="mt-6 inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white hover:bg-stone-700"
       >
         Ver módulo
