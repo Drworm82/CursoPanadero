@@ -14,7 +14,7 @@ const lessons = [
   ['28', 'Baguette: estructura, formado y greñado', 'Ubica el formado y la segunda fermentación dentro del proceso, y distingue qué información sobre greñado todavía falta en la fuente.', '/leccion-baguette-estructura-formado-greñado'],
   ['29', 'Focaccia: otra forma de entender la hidratación', 'Compara cantidades de harina y agua en distintas recetas y distingue qué información sobre focaccia e hidratación todavía falta en la fuente.', '/leccion-focaccia-otra-forma-hidratacion'],
   ['30', 'Ciabatta y biga', 'Reconoce la definición de biga y distingue qué información sobre biga y ciabatta todavía falta en la fuente.', '/leccion-ciabatta-y-biga'],
-  ['31', 'Panes enriquecidos', 'Reconoce qué ocurre cuando una masa de pan incorpora grasa, azúcar y huevo.', '#'],
+  ['31', 'Panes enriquecidos', 'Compara cómo distintas recetas incorporan grasa, azúcar y huevo y cómo cambia su manejo.', '/leccion-panes-enriquecidos'],
   ['32', 'Brioche: grasa, azúcar y fermentación', 'Estudia una masa enriquecida y el papel de una fermentación prolongada en refrigeración.', '#'],
   ['33', 'Bagels y pita: el formato cambia el proceso', 'Compara dos panes cuya forma y cocción producen resultados muy distintos.', '#'],
   ['34', 'Fougasse y panes saborizados', 'Integra formado, acabado y adición de ingredientes en panes con identidad propia.', '#'],
@@ -55,14 +55,8 @@ export default function ModuleFourPage() {
           <div className="grid gap-3">
             {lessons.map(([number, title, description, href]) =>
               href !== '#' ? (
-                <a
-                  key={number}
-                  href={href}
-                  className="flex items-center gap-4 rounded-2xl border border-amber-200 bg-white p-5 shadow-sm hover:border-amber-300 hover:shadow-md"
-                >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
-                    {number}
-                  </span>
+                <a key={number} href={href} className="flex items-center gap-4 rounded-2xl border border-amber-200 bg-white p-5 shadow-sm hover:border-amber-300 hover:shadow-md">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">{number}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block font-semibold text-stone-900">{title}</span>
                     <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
@@ -70,13 +64,8 @@ export default function ModuleFourPage() {
                   <span className="shrink-0 text-sm font-medium text-amber-700">Abrir →</span>
                 </a>
               ) : (
-                <div
-                  key={number}
-                  className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm opacity-70"
-                >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
-                    {number}
-                  </span>
+                <div key={number} className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm opacity-70">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">{number}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block font-semibold text-stone-900">{title}</span>
                     <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
