@@ -3,46 +3,56 @@ import CourseShell from './CourseShell';
 const recipeObservationGuides = {
   'rosca-pina-colada': [
     {
-      observation: 'Pon atención a la textura de la mantequilla con el azúcar: busca una mezcla más suave y homogénea que al inicio.',
-      interpretation: 'Este cambio es la primera señal de que el método de acremado está haciendo su trabajo.',
+      observation: 'Pon atención a la textura de la mantequilla con el azúcar: busca una mezcla más suave, cremosa y homogénea que al inicio.',
+      phenomenon: 'Al batir, los cristales de azúcar rozan y fragmentan la estructura de la mantequilla mientras el batido favorece la incorporación de pequeñas burbujas de aire.',
+      importance: 'Por eso la mezcla cambia de textura, puede verse más pálida y aumenta su volumen. Esas señales te indican que el acremado está ocurriendo.',
     },
     {
       observation: 'Pon atención a la apariencia de la mezcla después de cada huevo: fíjate si se mantiene uniforme y cómo cambia su textura.',
-      interpretation: 'La forma en que incorporas los huevos modifica el estado de la mezcla; no avances automáticamente sin mirar qué ocurrió.',
-      chibi: '¿Por qué uno por uno? Porque cada incorporación cambia la mezcla y permite trabajarla de forma progresiva.',
+      phenomenon: 'El huevo aporta una cantidad importante de agua a una mezcla cuya base es grasa. Al incorporarlo progresivamente, la grasa y la fase acuosa pueden mantenerse integradas durante el batido.',
+      importance: 'Por eso los huevos se incorporan uno a uno y se espera a que cada adición se integre antes de continuar.',
+      chibi: '¿Por qué uno por uno? Porque no estamos agregando simplemente líquido: estamos incorporando una nueva fase a una mezcla basada en grasa.',
     },
     {
       observation: 'Pon atención a cómo queda distribuido el coco tostado en la mezcla antes de incorporar los secos.',
-      interpretation: 'Aquí todavía estás construyendo una mezcla homogénea sin perder de vista su textura.',
+      phenomenon: 'El coco aporta partículas sólidas que deben repartirse por toda la mezcla.',
+      importance: 'Una distribución uniforme ayuda a que el sabor y la textura del coco aparezcan a lo largo de la pieza y no queden concentrados en un solo lugar.',
     },
     {
       observation: 'Pon atención a los secos después de cernirlos: busca una mezcla suelta y sin grumos antes de incorporarlos.',
-      interpretation: 'La incorporación de los secos empieza a cambiar la estructura de la preparación.',
+      phenomenon: 'El cernido separa los grumos y ayuda a distribuir los ingredientes secos entre sí.',
+      importance: 'Así puedes incorporarlos de manera más uniforme y evitar que queden concentraciones de harina o polvo para hornear.',
     },
     {
       observation: 'Pon atención a la textura mientras alternas la leche de coco y los secos. Fíjate en el momento en que todo queda integrado y deja de batir.',
-      interpretation: 'El punto de dejar de trabajar la mezcla es parte de la técnica: no se trata de batir más, sino de llegar al estado necesario.',
-      chibi: '¿Qué debes aprender aquí? A reconocer cuándo continuar trabajando y cuándo parar.',
+      phenomenon: 'Al entrar la harina en contacto con los líquidos y recibir trabajo mecánico, sus proteínas pueden formar gluten.',
+      importance: 'En una masa batida pesada no buscamos desarrollar una red de gluten como en un pan. Por eso la harina se integra y el batido se detiene cuando la mezcla ya está unificada.',
+      chibi: 'Aquí aparece una idea que volverá más adelante: en algunas preparaciones queremos desarrollar estructura y en otras queremos limitar ese desarrollo.',
     },
     {
       observation: 'Pon atención a la distribución de la piña cristalizada: debe quedar repartida en la masa mientras mantienes los movimientos envolventes.',
-      interpretation: 'La mezcla ya tiene la estructura que buscas; ahora el objetivo es incorporar el ingrediente sin sobretrabajarla.',
+      phenomenon: 'La piña es un ingrediente sólido que se incorpora cuando la masa ya está formada.',
+      importance: 'Los movimientos envolventes permiten repartirla sin volver a someter toda la masa al trabajo mecánico de la batidora.',
     },
     {
       observation: 'Pon atención durante el horneado al volumen, al cambio de color de la superficie y a cómo se va formando la estructura de la rosca.',
-      interpretation: 'El horno transforma la mezcla que acabas de preparar. La temperatura indicada en la receta forma parte del proceso, no es un dato independiente.',
+      phenomenon: 'El calor provoca cambios simultáneos en la masa: los gases se expanden, se produce vapor, actúan los agentes leudantes y la estructura de la masa se va fijando.',
+      importance: 'Por eso el horno no solamente “cocina” la mezcla: transforma la estructura que construiste durante la preparación.',
     },
     {
       observation: 'Pon atención a la firmeza y a la estructura de la rosca después de enfriar y desmoldar, antes de cubrirla.',
-      interpretation: 'El resultado final permite relacionar lo que hiciste durante la mezcla y la cocción con la estructura obtenida.',
+      phenomenon: 'Al enfriarse, la estructura formada durante el horneado termina de estabilizarse y la grasa se vuelve más firme.',
+      importance: 'Este es el momento de comprobar la estructura obtenida antes de añadir el glaseado.',
     },
     {
       observation: 'Pon atención a la consistencia del glaseado mientras agregas la leche de coco: debe quedar fluido pero consistente.',
-      interpretation: 'La cantidad de líquido determina la consistencia del glaseado; aquí debes aprender a reconocer el punto, no solamente repetir una cantidad.',
+      phenomenon: 'El azúcar glass se mezcla con una cantidad limitada de líquido; al aumentar el líquido, cambia la viscosidad de la mezcla.',
+      importance: 'Por eso la leche de coco se incorpora poco a poco: buscas una consistencia concreta, no simplemente utilizar todo el líquido de una vez.',
     },
     {
       observation: 'Pon atención a cómo se extiende el glaseado sobre la rosca y a la distribución del coco sobre la cobertura.',
-      interpretation: 'El acabado es la última etapa de la preparación y también sirve para evaluar la consistencia que obtuviste.',
+      phenomenon: 'La consistencia del glaseado determina cómo se desplaza y se queda sobre la superficie.',
+      importance: 'El acabado te permite comprobar si alcanzaste la consistencia adecuada y si puedes distribuir la cobertura de manera uniforme.',
     },
   ],
 };
@@ -129,7 +139,7 @@ export default function RecipeView({ recipe, ingredients, steps }) {
         <section>
           <div className="mb-5">
             <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Paso a paso</p>
-            <h2 className="mt-1 text-2xl font-semibold text-stone-900">Trabaja, observa e interpreta</h2>
+            <h2 className="mt-1 text-2xl font-semibold text-stone-900">Trabaja, observa y entiende</h2>
           </div>
 
           <ol className="space-y-4">
@@ -162,10 +172,17 @@ export default function RecipeView({ recipe, ingredients, steps }) {
                         </div>
                       )}
 
-                      {interpretation && (
+                      {guide?.phenomenon && (
                         <div className="mt-3 rounded-xl bg-stone-50 p-4">
-                          <p className="text-sm font-medium text-stone-800">Interpreta</p>
-                          <p className="mt-1 text-sm leading-6 text-stone-700">{interpretation}</p>
+                          <p className="text-sm font-medium text-stone-800">Qué está ocurriendo</p>
+                          <p className="mt-1 text-sm leading-6 text-stone-700">{guide.phenomenon}</p>
+                        </div>
+                      )}
+
+                      {guide?.importance && (
+                        <div className="mt-3 rounded-xl border border-stone-200 bg-white p-4">
+                          <p className="text-sm font-medium text-stone-800">¿Por qué importa?</p>
+                          <p className="mt-1 text-sm leading-6 text-stone-700">{guide.importance}</p>
                         </div>
                       )}
 
@@ -189,21 +206,21 @@ export default function RecipeView({ recipe, ingredients, steps }) {
           <div className="mt-4 space-y-4 text-stone-600">
             <div className="space-y-3">
               <div className="rounded-xl bg-stone-50 p-4">
-                <p className="font-medium text-stone-900">1. Al acremar la mantequilla con el azúcar</p>
+                <p className="font-medium text-stone-900">1. El acremado</p>
                 <p className="mt-1 leading-7">
-                  El azúcar ayuda a trabajar mecánicamente la mantequilla mientras se mezclan. Sus cristales generan pequeñas irregularidades en la grasa y, al batir, favorecen la incorporación de aire. Por eso la mezcla se vuelve más suave, ligera y puede verse más pálida. Ese cambio es una de las señales que buscamos al acremar.
+                  Los cristales de azúcar ayudan mecánicamente a trabajar la mantequilla durante el batido. Al mismo tiempo, el batido favorece la incorporación de pequeñas burbujas de aire. Por eso la mezcla se vuelve más cremosa, puede verse más pálida y aumenta su volumen.
                 </p>
               </div>
               <div className="rounded-xl bg-stone-50 p-4">
-                <p className="font-medium text-stone-900">2. Al incorporar los huevos y los secos</p>
+                <p className="font-medium text-stone-900">2. La incorporación de huevos y harina</p>
                 <p className="mt-1 leading-7">
-                  La mezcla cambia progresivamente de textura y empieza a tomar la estructura de la masa. Por eso es importante incorporar los ingredientes según el procedimiento y dejar de trabajarla cuando ya están integrados.
+                  Los huevos aportan una fase acuosa que debe integrarse progresivamente con la grasa. Después, al incorporar la harina, comienza a desarrollarse estructura y el trabajo mecánico puede favorecer la formación de gluten. En esta preparación queremos integrar la harina, no desarrollar una red de gluten como en un pan.
                 </p>
               </div>
               <div className="rounded-xl bg-stone-50 p-4">
-                <p className="font-medium text-stone-900">3. Durante el horneado</p>
+                <p className="font-medium text-stone-900">3. El horneado</p>
                 <p className="mt-1 leading-7">
-                  La masa cambia de volumen, color y estructura hasta convertirse en una rosca horneada con una estructura firme después de enfriar.
+                  El calor transforma la masa: los gases y el vapor se expanden, actúan los agentes leudantes y la estructura se fija. Por eso puedes relacionar el volumen, el color y la firmeza finales con todo lo que ocurrió antes de meter la rosca al horno.
                 </p>
               </div>
             </div>
