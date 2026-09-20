@@ -146,7 +146,6 @@ export default function RecipeView({ recipe, ingredients, steps }) {
             {steps.map((step, index) => {
               const guide = guides[index];
               const observation = guide?.observation || step.observation;
-              const interpretation = guide?.interpretation;
 
               return (
                 <li key={step.id} className="rounded-2xl border border-stone-200 bg-white p-5 sm:p-6">
