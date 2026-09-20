@@ -3,7 +3,7 @@ import CourseShell from '../components/course/CourseShell';
 export default function LessonFifteenPage() {
   return (
     <CourseShell
-      eyebrow="Lección 15"
+      eyebrow="Lección 16"
       title="Tres leches: cuando una masa recibe humedad"
       backHref="/modulo-3"
       backLabel="Volver al módulo"
