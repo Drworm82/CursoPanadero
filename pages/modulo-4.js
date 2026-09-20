@@ -16,7 +16,7 @@ const lessons = [
   ['30', 'Ciabatta y biga', 'Reconoce la definición de biga y distingue qué información sobre biga y ciabatta todavía falta en la fuente.', '/leccion-ciabatta-y-biga'],
   ['31', 'Panes enriquecidos', 'Compara cómo distintas recetas incorporan grasa, azúcar y huevo y cómo cambia su manejo.', '/leccion-panes-enriquecidos'],
   ['32', 'Brioche: grasa, azúcar y fermentación', 'Compara masas enriquecidas documentadas y distingue qué información específica de brioche todavía falta en la fuente.', '/leccion-brioche-grasa-azucar-fermentacion'],
-  ['33', 'Bagels y pita: el formato cambia el proceso', 'Compara dos panes cuya forma y cocción producen resultados muy distintos.', '#'],
+  ['33', 'Bagels y pita: el formato cambia el proceso', 'Distingue el proceso general documentado de la información específica que falta sobre bagels y pita.', '/leccion-bagels-y-pita'],
   ['34', 'Fougasse y panes saborizados', 'Integra formado, acabado y adición de ingredientes en panes con identidad propia.', '#'],
 ];
 
