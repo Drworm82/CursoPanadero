@@ -162,8 +162,6 @@ const recipeObservationGuides = {
   ]
 };
 
-};
-
 export default function RecipeView({ recipe, ingredients, steps }) {
   const guides = recipeObservationGuides[recipe.slug] || [];
   const lessonLink = lessonLinks[recipe.slug];
