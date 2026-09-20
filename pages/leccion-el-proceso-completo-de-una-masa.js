@@ -188,16 +188,17 @@ export default function LessonTwentyFivePage() {
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Siguiente lección</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Fermentar es transformar</h2>
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Continuación del módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">La secuencia será nuestro mapa</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-            En la siguiente lección vamos a detenernos en las señales de la fermentación y en cómo leer su avance dentro del proceso.
+            Las siguientes lecciones tomarán esta secuencia como punto de partida para comparar fermentación,
+            amasado, formado y diferentes familias de pan.
           </p>
           <a
-            href="/leccion-fermentar-es-transformar"
+            href="/modulo-4"
             className="mt-5 inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white hover:bg-stone-800"
           >
-            Ir a la siguiente lección →
+            Volver al Módulo 4 →
           </a>
         </section>
       </div>
