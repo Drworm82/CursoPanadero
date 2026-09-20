@@ -3,45 +3,45 @@ import CourseShell from './CourseShell';
 const recipeObservationGuides = {
   'rosca-pina-colada': [
     {
-      observation: 'Mira la mantequilla con el azúcar: debe verse más suave y trabajada que al inicio. Compara la textura antes de continuar.',
+      observation: 'Pon atención a la textura de la mantequilla con el azúcar: busca una mezcla más suave y homogénea que al inicio.',
       interpretation: 'Este cambio es la primera señal de que el método de acremado está haciendo su trabajo.',
     },
     {
-      observation: 'Al incorporar cada huevo, observa si la mezcla conserva una apariencia uniforme o cambia de textura.',
+      observation: 'Pon atención a la apariencia de la mezcla después de cada huevo: fíjate si se mantiene uniforme y cómo cambia su textura.',
       interpretation: 'La forma en que incorporas los huevos modifica el estado de la mezcla; no avances automáticamente sin mirar qué ocurrió.',
       chibi: '¿Por qué uno por uno? Porque cada incorporación cambia la mezcla y permite trabajarla de forma progresiva.',
     },
     {
-      observation: 'Después de agregar el coco tostado, observa cómo queda distribuido antes de incorporar los secos.',
+      observation: 'Pon atención a cómo queda distribuido el coco tostado en la mezcla antes de incorporar los secos.',
       interpretation: 'Aquí todavía estás construyendo una mezcla homogénea sin perder de vista su textura.',
     },
     {
-      observation: 'Después de cernir la harina y el polvo para hornear, compara la mezcla con el paso anterior.',
+      observation: 'Pon atención a los secos después de cernirlos: busca una mezcla suelta y sin grumos antes de incorporarlos.',
       interpretation: 'La incorporación de los secos empieza a cambiar la estructura de la preparación.',
     },
     {
-      observation: 'Al alternar la leche de coco y los secos, observa cómo cambia la textura. En cuanto estén incorporados, detén el batido.',
+      observation: 'Pon atención a la textura mientras alternas la leche de coco y los secos. Fíjate en el momento en que todo queda integrado y deja de batir.',
       interpretation: 'El punto de dejar de trabajar la mezcla es parte de la técnica: no se trata de batir más, sino de llegar al estado necesario.',
       chibi: '¿Qué debes aprender aquí? A reconocer cuándo continuar trabajando y cuándo parar.',
     },
     {
-      observation: 'Al incorporar la piña cristalizada con movimientos envolventes, fíjate en que quede distribuida sin trabajar nuevamente toda la masa con la batidora.',
+      observation: 'Pon atención a la distribución de la piña cristalizada: debe quedar repartida en la masa mientras mantienes los movimientos envolventes.',
       interpretation: 'La mezcla ya tiene la estructura que buscas; ahora el objetivo es incorporar el ingrediente sin sobretrabajarla.',
     },
     {
-      observation: 'Antes de hornear, mira la preparación en el molde. Durante el horneado observa cómo cambia su volumen, color y estructura.',
+      observation: 'Pon atención durante el horneado al volumen, al cambio de color de la superficie y a cómo se va formando la estructura de la rosca.',
       interpretation: 'El horno transforma la mezcla que acabas de preparar. La temperatura indicada en la receta forma parte del proceso, no es un dato independiente.',
     },
     {
-      observation: 'Después de enfriar y desmoldar, observa la firmeza y la estructura de la rosca antes de cubrirla.',
+      observation: 'Pon atención a la firmeza y a la estructura de la rosca después de enfriar y desmoldar, antes de cubrirla.',
       interpretation: 'El resultado final permite relacionar lo que hiciste durante la mezcla y la cocción con la estructura obtenida.',
     },
     {
-      observation: 'Al preparar el glaseado, observa cómo cambia la consistencia al incorporar poco a poco la leche de coco.',
+      observation: 'Pon atención a la consistencia del glaseado mientras agregas la leche de coco: debe quedar fluido pero consistente.',
       interpretation: 'La cantidad de líquido determina la consistencia del glaseado; aquí debes aprender a reconocer el punto, no solamente repetir una cantidad.',
     },
     {
-      observation: 'Al cubrir la rosca, observa cómo se comporta el glaseado sobre la superficie y cómo queda distribuido el coco.',
+      observation: 'Pon atención a cómo se extiende el glaseado sobre la rosca y a la distribución del coco sobre la cobertura.',
       interpretation: 'El acabado es la última etapa de la preparación y también sirve para evaluar la consistencia que obtuviste.',
     },
   ],
@@ -135,7 +135,7 @@ export default function RecipeView({ recipe, ingredients, steps }) {
           <ol className="space-y-4">
             {steps.map((step, index) => {
               const guide = guides[index];
-              const observation = guide?.observation || step.observation || 'Detente un momento y compara lo que ves con lo que esperabas obtener.';
+              const observation = guide?.observation || step.observation;
               const interpretation = guide?.interpretation;
 
               return (
@@ -155,10 +155,12 @@ export default function RecipeView({ recipe, ingredients, steps }) {
                         </div>
                       )}
 
-                      <div className="mt-5 rounded-xl bg-amber-50 p-4">
-                        <p className="text-sm font-medium text-amber-900">Observa</p>
-                        <p className="mt-1 text-sm leading-6 text-amber-950">{observation}</p>
-                      </div>
+                      {observation && (
+                        <div className="mt-5 rounded-xl bg-amber-50 p-4">
+                          <p className="text-sm font-medium text-amber-900">Observa</p>
+                          <p className="mt-1 text-sm leading-6 text-amber-950">{observation}</p>
+                        </div>
+                      )}
 
                       {interpretation && (
                         <div className="mt-3 rounded-xl bg-stone-50 p-4">
