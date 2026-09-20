@@ -12,8 +12,8 @@ export default function RecipeView({ recipe, ingredients, steps }) {
       eyebrow="Preparación"
       title={recipe.title}
       description={recipe.source_objective}
-      backHref="/leccion-primer-panque-acremado"
-      backLabel="Volver a la lección"
+      backHref="/modulo-1"
+      backLabel="Volver al módulo"
     >
       <div className="space-y-8">
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
