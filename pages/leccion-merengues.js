@@ -3,7 +3,7 @@ import CourseShell from '../components/course/CourseShell';
 export default function LessonSixteenPage() {
   return (
     <CourseShell
-      eyebrow="Lección 16"
+      eyebrow="Lección 15"
       title="Merengues: aire + azúcar"
       backHref="/modulo-3"
       backLabel="Volver al módulo"
