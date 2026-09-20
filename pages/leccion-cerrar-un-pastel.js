@@ -58,7 +58,7 @@ export default function LessonTwentyFourPage() {
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">Cuatro productos para aprender a leer la secuencia</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">Cinco productos para aprender a leer la secuencia</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">
             No necesitas aprender cuatro recetas aisladas. Compara qué ocurre después de que cada estructura está lista.
           </p>
@@ -132,6 +132,24 @@ export default function LessonTwentyFourPage() {
               </p>
               <p className="mt-3 text-sm font-medium text-amber-900">
                 Lectura: base → mousse → contención → frío → glaseado → desmolde.
+              </p>
+            </article>
+
+            <article className="rounded-2xl bg-stone-100 p-5">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p className="text-sm font-medium text-stone-500">Choux</p>
+                  <h3 className="text-xl font-semibold text-stone-900">Una estructura hueca recibe el producto que la completa</h3>
+                </div>
+                <span className="text-sm text-stone-500">Clase 11</span>
+              </div>
+              <p className="mt-3 leading-7 text-stone-700">
+                La fuente presenta las piezas de choux como estructuras que pueden rellenarse, cubrirse,
+                glasearse y decorarse. Enumera profiteroles, cisnes, éclairs y religiosas, pero no desarrolla
+                en esta sección un procedimiento completo para cada forma.
+              </p>
+              <p className="mt-3 text-sm font-medium text-stone-800">
+                Lectura: estructura hueca → relleno → cobertura o glaseado → decoración.
               </p>
             </article>
           </div>
@@ -248,8 +266,8 @@ export default function LessonTwentyFourPage() {
               gelatina, montaje y refrigeración antes del desmolde.
             </p>
             <p className="leading-7">
-              <strong>La receta puede leerse como una secuencia:</strong> estructura, transformación, montaje y
-              señal de finalización.
+              <strong>El producto terminado es una secuencia de decisiones, no solamente una receta:</strong>
+              estructura, humedad, relleno, montaje, cobertura y acabado aparecen de maneras diferentes según el producto.
             </p>
           </div>
         </section>
