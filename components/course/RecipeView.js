@@ -16,15 +16,23 @@ export default function RecipeView({ recipe, ingredients, steps }) {
       backLabel="Volver al módulo"
     >
       <div className="space-y-8">
-        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-300">Antes de empezar</p>
-          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-100">
-            No empieces leyendo todos los pasos como una lista que debes memorizar.
-            Trabaja un paso, observa qué ocurrió y después continúa.
-          </p>
+        <section className="relative overflow-hidden rounded-3xl bg-stone-900 p-6 text-white shadow-sm sm:p-8">
+          <div className="relative max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">Antes de empezar</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Haz, observa y continúa.</h2>
+            <p className="mt-3 text-base leading-7 text-stone-300 sm:text-lg sm:leading-8">
+              No necesitas memorizar todos los pasos. Trabaja uno, observa qué ocurrió y después continúa.
+            </p>
+          </div>
         </section>
 
-        <div className="grid gap-6 lg:grid-cols-[.7fr_1.3fr]">
+        <section className="grid gap-3 sm:grid-cols-3" aria-label="Datos de la preparación">
+          <div className="rounded-xl bg-stone-50 px-4 py-3"><p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">Dificultad</p><p className="mt-1 font-medium text-stone-900">{recipe.difficulty || '—'}</p></div>
+          <div className="rounded-xl bg-stone-50 px-4 py-3"><p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">Tiempo</p><p className="mt-1 font-medium text-stone-900">{recipe.source_time || '—'}</p></div>
+          <div className="rounded-xl bg-stone-50 px-4 py-3"><p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">Rendimiento</p><p className="mt-1 font-medium text-stone-900">{recipe.source_yield || '—'}</p></div>
+        </section>
+
+        <div className="grid gap-8 lg:grid-cols-[minmax(240px,.7fr)_minmax(0,1.3fr)] lg:items-start">
           <aside className="space-y-5">
             <div className="rounded-2xl border border-stone-200 bg-white p-6">
               <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Ficha</p>
