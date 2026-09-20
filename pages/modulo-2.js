@@ -10,7 +10,7 @@ const module = {
 const lessons = [
   ['7', 'Una masa que quiere lo contrario', 'Descubre por qué en una masa friable buscamos mantener el gluten lo más aislado posible.', '/leccion-masa-friable'],
   ['8', 'Sablée y sucrée', 'Conoce el método de arenado y compara dos pastas friables de la fuente.', '/leccion-sablee-y-sucree'],
-  ['9', 'De la pasta a la tarta', 'Aplica la pasta, cocínala, impermeabilízala y entiende cómo se construye una tarta de frutas.', '#'],
+  ['9', 'De la pasta a la tarta', 'Aplica la pasta, cocínala, impermeabilízala y entiende cómo se construye una tarta de frutas.', '/leccion-de-la-pasta-a-la-tarta'],
   ['10', 'Pay de limón', 'Integra una pasta sucrée con crema de limón y merengue suizo.', '#'],
   ['11', 'Lo que cambia cuando cambia el objetivo', 'Cierra el módulo relacionando gluten, grasa, reposo y método.', '#'],
 ];
