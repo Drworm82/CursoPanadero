@@ -11,7 +11,7 @@ const lessons = [
   ['12', 'El aire también construye la estructura', 'Entiende cómo el batido del huevo incorpora aire y por qué la mezcla posterior debe tratarse con cuidado.', '/leccion-el-aire-construye-la-estructura'],
   ['13', 'Cuando el huevo sostiene una masa', 'Aplicar el principio de las masas batidas ligeras y reconocer el punto de batido.', '/leccion-cuando-el-huevo-sostiene-una-masa'],
   ['14', 'El pionono: construir y conservar volumen', 'Llevar el principio a una masa flexible y en plancha.', '/leccion-el-pionono'],
-  ['15', 'Tres leches: cuando una masa recibe humedad', 'Observar cómo un bizcocho ligero absorbe un jarabe sin perder su estructura.', '#'],
+  ['15', 'Tres leches: cuando una masa recibe humedad', 'Observar cómo un bizcocho ligero recibe y absorbe un jarabe durante el montaje.', '/leccion-tres-leches'],
   ['16', 'Merengues: aire + azúcar', 'Conectar el batido de claras con una nueva familia de estructuras aireadas.', '#'],
 ];
 
