@@ -19,7 +19,7 @@ const lessons = [
   ['21', 'Crema y relleno también construyen el producto', 'Integra las preparaciones de crema y relleno que acompañan a las piezas de choux.', '/leccion-crema-y-relleno'],
   ['22', 'La consistencia también construye el acabado', 'Relaciona la consistencia de una preparación con su uso para rellenar, cubrir o decorar.', '/leccion-montar-y-decorar'],
   ['23', 'Cuando una estructura necesita frío', 'Compara cómo un cheesecake horneado y uno frío llegan a una estructura estable mediante rutas distintas.', '/leccion-cuando-una-estructura-necesita-frio'],
-  ['24', 'Cerrar un pastel: estructura, humedad y acabado', 'Integra las decisiones de masa, crema, humedad y acabado antes de pasar a la panadería fermentada.', '#'],
+  ['24', 'Cerrar un pastel: estructura, humedad y acabado', 'Integra estructura, humedad, relleno, cobertura, frío y señales de finalización antes de pasar a la panadería fermentada.', '/leccion-cerrar-un-pastel'],
 ];
 
 export default function ModuleThreePage() {
