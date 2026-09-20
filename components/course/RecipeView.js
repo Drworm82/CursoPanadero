@@ -102,6 +102,14 @@ const recipeObservationGuides = {
     },
   ],
 
+  'panque-citricos': [
+    ['El acremado ya es reconocible', 'Volviste a trabajar mantequilla y azúcar, pero ahora la señal ya no debería ser desconocida: buscas una mezcla más pálida, suave y esponjosa porque el batido ha modificado su textura e incorporado aire.'],
+    ['Los huevos se incorporan progresivamente', 'Cada huevo aporta una fase acuosa a una mezcla basada en grasa. Esperar a que se integre antes de agregar el siguiente ayuda a mantener una mezcla uniforme.'],
+    ['La harina cambia la preparación', 'Al entrar en contacto con líquido y trabajo mecánico, la harina puede empezar a formar gluten. Por eso se incorpora sin trabajar de más: queremos una masa batida pesada, no una estructura de pan.'],
+    ['El jugo entra al final', 'Los jugos aportan líquido y la receta los incorpora después de los secos, con un aumento breve de velocidad para integrarlos. Esto permite observar que el orden de incorporación también forma parte de la técnica.'],
+    ['El horno se aprende observándolo', 'El crecimiento, el color y la fijación de la estructura ocurren durante la cocción. La temperatura y el tiempo de la receta son una referencia, pero el resultado también se reconoce por lo que ves en la pieza.'],
+    ['El glaseado también se decide por textura', 'El azúcar glass recibe los jugos poco a poco hasta obtener una textura semilíquida. La consistencia final determina cómo se extiende y permanece sobre el panqué.'],
+  ],
   'marmoleado-intenso-cafe': [
     {
       observation: 'Pon atención a la mantequilla después de incorporar el azúcar moscabado y la miel: busca una crema más suave, esponjosa y untuosa que al inicio.',
@@ -154,6 +162,62 @@ const recipeObservationGuides = {
   ]
 };
 
+
+  'panque-citricos': [
+    {
+      observation: 'Pon atención a la mantequilla con el azúcar: busca que la mezcla se vea más pálida, suave y esponjosa antes de agregar los huevos.',
+      phenomenon: 'Durante el batido, los cristales de azúcar rozan y trabajan la mantequilla, mientras el batido favorece la incorporación de pequeñas burbujas de aire.',
+      importance: 'Esta es la señal del acremado que ya conoces. No se trata solamente de mezclar dos ingredientes: estás modificando la textura y la cantidad de aire de la mezcla.',
+    },
+    {
+      observation: 'Después de cada huevo, pon atención a que la mezcla vuelva a verse uniforme antes de agregar el siguiente.',
+      phenomenon: 'El huevo aporta una fase acuosa a una preparación cuya base es grasa. La incorporación progresiva ayuda a mantener ambas fases integradas durante el batido.',
+      importance: 'Por eso la receta indica esperar a que un huevo se integre antes de agregar el siguiente. La textura de la mezcla te indica cuándo puedes continuar.',
+    },
+    {
+      observation: 'Pon atención a los secos y a las ralladuras: la harina debe quedar sin grumos y las ralladuras deben quedar distribuidas al incorporarlas.',
+      phenomenon: 'El cernido separa grumos de harina y ayuda a repartir el polvo de hornear. Las ralladuras aportan partículas aromáticas que deben distribuirse por la masa.',
+      importance: 'Preparar y distribuir bien estos ingredientes ayuda a que la mezcla final sea uniforme.',
+    },
+    {
+      observation: 'Al incorporar la harina, fíjate en cómo cambia la textura de la mezcla y detén el trabajo mecánico cuando los ingredientes estén integrados.',
+      phenomenon: 'Cuando la harina recibe líquido y trabajo mecánico, sus proteínas pueden empezar a formar gluten.',
+      importance: 'Ya has visto esta idea en las preparaciones anteriores: en una masa batida pesada no buscamos desarrollar una red de gluten como en un pan.',
+      chibi: 'La receta te está enseñando a reconocer una señal: integrar no significa seguir batiendo indefinidamente.',
+    },
+    {
+      observation: 'Al agregar los jugos al final, pon atención a cómo cambia la textura y a que la mezcla quede nuevamente uniforme después del aumento breve de velocidad.',
+      phenomenon: 'Los jugos aportan líquido a una mezcla que ya contiene grasa, huevo y harina. La receta los incorpora al final y aumenta la velocidad durante medio minuto para favorecer su integración.',
+      importance: 'Aquí puedes observar que el orden de incorporación no es arbitrario: cada ingrediente entra en un momento en el que la mezcla puede recibirlo y distribuirlo correctamente.',
+    },
+    {
+      observation: 'Al llenar el molde, observa que la mezcla llegue aproximadamente a tres cuartas partes de su capacidad y quede distribuida de manera uniforme.',
+      phenomenon: 'La masa todavía necesita espacio para aumentar de volumen durante el horneado.',
+      importance: 'La cantidad de mezcla dentro del molde influye en el espacio disponible para que el panqué crezca y en la forma final de la pieza.',
+    },
+    {
+      observation: 'Durante el horneado, pon atención a tres señales: cuánto aumenta el volumen, cómo cambia el color de la superficie y cuándo la pieza deja de verse húmeda.',
+      phenomenon: 'El calor provoca expansión de gases y vapor, actúa el polvo para hornear y después la estructura de la masa se fija.',
+      importance: 'Estas señales te permiten relacionar lo que ocurre dentro del horno con la estructura que construiste durante el mezclado.',
+      chibi: 'Aquí el horno deja de ser una caja con una temperatura escrita: empieza a convertirse en algo que aprendes a observar.',
+    },
+    {
+      observation: 'Al sacar el panqué y colocarlo en la rejilla, pon atención a cómo se mantiene la estructura al desmoldarlo.',
+      phenomenon: 'Al salir del horno la pieza todavía está caliente y su estructura continúa estabilizándose mientras pierde temperatura.',
+      importance: 'Por eso el enfriado y el desmolde forman parte del proceso y no son simplemente un paso posterior sin importancia.',
+    },
+    {
+      observation: 'Al preparar el glaseado, fíjate en cómo cambia su consistencia a medida que agregas los jugos al azúcar glass. Busca una textura semilíquida que pueda cubrir la pieza.',
+      phenomenon: 'El azúcar glass forma una mezcla cada vez más fluida a medida que recibe líquido. La cantidad de jugo determina la consistencia final.',
+      importance: 'Aquí vuelves a trabajar con la textura como criterio: el objetivo no es solamente incorporar el jugo, sino alcanzar la consistencia indicada por la preparación.',
+    },
+    {
+      observation: 'Pon atención a cómo queda el glaseado sobre la superficie del panqué: debe poder extenderse y cubrir la pieza sin quedar completamente líquido.',
+      phenomenon: 'La viscosidad del glaseado determina cómo se desplaza y cuánto se mantiene sobre la superficie.',
+      importance: 'El acabado final te permite comprobar si alcanzaste la consistencia adecuada.',
+    },
+  ],
+
 const lessonLinks = {
   'rosca-pina-colada': {
     href: '/leccion-primer-panque-acremado',
@@ -165,6 +229,10 @@ const lessonLinks = {
   },
   'marmoleado-intenso-cafe': {
     href: '/leccion-repeticion-con-criterio',
+    label: 'Volver a la lección',
+  },
+  'panque-citricos': {
+    href: '/leccion-el-horno-tambien-es-parte',
     label: 'Volver a la lección',
   },
 };
