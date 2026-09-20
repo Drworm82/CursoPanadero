@@ -11,7 +11,7 @@ const lessons = [
   ['25', 'El proceso completo de una masa', 'Reconoce la secuencia desde el pesado y mezclado hasta el enfriado.', '/leccion-el-proceso-completo-de-una-masa'],
   ['26', 'Fermentar es transformar', 'Observa qué cambia en una masa durante la fermentación y qué señales indican su avance.', '/leccion-fermentar-es-transformar'],
   ['27', 'Amasado, estructura y tensión', 'Relaciona el trabajo de la masa con la condición que debe alcanzar antes de la fermentación.', '/leccion-amasado-estructura-y-tension'],
-  ['28', 'Baguette: estructura, formado y greñado', 'Aplica el proceso de panificación a una pieza donde el formado y el corte tienen un papel visible.', '#'],
+  ['28', 'Baguette: estructura, formado y greñado', 'Ubica el formado y la segunda fermentación dentro del proceso, y distingue qué información sobre greñado todavía falta en la fuente.', '/leccion-baguette-estructura-formado-greñado'],
   ['29', 'Focaccia: otra forma de entender la hidratación', 'Compara una masa de pan con un formato y manejo diferentes.', '#'],
   ['30', 'Ciabatta y biga', 'Conecta un pan de alta hidratación con el uso de un prefermento.', '#'],
   ['31', 'Panes enriquecidos', 'Reconoce qué ocurre cuando una masa de pan incorpora grasa, azúcar y huevo.', '#'],
