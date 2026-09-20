@@ -186,13 +186,30 @@ export default function RecipeView({ recipe, ingredients, steps }) {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Al terminar</p>
           <h2 className="mt-1 text-2xl font-semibold text-stone-900">Antes de pasar a la siguiente preparación</h2>
-          <div className="mt-4 space-y-3 text-stone-600">
-            <p className="leading-7">Quédate con tres observaciones concretas:</p>
-            <ol className="list-decimal space-y-2 pl-5 leading-7">
-              <li>¿Qué cambió al acremar la mantequilla con el azúcar?</li>
-              <li>¿Qué cambió al incorporar los huevos y los secos?</li>
-              <li>¿Qué observaste durante el horneado y qué resultado obtuviste?</li>
-            </ol>
+          <div className="mt-4 space-y-4 text-stone-600">
+            <p className="leading-7">
+              No necesitas responder un examen. Aquí tienes las ideas que conviene llevarte de esta preparación.
+            </p>
+            <div className="space-y-3">
+              <div className="rounded-xl bg-stone-50 p-4">
+                <p className="font-medium text-stone-900">1. Al acremar la mantequilla con el azúcar</p>
+                <p className="mt-1 leading-7">
+                  La mezcla se vuelve más suave y trabajada. Ese cambio es parte del método de acremado.
+                </p>
+              </div>
+              <div className="rounded-xl bg-stone-50 p-4">
+                <p className="font-medium text-stone-900">2. Al incorporar los huevos y los secos</p>
+                <p className="mt-1 leading-7">
+                  La mezcla cambia progresivamente de textura y empieza a tomar la estructura de la masa. Por eso es importante incorporar los ingredientes según el procedimiento y dejar de trabajarla cuando ya están integrados.
+                </p>
+              </div>
+              <div className="rounded-xl bg-stone-50 p-4">
+                <p className="font-medium text-stone-900">3. Durante el horneado</p>
+                <p className="mt-1 leading-7">
+                  La masa cambia de volumen, color y estructura hasta convertirse en una rosca horneada con una estructura firme después de enfriar.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
