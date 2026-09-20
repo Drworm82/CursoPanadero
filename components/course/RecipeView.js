@@ -55,11 +55,60 @@ const recipeObservationGuides = {
       importance: 'El acabado te permite comprobar si alcanzaste la consistencia adecuada y si puedes distribuir la cobertura de manera uniforme.',
     },
   ],
+
+  'panque-platano-streusel-canela': [
+    {
+      observation: 'Pon atención a los secos después de cernirlos: busca una mezcla suelta y sin grumos, con la canela distribuida.',
+      phenomenon: 'El cernido separa grumos y ayuda a repartir la harina, la sal, el polvo para hornear y la canela.',
+      importance: 'Así los ingredientes secos pueden incorporarse de manera más uniforme a la mezcla húmeda.',
+    },
+    {
+      observation: 'Pon atención a la mezcla de aceite, plátano, azúcar, huevo y vainilla: debe quedar homogénea y sin grumos, como indica la receta.',
+      phenomenon: 'Aquí la grasa principal es aceite, que ya está en estado líquido. No necesitamos batir mantequilla con azúcar para formar una estructura de acremado.',
+      importance: 'Esta es la diferencia que debes empezar a reconocer: estamos haciendo una masa batida pesada con una técnica distinta a la de acremado.',
+      chibi: 'En la rosca anterior trabajaste mantequilla y azúcar para acremar. Aquí la grasa ya está líquida, así que el procedimiento parte de otra estructura.',
+    },
+    {
+      observation: 'Al mezclar el licuado con los secos, pon atención a cómo desaparecen poco a poco los rastros de harina y a cuándo la mezcla queda integrada.',
+      phenomenon: 'En cuanto la harina recibe líquido y trabajo mecánico, sus proteínas pueden empezar a formar gluten.',
+      importance: 'Por eso la receta indica mezclar de manera envolvente y no sobre batir: queremos integrar los ingredientes sin desarrollar una estructura excesiva.',
+      chibi: 'La palabra clave aquí es “integrar”. Una vez que ya no ves harina seca, seguir trabajando la mezcla no significa necesariamente mejorarla.',
+    },
+    {
+      observation: 'Pon atención a cómo quedan distribuidas las nueces y las pasitas dentro de la masa.',
+      phenomenon: 'Son ingredientes sólidos que se incorporan después de formar la mezcla base.',
+      importance: 'Una distribución uniforme ayuda a que aparezcan de manera regular al cortar el panqué.',
+    },
+    {
+      observation: 'Antes de hornear, pon atención a cómo queda distribuido el streusel sobre la superficie.',
+      phenomenon: 'El streusel se prepara formando una arenilla con mantequilla fría, azúcar, harina y canela; durante el horneado esa mezcla se transforma y toma color.',
+      importance: 'La capa de streusel aporta una textura y un acabado diferentes a la masa del panqué.',
+    },
+    {
+      observation: 'Durante el horneado, pon atención al volumen, al color de la superficie y a cómo cambia la estructura de la masa.',
+      phenomenon: 'El calor activa los cambios que transforman la mezcla en una pieza horneada: se expanden gases y vapor, actúa el polvo para hornear y la estructura termina fijándose.',
+      importance: 'El resultado del horno depende de la estructura que construiste antes de hornear y de las condiciones de cocción indicadas por la receta.',
+    },
+    {
+      observation: 'Al enfriar y desmoldar, pon atención a la firmeza de la pieza y a cómo se mantiene la estructura al manipularla.',
+      phenomenon: 'La estructura se estabiliza al bajar la temperatura y la pieza deja de estar tan frágil como cuando acaba de salir del horno.',
+      importance: 'Por eso no se trata solo de “esperar”: el enfriado forma parte del resultado final.',
+    },
+    {
+      observation: 'Al preparar el streusel, pon atención a que la mantequilla fría se distribuya con los secos formando una arenilla, no una masa lisa.',
+      phenomenon: 'La mantequilla fría se mantiene en pequeños fragmentos entre los ingredientes secos mientras se trabaja la mezcla.',
+      importance: 'Esa estructura es la que permite obtener el acabado arenoso y crujiente característico del streusel después del horneado.',
+    },
+  ],
 };
 
 const lessonLinks = {
   'rosca-pina-colada': {
     href: '/leccion-primer-panque-acremado',
+    label: 'Volver a la lección',
+  },
+  'panque-platano-streusel-canela': {
+    href: '/leccion-segunda-ruta-aceite',
     label: 'Volver a la lección',
   },
 };
