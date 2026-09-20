@@ -34,6 +34,15 @@ const modules = [
     guiding_question: '¿Cómo conseguimos que una preparación gane volumen y conserve ese volumen hasta convertirse en un producto terminado?',
     expected_result: 'Reconocer el papel del huevo como agente aireante, entender por qué la harina se incorpora suavemente y empezar a interpretar el volumen y la estructura de una masa batida ligera.',
   },
+  {
+    id: 'modulo-4',
+    sort_order: 4,
+    slug: 'modulo-4-choux',
+    href: '/modulo-4',
+    title: 'Cuando el vapor construye la estructura',
+    guiding_question: '¿Cómo una masa que primero se cocina en la cacerola termina creciendo y formando un interior hueco en el horno?',
+    expected_result: 'Reconocer la lógica de una masa de cocción mixta, interpretar sus cambios durante la cocción inicial y relacionar la consistencia final con el formado y la cocción.',
+  },
 ];
 
 export default function RutaPage() {
