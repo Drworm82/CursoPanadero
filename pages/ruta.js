@@ -17,15 +17,6 @@ const modules = [
     expected_result: 'Ejecutar tres masas batidas pesadas con distintos métodos y describir lo observado.',
   },
   {
-    id: 'modulo-3',
-    sort_order: 3,
-    slug: 'modulo-3-masas-batidas-ligeras',
-    href: '/modulo-3',
-    title: 'Cuando el aire construye la estructura',
-    guiding_question: '¿Cómo conseguimos que una preparación gane volumen y conserve ese volumen hasta convertirse en un producto terminado?',
-    expected_result: 'Reconocer el papel del huevo como agente aireante, entender por qué la harina se incorpora suavemente y empezar a interpretar el volumen y la estructura de una masa batida ligera.',
-  },
-  {
     id: 'modulo-2',
     sort_order: 2,
     slug: 'modulo-2-masas-friables',
@@ -33,6 +24,15 @@ const modules = [
     title: 'Cuando una masa no quiere gluten: masas friables',
     guiding_question: '¿Por qué algunas masas necesitan desarrollar estructura y otras necesitan evitarla?',
     expected_result: 'Reconocer qué busca una masa friable, entender el papel de la grasa y el reposo, y distinguir el método de arenado del acremado.',
+  },
+  {
+    id: 'modulo-3',
+    sort_order: 3,
+    slug: 'modulo-3-masas-batidas-ligeras',
+    href: '/modulo-3',
+    title: 'Cuando el aire construye la estructura',
+    guiding_question: '¿Cómo conseguimos que una preparación gane volumen y conserve ese volumen hasta convertirse en un producto terminado?',
+    expected_result: 'Reconocer el papel del huevo como agente aireante, entender por qué la harina se incorpora suavemente y empezar a interpretar el volumen y la estructura de una masa batida ligera.',
   },
 ];
 
