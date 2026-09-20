@@ -23,9 +23,32 @@ const lessonNotes = {
   },
   6: {
     label: 'Cierra el ciclo',
-    text: 'Compara las preparaciones y describe qué cambió entre métodos, mezclado y cocción. La meta es poder explicar lo que observaste con tus propias palabras.',
+    text: 'Ahora reúne lo que has visto en las cuatro preparaciones. No necesitas memorizar una lista de respuestas: aquí encontrarás las relaciones que conviene llevarte antes de continuar.',
   },
 };
+
+const recap = [
+  {
+    title: 'Mantequilla y acremado',
+    text: 'En la Rosca, el Marmoleado y el Panqué de Cítricos trabajaste mantequilla con azúcar mediante acremado. El batido modifica la textura de la mantequilla y favorece la incorporación de aire. Por eso buscas una mezcla más suave, pálida y esponjosa.',
+  },
+  {
+    title: 'Aceite y otra forma de trabajar',
+    text: 'En el Panqué de Plátano utilizaste aceite. Al ser una grasa líquida, no se trabaja mediante el mismo acremado que la mantequilla. En esta preparación se busca una miga húmeda y suave, y la elección de la grasa cambia tanto el método como el resultado.',
+  },
+  {
+    title: 'La harina y el momento de detenerse',
+    text: 'En todas estas masas batidas pesadas, la harina se incorpora sin sobrebatir. Cuando recibe líquido y trabajo mecánico, sus proteínas pueden empezar a formar gluten. Aquí buscamos integrar la mezcla, no desarrollar una estructura de pan.',
+  },
+  {
+    title: 'La textura también da información',
+    text: 'Ya viste que la textura sirve para saber cuándo continuar y cuándo detenerse: una crema esponjosa durante el acremado, una mezcla integrada después de los secos y una consistencia concreta en el glaseado o en la mezcla de café.',
+  },
+  {
+    title: 'El horno forma parte del proceso',
+    text: 'El calor transforma la masa: se expanden gases y vapor, actúa el polvo para hornear y la estructura termina fijándose. El volumen, el color y la firmeza que observas al final son señales de lo que ocurrió durante la preparación y la cocción.',
+  },
+];
 
 export default function LessonView({ lesson, recipes }) {
   const note = lessonNotes[lesson.sort_order] || lessonNotes[1];
@@ -44,48 +67,83 @@ export default function LessonView({ lesson, recipes }) {
           <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">{note.text}</p>
         </section>
 
-        <div className="grid gap-6 lg:grid-cols-[1.35fr_.65fr]">
+        {lesson.sort_order === 6 ? (
           <section>
-            <div className="mb-4">
-              <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Práctica</p>
-              <h2 className="mt-1 text-2xl font-semibold text-stone-900">Preparaciones</h2>
+            <div className="mb-5">
+              <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Lo que acabas de aprender</p>
+              <h2 className="mt-1 text-2xl font-semibold text-stone-900">Cuatro preparaciones, varias ideas conectadas</h2>
+              <p className="mt-3 max-w-3xl leading-7 text-stone-600">
+                Las cuatro preparaciones no estaban ahí solamente para practicar recetas distintas. Cada una añadió una pieza que ayuda a entender la siguiente.
+              </p>
             </div>
 
-            <div className="space-y-3">
-              {recipes.length ? recipes.map((recipe) => (
-                <a
-                  key={recipe.id}
-                  href={`/receta-${recipe.slug}`}
-                  className="group block rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-stone-600 group-hover:bg-amber-100 group-hover:text-amber-900">
-                      →
+            <div className="grid gap-3">
+              {recap.map((item, index) => (
+                <article key={item.title} className="rounded-2xl border border-stone-200 bg-white p-5 sm:p-6">
+                  <div className="flex gap-4">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
+                      {index + 1}
                     </span>
-                    <span className="min-w-0 flex-1">
-                      <span className="block font-semibold text-stone-900">{recipe.title}</span>
-                      {recipe.pedagogical_role && (
-                        <span className="mt-1 block text-sm leading-6 text-stone-600">{recipe.pedagogical_role}</span>
-                      )}
-                    </span>
-                    <span className="text-sm text-stone-400">Abrir</span>
+                    <div>
+                      <h3 className="font-semibold text-stone-900">{item.title}</h3>
+                      <p className="mt-2 leading-7 text-stone-600">{item.text}</p>
+                    </div>
                   </div>
-                </a>
-              )) : (
-                <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 text-stone-600">
-                  Esta lección no tiene una preparación asociada. Aquí el trabajo principal es observar, comparar y sacar conclusiones.
-                </div>
-              )}
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-6 rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
+              <p className="text-sm font-medium text-stone-300">La idea que llevas al siguiente módulo</p>
+              <p className="mt-3 text-xl leading-8 text-stone-100">
+                No solo sabes seguir una receta: ya puedes empezar a relacionar una textura o un cambio en la masa con lo que acabas de hacer.
+              </p>
             </div>
           </section>
+        ) : (
+          <div className="grid gap-6 lg:grid-cols-[1.35fr_.65fr]">
+            <section>
+              <div className="mb-4">
+                <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Práctica</p>
+                <h2 className="mt-1 text-2xl font-semibold text-stone-900">Preparaciones</h2>
+              </div>
 
-          <aside className="rounded-2xl bg-stone-900 p-6 text-white">
-            <p className="text-sm font-medium text-stone-300">La idea central</p>
-            <p className="mt-3 leading-7 text-stone-100">
-              No memorices solamente los pasos. Intenta relacionar cada cambio que ves con lo que acabas de hacer.
-            </p>
-          </aside>
-        </div>
+              <div className="space-y-3">
+                {recipes.length ? recipes.map((recipe) => (
+                  <a
+                    key={recipe.id}
+                    href={`/receta-${recipe.slug}`}
+                    className="group block rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-stone-600 group-hover:bg-amber-100 group-hover:text-amber-900">
+                        →
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-semibold text-stone-900">{recipe.title}</span>
+                        {recipe.pedagogical_role && (
+                          <span className="mt-1 block text-sm leading-6 text-stone-600">{recipe.pedagogical_role}</span>
+                        )}
+                      </span>
+                      <span className="text-sm text-stone-400">Abrir</span>
+                    </div>
+                  </a>
+                )) : (
+                  <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 text-stone-600">
+                    Esta lección no tiene una preparación asociada. Aquí el trabajo principal es observar, comparar y sacar conclusiones.
+                  </div>
+                )}
+              </div>
+            </section>
+
+            <aside className="rounded-2xl bg-stone-900 p-6 text-white">
+              <p className="text-sm font-medium text-stone-300">La idea central</p>
+              <p className="mt-3 leading-7 text-stone-100">
+                No memorices solamente los pasos. Intenta relacionar cada cambio que ves con lo que acabas de hacer.
+              </p>
+            </aside>
+          </div>
+        )}
       </div>
     </CourseShell>
   );
