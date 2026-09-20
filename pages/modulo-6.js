@@ -10,9 +10,9 @@ const module = {
 const lessons = [
   ['40', 'El principio del laminado', 'Reconoce qué elementos aparecen de forma documentada en el trabajo con masa y empaste.', '/leccion-principio-del-laminado', true],
   ['41', 'Croissant: empaste y vueltas', 'Sigue la secuencia documentada de fermentación, refrigeración, empaste, vueltas, formado y horneado.', '/leccion-croissant-empaste-y-vueltas', true],
-  ['42', 'Pan danés: tres vueltas y varios formatos', 'Compara la secuencia del pan danés y observa cómo cambia el formado según la pieza.', '/leccion-pan-danes-tres-vueltas', false],
-  ['43', 'Croissant y pan danés: comparar para reconocer', 'Distingue qué comparten y qué cambia entre dos recetas laminadas documentadas.', '/leccion-croissant-y-pan-danes-comparar', false],
-  ['44', 'Cerrar el laminado', 'Integra empaste, refrigeración, vueltas y formado sin añadir procedimientos que la fuente no documenta.', '/leccion-cerrar-el-laminado', false],
+  ['42', 'Pan danés: tres vueltas y varios formatos', 'Compara la secuencia del pan danés y observa cómo cambia el formado según la pieza.', '/leccion-pan-danes-tres-vueltas', true],
+  ['43', 'Croissant y pan danés: comparar para reconocer', 'Distingue qué comparten y qué cambia entre dos recetas laminadas documentadas.', '/leccion-croissant-y-pan-danes-comparar', true],
+  ['44', 'Cerrar el laminado', 'Integra empaste, refrigeración, vueltas y formado sin añadir procedimientos que la fuente no documenta.', '/leccion-cerrar-el-laminado', true],
 ];
 
 export default function ModuleSixPage() {
