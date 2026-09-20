@@ -5,7 +5,7 @@ export default function LessonEighteenPage() {
     <CourseShell
       eyebrow="Lección 18"
       title="El huevo cambia la masa"
-      backHref="/modulo-4"
+      backHref="/modulo-3"
       backLabel="Volver al módulo"
     >
       <div className="space-y-8">
