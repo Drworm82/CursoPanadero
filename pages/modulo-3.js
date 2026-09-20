@@ -16,7 +16,7 @@ const lessons = [
   ['18', 'El huevo cambia la masa', 'Reconoce cómo cambia la consistencia al incorporar el huevo y cuándo la pasta queda manejable con duya.', '/leccion-el-huevo-cambia-la-masa'],
   ['19', 'El vapor construye el interior', 'Entiende cómo el vapor impulsa el crecimiento y cómo el calor permite que la pieza conserve su estructura.', '/leccion-el-vapor-construye-el-interior'],
   ['20', 'De una masa salen varios productos', 'Lleva la misma base técnica a profiteroles, éclairs, cisnes y religiosas y entiende qué cambia al convertir una masa en productos distintos.', '/leccion-de-una-masa-salen-varios-productos'],
-  ['21', 'Crema y relleno también construyen el producto', 'Integra las preparaciones de crema y relleno que acompañan a las piezas de choux.', '#'],
+  ['21', 'Crema y relleno también construyen el producto', 'Integra las preparaciones de crema y relleno que acompañan a las piezas de choux.', '/leccion-crema-y-relleno'],
   ['22', 'Montar y decorar cambia la lectura del producto', 'Relaciona manga, cobertura, relleno y acabado con la transformación de una pieza técnica en un producto terminado.', '#'],
   ['23', 'Cuando una estructura necesita frío', 'Introduce la lógica de los cheesecakes horneados y fríos y el papel del montaje y la refrigeración.', '#'],
   ['24', 'Cerrar un pastel: estructura, humedad y acabado', 'Integra las decisiones de masa, crema, humedad y acabado antes de pasar a la panadería fermentada.', '#'],
