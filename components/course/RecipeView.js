@@ -187,14 +187,11 @@ export default function RecipeView({ recipe, ingredients, steps }) {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Al terminar</p>
           <h2 className="mt-1 text-2xl font-semibold text-stone-900">Antes de pasar a la siguiente preparación</h2>
           <div className="mt-4 space-y-4 text-stone-600">
-            <p className="leading-7">
-              No necesitas responder un examen. Aquí tienes las ideas que conviene llevarte de esta preparación.
-            </p>
             <div className="space-y-3">
               <div className="rounded-xl bg-stone-50 p-4">
                 <p className="font-medium text-stone-900">1. Al acremar la mantequilla con el azúcar</p>
                 <p className="mt-1 leading-7">
-                  La mezcla se vuelve más suave y trabajada. Ese cambio es parte del método de acremado.
+                  El azúcar ayuda a trabajar mecánicamente la mantequilla mientras se mezclan. Sus cristales generan pequeñas irregularidades en la grasa y, al batir, favorecen la incorporación de aire. Por eso la mezcla se vuelve más suave, ligera y puede verse más pálida. Ese cambio es una de las señales que buscamos al acremar.
                 </p>
               </div>
               <div className="rounded-xl bg-stone-50 p-4">
