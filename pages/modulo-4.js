@@ -38,8 +38,8 @@ export default function ModuleFourPage() {
         <section className="rounded-2xl bg-amber-50 p-6">
           <p className="text-sm font-medium text-amber-900">El siguiente cambio</p>
           <p className="mt-2 max-w-3xl leading-7 text-amber-950">
-            En el módulo anterior aprendiste a construir estructuras mediante aire y vapor. Ahora el mecanismo cambia otra vez:
-            vamos a trabajar con fermentación y a observar cómo una masa viva cambia con el tiempo.
+            En el módulo anterior aprendiste a construir estructuras mediante aire y vapor. Ahora cambia el proceso:
+            vamos a trabajar con masas fermentadas y a observar cómo avanzan las distintas etapas de elaboración.
           </p>
         </section>
 
@@ -53,16 +53,38 @@ export default function ModuleFourPage() {
           </div>
 
           <div className="grid gap-3">
-            {lessons.map(([number, title, description]) => (
-              {lessons.map(([number, title, description, href]) => href !== '#' ? (\n                <a key={number} href={href} className="flex items-center gap-4 rounded-2xl border border-amber-200 bg-white p-5 shadow-sm hover:border-amber-300 hover:shadow-md">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">{number}</span>
-                <span className="min-w-0 flex-1">
-                  <span className="block font-semibold text-stone-900">{title}</span>
-                  <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
-                </span>
-                <span className="shrink-0 text-sm text-stone-400">En preparación</span>
-              </div>
-            ))}
+            {lessons.map(([number, title, description, href]) =>
+              href !== '#' ? (
+                <a
+                  key={number}
+                  href={href}
+                  className="flex items-center gap-4 rounded-2xl border border-amber-200 bg-white p-5 shadow-sm hover:border-amber-300 hover:shadow-md"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
+                    {number}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-semibold text-stone-900">{title}</span>
+                    <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
+                  </span>
+                  <span className="shrink-0 text-sm font-medium text-amber-700">Abrir →</span>
+                </a>
+              ) : (
+                <div
+                  key={number}
+                  className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm opacity-70"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
+                    {number}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-semibold text-stone-900">{title}</span>
+                    <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
+                  </span>
+                  <span className="shrink-0 text-sm text-stone-400">En preparación</span>
+                </div>
+              )
+            )}
           </div>
         </section>
       </div>
