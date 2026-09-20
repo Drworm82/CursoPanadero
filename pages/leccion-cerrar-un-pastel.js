@@ -60,7 +60,7 @@ export default function LessonTwentyFourPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Cinco productos para aprender a leer la secuencia</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-            No necesitas aprender cuatro recetas aisladas. Compara qué ocurre después de que cada estructura está lista.
+            No necesitas aprender cinco recetas aisladas. Compara qué ocurre después de que cada estructura está lista.
           </p>
 
           <div className="mt-6 space-y-4">
@@ -275,8 +275,8 @@ export default function LessonTwentyFourPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Nota sobre la fuente</p>
           <p className="mt-2 leading-7 text-stone-700">
-            Las secuencias utilizadas aquí proceden de las preparaciones de las Clases 9, 10 y 15: tres leches,
-            Selva Negra, Sacher y cheesecake de Baileys. La comparación entre ellas y la idea de leer una receta
+            Las secuencias utilizadas aquí proceden de las preparaciones de las Clases 9, 10, 11 y 15: tres leches,
+            Selva Negra, Sacher, preparaciones de choux y cheesecake de Baileys. La comparación entre ellas y la idea de leer una receta
             como una secuencia son organización pedagógica del curso. No se añaden aquí mecanismos técnicos que
             la fuente no desarrolla.
           </p>
