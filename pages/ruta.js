@@ -15,6 +15,14 @@ const modules = [
     guiding_question: '¿Qué estoy haciendo cuando mezclo una masa y cómo sé cuándo dejar de trabajarla?',
     expected_result: 'Ejecutar tres masas batidas pesadas con distintos métodos y describir lo observado.',
   },
+  {
+    id: 'modulo-2',
+    sort_order: 2,
+    slug: 'modulo-2-masas-friables',
+    title: 'Cuando una masa no quiere gluten: masas friables',
+    guiding_question: '¿Por qué algunas masas necesitan desarrollar estructura y otras necesitan evitarla?',
+    expected_result: 'Reconocer qué busca una masa friable, entender el papel de la grasa y el reposo, y distinguir el método de arenado del acremado.',
+  },
 ];
 
 export default function RutaPage() {
