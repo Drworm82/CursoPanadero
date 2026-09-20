@@ -11,7 +11,7 @@ const lessons = [
   ['17', 'Una masa que se cocina antes de hornearse', 'Entiende por qué la pasta choux empieza su transformación en la cacerola y cómo el huevo completa la masa antes del formado.', '/leccion-una-masa-que-se-cocina'],
   ['18', 'El huevo cambia la masa', 'Reconoce cómo cambia la consistencia al incorporar el huevo y cuándo la pasta queda manejable con duya.', '/leccion-el-huevo-cambia-la-masa'],
   ['19', 'El vapor construye el interior', 'Entiende cómo el vapor impulsa el crecimiento y cómo el calor permite que la pieza conserve su estructura.', '/leccion-el-vapor-construye-el-interior'],
-  ['20', 'De una masa salen varios productos', 'Próximamente: llevar la misma técnica a profiteroles, éclairs, cisnes y religiosas.', '#'],
+  ['20', 'De una masa salen varios productos', 'Lleva la misma base técnica a profiteroles, éclairs, cisnes y religiosas y entiende qué cambia al convertir una masa en productos distintos.', '/leccion-de-una-masa-salen-varios-productos'],
 ];
 
 export default function ModuleFourPage() {
