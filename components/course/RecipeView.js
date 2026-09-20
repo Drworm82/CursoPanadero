@@ -100,6 +100,57 @@ const recipeObservationGuides = {
       phenomenon: 'La mantequilla fría se mantiene en pequeños fragmentos entre los ingredientes secos mientras se trabaja la mezcla.',
       importance: 'Esa estructura es la que permite obtener el acabado arenoso y crujiente característico del streusel después del horneado.',
     },
+  ],
+
+  'marmoleado-intenso-cafe': [
+    {
+      observation: 'Pon atención a la mantequilla después de incorporar el azúcar moscabado y la miel: busca una crema más suave, esponjosa y untuosa que al inicio.',
+      phenomenon: 'El batido modifica la estructura de la mantequilla y favorece la incorporación de aire. El azúcar aporta partículas sólidas que participan en ese trabajo mecánico y la miel se incorpora poco a poco, como indica la receta.',
+      importance: 'La receta busca explícitamente llegar a una crema suave y untuosa y continuar batiendo hasta esponjar. Esa textura es la señal que debes reconocer antes de seguir.',
+      chibi: 'Ya viste el acremado en la rosca. Aquí la señal importante es la misma idea: no te guíes solamente por el tiempo; aprende a reconocer el cambio de textura.',
+    },
+    {
+      observation: 'Pon atención a la mezcla después de cada huevo: fíjate en que se integre antes de agregar el siguiente.',
+      phenomenon: 'El huevo aporta una fase acuosa a una mezcla cuya base es grasa. Al incorporarlo progresivamente, el batido ayuda a mantener una mezcla uniforme.',
+      importance: 'Por eso los huevos se agregan uno a uno. El objetivo es que cada adición se integre antes de introducir la siguiente.',
+    },
+    {
+      observation: 'Pon atención a los dos grupos que vas a preparar: la leche con vainilla debe quedar lista y los secos deben quedar cernidos y sin grumos.',
+      phenomenon: 'La leche aporta la fase líquida que se incorporará después, mientras que el cernido ayuda a distribuir la harina y el polvo para hornear.',
+      importance: 'Tener ambas partes preparadas permite incorporarlas de forma intercalada sin detener el proceso para preparar ingredientes a mitad de la mezcla.',
+    },
+    {
+      observation: 'Pon atención a la textura mientras alternas la leche y los secos. Busca el momento en que todo queda integrado y detén el batido.',
+      phenomenon: 'La harina entra en contacto con líquido y trabajo mecánico, por lo que sus proteínas pueden empezar a formar gluten.',
+      importance: 'La receta indica expresamente no sobre batir. En esta masa buscamos integrar los ingredientes y conservar una textura adecuada, no desarrollar una red de gluten como en un pan.',
+      chibi: 'Ya conoces esta señal del panqué de plátano: una vez integrada la harina, seguir trabajando no significa mejorar la masa.',
+    },
+    {
+      observation: 'Después de dividir la mezcla, comprueba que las dos partes tengan una textura semejante antes de modificar una de ellas.',
+      phenomenon: 'Dividir la masa crea dos preparaciones que después se combinarán en el mismo panqué: una permanece como vainilla y la otra recibe el café.',
+      importance: 'Si las dos partes parten de una textura semejante, el marmoleado puede distribuirse sin que una mezcla sea mucho más pesada o fluida que la otra.',
+    },
+    {
+      observation: 'Pon atención a la mezcla de café: disuelve el café instantáneo en la leche y agrega solamente la cantidad necesaria para mantener una textura parecida a la mezcla de vainilla.',
+      phenomenon: 'La leche aporta líquido a la preparación de café. La receta indica que no es necesario utilizar toda la cantidad marcada porque la cantidad necesaria depende de la textura que se busca.',
+      importance: 'Aquí aparece una idea importante: una cantidad escrita en la receta no siempre significa que debas utilizarla toda si el propio procedimiento indica ajustar según la textura.',
+      chibi: 'No estás cambiando la receta al azar. Estás siguiendo un criterio que la propia receta establece: agregar la cantidad necesaria para igualar texturas.',
+    },
+    {
+      observation: 'Pon atención a cómo colocas las dos mezclas en el molde y a la profundidad de los movimientos del palillo. Busca vetas visibles, no una mezcla completamente unificada.',
+      phenomenon: 'Las dos masas permanecen diferentes y el palillo las atraviesa para generar el patrón marmoleado.',
+      importance: 'El objetivo del movimiento no es mezclar las dos masas por completo, sino crear el dibujo sin perder la separación entre vainilla y café.',
+    },
+    {
+      observation: 'Durante el horneado, pon atención al volumen, al color de la superficie y a cómo se fija la estructura del panqué.',
+      phenomenon: 'El calor provoca expansión de gases y vapor, actúa el polvo para hornear y transforma progresivamente la mezcla hasta fijar su estructura.',
+      importance: 'El horno transforma la estructura que construiste durante el mezclado. El resultado que observas es consecuencia de ambas etapas.',
+    },
+    {
+      observation: 'Al enfriar y desmoldar, pon atención a la firmeza de la pieza y al dibujo del marmoleado antes de cortarla.',
+      phenomenon: 'Al bajar la temperatura, la estructura del panqué se estabiliza y la grasa se vuelve más firme.',
+      importance: 'El enfriado permite manipular la pieza sin comprometer su estructura y comprobar el resultado final del marmoleado.',
+    },
   ]
 };
 
@@ -110,6 +161,10 @@ const lessonLinks = {
   },
   'panque-platano-streusel-canela': {
     href: '/leccion-segunda-ruta-aceite',
+    label: 'Volver a la lección',
+  },
+  'marmoleado-intenso-cafe': {
+    href: '/leccion-repeticion-con-criterio',
     label: 'Volver a la lección',
   },
 };
@@ -126,6 +181,13 @@ const recipeClosingGuides = {
     ['Integrar sin sobre batir', 'Cuando los secos entran en contacto con los ingredientes húmedos, la harina puede empezar a formar gluten con el trabajo mecánico. Por eso la receta indica mezclar de manera envolvente y no sobre batir: buscamos integrar la mezcla, no desarrollar una estructura de pan.'],
     ['El streusel', 'La mantequilla fría se trabaja con harina, azúcar y canela hasta formar una arenilla. Sus pequeños fragmentos de grasa quedan separados entre los secos y, al hornearse, producen una cobertura con textura diferente a la del panqué.'],
     ['El horneado', 'El calor transforma tanto la masa como el streusel. El polvo para hornear contribuye al crecimiento, mientras la estructura de la masa se fija y la cobertura toma color y textura.'],
+  ],
+  'marmoleado-intenso-cafe': [
+    ['Volver al acremado', 'En esta preparación volviste a utilizar mantequilla, azúcar y batido. La diferencia es que ahora ya puedes reconocer qué cambio de textura estás buscando: una crema suave, esponjosa y untuosa antes de continuar.'],
+    ['Huevos y harina', 'Los huevos se incorporan uno a uno para mantener una mezcla uniforme. Después, la leche y los secos se incorporan de manera intercalada y sin sobre batir porque, una vez que la harina recibe líquido y trabajo mecánico, puede empezar a formar gluten.'],
+    ['Igualar las dos mezclas', 'La parte de café recibe leche solamente en la cantidad necesaria para igualar su textura con la preparación de vainilla. Esto enseña que la textura también puede ser un criterio para decidir cuánto ingrediente incorporar cuando la propia receta permite ajustar.'],
+    ['El marmoleado', 'Las dos mezclas se colocan de manera intercalada y el palillo genera las vetas. No buscamos unirlas completamente: buscamos conservar las dos preparaciones dentro de una misma pieza.'],
+    ['El horneado', 'El polvo para hornear y el calor contribuyen al crecimiento y después la estructura se fija. El volumen, el color y la firmeza finales son el resultado de todo el proceso anterior.'],
   ],
 };
 
