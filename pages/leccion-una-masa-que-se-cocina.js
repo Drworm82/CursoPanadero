@@ -5,7 +5,7 @@ export default function LessonSeventeenPage() {
     <CourseShell
       eyebrow="Lección 17"
       title="Una masa que se cocina antes de hornearse"
-      backHref="/modulo-4"
+      backHref="/modulo-3"
       backLabel="Volver al módulo"
     >
       <div className="space-y-8">
