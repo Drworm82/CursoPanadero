@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    background: #fbf8f2;
+  }
+
+  ::selection {
+    background: #f3d7a2;
+    color: #292524;
+  }
+
+  :focus-visible {
+    outline: 3px solid #d97706;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .course-surface {
+    box-shadow: 0 18px 50px -36px rgba(68, 49, 31, 0.35);
+  }
+}
