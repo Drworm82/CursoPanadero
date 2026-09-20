@@ -8,11 +8,11 @@ const module = {
 };
 
 const lessons = [
-  ['35', 'Entrar al pan mexicano', 'Identifica qué productos mexicanos están realmente documentados y qué aspectos de su elaboración pueden compararse.', '/leccion-entrar-al-pan-mexicano'],
-  ['36', 'Conchas: una masa, dos preparaciones', 'Analiza la masa fermentada y la pasta de cobertura de las conchas como partes distintas del mismo producto.', '#'],
-  ['37', 'Pan de pulque: otra ruta de fermentación', 'Reconoce la secuencia particular del pan de pulque y compara su fórmula con otras masas enriquecidas.', '#'],
-  ['38', 'Garibaldis: estructura, acabado e identidad', 'Observa cómo una preparación horneada se completa con mermelada y gragea blanca.', '#'],
-  ['39', 'Comparar para reconocer', 'Integra conchas, pan de pulque y garibaldis y distingue qué cambia en ingredientes, proceso, formado y acabado.', '#'],
+  ['35', 'Entrar al pan mexicano', 'Identifica qué productos mexicanos están realmente documentados y qué aspectos de su elaboración pueden compararse.', '/leccion-entrar-al-pan-mexicano', true],
+  ['36', 'Conchas: una masa, dos preparaciones', 'Analiza la masa fermentada y la pasta de cobertura de las conchas como partes distintas del mismo producto.', '#', false],
+  ['37', 'Pan de pulque: otra ruta de fermentación', 'Reconoce la secuencia particular del pan de pulque y compara su fórmula con otras masas enriquecidas.', '#', false],
+  ['38', 'Garibaldis: estructura, acabado e identidad', 'Observa cómo una preparación horneada se completa con mermelada y gragea blanca.', '#', false],
+  ['39', 'Comparar para reconocer', 'Integra conchas, pan de pulque y garibaldis y distingue qué cambia en ingredientes, proceso, formado y acabado.', '#', false],
 ];
 
 export default function ModuleFivePage() {
@@ -60,20 +60,37 @@ export default function ModuleFivePage() {
           </div>
 
           <div className="grid gap-3">
-            {lessons.map(([number, title, description, href]) => (
-              <div
-                key={number}
-                className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm opacity-70"
-              >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
-                  {number}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block font-semibold text-stone-900">{title}</span>
-                  <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
-                </span>
-                <span className="shrink-0 text-sm text-stone-400">En preparación</span>
-              </div>
+            {lessons.map(([number, title, description, href, active]) => (
+              active ? (
+                <a
+                  key={number}
+                  href={href}
+                  className="flex items-center gap-4 rounded-2xl border border-amber-300 bg-white p-5 shadow-sm transition hover:border-amber-500 hover:shadow-md"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-semibold text-amber-900">
+                    {number}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-semibold text-stone-900">{title}</span>
+                    <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
+                  </span>
+                  <span className="shrink-0 text-sm font-medium text-amber-800">Abrir lección →</span>
+                </a>
+              ) : (
+                <div
+                  key={number}
+                  className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm opacity-70"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
+                    {number}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-semibold text-stone-900">{title}</span>
+                    <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
+                  </span>
+                  <span className="shrink-0 text-sm text-stone-400">En preparación</span>
+                </div>
+              )
             ))}
           </div>
         </section>
