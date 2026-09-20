@@ -2,7 +2,7 @@ import CourseShell from '../components/course/CourseShell';
 
 export default function LessonTwelvePage() {
   return (
-    <CourseShell eyebrow="Lección 12" title="El aire también construye la estructura" backHref="/modulo-3" backLabel="Volver al módulo">
+    <CourseShell eyebrow="Lección 13" title="El aire también construye la estructura" backHref="/modulo-3" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Antes de empezar</p>
