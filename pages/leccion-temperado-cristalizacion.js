@@ -1,0 +1,74 @@
+import CourseShell from '../components/course/CourseShell';
+
+const lesson = {
+  number: '52',
+  title: 'Temperado: controlar la cristalización',
+  subtitle: 'Seguir las temperaturas y la secuencia de temperado documentadas antes de pasar a piezas macizas y moldeadas.',
+};
+
+export default function LessonPage() {
+  return (
+    <CourseShell
+      eyebrow="Módulo 7 · Lección 52"
+      title={lesson.title}
+      subtitle={lesson.subtitle}
+      backHref="/modulo-7"
+      backLabel="Volver al módulo"
+    >
+      <div className="space-y-8">
+        <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Qué busca la fuente cuando hace oscilar la cobertura entre distintas temperaturas?</h2>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">La idea central</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">El temperado como secuencia de temperaturas</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La Clase 19 define el temperado como la oscilación de la cobertura de chocolate por diferentes temperaturas con el fin de estabilizar los cristales Beta contenidos en la manteca de cacao.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">El documento relaciona el temperado con brillo, facilidad de moldeado, desmoldado, textura crujiente, rotura y contracción.</p>
+          
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">La secuencia documentada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Fundir → enfriar → juntar → verificar</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La técnica indicada por la fuente es: fundir el chocolate a 45 °C; enfriar en mármol el 50% a 28 °C; juntar esa parte con el resto que permanece a 45 °C; verificar la temperatura y emplear según el caso.</p>
+          
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Temperaturas indicadas</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Oscuro, leche y blanco</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La tabla de la fuente presenta como temperaturas de trabajo 30 °C para oscuro, 29 °C para leche y 27 °C para blanco. También aparecen temperaturas de 45 °C para oscuro, 31 °C para leche y 29 °C para blanco en la secuencia térmica.</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate oscuro: 45 °C → 28 °C en la parte enfriada → 30 °C de trabajo.</p></div>
+            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate de leche: 45 °C → 28 °C en la parte enfriada → 29 °C de trabajo.</p></div>
+            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate blanco: 45 °C → 28 °C en la parte enfriada → 27 °C de trabajo.</p></div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Diagnóstico</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">La superficie también cuenta</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente enumera como causas de textura blanca o satinada el mal temperado, mal enfriamiento, molde demasiado caliente, choque térmico, humedad ambiental, temperatura demasiado caliente y suciedad en el molde.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Para manchas oscuras, señala moldes demasiado fríos y establece 20 °C como temperatura correcta del molde.</p>
+          
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Práctica</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye la secuencia térmica</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Escribe sin mirar la receta: 45 °C para fundir, 28 °C para enfriar la mitad y después la temperatura de trabajo correspondiente al tipo de chocolate.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
+          <p className="text-sm font-medium text-amber-800">Límite de la fuente</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">No añadimos curvas externas</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente presenta una técnica y temperaturas concretas. No se incorporan aquí curvas de temperado de otras escuelas o fabricantes.</p>
+        </section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6">
+          <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
+          <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
+        </section>
+      </div>
+    </CourseShell>
+  );
+}
