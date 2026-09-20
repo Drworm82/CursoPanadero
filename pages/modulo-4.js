@@ -8,7 +8,7 @@ const module = {
 };
 
 const lessons = [
-  ['25', 'El proceso completo de una masa', 'Reconoce la secuencia desde el pesado y mezclado hasta el enfriado.', '#'],
+  ['25', 'El proceso completo de una masa', 'Reconoce la secuencia desde el pesado y mezclado hasta el enfriado.', '/leccion-el-proceso-completo-de-una-masa'],
   ['26', 'Fermentar es transformar', 'Observa qué cambia en una masa durante la fermentación y qué señales indican su avance.', '#'],
   ['27', 'Amasado, estructura y tensión', 'Relaciona el trabajo de la masa con la estructura que necesitará durante la fermentación y el horneado.', '#'],
   ['28', 'Baguette: estructura, formado y greñado', 'Aplica el proceso de panificación a una pieza donde el formado y el corte tienen un papel visible.', '#'],
@@ -54,7 +54,7 @@ export default function ModuleFourPage() {
 
           <div className="grid gap-3">
             {lessons.map(([number, title, description]) => (
-              <div key={number} className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm opacity-70">
+              {lessons.map(([number, title, description, href]) => href !== '#' ? (\n                <a key={number} href={href} className="flex items-center gap-4 rounded-2xl border border-amber-200 bg-white p-5 shadow-sm hover:border-amber-300 hover:shadow-md">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">{number}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold text-stone-900">{title}</span>
