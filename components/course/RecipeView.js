@@ -69,37 +69,32 @@ const recipeObservationGuides = {
       chibi: 'En la rosca anterior trabajaste mantequilla y azúcar para acremar. Aquí la grasa ya está líquida, así que el procedimiento parte de otra estructura.',
     },
     {
-      observation: 'Al mezclar el licuado con los secos, pon atención a cómo desaparecen poco a poco los rastros de harina y a cuándo la mezcla queda integrada.',
-      phenomenon: 'En cuanto la harina recibe líquido y trabajo mecánico, sus proteínas pueden empezar a formar gluten.',
-      importance: 'Por eso la receta indica mezclar de manera envolvente y no sobre batir: queremos integrar los ingredientes sin desarrollar una estructura excesiva.',
+      observation: 'Al mezclar el licuado con los secos, pon atención a cómo desaparecen poco a poco los rastros de harina y a cuándo la mezcla queda integrada. Después fíjate en cómo quedan repartidas las nueces y las pasitas.',
+      phenomenon: 'En cuanto la harina recibe líquido y trabajo mecánico, sus proteínas pueden empezar a formar gluten. Las nueces y las pasitas se incorporan después como ingredientes sólidos.',
+      importance: 'Por eso la receta indica mezclar de manera envolvente y no sobre batir: queremos integrar la harina y repartir los sólidos sin desarrollar una estructura excesiva.',
       chibi: 'La palabra clave aquí es “integrar”. Una vez que ya no ves harina seca, seguir trabajando la mezcla no significa necesariamente mejorarla.',
     },
     {
-      observation: 'Pon atención a cómo quedan distribuidas las nueces y las pasitas dentro de la masa.',
-      phenomenon: 'Son ingredientes sólidos que se incorporan después de formar la mezcla base.',
-      importance: 'Una distribución uniforme ayuda a que aparezcan de manera regular al cortar el panqué.',
-    },
-    {
       observation: 'Antes de hornear, pon atención a cómo queda distribuido el streusel sobre la superficie.',
-      phenomenon: 'El streusel se prepara formando una arenilla con mantequilla fría, azúcar, harina y canela; durante el horneado esa mezcla se transforma y toma color.',
+      phenomenon: 'El streusel se prepara formando una arenilla con mantequilla fría, azúcar, harina y canela. Durante el horneado esa mezcla se transforma y toma color.',
       importance: 'La capa de streusel aporta una textura y un acabado diferentes a la masa del panqué.',
     },
     {
       observation: 'Durante el horneado, pon atención al volumen, al color de la superficie y a cómo cambia la estructura de la masa.',
-      phenomenon: 'El calor activa los cambios que transforman la mezcla en una pieza horneada: se expanden gases y vapor, actúa el polvo para hornear y la estructura termina fijándose.',
+      phenomenon: 'El calor transforma la mezcla: se expanden gases y vapor, actúa el polvo para hornear y la estructura termina fijándose.',
       importance: 'El resultado del horno depende de la estructura que construiste antes de hornear y de las condiciones de cocción indicadas por la receta.',
     },
     {
       observation: 'Al enfriar y desmoldar, pon atención a la firmeza de la pieza y a cómo se mantiene la estructura al manipularla.',
       phenomenon: 'La estructura se estabiliza al bajar la temperatura y la pieza deja de estar tan frágil como cuando acaba de salir del horno.',
-      importance: 'Por eso no se trata solo de “esperar”: el enfriado forma parte del resultado final.',
+      importance: 'El enfriado forma parte del resultado final: permite que la pieza se estabilice antes de manipularla y desmoldarla.',
     },
     {
       observation: 'Al preparar el streusel, pon atención a que la mantequilla fría se distribuya con los secos formando una arenilla, no una masa lisa.',
       phenomenon: 'La mantequilla fría se mantiene en pequeños fragmentos entre los ingredientes secos mientras se trabaja la mezcla.',
       importance: 'Esa estructura es la que permite obtener el acabado arenoso y crujiente característico del streusel después del horneado.',
     },
-  ],
+  ]
 };
 
 const lessonLinks = {
@@ -111,6 +106,20 @@ const lessonLinks = {
     href: '/leccion-segunda-ruta-aceite',
     label: 'Volver a la lección',
   },
+};
+
+const recipeClosingGuides = {
+  'rosca-pina-colada': [
+    ['El acremado', 'Los cristales de azúcar ayudan mecánicamente a trabajar la mantequilla durante el batido. Al mismo tiempo, el batido favorece la incorporación de pequeñas burbujas de aire. Por eso la mezcla se vuelve más cremosa, puede verse más pálida y aumenta su volumen.'],
+    ['La incorporación de huevos y harina', 'Los huevos aportan una fase acuosa que debe integrarse progresivamente con la grasa. Después, al incorporar la harina, comienza a desarrollarse estructura y el trabajo mecánico puede favorecer la formación de gluten. En esta preparación queremos integrar la harina, no desarrollar una red de gluten como en un pan.'],
+    ['El horneado', 'El calor transforma la masa: los gases y el vapor se expanden, actúan los agentes leudantes y la estructura se fija. Por eso puedes relacionar el volumen, el color y la firmeza finales con todo lo que ocurrió antes de meter la rosca al horno.'],
+  ],
+  'panque-platano-streusel-canela': [
+    ['Una masa batida sin acremado', 'A diferencia de la rosca anterior, aquí la grasa principal es aceite. No comenzamos batiendo mantequilla con azúcar, sino formando una mezcla homogénea con aceite, plátano, azúcar, huevo y vainilla.'],
+    ['Integrar sin sobre batir', 'Cuando los secos entran en contacto con los ingredientes húmedos, la harina puede empezar a formar gluten con el trabajo mecánico. Por eso la receta indica mezclar de manera envolvente y no sobre batir: buscamos integrar la mezcla, no desarrollar una estructura de pan.'],
+    ['El streusel', 'La mantequilla fría se trabaja con harina, azúcar y canela hasta formar una arenilla. Sus pequeños fragmentos de grasa quedan separados entre los secos y, al hornearse, producen una cobertura con textura diferente a la del panqué.'],
+    ['El horneado', 'El calor transforma tanto la masa como el streusel. El polvo para hornear contribuye al crecimiento, mientras la estructura de la masa se fija y la cobertura toma color y textura.'],
+  ],
 };
 
 const defaultEquipment = [
@@ -253,24 +262,12 @@ export default function RecipeView({ recipe, ingredients, steps }) {
           <h2 className="mt-1 text-2xl font-semibold text-stone-900">Antes de pasar a la siguiente preparación</h2>
           <div className="mt-4 space-y-4 text-stone-600">
             <div className="space-y-3">
-              <div className="rounded-xl bg-stone-50 p-4">
-                <p className="font-medium text-stone-900">1. El acremado</p>
-                <p className="mt-1 leading-7">
-                  Los cristales de azúcar ayudan mecánicamente a trabajar la mantequilla durante el batido. Al mismo tiempo, el batido favorece la incorporación de pequeñas burbujas de aire. Por eso la mezcla se vuelve más cremosa, puede verse más pálida y aumenta su volumen.
-                </p>
-              </div>
-              <div className="rounded-xl bg-stone-50 p-4">
-                <p className="font-medium text-stone-900">2. La incorporación de huevos y harina</p>
-                <p className="mt-1 leading-7">
-                  Los huevos aportan una fase acuosa que debe integrarse progresivamente con la grasa. Después, al incorporar la harina, comienza a desarrollarse estructura y el trabajo mecánico puede favorecer la formación de gluten. En esta preparación queremos integrar la harina, no desarrollar una red de gluten como en un pan.
-                </p>
-              </div>
-              <div className="rounded-xl bg-stone-50 p-4">
-                <p className="font-medium text-stone-900">3. El horneado</p>
-                <p className="mt-1 leading-7">
-                  El calor transforma la masa: los gases y el vapor se expanden, actúan los agentes leudantes y la estructura se fija. Por eso puedes relacionar el volumen, el color y la firmeza finales con todo lo que ocurrió antes de meter la rosca al horno.
-                </p>
-              </div>
+              {(recipeClosingGuides[recipe.slug] || []).map(([title, text]) => (
+                <div key={title} className="rounded-xl bg-stone-50 p-4">
+                  <p className="font-medium text-stone-900">{title}</p>
+                  <p className="mt-1 leading-7">{text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
