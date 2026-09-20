@@ -69,6 +69,12 @@ const recipeObservationGuides = {
       chibi: 'En la rosca anterior trabajaste mantequilla y azúcar para acremar. Aquí la grasa ya está líquida, así que el procedimiento parte de otra estructura.',
     },
     {
+      observation: 'Al comparar esta preparación con la rosca anterior, pon atención a la textura que buscas después de que el panqué se enfríe: debe conservar una sensación húmeda y suave.',
+      phenomenon: 'El aceite permanece líquido a temperatura ambiente, mientras que la mantequilla contiene grasa, agua y sólidos lácteos y cambia de estado al enfriarse.',
+      importance: 'En este panqué elegimos aceite porque buscamos una miga húmeda y suave y una sensación que se conserve después del enfriado. La mantequilla también aporta grasa, pero produciría un comportamiento diferente y además aporta su propio sabor.',
+      chibi: 'No se trata de que una grasa sea “mejor” que la otra. Se elige la materia grasa según el resultado que queremos obtener.',
+    },
+    {
       observation: 'Al mezclar el licuado con los secos, pon atención a cómo desaparecen poco a poco los rastros de harina y a cuándo la mezcla queda integrada. Después fíjate en cómo quedan repartidas las nueces y las pasitas.',
       phenomenon: 'En cuanto la harina recibe líquido y trabajo mecánico, sus proteínas pueden empezar a formar gluten. Las nueces y las pasitas se incorporan después como ingredientes sólidos.',
       importance: 'Por eso la receta indica mezclar de manera envolvente y no sobre batir: queremos integrar la harina y repartir los sólidos sin desarrollar una estructura excesiva.',
@@ -116,6 +122,7 @@ const recipeClosingGuides = {
   ],
   'panque-platano-streusel-canela': [
     ['Una masa batida sin acremado', 'A diferencia de la rosca anterior, aquí la grasa principal es aceite. No comenzamos batiendo mantequilla con azúcar, sino formando una mezcla homogénea con aceite, plátano, azúcar, huevo y vainilla.'],
+    ['¿Por qué aceite y no mantequilla?', 'El aceite y la mantequilla aportan grasa, pero se comportan de manera diferente. El aceite permanece líquido a temperatura ambiente; la mantequilla contiene grasa, agua y sólidos lácteos y cambia de estado al enfriarse. En este panqué elegimos aceite porque buscamos una miga húmeda y suave y una sensación de suavidad que se conserve después del enfriado. La mantequilla no es “peor”: simplemente llevaría la preparación hacia otro resultado y además aportaría su propio sabor.'],
     ['Integrar sin sobre batir', 'Cuando los secos entran en contacto con los ingredientes húmedos, la harina puede empezar a formar gluten con el trabajo mecánico. Por eso la receta indica mezclar de manera envolvente y no sobre batir: buscamos integrar la mezcla, no desarrollar una estructura de pan.'],
     ['El streusel', 'La mantequilla fría se trabaja con harina, azúcar y canela hasta formar una arenilla. Sus pequeños fragmentos de grasa quedan separados entre los secos y, al hornearse, producen una cobertura con textura diferente a la del panqué.'],
     ['El horneado', 'El calor transforma tanto la masa como el streusel. El polvo para hornear contribuye al crecimiento, mientras la estructura de la masa se fija y la cobertura toma color y textura.'],
