@@ -208,6 +208,22 @@ export default function LessonCroissantEmpasteYVueltasPage() {
         </section>
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y compara</h2>
+          <p className="mt-2 leading-7 text-stone-600">Reconstruye el croissant sin mirar la receta: escribe en orden fermentación, ponchado, refrigeración, empaste, vueltas, corte, enrollado, fermentación final y horneado. Luego comprueba la secuencia.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica con evidencia de la receta</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Cuándo ocurre la refrigeración de 20 minutos?</p>
+            <p>2. ¿Cuántas vueltas documenta la receta y de qué tipo?</p>
+            <p>3. ¿Qué sucede inmediatamente después del laminado antes de la fermentación final?</p>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Práctica</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye las vueltas sin mirar la receta</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">
