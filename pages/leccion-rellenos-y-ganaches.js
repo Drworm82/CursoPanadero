@@ -20,6 +20,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Cómo se construye un relleno cuando el chocolate ya no es solamente la cobertura?</h2>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Un chocolate relleno tiene más de una estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Las preparaciones de bombonería permiten distinguir una cobertura exterior de un relleno interior. La lección busca que puedas leer ambos como componentes de una misma pieza.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera el temperado y el trabajo de coberturas. Después observa cómo la preparación del relleno y su incorporación se relacionan con el cierre del conjunto. Práctica: dibuja el corte de un bombón y etiqueta cobertura, relleno y cierre; después reconstruye el orden de trabajo.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 20</p>
@@ -57,11 +60,7 @@ export default function LessonPage() {
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Separa casco y relleno</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">En uno de los ejercicios de la Clase 20 identifica qué ingredientes pertenecen al casco y cuáles al relleno. Después escribe la secuencia hasta llegar al molde relleno.</p>
         </section>
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium text-amber-800">Límite de la fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">No definimos ganache fuera de la fuente</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La palabra ganache aparece en los procedimientos y objetivos de la Clase 20. No añadimos una teoría externa sobre proporciones o emulsión.</p>
-        </section>
+        
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
