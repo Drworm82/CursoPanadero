@@ -39,13 +39,14 @@ export default function ModuleSixPage() {
           </p>
         </section>
 
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Límite de la fuente</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Trabajaremos con los laminados que sí están documentados.</h2>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Sigue la transformación paso a paso</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-            La fuente contiene recetas de Croissant Casero y Pan Danés Varios Sabores. La ruta también menciona
-            hojaldre como una aplicación de los laminados, pero no hay una receta de hojaldre documentada en
-            <code>data/recetas.js</code>. Por eso el módulo no añadirá una fórmula ni un procedimiento de hojaldre.
+            Las recetas de este módulo permiten observar una secuencia de masa, empaste, refrigeración, vueltas y
+            formado. Durante cada preparación, identifica qué operación estás realizando y compárala con la otra
+            receta. El módulo se mantiene dentro de los procedimientos que la fuente documenta; no se añade una
+            fórmula de hojaldre porque no existe una receta documentada para estudiarla aquí.
           </p>
         </section>
 
