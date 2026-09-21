@@ -20,6 +20,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Qué operaciones aparecen cuando la cobertura deja de ser una salsa y se convierte en una pieza?</h2>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Del chocolate controlado a una pieza con forma</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">El moldeado convierte la cobertura en una pieza concreta. La lectura pedagógica consiste en seguir la relación entre chocolate, molde, enfriado y desmolde, sin separar esas operaciones.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera el temperado. Ahora identifica en una pieza moldeada qué momento corresponde a preparar el molde, trabajar la cobertura, formar la pieza y permitir su cristalización. Práctica: señala qué parte depende de la cobertura, cuál del molde y cuál del enfriado; después explica qué observarías al desmoldar.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Del temperado al molde</p>
@@ -55,11 +58,7 @@ export default function LessonPage() {
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Compara dos formas</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Explica la diferencia entre el molde limpio del chocolate con cardamomo y las moneditas sobre acetato de los Mendiants. En ambos casos identifica cuándo interviene el temperado.</p>
         </section>
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium text-amber-800">Límite de la fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">No generalizamos el comportamiento del molde</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La lección se limita a los formatos y temperaturas que la Clase 19 documenta.</p>
-        </section>
+        
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
