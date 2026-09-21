@@ -11,6 +11,14 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera crema inglesa, batidos, gelatina y crema semimontada. Señala dónde aparece la cocción inglesa y qué sucede después de retirar cada preparación del fuego. Práctica: relaciona biscuit, crema de naranja, mousse, glaseado y decoración con su lugar en el montaje.</p></section>
 <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Aprende mientras haces</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Convierte cada paso en una observación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Pon atención especial a la continuidad de la técnica. <strong>Durante la cocción inglesa:</strong> identifica dónde aparece dentro de la preparación documentada. <strong>Después de esa cocción:</strong> observa qué componentes se incorporan antes de llegar a la mousse terminada. <strong>Al revisar el montaje:</strong> separa las preparaciones horneadas, las cremas y el acabado. Al finalizar, explica qué técnica previa fue recuperada y en qué preparación vuelve a aparecer.</p></section>
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Estructura de Andalucía]</strong><br />Corte o esquema que identifique biscuit de almendra, crema de naranja, mousse de chocolate/praliné y glaseado oscuro.</p>
+            <p><strong>[VIDEO SUGERIDO — Cocción de la crema inglesa y mousse]</strong><br />Demostración centrada en la transformación de la mezcla durante la cocción y en su integración posterior a la mousse.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
