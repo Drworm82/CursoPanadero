@@ -61,6 +61,22 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">En uno de los ejercicios de la Clase 20 identifica qué ingredientes pertenecen al casco y cuáles al relleno. Después escribe la secuencia hasta llegar al molde relleno.</p>
         </section>
         
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y reconstruye</h2>
+          <p className="mt-2 leading-7 text-stone-600">Dibuja un bombón en corte y separa cobertura, relleno y cierre. Después reconstruye el orden de trabajo de una de las preparaciones documentadas.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Responde con evidencia de la fuente</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué diferencia existe entre la cobertura exterior y el relleno interior?</p>
+            <p>2. ¿Qué operaciones aparecen antes de incorporar el relleno?</p>
+            <p>3. ¿Qué parte de la secuencia corresponde al cierre del conjunto?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
