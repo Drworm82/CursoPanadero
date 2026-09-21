@@ -60,6 +60,22 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Compara trufa de vainilla, rocher y chocolate de pasas: indica cuál se corta, cuál se bolea y cuál recibe transfer.</p>
         </section>
         
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y reconstruye</h2>
+          <p className="mt-2 leading-7 text-stone-600">Completa una tabla con cuatro formatos: bombón, trufa, rocher y chocolate de corte. Para cada uno registra la operación principal y el acabado que documenta la lección.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Responde con evidencia de la fuente</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Cuál de los formatos se trabaja mediante corte?</p>
+            <p>2. ¿Qué formato incorpora sólidos o frutos secos como parte de su construcción?</p>
+            <p>3. ¿Qué diferencia puedes demostrar entre una pieza bañada y una pieza terminada mediante otro acabado?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
