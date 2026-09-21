@@ -62,6 +62,23 @@ export default function LessonPage() {
           </div>
         </section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Separa base, derivado y acabado</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Haz tres columnas y clasifica las elaboraciones de Gimont: biscuit, jarabe, pistache dragee, crema pastelera, mousseline, bavaroise y decoración. Después reconstruye el orden documentado hasta el montaje individual y marca qué preparaciones se derivan de otra.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Explica el sistema de producción</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Explica cómo se relacionan la crema pastelera y la mousseline de pistache.</li>
+            <li>Ordena las preparaciones documentadas antes del montaje.</li>
+            <li>Reconstruye los cuatro pasos del montaje individual.</li>
+            <li>Identifica qué elementos pertenecen al acabado final y cuáles forman parte de la estructura del pastel.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
