@@ -53,7 +53,7 @@ const modules = [
     href: '/modulo-6',
     title: 'Laminados',
     guiding_question: '¿Cómo se construyen capas de masa y grasa y qué hace que se separen durante el horneado?',
-    expected_result: 'Reconocer el empaste, la refrigeración y las vueltas documentadas en croissant y pan danés, y comparar cómo esas operaciones se integran en cada receta.',
+    expected_result: 'Reconstruir y comparar las secuencias documentadas de croissant y pan danés, identificando empaste, refrigeración, vueltas y formado en cada receta.'
   },
   {
     id: 'modulo-7',
