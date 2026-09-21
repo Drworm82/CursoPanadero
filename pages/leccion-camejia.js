@@ -29,6 +29,9 @@ export default function LessonPage() {
             <div><h3 className="font-semibold text-stone-900">Montaje</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Marco 22 cm × 16 cm.</li></ol><p className="mt-2 text-sm text-stone-500">La fuente recuperada termina el apartado de montaje después de indicar el marco; no se agregan pasos que no estén documentados.</p></div>
           </div>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Merengue italiano, crema montada, gelatina y bizcochos ya forman parte del curso. La comparación entre las dos mousses permite recuperar esas técnicas.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder explicar qué estructura comparten las dos mousses y qué componente cambia entre ellas.</p></section>
+
       </div>
     </CourseShell>
   );
