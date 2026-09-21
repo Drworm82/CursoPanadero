@@ -45,7 +45,7 @@ const modules = [
     href: '/modulo-5',
     title: 'Pan mexicano y tradición',
     guiding_question: '¿Cómo se traducen las técnicas de panificación en productos mexicanos con identidad propia?',
-    expected_result: 'Relacionar técnicas de masa, formado, fermentación y acabado con piezas tradicionales documentadas en la fuente.',
+    expected_result: 'Comparar las preparaciones mexicanas documentadas y explicar cómo sus ingredientes, proceso, formado y acabado construyen diferencias observables entre las piezas.'
   },
   {
     id: 'modulo-6',
