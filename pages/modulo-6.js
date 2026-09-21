@@ -4,7 +4,7 @@ const moduleInfo = {
   sort_order: 6,
   title: 'Laminados',
   guiding_question: '¿Cómo se construyen capas de masa y grasa y qué hace que se separen durante el horneado?',
-  expected_result: 'Reconocer el empaste, la refrigeración y las vueltas documentadas en croissant y pan danés, y comparar cómo esas operaciones se integran en cada receta.',
+  expected_result: 'Reconstruir y comparar las secuencias documentadas de croissant y pan danés, identificando empaste, refrigeración, vueltas y formado en cada receta.'
 };
 
 const lessons = [
@@ -47,6 +47,32 @@ export default function ModuleSixPage() {
             formado. Durante cada preparación, identifica qué operación estás realizando y compárala con la otra
             receta. El módulo se mantiene dentro de los procedimientos que la fuente documenta; no se añade una
             fórmula de hojaldre porque no existe una receta documentada para estudiarla aquí.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+            Lee primero la secuencia de la receta. Después ejecuta o reconstruye cada operación, observa dónde
+            intervienen el frío, el empaste y las vueltas, y finalmente explica qué cambia cuando la receta llega
+            al formado. La comparación debe conservar las diferencias documentadas entre croissant y pan danés.
+          </p>
+          <div className="mt-5 grid gap-3 md:grid-cols-4">
+            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Ubica masa, fermentación, frío y empaste.</p></div>
+            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Sigue la secuencia documentada.</p></div>
+            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Registra vueltas, refrigeraciones y formado.</p></div>
+            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Compara las dos recetas sin mezclarlas.</p></div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-900">Integración del módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Reconstruye dos secuencias</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
+            Haz dos diagramas, uno para croissant y otro para pan danés. Coloca en orden masa, fermentación,
+            refrigeración, empaste, cada vuelta y formado. Después marca tres coincidencias y tres diferencias
+            que puedas comprobar directamente en las recetas.
           </p>
         </section>
 
