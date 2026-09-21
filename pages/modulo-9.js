@@ -4,7 +4,7 @@ const moduleInfo = {
   sort_order: 9,
   title: 'Pasteles a gran escala',
   guiding_question: '¿Cómo se organizan pasteles a gran escala mediante sistemas de producción en serie?',
-  expected_result: 'Reconocer la organización de las preparaciones y del montaje en los pasteles a gran escala documentados en la Clase 38.',
+  expected_result: 'Reconstruir y comparar la organización de las preparaciones, la secuencia de producción y el montaje de los pasteles a gran escala documentados en la Clase 38.',
 };
 
 const lessons = [
