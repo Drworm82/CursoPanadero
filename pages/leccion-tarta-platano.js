@@ -14,6 +14,14 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera masa sable y preparaciones de crema. Observa qué componente se hornea como estructura y cuáles se incorporan posteriormente. Práctica: identifica base, capa de ganache y cobertura de chiboust; después reconstruye el montaje sin mirar la receta.</p></section>
 
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Capas de la tarta]</strong><br />Corte esquemático o fotografía de referencia que identifique sable, ganache de plátano, plátano salteado y chiboust.</p>
+            <p><strong>[VIDEO SUGERIDO — Construcción de la tarta]</strong><br />Demostración del orden de montaje y de la colocación de los componentes, para que el alumno pueda comparar el proceso con su propia secuencia.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-2">
