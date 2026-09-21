@@ -87,6 +87,14 @@ export default function LessonPage() {
           </ol>
         </section>
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Estructura del pastel]</strong><br />Diagrama o fotografía de corte que permita identificar visualmente la magdalena, el jelly, la mousse y la relación entre el inserto y el molde exterior.</p>
+            <p><strong>[VIDEO SUGERIDO — Armado invertido]</strong><br />Demostración del montaje de la mousse, incorporación de la pastilla y secuencia de refrigeración y desmolde. El objetivo es observar el orden de las operaciones.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-2">
