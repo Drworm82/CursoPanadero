@@ -184,6 +184,25 @@ export default function LessonTwentyThreePage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Compara las dos rutas</h2>
+          <p className="mt-2 leading-7 text-stone-600">
+            Sin mirar la receta, reconstruye las dos secuencias: cheesecake horneado y cheesecake frío.
+            En cada una identifica qué ocurre antes de obtener la consistencia final y qué papel cumple el montaje.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica qué cambia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué diferencia de proceso presenta la fuente entre el cheesecake horneado y el cheesecake frío?</p>
+            <p>2. ¿Qué componentes del montaje del cheesecake frío deben estar presentes antes del desmolde?</p>
+            <p>3. ¿Qué terminología de la fuente se conserva sin intentar reconciliarla?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte</h2>
