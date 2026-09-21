@@ -164,6 +164,26 @@ export default function LessonTwentyPage() {
           </div>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Clasifica sin memorizar recetas</h2>
+          <p className="mt-2 leading-7 text-stone-600">
+            Toma los cuatro productos de la fuente y escribe para cada uno qué permanece igual de la pasta choux
+            y qué cambia en el producto terminado. Si la fuente no especifica un formado, no inventes el procedimiento:
+            señala simplemente que esa información no está desarrollada en la ficha.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Reconstruye la familia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué cuatro aplicaciones de la pasta choux enumera la Clase 11?</p>
+            <p>2. ¿Qué variantes de crema pastelera aparecen en la fuente?</p>
+            <p>3. ¿Qué información sobre los formados individuales debes evitar completar por tu cuenta?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte</h2>
