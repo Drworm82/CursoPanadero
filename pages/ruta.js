@@ -13,7 +13,7 @@ const modules = [
     href: '/modulo-1',
     title: 'Entrar a la panadería: masas batidas pesadas',
     guiding_question: '¿Qué estoy haciendo cuando mezclo una masa y cómo sé cuándo dejar de trabajarla?',
-    expected_result: 'Ejecutar tres masas batidas pesadas con distintos métodos y describir lo observado.',
+    expected_result: 'Ejecutar las preparaciones del módulo aplicando y comparando métodos de masas batidas pesadas, y explicar qué se observa durante la mezcla y la cocción.',
   },
   {
     id: 'modulo-2',
