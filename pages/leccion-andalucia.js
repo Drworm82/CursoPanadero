@@ -41,6 +41,23 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La crema inglesa, los batidos y la gelatina ya forman parte del repertorio del curso. Esta vez se conectan para construir crema de naranja y mousse.</p></section>
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder localizar la cocción inglesa dentro de la preparación y relacionarla con el componente que se obtiene después.</p></section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Mapa de componentes y técnicas</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Haz una tabla con biscuit de almendra, crema de naranja, mousse de chocolate, praliné y glaseado. Para cada componente, anota la técnica documentada y la señal de proceso que permite reconocer cuándo continuar. No agregues operaciones que la receta no indique.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye la lógica de la preparación</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Identifica qué preparaciones parten de una cocción inglesa.</li>
+            <li>Explica qué función cumple la grenetina dentro de las preparaciones donde aparece.</li>
+            <li>Describe la secuencia documentada del glaseado y su temperatura de uso.</li>
+            <li>Explica cómo se combinan los componentes para formar una pieza contemporánea.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
