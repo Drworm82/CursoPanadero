@@ -15,7 +15,7 @@ const lessons = [
   ['62', 'Pastel café y chocolate', 'Relaciona dacquoise, cremoso de café, bavaresa de chocolate y glaseo de café en un armado invertido.', '/leccion-pastel-cafe-chocolate', true],
   ['63', 'Tarta Tango', 'Reconoce la construcción de una tarta con sucrée de ajonjolí, biscuit joconde, compota de frambuesa y pimiento, crema de parmesano y teja.', '/leccion-tarta-tango', true],
   ['64', 'Camejía', 'Analiza un ensamblaje de bizcocho de chocolate y avellana con mousses de té y naranja y naranjas deshidratadas.', '/leccion-camejia', true],
-  ['65', 'Pastelería contemporánea IV: naranja', 'Relaciona biscuit de naranja, crema, gel y naranja deshidratada dentro del montaje documentado.', '/leccion-pasteleria-contemporanea-naranja', true],
+  ['65', 'Pastelería Contemporánea IV', 'Clase 37 · preparación documentada de biscuit, crema, gel y naranjas deshidratadas.', '/leccion-pasteleria-contemporanea-naranja', true],
 ];
 
 export default function ModuleEightPage() {
