@@ -76,7 +76,17 @@ export default function ModuleTwoPage() {
           </div>
         </section>
 
-
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cierre del módulo</p>
+          <h2 className="mt-1 text-2xl font-semibold text-stone-900">Qué deberías poder explicar</h2>
+          <ul className="mt-4 space-y-3 text-stone-700">
+            <li>• Qué busca una masa friable y en qué se diferencia de una masa de pan.</li>
+            <li>• Qué observas cuando la grasa y la harina forman la arenilla del sablage.</li>
+            <li>• Por qué la fuente indica mezclar sin amasar y dejar reposar en refrigeración.</li>
+            <li>• Qué diferencia hay entre trabajar una pasta por sablage y por acremado.</li>
+            <li>• Cómo se relacionan la base, la impermeabilización y el montaje en las tartas trabajadas.</li>
+          </ul>
+        </section>
       </div>
     </CourseShell>
   );
