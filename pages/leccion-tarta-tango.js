@@ -11,6 +11,14 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera masas de tarta, biscuit, compotas, cremas y acabados. Observa cómo cada componente entra en el montaje. Práctica: separa estructura, capa intermedia, crema, acabado y elemento crujiente; después identifica qué técnica previa reconoces en cada uno.</p></section>
 <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Aprende mientras haces</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Convierte cada paso en una observación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Esta receta permite practicar la lectura de una composición compleja. <strong>Antes de comenzar:</strong> separa mentalmente casco, biscuit, compota, crema y teja. <strong>Durante la elaboración:</strong> identifica qué preparaciones requieren horno, cuáles requieren cocción y cuáles se reservan para el montaje. <strong>Al montar:</strong> sigue la secuencia documentada y comprueba qué componente aparece después de la refrigeración. Al terminar, intenta describir Tango únicamente mediante sus componentes y su orden de montaje.</p></section>
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Corte de Tarta Tango]</strong><br />Fotografía o diagrama que permita reconocer las capas de sucrée de sésamo, joconde, compota, crema de parmesano y acabado de frambuesa.</p>
+            <p><strong>[VIDEO SUGERIDO — Montaje y acabado]</strong><br />Mostrar la colocación de las capas y la elaboración o aplicación de los acabados documentados, sin sustituir las instrucciones escritas.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
