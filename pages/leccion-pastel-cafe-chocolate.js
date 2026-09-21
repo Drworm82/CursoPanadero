@@ -1,0 +1,17 @@
+import CourseShell from '../components/course/CourseShell';
+
+const lesson = { number: '62', title: 'Pastel café y chocolate', subtitle: 'Dacquoise de chocolate, cremoso de café, bavaresa de chocolate y glaseo de café.' };
+
+export default function LessonPage() {
+  return (
+    <CourseShell eyebrow="Módulo 8 · Lección 62" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
+      <div className="space-y-8">
+        <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Cómo se ensamblan capas de café y chocolate con un glaseado final?</h2></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 36</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cuatro componentes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La receta utiliza dacquoise de chocolate, cremoso de café, bavaresa de chocolate y glaseo de café. El montaje se realiza de forma invertida y termina con glaseado.</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Composición</p><p className="mt-3 max-w-3xl leading-7 text-stone-700"><strong>Dacquoise:</strong> claras 105 g, azúcar 52 g + 30 g, polvo de almendras 90 g, harina 15 g, chocolate semiamargo 30 g y azúcar glass 45 g. <strong>Cremoso:</strong> leche 110 ml, crema 80 g, yemas 40 g, azúcar mascabado 90 g, café soluble 10 g, grenetina 12 g y crema 150 g. <strong>Bavaresa:</strong> leche 100 ml, crema 100 g, yemas 40 g, azúcar 20 g, grenetina 6 g, chocolate amargo 120 g y crema semibatida 360 g. <strong>Glaseo:</strong> glucosa 30 g, crema 95 g, chocolate blanco 150 g, café 3 g, grenetina 5 g y brillo 75 g.</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Procedimiento y montaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El dacquoise se prepara batiendo claras con azúcar e incorporando los secos tamizados y chocolate rallado; se forman dos óvalos de 16 cm y se hornean a 180 °C durante 7–8 minutos. El cremoso parte de una infusión de café y leche, que se cocina con crema, yemas y azúcar hasta 84 °C, incorporando grenetina y luego crema semibatida a 26 °C. La bavaresa se realiza con crema inglesa, chocolate, grenetina y crema semibatida. Para el glaseo se funden crema, glucosa, café y chocolate blanco; por debajo de 50 °C se agrega grenetina, luego brillo, y se utiliza a 27–29 °C. Se arma una pastilla de cremoso y dacquoise en un óvalo de 18 cm, se vierte bavaresa en un óvalo de 20 cm y se realiza un armado invertido antes de desmoldar y bañar.</p></section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6"><p className="text-sm font-medium text-amber-800">Práctica</p><p className="mt-2 max-w-3xl leading-7 text-stone-700">Identifica las temperaturas explícitas de la fuente: cocción del cremoso, incorporación de crema, uso del glaseo y horneado del dacquoise.</p></section>
+      </div>
+    </CourseShell>
+  );
+}
