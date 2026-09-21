@@ -60,7 +60,7 @@ export default function LessonPage() {
             <li>Enumera los cuatro componentes principales de la tarta.</li>
             <li>Indica qué componente se incorpora antes de la ganache y cuál después.</li>
             <li>Reconstruye el orden desde el montaje hasta el acabado con soplete.</li>
-            <li>Explica qué diferencia documenta la fuente entre la lista de ingredientes y el procedimiento del chiboust.</li>
+            <li>Explica qué función cumple cada componente en la secuencia de montaje y qué observación te permite comprobar que la tarta está lista para pasar a la siguiente etapa.</li>
           </ol>
         </section>
 
