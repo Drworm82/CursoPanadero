@@ -6,7 +6,17 @@ export default function LessonPage() {
   return (
     <CourseShell eyebrow="Módulo 8 · Lección 60" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
-        <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Ingredientes</p><p className="mt-3 max-w-4xl leading-7 text-stone-700"><strong>Sablé de chocolate y especias:</strong> mantequilla 125 g, harina 200 g, cocoa 50 g, 4 especias 1 pizca, sal 1 pizca, yemas 1 pza, huevo 1 pza, azúcar 80 g. <strong>Flan de coco y caramelo:</strong> leche 120 ml, crema para batir 180 ml, azúcar 80 g, coco rallado 40 g, huevo 1 pza, yemas 3 pzas. <strong>Mousse de chocolate y Bailey’s:</strong> cobertura de leche 140 g, leche 50 ml, crema para batir 50 ml, yemas 20 g, Bailey’s 25 ml, azúcar 25 g, crema para batir 160 g semi montada, grenetina en polvo 8 g. <strong>Tejas de coco:</strong> coco rallado 30 g, azúcar mascabado 35 g, claras 30 g, harina 10 g, mantequilla noisette 24 g. <strong>Para decorar:</strong> chocolate amargo 300 g y manteca de cacao 300 g, para todo el grupo.</p></section>
+        <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno aplicara técnicas antes vistas, para la confección de tartas contemporáneas.</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
+          <div className="mt-5 space-y-5 leading-7 text-stone-700">
+            <p><strong>Sablé de chocolate y especias:</strong> mantequilla 125 g · harina 200 g · cocoa 50 g · 4 especias 1 pizca · sal 1 pizca · yemas 1 pza · huevo 1 pza · azúcar 80 g.</p>
+            <p><strong>Flan de coco y caramelo:</strong> leche 120 ml · crema para batir 180 ml · azúcar 80 g · coco rallado 40 g · huevo 1 pza · yemas 3 pzas.</p>
+            <p><strong>Mousse de chocolate y Bailey’s:</strong> cobertura de leche 140 g · leche 50 ml · crema para batir 50 ml · yemas 20 g · Bailey’s 25 ml · azúcar 25 g · crema para batir 160 g semi montada · grenetina en polvo 8 g.</p>
+            <p><strong>Tejas de coco:</strong> coco rallado 30 g · azúcar mascabado 35 g · claras 30 g · harina 10 g · mantequilla noisette 24 g.</p>
+            <p><strong>Para decorar:</strong> chocolate amargo 300 g y manteca de cacao 300 g, para todo el grupo.</p>
+          </div>
+        </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Modo de elaboración</h2>
           <div className="mt-5 space-y-6 leading-7 text-stone-700">
