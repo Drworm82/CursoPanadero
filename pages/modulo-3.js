@@ -4,7 +4,7 @@ const moduleInfo = {
   sort_order: 3,
   title: 'Cuando el aire construye la estructura',
   guiding_question: '¿Cómo conseguimos que una preparación gane volumen y conserve ese volumen hasta convertirse en un producto terminado?',
-  expected_result: 'Reconocer el papel del huevo como agente aireante, entender por qué la harina se incorpora suavemente y relacionar después ese principio con merengues, montaje y pasta choux.',
+  expected_result: 'Aplicar y comparar los principios documentados para construir volumen, conservar aire, trabajar merengues y pasta choux, y relacionar esas estructuras con el montaje y el frío de productos terminados.',
 };
 
 const lessons = [
@@ -38,11 +38,58 @@ export default function ModuleThreePage() {
         </div>
 
         <section className="rounded-2xl bg-amber-50 p-6">
-          <p className="text-sm font-medium text-amber-900">La idea que conecta con los módulos anteriores</p>
-          <p className="mt-2 max-w-3xl leading-7 text-amber-950">
-            Ya aprendiste que una masa puede necesitar desarrollar estructura o, por el contrario, evitar el desarrollo del gluten.
-            Ahora aparece otra posibilidad: construir volumen incorporando aire y después conservarlo durante la mezcla, la cocción y el montaje.
+          <p className="text-sm font-medium text-amber-900">Cómo estudiar este módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
+            En este módulo no memorices solamente nombres de masas y productos. En cada preparación identifica qué
+            construye la estructura, ejecuta la operación documentada, observa la señal que indica que puedes continuar
+            y después explica qué relación existe entre esa operación y el resultado.
           </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6">
+          <div className="grid gap-3 md:grid-cols-4">
+            <div>
+              <p className="font-semibold text-stone-900">1. Comprende</p>
+              <p className="mt-1 text-sm leading-6 text-stone-600">Identifica qué construye el volumen o la consistencia.</p>
+            </div>
+            <div>
+              <p className="font-semibold text-stone-900">2. Haz</p>
+              <p className="mt-1 text-sm leading-6 text-stone-600">Ejecuta la preparación siguiendo la secuencia de la fuente.</p>
+            </div>
+            <div>
+              <p className="font-semibold text-stone-900">3. Observa</p>
+              <p className="mt-1 text-sm leading-6 text-stone-600">Busca cambios visibles de volumen, consistencia, cocción o montaje.</p>
+            </div>
+            <div>
+              <p className="font-semibold text-stone-900">4. Explica</p>
+              <p className="mt-1 text-sm leading-6 text-stone-600">Reconstruye por qué una operación aparece en ese momento.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-900">Integración del módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Aprende a reconocer qué sostiene cada producto</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
+            Antes de cerrar el módulo, compara al menos cinco preparaciones: una masa batida ligera, el Pionono,
+            un merengue, la pasta choux y uno de los cheesecakes. Para cada una escribe qué construye la estructura,
+            qué señal debes observar y qué ocurre después de la cocción o del montaje.
+          </p>
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            <div className="rounded-2xl bg-white p-5">
+              <p className="font-semibold text-stone-900">Antes</p>
+              <p className="mt-1 text-sm leading-6 text-stone-600">¿Qué necesita ocurrir para construir volumen o consistencia?</p>
+            </div>
+            <div className="rounded-2xl bg-white p-5">
+              <p className="font-semibold text-stone-900">Durante</p>
+              <p className="mt-1 text-sm leading-6 text-stone-600">¿Qué señal concreta te indica que puedes continuar?</p>
+            </div>
+            <div className="rounded-2xl bg-white p-5">
+              <p className="font-semibold text-stone-900">Después</p>
+              <p className="mt-1 text-sm leading-6 text-stone-600">¿Qué operación termina de construir el producto?</p>
+            </div>
+          </div>
         </section>
 
         <section>
