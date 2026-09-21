@@ -11,6 +11,14 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera batidos y cremas cocidas. Compara qué técnica produce cada componente y qué lugar ocupa dentro del conjunto. Práctica: construye un esquema con base, crema, bavaresa, glaseado y decoración y explica la técnica asociada a cada parte.</p></section>
 <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Aprende mientras haces</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Convierte cada paso en una observación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Mientras avanzas, identifica qué función cumple cada preparación dentro del conjunto. <strong>En la dacquoise:</strong> observa cómo se combinan claras, azúcar, almendra y los ingredientes secos documentados. <strong>En las cremas:</strong> distingue la preparación cocida de la incorporación de crema semi montada. <strong>En el montaje:</strong> recupera el orden de los componentes antes de pasar al acabado. Después compara esta arquitectura con una preparación anterior del módulo y señala qué elemento se repite y cuál cambia.</p></section>
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Dacquoise, bavaresa y glaseado]</strong><br />Corte o esquema que permita distinguir las capas y relacionarlas con las preparaciones documentadas.</p>
+            <p><strong>[VIDEO SUGERIDO — Montaje y acabado]</strong><br />Mostrar el armado de las capas y el glaseado final, haciendo visible cómo una preparación compuesta se convierte en una pieza terminada.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
