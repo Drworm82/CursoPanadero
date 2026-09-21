@@ -1,5 +1,12 @@
 import CourseShell from './CourseShell';
 
+const lessonLinks = {
+  'rosca-pina-colada': { href: '/leccion-primer-panque-acremado', label: 'Volver a la lección' },
+  'panque-platano-streusel-canela': { href: '/leccion-segunda-ruta-aceite', label: 'Volver a la lección' },
+  'marmoleado-intenso-cafe': { href: '/leccion-repeticion-con-criterio', label: 'Volver a la lección' },
+  'panque-citricos': { href: '/leccion-el-horno-tambien-es-parte', label: 'Volver a la lección' },
+};
+
 const recipeObservationGuides = {
   'rosca-pina-colada': [
     {
