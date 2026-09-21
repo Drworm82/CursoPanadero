@@ -1,6 +1,6 @@
 import CourseShell from '../components/course/CourseShell';
 
-const module = {
+const moduleInfo = {
   sort_order: 3,
   title: 'Cuando el aire construye la estructura',
   guiding_question: '¿Cómo conseguimos que una preparación gane volumen y conserve ese volumen hasta convertirse en un producto terminado?',
@@ -24,16 +24,16 @@ const lessons = [
 
 export default function ModuleThreePage() {
   return (
-    <CourseShell eyebrow="Módulo 3" title={module.title} backHref="/ruta" backLabel="Volver a la ruta">
+    <CourseShell eyebrow="Módulo 3" title={moduleInfo.title} backHref="/ruta" backLabel="Volver a la ruta">
       <div className="space-y-8">
         <div className="grid gap-4 md:grid-cols-2">
           <section className="rounded-2xl border border-stone-200 bg-white p-6">
             <p className="text-sm font-medium text-stone-500">Pregunta guía</p>
-            <p className="mt-3 text-lg leading-8 text-stone-800">{module.guiding_question}</p>
+            <p className="mt-3 text-lg leading-8 text-stone-800">{moduleInfo.guiding_question}</p>
           </section>
           <section className="rounded-2xl border border-stone-200 bg-white p-6">
             <p className="text-sm font-medium text-stone-500">Al terminar</p>
-            <p className="mt-3 leading-7 text-stone-700">{module.expected_result}</p>
+            <p className="mt-3 leading-7 text-stone-700">{moduleInfo.expected_result}</p>
           </section>
         </div>
 
