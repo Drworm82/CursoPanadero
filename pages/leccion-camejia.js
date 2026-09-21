@@ -13,10 +13,10 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
-            <p><strong>Bizcocho de chocolate y avellana:</strong> yemas 115 g · azúcar 100 g · harina 25 g · fécula de maíz 25 g · cocoa 25 g · mantequilla fundida y fría 50 g · avellana tostada y troceada 30 g · claras 125 g · azúcar 20 g.</p>
-            <p><strong>Mousse de té:</strong> té fuerte 95 g (100 agua + 20 g té negro, infusionar) · grenetina 10 g · merengue italiano 150 g (2 claras + 120 azúcar) · crema montada 190 g.</p>
-            <p><strong>Mousse de naranja:</strong> jugo de naranja 100 g · grenetina 8 g · merengue italiano 150 g (2 claras + 120 g azúcar) · crema montada 190 g.</p>
-            <p><strong>Naranjas deshidratadas:</strong> ocupar el resto del almíbar para humectar el bizcocho · agua 100 g · azúcar 100 g · naranja 1 pza · té negro 10 g.</p>
+            <div><h3 className="font-semibold text-stone-900">Bizcocho de chocolate y avellana</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>yemas 115 g</li><li>azúcar 100 g</li><li>harina 25 g</li><li>fécula de maíz 25 g</li><li>cocoa 25 g</li><li>mantequilla fundida y fría 50 g</li><li>avellana tostada y troceada 30 g</li><li>claras 125 g</li><li>azúcar 20 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Mousse de té</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>té fuerte 95 g (100 agua + 20 g té negro, infusionar)</li><li>grenetina 10 g</li><li>merengue italiano 150 g (2 claras + 120 azúcar)</li><li>crema montada 190 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Mousse de naranja</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>jugo de naranja 100 g</li><li>grenetina 8 g</li><li>merengue italiano 150 g (2 claras + 120 g azúcar)</li><li>crema montada 190 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Naranjas deshidratadas</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>ocupar el resto del almíbar para humectar el bizcocho</li><li>agua 100 g</li><li>azúcar 100 g</li><li>naranja 1 pza</li><li>té negro 10 g</li></ul></div>
           </div>
         </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
