@@ -20,6 +20,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Qué cambia cuando el relleno se convierte en una pieza que debe cortarse, bañarse o revolcarse?</h2>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Comparar formatos para entender la técnica</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Bombón, trufa, rocher y chocolate de corte no se leen como cuatro nombres aislados: la fuente permite compararlos por construcción, forma de manipulación y acabado.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera cobertura y temperado. Después compara qué preparación se corta, cuál se bolea, cuál recibe transfer y cómo interviene el chocolate en cada formato. Práctica: completa una tabla con formato, operación principal, acabado y momento de corte o baño usando los procedimientos documentados.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Bombonería</p>
@@ -56,11 +59,7 @@ export default function LessonPage() {
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye tres formatos</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Compara trufa de vainilla, rocher y chocolate de pasas: indica cuál se corta, cuál se bolea y cuál recibe transfer.</p>
         </section>
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium text-amber-800">Límite de la fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Conservamos los términos del documento</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente utiliza expresiones como «trampar», «revolcarlas», «primera cristalización» y «feulletine». Se conservan sin sustituirlas por una terminología externa.</p>
-        </section>
+        
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
