@@ -29,6 +29,9 @@ export default function LessonPage() {
             <div><h3 className="font-semibold text-stone-900">Glaseado</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Hervir la crema con el agua y el azúcar.</li><li>Agregar la cocoa y mezclar para que se incorpore bien.</li><li>Esperar a que baje la temperatura y agregar la gelatina.</li><li>Mixear sin incorporar aire y colar.</li><li>Utilizar entre 22 °C y 24 °C.</li></ol></div>
           </div>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La crema inglesa, los batidos y la gelatina ya forman parte del repertorio del curso. Esta vez se conectan para construir crema de naranja y mousse.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder localizar la cocción inglesa dentro de la preparación y relacionarla con el componente que se obtiene después.</p></section>
+
       </div>
     </CourseShell>
   );
