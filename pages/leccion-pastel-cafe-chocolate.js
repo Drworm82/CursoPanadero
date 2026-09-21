@@ -30,6 +30,9 @@ export default function LessonPage() {
             <div><h3 className="font-semibold text-stone-900">Montaje</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Realizar una pastilla con el cremoso de café y el dacquoise en un óvalo de 18 cm de diámetro.</li><li>En un óvalo de 20 cm. Verter la bavaresa de café para realizar un armado invertido.</li><li>Una vez listo desmoldar y bañar con el glaseo de café.</li><li>Para decorar realizar casquillos de chocolate para colocar alrededor del pastel terminar con algo de chocolate.</li></ol><p className="mt-2 text-sm text-stone-500">La fuente denomina «bavaresa de café» en este paso, aunque la receta está titulada y formulada como bavaresa de chocolate. Se conserva el texto de la fuente.</p></div>
           </div>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Retoma los batidos y las cremas cocidas. La preparación usa esas técnicas para construir componentes con texturas diferentes.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder distinguir la función de dacquoise, crema de café, bavaresa, glaseado y decoración.</p></section>
+
       </div>
     </CourseShell>
   );
