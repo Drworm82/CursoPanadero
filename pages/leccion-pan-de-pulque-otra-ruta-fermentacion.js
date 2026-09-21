@@ -20,6 +20,22 @@ export default function LessonThirtySevenPage() {
   return (
     <CourseShell eyebrow={lesson.eyebrow} title={lesson.title} backHref={lesson.backHref} backLabel="Volver al Módulo 5">
       <div className="space-y-8">
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y compara</h2>
+          <p className="mt-2 leading-7 text-stone-600">Reconstruye la receta en cuatro momentos: batido, incorporación, fermentación y horneado. Después compárala con la secuencia de las conchas.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica con evidencia de la receta</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué ingrediente líquido se incorpora en forma de hilo durante el batido?</p>
+            <p>2. ¿Qué señal indica que la fermentación terminó según la fuente?</p>
+            <p>3. ¿Qué diferencia de secuencia puedes demostrar frente a las conchas?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">La pregunta de esta lección</p>
           <h2 className="mt-2 text-2xl font-semibold">
