@@ -47,6 +47,23 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La masa sable y las preparaciones de crema son técnicas conocidas. La novedad está en coordinarlas dentro de una tarta con varias capas.</p></section>
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder reconstruir el orden del montaje y justificar por qué cada componente entra en ese momento según la receta.</p></section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye el orden del montaje</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Ordena estas operaciones según la receta: preparar la base de masa sable, disponer los plátanos salteados, cubrir con la ganache, completar con la chiboust, dar frío y caramelizar la superficie. Después comprueba qué preparación debe estar lista antes de cada paso.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Explica por qué el orden importa</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Enumera los cuatro componentes principales de la tarta.</li>
+            <li>Indica qué componente se incorpora antes de la ganache y cuál después.</li>
+            <li>Reconstruye el orden desde el montaje hasta el acabado con soplete.</li>
+            <li>Explica qué diferencia documenta la fuente entre la lista de ingredientes y el procedimiento del chiboust.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
