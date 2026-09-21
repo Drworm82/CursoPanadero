@@ -53,6 +53,22 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">En la receta de trufa de vainilla, identifica en qué paso se corta, en qué paso se baña y en qué paso se coloca el transfer.</p>
         </section>
         
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y reconstruye</h2>
+          <p className="mt-2 leading-7 text-stone-600">Ordena de memoria la secuencia película → trufa → película → corte → baño → transfer. Después localiza en qué punto aparece el transfer y qué ocurre después.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Responde con evidencia de la fuente</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿En qué momento entra el transfer?</p>
+            <p>2. ¿Qué operaciones ocurren antes del transfer?</p>
+            <p>3. ¿Qué otros acabados documenta la fuente además del transfer?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
