@@ -107,11 +107,6 @@ export default function LessonPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-stone-200 bg-white p-6">
-          <p className="text-sm font-medium text-stone-500">Fuente</p>
-          <p className="mt-2 leading-7 text-stone-700">Curso completo Panaderia y reposteria ISMM.pdf · Clase 34 · Pastelería Contemporánea I.</p>
-        </section>
-
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cierre</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">La receta es ahora una secuencia que puedes explicar</h2>
