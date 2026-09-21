@@ -17,10 +17,10 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-2">
-            <div><h3 className="font-semibold">Magdalena de limón y romero</h3><p className="mt-2 leading-7 text-stone-700">Huevo 50 g · azúcar 60 g · ralladura de limón 5 g · crema para batir 12 g · romero fresco 2 g · harina 50 g · fécula de maíz 12 g · polvo de hornear 2 g · mantequilla derretida 25 g.</p></div>
-            <div><h3 className="font-semibold">Jelly de frutos rojos</h3><p className="mt-2 leading-7 text-stone-700">Azúcar 40 g · glucosa 15 g · frutos rojos 300 g · grenetina en polvo 8 g.</p></div>
-            <div><h3 className="font-semibold">Mousse de yogurt</h3><p className="mt-2 leading-7 text-stone-700">Yogurt 250 g · merengue italiano 150 g (2 pzas claras y 120 g azúcar) · vaina de vainilla ½ pza · grenetina en polvo 10 g · crema para batir 250 g.</p></div>
-            <div><h3 className="font-semibold">Decoración</h3><p className="mt-2 leading-7 text-stone-700">Manteca de cacao 20 g · colorante para chocolate rojo 5 g · chocolate blanco 200 g · frambuesas frescas 50 g · brillo de pastelería 100 g · colorante rojo 2 g · glucosa 50 g.</p></div>
+            <div><h3 className="font-semibold text-stone-900">Magdalena de limón y romero</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Huevo 50 g</li><li>azúcar 60 g</li><li>ralladura de limón 5 g</li><li>crema para batir 12 g</li><li>romero fresco 2 g</li><li>harina 50 g</li><li>fécula de maíz 12 g</li><li>polvo de hornear 2 g</li><li>mantequilla derretida 25 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Jelly de frutos rojos</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Azúcar 40 g</li><li>glucosa 15 g</li><li>frutos rojos 300 g</li><li>grenetina en polvo 8 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Mousse de yogurt</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Yogurt 250 g</li><li>merengue italiano 150 g (2 pzas claras y 120 g azúcar)</li><li>vaina de vainilla ½ pza</li><li>grenetina en polvo 10 g</li><li>crema para batir 250 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Decoración</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Manteca de cacao 20 g</li><li>colorante para chocolate rojo 5 g</li><li>chocolate blanco 200 g</li><li>frambuesas frescas 50 g</li><li>brillo de pastelería 100 g</li><li>colorante rojo 2 g</li><li>glucosa 50 g</li></ul></div>
           </div>
         </section>
 
