@@ -13,11 +13,11 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
-            <p><strong>Biscuit de almendra:</strong> yemas 3 pzas · azúcar 30 g · claras 3 pzas · azúcar 40 g · harina 50 g · mantequilla fundida 50 g · almendra caramelizada 50 g (30 g azúcar + 30 g almendra + 10 g mantequilla).</p>
-            <p><strong>Crema de naranja:</strong> grenetina en polvo 3 g · huevo 50 g · azúcar 100 g · jugo de naranja 75 ml · ralladura de naranja 6 g · mantequilla 100 g.</p>
-            <p><strong>Mousse de chocolate y praliné:</strong> azúcar 20 g · leche 75 g · crema para batir 75 g · yemas 40 g · praliné 60% 90 g · chocolate amargo 90 g · grenetina en polvo 8 g · crema para batir 270 g semi montada.</p>
-            <p><strong>Glaseado oscuro:</strong> crema para batir 60 g · agua 70 g · azúcar 90 g · cocoa 30 g · grenetina en polvo 4 g.</p>
-            <p><strong>Decoración:</strong> naranja 1 pza · chocolate amargo 200 g · manteca de cacao 20 g · colorante para chocolate 5 g · colorante metálico en polvo 2 g (laca alumínica) · brillo de pastelería 30 g.</p>
+            <div><h3 className="font-semibold text-stone-900">Biscuit de almendra</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>yemas 3 pzas</li><li>azúcar 30 g</li><li>claras 3 pzas</li><li>azúcar 40 g</li><li>harina 50 g</li><li>mantequilla fundida 50 g</li><li>almendra caramelizada 50 g (30 g azúcar + 30 g almendra + 10 g mantequilla)</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Crema de naranja</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>grenetina en polvo 3 g</li><li>huevo 50 g</li><li>azúcar 100 g</li><li>jugo de naranja 75 ml</li><li>ralladura de naranja 6 g</li><li>mantequilla 100 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Mousse de chocolate y praliné</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>azúcar 20 g</li><li>leche 75 g</li><li>crema para batir 75 g</li><li>yemas 40 g</li><li>praliné 60% 90 g</li><li>chocolate amargo 90 g</li><li>grenetina en polvo 8 g</li><li>crema para batir 270 g semi montada</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Glaseado oscuro</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>crema para batir 60 g</li><li>agua 70 g</li><li>azúcar 90 g</li><li>cocoa 30 g</li><li>grenetina en polvo 4 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Decoración</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>naranja 1 pza</li><li>chocolate amargo 200 g</li><li>manteca de cacao 20 g</li><li>colorante para chocolate 5 g</li><li>colorante metálico en polvo 2 g (laca alumínica)</li><li>brillo de pastelería 30 g</li></ul></div>
           </div>
         </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
