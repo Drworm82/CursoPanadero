@@ -63,6 +63,22 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Escribe sin mirar la receta: 45 °C para fundir, 28 °C para enfriar la mitad y después la temperatura de trabajo correspondiente al tipo de chocolate.</p>
         </section>
         
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y reconstruye</h2>
+          <p className="mt-2 leading-7 text-stone-600">Sin mirar la receta, reconstruye la secuencia 45 °C → 28 °C → combinación → verificación. Después compara las temperaturas de trabajo indicadas para oscuro, leche y blanco.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Responde con evidencia de la fuente</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué ocurre con el 50% del chocolate durante el enfriamiento?</p>
+            <p>2. ¿Qué temperaturas de trabajo documenta la fuente para oscuro, leche y blanco?</p>
+            <p>3. ¿Qué resultados relaciona la fuente con un temperado correcto?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
