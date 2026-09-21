@@ -19,8 +19,13 @@ export default function ModuleNinePage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">De la receta al sistema de producción</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">En esta etapa no basta con identificar ingredientes. Vas a seguir el orden de producción, distinguir preparaciones base de derivados, reconocer qué componentes necesitan frío y observar cómo el montaje convierte varias elaboraciones en una pieza final.</p>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Framboisier y Gimont funcionan como dos casos para practicar esa lectura: primero se entiende cada componente y después se reconstruye la secuencia completa.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">En esta etapa no basta con identificar ingredientes. Vas a seguir el orden de producción, distinguir preparaciones base de derivados y observar cómo varias elaboraciones se coordinan hasta convertirse en una pieza final.</p>
+          <div className="mt-5 grid gap-4 md:grid-cols-4">
+            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica los componentes y el resultado documentado.</p></div>
+            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Ejecuta cada preparación respetando la secuencia de la fuente.</p></div>
+            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Registra qué componentes dependen de otros y dónde aparece el frío.</p></div>
+            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Reconstruye el sistema de producción sin mirar la receta.</p></div>
+          </div>
         </section>
 
         <section>
@@ -52,6 +57,12 @@ export default function ModuleNinePage() {
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Integración del módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Compara dos sistemas de producción</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Construye una tabla con Framboisier y Gimont. Para cada pastel, separa preparaciones base, derivados, componentes de relleno, etapas de frío y acabados. Después reconstruye la secuencia de producción de cada uno y señala qué tienen en común y qué cambia. Usa únicamente las operaciones documentadas en las lecciones.</p>
         </section>
       </div>
     </CourseShell>
