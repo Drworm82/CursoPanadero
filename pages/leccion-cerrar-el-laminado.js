@@ -121,6 +121,22 @@ export default function LessonCerrarElLaminadoPage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y compara</h2>
+          <p className="mt-2 leading-7 text-stone-600">Cierra el módulo con una reconstrucción de memoria: explica las dos recetas usando seis palabras —masa, fermentación, refrigeración, empaste, vueltas y formado— y añade una diferencia concreta entre ellas.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica con evidencia de la receta</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Puedes ordenar las seis operaciones sin consultar las recetas?</p>
+            <p>2. ¿Qué diferencia concreta puedes demostrar entre croissant y pan danés?</p>
+            <p>3. ¿Qué aspecto de la laminación no queda explicado por estas recetas?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Reto de cierre</p>
           <h2 className="mt-2 text-2xl font-semibold text-amber-950">Explica el proceso en seis pasos</h2>
