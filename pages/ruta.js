@@ -69,7 +69,7 @@ const modules = [
     href: '/modulo-8',
     title: 'Pastelería contemporánea',
     guiding_question: '¿Cómo se combinan técnicas conocidas para construir postres de varias capas y texturas?',
-    expected_result: 'Interpretar montajes contemporáneos mediante bases, cremosos, mousses, insertos y glaseados.',
+    expected_result: 'Interpretar montajes contemporáneos mediante bases, cremosos, mousses, insertos y glaseados, a partir de las preparaciones documentadas en la fuente.',
   },
   {
     id: 'modulo-9',
