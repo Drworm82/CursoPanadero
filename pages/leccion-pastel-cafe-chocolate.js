@@ -7,6 +7,9 @@ export default function LessonPage() {
     <CourseShell eyebrow="Módulo 8 · Lección 62" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno reforzara su conocimiento en la elaboración de masas merengadas. Elaborara cremas saborizadas con técnica de cocción a la inglesa.</p></section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Varias texturas, una sola arquitectura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La dacquoise, el cremoso de café, la bavaresa, el glaseado y la decoración tienen preparaciones distintas pero terminan organizados en un solo pastel.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera batidos y cremas cocidas. Compara qué técnica produce cada componente y qué lugar ocupa dentro del conjunto. Práctica: construye un esquema con base, crema, bavaresa, glaseado y decoración y explica la técnica asociada a cada parte.</p></section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
