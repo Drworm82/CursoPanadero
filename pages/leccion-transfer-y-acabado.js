@@ -20,6 +20,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿En qué momento entra un transfer y qué relación tiene con la cobertura?</h2>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">El acabado ocupa un momento preciso del proceso</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">En la trufa de vainilla, el transfer aparece después del baño y antes del enfriado final. Esa posición permite estudiar el acabado como parte de la secuencia, no como un adorno separado.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera la diferencia entre cobertura y acabado. Sigue la secuencia película → trufa → película → corte → baño → transfer. Práctica: ordena esos pasos sin mirar la receta y compáralos con las guarniciones y decoraciones documentadas en la Clase 19.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Qué documenta la Clase 21</p>
@@ -49,11 +52,7 @@ export default function LessonPage() {
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Marca el momento exacto</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">En la receta de trufa de vainilla, identifica en qué paso se corta, en qué paso se baña y en qué paso se coloca el transfer.</p>
         </section>
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium text-amber-800">Límite de la fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">El documento no explica la composición del transfer</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La lección enseña su lugar dentro de la secuencia documentada, pero no añade una explicación química o técnica del material del transfer.</p>
-        </section>
+        
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
