@@ -84,11 +84,25 @@ const modules = [
 export default function RutaPage() {
   return (
     <CourseShell eyebrow="Tu ruta" title={course.title} description={course.description}>
-      <div className="mb-8 rounded-2xl bg-amber-50 p-6">
-        <p className="text-sm font-medium text-amber-900">Principio de la ruta</p>
-        <p className="mt-2 max-w-3xl text-amber-950">
-          Aprenderás a interpretar lo que ocurre en la masa, no solamente a repetir instrucciones.
-        </p>
+      <div className="mb-8 space-y-4">
+        <section className="rounded-2xl bg-amber-50 p-6">
+          <p className="text-sm font-medium text-amber-900">Cómo estudiar este curso</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Aprende haciendo, observando y explicando</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
+            Las recetas no son solamente instrucciones: son oportunidades para practicar las técnicas del curso.
+            Antes de empezar una preparación, recupera lo que ya sabes. Durante el proceso, observa los cambios
+            indicados y comprueba si puedes reconocerlos. Al terminar, intenta explicar qué hiciste y qué relación
+            tiene con otras preparaciones.
+          </p>
+        </section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6">
+          <div className="grid gap-3 md:grid-cols-4">
+            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica qué vas a aprender.</p></div>
+            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Ejecuta la preparación con la fuente como guía.</p></div>
+            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Reconoce cambios y señales durante el proceso.</p></div>
+            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Comprueba si puedes reconstruir lo aprendido.</p></div>
+          </div>
+        </section>
       </div>
 
       <div className="grid gap-5">
