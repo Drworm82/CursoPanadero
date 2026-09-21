@@ -116,7 +116,17 @@ export default function LessonFourteenPage() {
           </a>
         </section>
 
-        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
+        
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica y reconstruye</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. 1. ¿Qué señal de volumen establece la fuente para el batido del Pionono?</p>
+            <p>2. 2. ¿Cómo debe incorporarse la harina?</p>
+            <p>3. 3. ¿Qué característica debe conservar la plancha después del horno para cumplir el objetivo de la preparación?</p>
+          </div>
+        </section>
+<section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte</h2>
           <div className="mt-5 space-y-4 text-stone-100">
