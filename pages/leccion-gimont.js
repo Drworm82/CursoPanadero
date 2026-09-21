@@ -15,6 +15,19 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno aprenderá a elaborar pasteles a gran escala, mediante sistemas de producción en serie.</p>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Antes de empezar</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Conocimientos que vas a retomar</h2>
+          <p className="mt-3 leading-7 text-stone-700">Esta elaboración reúne técnicas que ya aparecen en el recorrido. Repásalas antes de continuar:</p>
+          <ul className="mt-4 space-y-3 leading-7">
+            <li><a className="font-medium text-amber-800 underline underline-offset-2" href="/leccion-el-aire-construye-la-estructura">El aire también construye la estructura</a> <span className="text-stone-700">— para retomar el principio de los bizcochos y masas batidas aplicado al biscuit de soleta.</span></li>
+            <li><a className="font-medium text-amber-800 underline underline-offset-2" href="/leccion-tres-leches">Tres leches: cuando una masa recibe humedad</a> <span className="text-stone-700">— para recuperar el uso y la función de un jarabe durante el montaje.</span></li>
+            <li><a className="font-medium text-amber-800 underline underline-offset-2" href="/leccion-crema-y-relleno">Crema y relleno también construyen el producto</a> <span className="text-stone-700">— para retomar la crema pastelera y la función de las cremas en el montaje.</span></li>
+            <li><a className="font-medium text-amber-800 underline underline-offset-2" href="/leccion-cuando-una-estructura-necesita-frio">Cuando una estructura necesita frío</a> <span className="text-stone-700">— para relacionar la bavaroise con preparaciones cuya estructura se consolida mediante frío.</span></li>
+            <li><a className="font-medium text-amber-800 underline underline-offset-2" href="/leccion-temperado-cristalizacion">Temperado: controlar la cristalización</a> <span className="text-stone-700">— antes de trabajar el chocolate temperado de la decoración.</span></li>
+          </ul>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-6 leading-7 text-stone-700">
