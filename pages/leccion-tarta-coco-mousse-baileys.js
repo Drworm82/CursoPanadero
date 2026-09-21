@@ -42,6 +42,23 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Vas a reutilizar masa sable, flan, mousse y elementos de decoración. Antes de leer el procedimiento completo, identifica qué técnica corresponde a cada componente.</p></section>
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder separar la preparación en componentes y explicar qué técnica previa recupera cada uno.</p></section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Sigue la transformación de la mousse</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Reconstruye la secuencia de la mousse: crema inglesa → chocolate y Bailey’s → grenetina → 40 °C → crema semi montada → aro de 18 cm → refrigeración. Después relaciona esa secuencia con la tarta fría, el pulverizado documentado y las tejas.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Relaciona técnica y componente</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Explica qué componente se construye mediante crema inglesa.</li>
+            <li>Indica qué sucede con la mousse cuando llega a 40 °C.</li>
+            <li>Reconstruye el orden general del montaje de la tarta.</li>
+            <li>Señala qué parte del acabado está condicionada por disponer de compresor según la fuente.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
