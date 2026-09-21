@@ -13,12 +13,12 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
-            <p><strong>Sucrée de ajonjolí:</strong> mantequilla 75 g · polvo de almendra 18 g · azúcar glass 47 g · vaina de vainilla ½ pza · huevo 30 g · flor de sal 1 pizca · harina 125 g · ajonjolí blanco 30 g.</p>
-            <p><strong>Biscuit joconde:</strong> polvo de almendras 83 g · azúcar glass 66 g · azúcar invertida 6 g · huevo 110 g · mantequilla 16 g · claras 73 g · azúcar 10 g · harina 22 g.</p>
-            <p><strong>Compota de frambuesa y pimiento:</strong> puré de frambuesa 92 g · puré de pimiento rojo 9 g (blanqueado) · azúcar 22 g · vinagre de frambuesa 7 ml · grenetina 3 g.</p>
-            <p><strong>Crema de parmesano:</strong> yemas 40 g · agua 55 g · azúcar 61 g · grenetina en polvo 5 g · crema para batir 22 g · crema semi montada 188 g · queso parmesano 75 g.</p>
-            <p><strong>Brillo de frambuesa:</strong> frambuesas 120 g · azúcar 65 g · pectina 2 g · jugo de limón 10 ml · brillo neutro 75 g · colorante rojo 1 g en gel.</p>
-            <p><strong>Teja de parmesano:</strong> queso parmesano 25 g rallado · isomalt 65 g.</p>
+            <div><h3 className="font-semibold text-stone-900">Sucrée de ajonjolí</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>mantequilla 75 g</li><li>polvo de almendra 18 g</li><li>azúcar glass 47 g</li><li>vaina de vainilla ½ pza</li><li>huevo 30 g</li><li>flor de sal 1 pizca</li><li>harina 125 g</li><li>ajonjolí blanco 30 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Biscuit joconde</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>polvo de almendras 83 g</li><li>azúcar glass 66 g</li><li>azúcar invertida 6 g</li><li>huevo 110 g</li><li>mantequilla 16 g</li><li>claras 73 g</li><li>azúcar 10 g</li><li>harina 22 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Compota de frambuesa y pimiento</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>puré de frambuesa 92 g</li><li>puré de pimiento rojo 9 g (blanqueado)</li><li>azúcar 22 g</li><li>vinagre de frambuesa 7 ml</li><li>grenetina 3 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Crema de parmesano</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>yemas 40 g</li><li>agua 55 g</li><li>azúcar 61 g</li><li>grenetina en polvo 5 g</li><li>crema para batir 22 g</li><li>crema semi montada 188 g</li><li>queso parmesano 75 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Brillo de frambuesa</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>frambuesas 120 g</li><li>azúcar 65 g</li><li>pectina 2 g</li><li>jugo de limón 10 ml</li><li>brillo neutro 75 g</li><li>colorante rojo 1 g en gel</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Teja de parmesano</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>queso parmesano 25 g rallado</li><li>isomalt 65 g</li></ul></div>
           </div>
         </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
