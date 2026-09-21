@@ -245,7 +245,19 @@ export default function LessonTwentyFourPage() {
           </p>
         </section>
 
-        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
+        
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Reconstruye el proceso completo</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. Elige uno de los productos comparados y señala qué componente constituye su estructura principal.</p>
+            <p>2. Reconstruye la secuencia desde esa estructura hasta el acabado, indicando qué recibe después.</p>
+            <p>3. Identifica una señal de finalización documentada en la fuente para ese producto.</p>
+            <p>4. Explica qué cambia en la secuencia cuando pasas a otro producto del módulo.</p>
+          </div>
+        </section>
+
+<section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte del Módulo 3</h2>
           <div className="mt-5 space-y-4 text-stone-100">
