@@ -10,6 +10,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno aprenderá a confeccionar un pastel de tipo contemporáneo, utilizando técnicas diversas, también conocerá como es el armado de un pastel con insertos.</p>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Un pastel contemporáneo se construye por componentes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La preparación combina magdalena, gelatina de frutos rojos, mousse de yogurt y decoración. La idea es aprender a leer esas partes como una arquitectura de montaje.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera batidos, gelatinas, merengue italiano y mousses. Después identifica qué aporta cada componente dentro del pastel según el montaje documentado. Práctica: dibuja un corte del pastel y coloca los componentes en el orden del montaje; después explica por qué se preparan por separado.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
