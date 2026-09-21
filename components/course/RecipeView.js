@@ -9,6 +9,25 @@ const lessonLinks = {
   'panque-citricos': { href: '/leccion-el-horno-tambien-es-parte', label: 'Volver a la lección' },
 };
 
+const recipeClosingGuides = {
+  'rosca-pina-colada': [
+    ['Reconoce la señal del acremado', 'Antes de pasar a la siguiente preparación, identifica el cambio de textura que obtuviste al acremar la mantequilla con el azúcar glass.'],
+    ['Comprueba la estructura', 'Después de enfriar y desmoldar, observa la firmeza de la rosca antes de cubrirla con el glaseado.'],
+  ],
+  'panque-platano-streusel-canela': [
+    ['Compara la técnica', 'Relaciona el resultado del panqué con la técnica utilizada: aquí la grasa principal es aceite y la mezcla se integra sin sobre batir.'],
+    ['Observa el streusel', 'Después de enfriar y desmoldar, observa cómo la cobertura de streusel cambió durante el horneado.'],
+  ],
+  'marmoleado-intenso-cafe': [
+    ['Compara las dos mezclas', 'Observa el resultado del marmoleado y relaciona las dos mezclas con la textura que tenían antes de entrar al horno.'],
+    ['Comprueba la estructura', 'Después de enfriar y desmoldar, observa la firmeza de la pieza y el dibujo que se formó durante el marmoleado.'],
+  ],
+  'panque-citricos': [
+    ['Observa el resultado de la cocción', 'Comprueba el volumen, el color y la estructura del panqué después de enfriar y desmoldar.'],
+    ['Comprueba el glaseado', 'Observa la consistencia del glaseado y cómo se distribuye sobre la pieza terminada.'],
+  ],
+};
+
 const recipeObservationGuides = {
   'rosca-pina-colada': [
     {
