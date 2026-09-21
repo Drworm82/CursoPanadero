@@ -24,6 +24,7 @@ export default function LessonPage() {
             <div><h3 className="font-semibold text-stone-900">Decoración</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Plátano en rodajas 1 pza</li><li>azúcar 250 g</li><li>chocolate semi amargo 100 g</li></ul></div>
           </div>
         </section>
+<section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Aprende mientras haces</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Convierte cada paso en una observación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Durante la elaboración, usa la receta para comprobar tres relaciones. <strong>Antes de montar:</strong> identifica qué componentes ya están cocidos o preparados y cuáles todavía dependen del frío. <strong>Durante el chiboust:</strong> sigue el orden documentado y observa que la preparación incorpora la grenetina y el merengue italiano mientras sigue tibia. <strong>Antes de decorar:</strong> reconstruye mentalmente la secuencia plátano salteado → ganache → chiboust → frío → acabado. Si puedes explicar esa secuencia sin mirar, no solo seguiste la receta: reconociste cómo se construye la tarta.</p></section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Modo de elaboración</h2>
