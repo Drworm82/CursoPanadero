@@ -4,7 +4,7 @@ const moduleInfo = {
   sort_order: 7,
   title: 'Chocolatería',
   guiding_question: '¿Qué cambia cuando controlamos la cristalización del chocolate?',
-  expected_result: 'Comprender el temperado y sus aplicaciones en piezas moldeadas, rellenas y decorativas.',
+  expected_result: 'Reconstruir la secuencia documentada del temperado y aplicarla al análisis de piezas moldeadas, rellenas y decorativas, comparando las operaciones de cada preparación.',
 };
 
 const lessons = [
@@ -40,15 +40,22 @@ export default function ModuleSevenPage() {
           </p>
         </section>
 
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Límite de la fuente</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">La chocolatería se construirá desde lo que está documentado.</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-            El material de partida organiza este módulo alrededor de tipos de chocolate, temperado, chocolate
-            moldeado, rellenos, bombonería, trufas, ganaches, transfer y ganaches avanzadas. Cuando la fuente no
-            desarrolla una explicación o procedimiento completo, la lección lo señalará en lugar de completarlo con
-            una receta inventada.
-          </p>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Empieza por reconocer la cobertura. Después reconstruye el temperado, sigue una preparación documentada, observa cómo cambian las operaciones cuando aparece un molde, un relleno o un acabado y explica la secuencia con evidencia de la receta.</p>
+          <div className="mt-5 grid gap-3 md:grid-cols-4">
+            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica cobertura, formulación y objetivo.</p></div>
+            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Sigue el temperado y las preparaciones documentadas.</p></div>
+            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Relaciona temperatura, forma, relleno y acabado con cada secuencia.</p></div>
+            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Reconstruye el proceso sin convertirlo en una regla no documentada.</p></div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-900">Integración del módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Del chocolate a la pieza terminada</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">Elige una preparación de chocolate documentada y reconstruye su recorrido: tipo de cobertura, temperado, operación principal, enfriado y acabado. Después compárala con otra preparación y señala qué operaciones permanecen y cuáles cambian.</p>
         </section>
 
         <section>
