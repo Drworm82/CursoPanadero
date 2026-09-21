@@ -8,8 +8,8 @@ const moduleInfo = {
 };
 
 const lessons = [
-  ['66', 'Framboisier', 'Clase 38 · Pasteles a Gran Escala', '/leccion-framboisier', false],
-  ['67', 'Gimont', 'Clase 38 · Pasteles a Gran Escala', '/leccion-gimont', false],
+  ['66', 'Framboisier', 'Clase 38 · Pasteles a Gran Escala', '/leccion-framboisier', true],
+  ['67', 'Gimont', 'Clase 38 · Pasteles a Gran Escala', '/leccion-gimont', true],
 ];
 
 export default function ModuleNinePage() {
