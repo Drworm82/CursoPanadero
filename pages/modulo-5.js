@@ -4,7 +4,7 @@ const moduleInfo = {
   sort_order: 5,
   title: 'Pan mexicano y tradición',
   guiding_question: '¿Cómo se traducen las técnicas de panificación en productos mexicanos con identidad propia?',
-  expected_result: 'Relacionar técnicas de masa, formado, fermentación y acabado con piezas tradicionales documentadas en la fuente.',
+  expected_result: 'Comparar las preparaciones mexicanas documentadas y explicar cómo sus ingredientes, proceso, formado y acabado construyen diferencias observables entre las piezas.'
 };
 
 const lessons = [
@@ -39,14 +39,33 @@ export default function ModuleFivePage() {
           </p>
         </section>
 
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Límite de la fuente</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">La tradición no se completa con información externa.</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-            El repositorio contiene recetas llamadas Conchas Tradicionales Mexicanas, Pan de Pulque con Sabor
-            Tradicional y Garibaldis. No contiene una explicación histórica o cultural amplia de estos productos.
-            Por eso el módulo estudiará lo que puede observarse en sus fórmulas y procedimientos, sin atribuirles
-            datos históricos que la fuente no proporciona.
+        <section className="rounded-2xl bg-amber-50 p-6">
+          <p className="text-sm font-medium text-amber-900">Cómo estudiar este módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
+            Estudia cada pieza desde lo que la fuente permite observar. Identifica la fórmula y la secuencia,
+            realiza o reconstruye las operaciones documentadas, observa el resultado y explica qué diferencia
+            encuentras frente a las otras preparaciones. La información histórica o cultural no se completa
+            por inferencia cuando la fuente no la desarrolla.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6">
+          <div className="grid gap-3 md:grid-cols-4">
+            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica ingredientes, operaciones y objetivo de la pieza.</p></div>
+            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Ejecuta o reconstruye la secuencia documentada.</p></div>
+            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Registra diferencias visibles de estructura y acabado.</p></div>
+            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Compara las decisiones de cada receta.</p></div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-900">Integración del módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Construye una comparación final</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
+            Haz una tabla con Conchas, Pan de pulque y Garibaldis. Para cada pieza registra ingredientes que
+            distinguen la fórmula, etapas antes del horno, formado o preparación de la pieza y acabado.
+            Después escribe dos diferencias que puedas demostrar directamente con las recetas.
           </p>
         </section>
 
