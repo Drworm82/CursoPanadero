@@ -105,6 +105,22 @@ export default function LessonCompararParaReconocerPage() {
           </div>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y compara</h2>
+          <p className="mt-2 leading-7 text-stone-600">Sin mirar las recetas, intenta reconstruir para cada producto cuatro elementos: fórmula distintiva, fermentación o mezcla, formado y acabado. Después comprueba tus respuestas con la fuente.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica con evidencia de la receta</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué diferencia de proceso puedes demostrar entre Conchas y Pan de pulque?</p>
+            <p>2. ¿Qué diferencia de acabado puedes demostrar entre Conchas y Garibaldis?</p>
+            <p>3. ¿Qué afirmación sobre los tres productos necesitaría una fuente histórica adicional?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Ejercicio de integración</p>
           <h2 className="mt-2 text-2xl font-semibold">Reconstruye la diferencia</h2>
