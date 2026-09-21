@@ -11,6 +11,14 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera merengue italiano, crema montada, gelatina y deshidratación. Compara qué se mantiene y qué cambia entre mousse de té y mousse de naranja. Práctica: coloca ambas mousses lado a lado, marca sus elementos comunes y diferentes y después relaciona bizcocho y naranjas deshidratadas con el conjunto.</p></section>
 <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Aprende mientras haces</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Convierte cada paso en una observación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La comparación entre las dos mousses es la oportunidad de aprendizaje principal. <strong>Al prepararlas:</strong> identifica qué elementos permanecen iguales —merengue italiano, gelatina y crema montada— y qué elemento cambia —té fuerte frente a jugo de naranja—. <strong>Durante el proceso:</strong> observa cuándo se incorpora la grenetina y cuándo se termina cada mousse con crema montada. <strong>Al revisar el montaje:</strong> conecta ambas mousses con el bizcocho y la fruta deshidratada, sin completar pasos que la fuente no documenta.</p></section>
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Componentes de Camejía]</strong><br />Esquema de corte que identifique el bizcocho de chocolate y avellana, mousse de té, mousse de naranja y naranjas deshidratadas.</p>
+            <p><strong>[VIDEO SUGERIDO — Secuencia de montaje]</strong><br />Mostrar cómo se relacionan los componentes antes del punto final documentado por la fuente.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
