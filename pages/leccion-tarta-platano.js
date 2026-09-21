@@ -17,11 +17,11 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-2">
-            <div><h3 className="font-semibold">Masa sable</h3><p className="mt-2 leading-7 text-stone-700">Harina 250 g · mantequilla 125 g · azúcar glass 100 g · yemas 40 g · huevo 50 g · sal 1 g.</p></div>
-            <div><h3 className="font-semibold">Ganache de plátano</h3><p className="mt-2 leading-7 text-stone-700">Crema para batir 125 g · chocolate semi amargo 150 g · plátano 120 g · Trimoline 12 g · mantequilla 15 g.</p></div>
-            <div><h3 className="font-semibold">Plátano salteado</h3><p className="mt-2 leading-7 text-stone-700">Plátano 2 pzas · mantequilla 15 g · miel 30 g · ron 20 g.</p></div>
-            <div><h3 className="font-semibold">Chiboust de plátano</h3><p className="mt-2 leading-7 text-stone-700">Puré de plátano 170 g · jugo de limón 15 g · yemas 40 g · azúcar 30 g (crema pastelera) · crema para batir 200 g (crema pastelera) · fécula 15 g (crema pastelera) · grenetina 8 g · claras 70 g (merengue italiano) · azúcar 140 g (merengue italiano) · sal 1 g.</p></div>
-            <div><h3 className="font-semibold">Decoración</h3><p className="mt-2 leading-7 text-stone-700">Plátano en rodajas 1 pza · azúcar 250 g · chocolate semi amargo 100 g.</p></div>
+            <div><h3 className="font-semibold text-stone-900">Masa sable</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Harina 250 g</li><li>mantequilla 125 g</li><li>azúcar glass 100 g</li><li>yemas 40 g</li><li>huevo 50 g</li><li>sal 1 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Ganache de plátano</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Crema para batir 125 g</li><li>chocolate semi amargo 150 g</li><li>plátano 120 g</li><li>Trimoline 12 g</li><li>mantequilla 15 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Plátano salteado</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Plátano 2 pzas</li><li>mantequilla 15 g</li><li>miel 30 g</li><li>ron 20 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Chiboust de plátano</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Puré de plátano 170 g</li><li>jugo de limón 15 g</li><li>yemas 40 g</li><li>azúcar 30 g (crema pastelera)</li><li>crema para batir 200 g (crema pastelera)</li><li>fécula 15 g (crema pastelera)</li><li>grenetina 8 g</li><li>claras 70 g (merengue italiano)</li><li>azúcar 140 g (merengue italiano)</li><li>sal 1 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Decoración</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Plátano en rodajas 1 pza</li><li>azúcar 250 g</li><li>chocolate semi amargo 100 g</li></ul></div>
           </div>
         </section>
 
