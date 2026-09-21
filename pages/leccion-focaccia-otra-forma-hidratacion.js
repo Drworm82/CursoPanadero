@@ -134,6 +134,22 @@ export default function LessonTwentyNinePage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
+          <p className="mt-2 leading-7 text-stone-600">Compara las cantidades de harina y agua de las preparaciones que aparecen en la lección. Después observa cómo se maneja la masa y qué información concreta proporciona la fuente sobre su formado.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué relación de cantidades puedes observar en la receta?</p>
+            <p>2. ¿Qué operaciones aparecen después de formar una masa homogénea?</p>
+            <p>3. ¿Qué explicación general sobre hidratación no está desarrollada explícitamente por la fuente?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte de esta lección</h2>
