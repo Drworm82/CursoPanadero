@@ -152,6 +152,22 @@ export default function LessonTwentyFivePage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
+          <p className="mt-2 leading-7 text-stone-600">Antes de trabajar, reconstruye en una hoja la secuencia de la masa desde el pesado hasta el enfriado. Durante la preparación, marca cada etapa cuando realmente la hayas realizado y anota qué cambió.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué etapas aparecen antes de la fermentación?</p>
+            <p>2. ¿Qué señal utilizas para reconocer que una etapa terminó?</p>
+            <p>3. ¿Qué operaciones ocurren después del horneado?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte de esta lección</h2>
