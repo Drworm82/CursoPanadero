@@ -37,12 +37,12 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-6 leading-7 text-stone-700">
-            <div><h3 className="font-semibold text-stone-900">Bizcocho cuillere de pistache</h3><p className="mt-2">Yemas 5 pz · claras 5 pz · azúcar 150 g · harina 150 g · pistache picado finamente 30 g.</p></div>
-            <div><h3 className="font-semibold text-stone-900">Jarabe de pistache</h3><p className="mt-2">Jarabe TpT 180 g, azúcar 90 g + agua 90 g · esencia de pistache 5 gotas.</p></div>
-            <div><h3 className="font-semibold text-stone-900">Pistache dragee</h3><p className="mt-2">Pistache 225 g · azúcar 60 g · agua 15 g.</p></div>
-            <div><h3 className="font-semibold text-stone-900">Mousseline pistache</h3><p className="mt-2">Crema pastelera 800 g, elaborada con leche 600 g, azúcar 170 g, fécula 50 g y yemas 8 pz · pasta de pistache 150 g · mantequilla 160 g · pistache dragee c/s, la receta.</p></div>
-            <div><h3 className="font-semibold text-stone-900">Bavaroise pistache</h3><p className="mt-2">Grenetina en hoja 10 pz · leche 600 g · yemas 200 g · azúcar 200 g · pasta de pistache 120 g · crema para batir 500 g.</p></div>
-            <div><h3 className="font-semibold text-stone-900">Decoración</h3><p className="mt-2">Brillo neutro 50 g · chocolate blanco 300 g · manteca de cacao 30 g · colorante verde c/s, laca alumínica.</p></div>
+            <div><h3 className="font-semibold text-stone-900">Bizcocho cuillere de pistache</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Yemas 5 pz</li><li>claras 5 pz</li><li>azúcar 150 g</li><li>harina 150 g</li><li>pistache picado finamente 30 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Jarabe de pistache</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Jarabe TpT 180 g, azúcar 90 g + agua 90 g</li><li>esencia de pistache 5 gotas</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Pistache dragee</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Pistache 225 g</li><li>azúcar 60 g</li><li>agua 15 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Mousseline pistache</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Crema pastelera 800 g, elaborada con leche 600 g, azúcar 170 g, fécula 50 g y yemas 8 pz</li><li>pasta de pistache 150 g</li><li>mantequilla 160 g</li><li>pistache dragee c/s, la receta</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Bavaroise pistache</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Grenetina en hoja 10 pz</li><li>leche 600 g</li><li>yemas 200 g</li><li>azúcar 200 g</li><li>pasta de pistache 120 g</li><li>crema para batir 500 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Decoración</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Brillo neutro 50 g</li><li>chocolate blanco 300 g</li><li>manteca de cacao 30 g</li><li>colorante verde c/s, laca alumínica</li></ul></div>
           </div>
         </section>
 
