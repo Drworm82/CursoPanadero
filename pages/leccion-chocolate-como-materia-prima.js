@@ -20,6 +20,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Qué cambia cuando trabajamos con chocolate oscuro, de leche o blanco?</h2>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Leer el chocolate como materia prima</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de transformar una cobertura, hay que reconocer qué tipo de chocolate se está trabajando y qué composición describe la fuente. Esta lectura prepara el paso siguiente: controlar su comportamiento.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera ingredientes y formulación. La fuente distingue chocolate oscuro, de leche y blanco, y después muestra aplicaciones concretas de esas coberturas. Práctica: clasifica oscuro, leche y blanco y relaciona cada cobertura con uno de los ejercicios documentados en la Clase 19.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Antes de trabajar</p>
@@ -61,11 +64,7 @@ export default function LessonPage() {
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Clasifica antes de fundir</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Toma tres coberturas distintas y escribe qué tipo son según la clasificación de la fuente. Después identifica cuál se utiliza en cada uno de los ejercicios de la Clase 19.</p>
         </section>
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium text-amber-800">Límite de la fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">La clasificación es la de la fuente</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Las afirmaciones sobre composición, porcentaje y características se presentan tal como aparecen en el documento. No se añaden categorías comerciales externas.</p>
-        </section>
+        
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
