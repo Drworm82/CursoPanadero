@@ -135,6 +135,22 @@ export default function LessonThirtyPage() {
           </div>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
+          <p className="mt-2 leading-7 text-stone-600">Separa en tu hoja las dos partes de la preparación: biga y masa final. Reconstruye qué debe ocurrir con la biga antes de incorporarla a los demás ingredientes.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Cuánto tiempo indica la fuente para el reposo de la biga?</p>
+            <p>2. ¿Qué operaciones siguen después de mezclar la biga con la masa?</p>
+            <p>3. ¿Qué información sobre la técnica de ciabatta queda indicada como demostración?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte de esta lección</h2>
