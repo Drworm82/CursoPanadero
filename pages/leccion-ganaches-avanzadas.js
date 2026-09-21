@@ -20,6 +20,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Qué cambia cuando la fuente introduce ingredientes específicos para construir y estabilizar una ganache?</h2>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Leer una ganache como una formulación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Las preparaciones avanzadas permiten observar cómo aparecen trimolina y sorbitol dentro de fórmulas concretas. El objetivo es comprender la organización de la preparación documentada, no convertirla en una regla universal.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera el trabajo de rellenos y ganaches. Identifica qué componentes aparecen, qué se incorpora primero y qué cambios presenta la fórmula respecto de preparaciones anteriores. Práctica: compara una ganache anterior con una de esta clase y registra qué componentes cambian, cuáles permanecen y en qué momento se incorporan.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 22</p>
@@ -56,11 +59,7 @@ export default function LessonPage() {
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Compara las tres ganaches</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Identifica dónde aparece trimolina, dónde aparece sorbitol, cuándo se incorpora la mantequilla y qué rellenos terminan dentro de cascos de chocolate.</p>
         </section>
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium text-amber-800">Límite de la fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">No atribuimos funciones químicas no explicadas</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente documenta ingredientes y operaciones —incluida la emulsión—, pero no desarrolla una explicación teórica de por qué funcionan la trimolina o el sorbitol. Esa explicación queda fuera de esta lección.</p>
-        </section>
+        
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
