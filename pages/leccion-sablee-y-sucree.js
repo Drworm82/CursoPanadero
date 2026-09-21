@@ -117,6 +117,22 @@ export default function LessonEightPage() {
             <p className="leading-7"><strong>El frío:</strong> ayuda a estabilizar la grasa y a que la pasta conserve mejor la forma.</p>
           </div>
         </section>
+
+
+        <section className="grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
+          <div className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Observa y compara</p>
+            <p className="mt-3 leading-7 text-stone-700">Mientras revisas o elaboras las dos pastas, registra qué tienen en común y qué diferencia de formulación o uso aparece entre ellas. No memorices todavía: intenta explicar la relación entre método y textura.</p>
+          </div>
+          <div className="rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
+            <p className="text-sm font-medium text-stone-300">Comprueba tu aprendizaje</p>
+            <ul className="mt-3 space-y-3 text-sm leading-6 text-stone-100">
+              <li>• ¿Qué debes observar para reconocer que el arenado ha avanzado?</li>
+              <li>• ¿Qué tienen en común sablée y sucrée en el material de la fuente?</li>
+              <li>• ¿Qué parte del proceso no debe convertirse en amasado?</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </CourseShell>
   );
