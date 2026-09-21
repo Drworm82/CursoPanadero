@@ -45,6 +45,23 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Masa sucrée, joconde, compota, crema y acabados son técnicas ya estudiadas. El ejercicio consiste en reconocerlas dentro de una combinación distinta.</p></section>
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder leer Tango como una suma ordenada de componentes y no como una receta de una sola preparación.</p></section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Construye el mapa de Tango</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Clasifica los componentes de la receta en base, componente frutal, crema, brillo y decoración. Después relaciona cada uno con la técnica documentada y reconstruye el orden de los dos pasos de montaje que aparecen en la fuente.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Distingue componente y función</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Identifica qué componente aporta la estructura de tarta y cuál aporta la base de biscuit.</li>
+            <li>Explica cómo se prepara la compota de frambuesa y pimiento según la receta.</li>
+            <li>Reconstruye el montaje documentado desde el casco de tarta hasta la crema de parmesano.</li>
+            <li>Explica qué información puedes obtener de la receta y qué aspectos no están desarrollados en el apartado de montaje.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
