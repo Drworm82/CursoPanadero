@@ -14,6 +14,79 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera batidos, gelatinas, merengue italiano y mousses. Después identifica qué aporta cada componente dentro del pastel según el montaje documentado. Práctica: dibuja un corte del pastel y coloca los componentes en el orden del montaje; después explica por qué se preparan por separado.</p></section>
 
 
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo leer esta receta</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">No empieces por memorizar ingredientes: empieza por reconocer el sistema</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+            Esta preparación no se presenta como una sola mezcla. La fuente la organiza en cuatro partes: magdalena de limón y romero, jelly de frutos rojos, mousse de yogurt y decoración.
+            El objetivo de esta lección es aprender a seguir la relación entre esas partes y el orden en que se convierten en un solo pastel.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl bg-stone-50 p-5">
+              <h3 className="font-semibold text-stone-900">1. Construir</h3>
+              <p className="mt-2 leading-7 text-stone-700">Primero se preparan por separado la magdalena, el jelly y la mousse. La receta permite identificar cada preparación antes del montaje.</p>
+            </div>
+            <div className="rounded-xl bg-stone-50 p-5">
+              <h3 className="font-semibold text-stone-900">2. Insertar</h3>
+              <p className="mt-2 leading-7 text-stone-700">La magdalena y el jelly se colocan juntos en una pastilla de 20 cm. Esa pastilla será incorporada después al armado.</p>
+            </div>
+            <div className="rounded-xl bg-stone-50 p-5">
+              <h3 className="font-semibold text-stone-900">3. Encerrar</h3>
+              <p className="mt-2 leading-7 text-stone-700">La mousse se coloca en un molde de gota de 25 cm y la pastilla fría entra en un armado invertido. La secuencia es parte del aprendizaje.</p>
+            </div>
+            <div className="rounded-xl bg-stone-50 p-5">
+              <h3 className="font-semibold text-stone-900">4. Terminar</h3>
+              <p className="mt-2 leading-7 text-stone-700">Después del frío vienen el desmolde y los acabados documentados: cinta de chocolate, enjambre de glucosa con frambuesa y brillo rojo.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye el montaje antes de cocinar</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+            Sin mirar todavía el modo de elaboración, intenta ordenar estas operaciones: preparar la mousse, formar la pastilla con magdalena y jelly, enfriar la pastilla, colocar la mousse en el molde grande, realizar el armado invertido, refrigerar, desmoldar y decorar.
+          </p>
+          <p className="mt-4 max-w-3xl leading-7 text-stone-700">
+            Después compara tu secuencia con la receta. El ejercicio no consiste en adivinar: consiste en detectar qué operaciones dependen de que una preparación anterior ya esté lista o fría.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Lectura de los componentes</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Qué estás construyendo en cada etapa?</h2>
+          <div className="mt-5 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b border-stone-200">
+                  <th className="px-3 py-3 font-semibold text-stone-900">Componente</th>
+                  <th className="px-3 py-3 font-semibold text-stone-900">Qué documenta la fuente</th>
+                  <th className="px-3 py-3 font-semibold text-stone-900">Qué debes observar</th>
+                </tr>
+              </thead>
+              <tbody className="text-stone-700">
+                <tr className="border-b border-stone-100"><td className="px-3 py-3 font-medium text-stone-900">Magdalena</td><td className="px-3 py-3">Se cocina sobre silpat y se corta una gota de 20 cm.</td><td className="px-3 py-3">Cómo una preparación horneada se prepara para entrar al montaje.</td></tr>
+                <tr className="border-b border-stone-100"><td className="px-3 py-3 font-medium text-stone-900">Jelly</td><td className="px-3 py-3">Se cocina, enfría y después recibe la grenetina.</td><td className="px-3 py-3">Su relación temporal con la pastilla de magdalena y el frío.</td></tr>
+                <tr className="border-b border-stone-100"><td className="px-3 py-3 font-medium text-stone-900">Mousse</td><td className="px-3 py-3">Integra yogurt, merengue italiano, grenetina y crema semi montada.</td><td className="px-3 py-3">Que se prepara como componente independiente antes del armado.</td></tr>
+                <tr><td className="px-3 py-3 font-medium text-stone-900">Montaje y acabado</td><td className="px-3 py-3">La fuente indica armado invertido, refrigeración, desmolde y decoración.</td><td className="px-3 py-3">Cómo cambia la pieza al pasar de componentes separados a producto terminado.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Explica la receta sin leerla</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Enumera los cuatro grandes componentes de la preparación.</li>
+            <li>Explica qué preparaciones forman la pastilla de 20 cm.</li>
+            <li>Describe en qué momento aparece el molde de 25 cm y qué se coloca dentro de él.</li>
+            <li>Explica por qué el frío aparece antes del desmolde y del acabado en la secuencia documentada.</li>
+            <li>Reconstruye de memoria el orden general: preparación → pastilla → armado → frío → acabado.</li>
+          </ol>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-2">
@@ -38,9 +111,14 @@ export default function LessonPage() {
           <p className="text-sm font-medium text-stone-500">Fuente</p>
           <p className="mt-2 leading-7 text-stone-700">Curso completo Panaderia y reposteria ISMM.pdf · Clase 34 · Pastelería Contemporánea I.</p>
         </section>
-<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Batidos, gelatinas, merengue italiano y mousses ya aparecieron en el curso. Aquí debes reconocer cada técnica antes de combinarla.</p></section>
-<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder señalar la función de la base, el inserto, la mousse y el acabado dentro del montaje documentado.</p></section>
 
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cierre</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">La receta es ahora una secuencia que puedes explicar</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+            Si puedes reconstruir los componentes, explicar cómo se forma la pastilla, identificar el armado invertido y ordenar las etapas de frío y acabado, ya no estás solamente siguiendo una receta: estás interpretando el sistema de montaje documentado en esta clase.
+          </p>
+        </section>
       </div>
     </CourseShell>
   );
