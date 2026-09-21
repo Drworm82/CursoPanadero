@@ -65,6 +65,22 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Toma tres coberturas distintas y escribe qué tipo son según la clasificación de la fuente. Después identifica cuál se utiliza en cada uno de los ejercicios de la Clase 19.</p>
         </section>
         
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y reconstruye</h2>
+          <p className="mt-2 leading-7 text-stone-600">Clasifica tres coberturas —oscuro, leche y blanco— a partir de las descripciones de la lección. Después elige una y explica qué información de su composición estás usando para identificarla.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Responde con evidencia de la fuente</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué tres tipos de cobertura distingue la fuente?</p>
+            <p>2. ¿Qué relación establece la fuente entre el porcentaje indicado y la pasta de cacao?</p>
+            <p>3. ¿Qué debes reconocer antes de pasar al temperado?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Fuente de esta lección</p>
           <p className="mt-2 leading-7 text-stone-700">Material de <strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, organizado pedagógicamente para esta ruta.</p>
