@@ -13,11 +13,11 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
-            <p><strong>Sablé de chocolate y especias:</strong> mantequilla 125 g · harina 200 g · cocoa 50 g · 4 especias 1 pizca · sal 1 pizca · yemas 1 pza · huevo 1 pza · azúcar 80 g.</p>
-            <p><strong>Flan de coco y caramelo:</strong> leche 120 ml · crema para batir 180 ml · azúcar 80 g · coco rallado 40 g · huevo 1 pza · yemas 3 pzas.</p>
-            <p><strong>Mousse de chocolate y Bailey’s:</strong> cobertura de leche 140 g · leche 50 ml · crema para batir 50 ml · yemas 20 g · Bailey’s 25 ml · azúcar 25 g · crema para batir 160 g semi montada · grenetina en polvo 8 g.</p>
-            <p><strong>Tejas de coco:</strong> coco rallado 30 g · azúcar mascabado 35 g · claras 30 g · harina 10 g · mantequilla noisette 24 g.</p>
-            <p><strong>Para decorar:</strong> chocolate amargo 300 g y manteca de cacao 300 g, para todo el grupo.</p>
+            <div><h3 className="font-semibold text-stone-900">Sablé de chocolate y especias</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>mantequilla 125 g</li><li>harina 200 g</li><li>cocoa 50 g</li><li>4 especias 1 pizca</li><li>sal 1 pizca</li><li>yemas 1 pza</li><li>huevo 1 pza</li><li>azúcar 80 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Flan de coco y caramelo</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>leche 120 ml</li><li>crema para batir 180 ml</li><li>azúcar 80 g</li><li>coco rallado 40 g</li><li>huevo 1 pza</li><li>yemas 3 pzas</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Mousse de chocolate y Bailey’s</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>cobertura de leche 140 g</li><li>leche 50 ml</li><li>crema para batir 50 ml</li><li>yemas 20 g</li><li>Bailey’s 25 ml</li><li>azúcar 25 g</li><li>crema para batir 160 g semi montada</li><li>grenetina en polvo 8 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Tejas de coco</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>coco rallado 30 g</li><li>azúcar mascabado 35 g</li><li>claras 30 g</li><li>harina 10 g</li><li>mantequilla noisette 24 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Para decorar</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>chocolate amargo 300 g y manteca de cacao 300 g, para todo el grupo</li></ul></div>
           </div>
         </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
