@@ -4,7 +4,7 @@ const moduleInfo = {
   sort_order: 4,
   title: 'Fermentación y panadería',
   guiding_question: '¿Cómo pasa una masa de ingredientes mezclados a una pieza de pan con volumen, estructura y características propias?',
-  expected_result: 'Interpretar el proceso de una masa fermentada, reconocer fermentación, formado, greñado y horneado, y comenzar a comparar masas de pan con diferentes niveles de hidratación y enriquecimiento.',
+  expected_result: 'Ejecutar y comparar las etapas documentadas de masas fermentadas, reconocer señales de fermentación, amasado, formado y horneado, y explicar cómo cambian los procesos según la receta.'
 };
 
 const lessons = [
@@ -34,6 +34,36 @@ export default function ModuleFourPage() {
             <p className="mt-3 leading-7 text-stone-700">{moduleInfo.expected_result}</p>
           </section>
         </div>
+
+        <section className="rounded-2xl bg-amber-50 p-6">
+          <p className="text-sm font-medium text-amber-900">Cómo estudiar este módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
+            En cada pan identifica primero la etapa que estás estudiando. Después ejecuta la secuencia documentada,
+            observa señales como volumen, elasticidad, tensión, fermentación o coloración y finalmente explica qué
+            relación existe entre esa señal y la operación que acabas de realizar.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6">
+          <div className="grid gap-3 md:grid-cols-4">
+            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica la etapa y el objetivo de la preparación.</p></div>
+            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Sigue la secuencia de la fuente sin adelantar operaciones.</p></div>
+            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Registra cambios de volumen, textura, tensión y color.</p></div>
+            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Relaciona cada señal con la etapa correspondiente.</p></div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6">
+          <p className="text-sm font-medium text-stone-500">Integración del módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye el proceso sin mirar la receta</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+            Elige tres preparaciones del módulo y escribe su secuencia desde el mezclado hasta el horneado.
+            Después marca dónde aparece la fermentación, qué señal indica avanzar y qué operación cambia entre
+            las tres recetas. Si una técnica específica no está desarrollada en la fuente, déjala identificada
+            como información pendiente en lugar de completarla por inferencia.
+          </p>
+        </section>
 
         <section className="rounded-2xl bg-amber-50 p-6">
           <p className="text-sm font-medium text-amber-900">El siguiente cambio</p>
