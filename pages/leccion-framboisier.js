@@ -35,10 +35,10 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-6 leading-7 text-stone-700">
-            <div><h3 className="font-semibold text-stone-900">Bizcocho de almendra</h3><p className="mt-2">Almendra en polvo 500 g · azúcar 250 g · claras 600 g · azúcar 250 g · mantequilla 75 g, fundida.</p></div>
-            <div><h3 className="font-semibold text-stone-900">Crema pastelera</h3><p className="mt-2">Crema pastelera 600 g. Para elaborarla: leche 400 ml · yemas 96 g · azúcar 120 g · fécula de maíz 28 g · esencia de vainilla 8 ml.</p></div>
-            <div><h3 className="font-semibold text-stone-900">Mousseline de frambuesa</h3><p className="mt-2">Mantequilla 1,100 g; separar 400 g de crema de mantequilla para alisar · claras 360 g · azúcar 720 g · esencia de frambuesa 90 gotas, importada · crema pastelera, la receta · colorante rojo c/s · frambuesas frescas 680 g, 3 domos (2 relleno y 1 decoración).</p></div>
-            <div><h3 className="font-semibold text-stone-900">Acabado</h3><p className="mt-2">Pintura de chocolate obscura 700 g, para todo el grupo · brillo neutro 250 g · colorante rojo c/s.</p></div>
+            <div><h3 className="font-semibold text-stone-900">Bizcocho de almendra</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Almendra en polvo 500 g</li><li>azúcar 250 g</li><li>claras 600 g</li><li>azúcar 250 g</li><li>mantequilla 75 g, fundida</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Crema pastelera</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Crema pastelera 600 g. Para elaborarla: leche 400 ml</li><li>yemas 96 g</li><li>azúcar 120 g</li><li>fécula de maíz 28 g</li><li>esencia de vainilla 8 ml</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Mousseline de frambuesa</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Mantequilla 1,100 g; separar 400 g de crema de mantequilla para alisar</li><li>claras 360 g</li><li>azúcar 720 g</li><li>esencia de frambuesa 90 gotas, importada</li><li>crema pastelera, la receta</li><li>colorante rojo c/s</li><li>frambuesas frescas 680 g, 3 domos (2 relleno y 1 decoración)</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Acabado</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>Pintura de chocolate obscura 700 g, para todo el grupo</li><li>brillo neutro 250 g</li><li>colorante rojo c/s</li></ul></div>
           </div>
         </section>
 
