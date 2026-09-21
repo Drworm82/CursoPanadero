@@ -41,6 +41,23 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Merengue italiano, crema montada, gelatina y bizcochos ya forman parte del curso. La comparación entre las dos mousses permite recuperar esas técnicas.</p></section>
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder explicar qué estructura comparten las dos mousses y qué componente cambia entre ellas.</p></section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Compara las dos mousses</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Coloca en paralelo la mousse de té y la mousse de naranja. Marca los elementos que comparten —grenetina, merengue italiano y crema montada— y el componente que cambia. Después identifica cómo se prepara el bizcocho y cómo se documentan las naranjas deshidratadas.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconoce lo común y lo diferente</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Enumera los elementos comunes a las dos mousses.</li>
+            <li>Explica qué cambia entre la mousse de té y la de naranja.</li>
+            <li>Reconstruye la preparación de las naranjas deshidratadas.</li>
+            <li>Indica hasta dónde documenta la fuente el montaje de Camejía.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
