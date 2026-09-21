@@ -13,10 +13,10 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
-            <p><strong>Para Biscuit de Naranja:</strong> mantequilla 85 g · azúcar 85 g · yemas de huevo 3 pzas · extracto de vainilla · sal 1 g · naranja, solo la ralladura, 1 pza · claras de huevo 3 pzas · harina 58 g · almendra en polvo 35 g.</p>
-            <p><strong>Para la Crema de Naranja:</strong> azúcar 250 g · huevos 6 pzas · jugo de naranja 350 g · mantequilla 60 g · ralladura de naranja 5 g · crema para batir 800 g · hojas de grenetina 13 pzas.</p>
-            <p><strong>Para el Gel de Naranja:</strong> base de la crema de naranja sin añadir crema, 150 g · colorante naranja 1 c/s.</p>
-            <p><strong>Para las Naranjas Deshidratadas:</strong> jarabe TPT 200 g (100 g azúcar + 100 g agua) · naranjas en rodajas delgadas 2 pzas · sal 1 g.</p>
+            <div><h3 className="font-semibold text-stone-900">Para Biscuit de Naranja</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>mantequilla 85 g</li><li>azúcar 85 g</li><li>yemas de huevo 3 pzas</li><li>extracto de vainilla</li><li>sal 1 g</li><li>naranja, solo la ralladura, 1 pza</li><li>claras de huevo 3 pzas</li><li>harina 58 g</li><li>almendra en polvo 35 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Para la Crema de Naranja</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>azúcar 250 g</li><li>huevos 6 pzas</li><li>jugo de naranja 350 g</li><li>mantequilla 60 g</li><li>ralladura de naranja 5 g</li><li>crema para batir 800 g</li><li>hojas de grenetina 13 pzas</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Para el Gel de Naranja</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>base de la crema de naranja sin añadir crema, 150 g</li><li>colorante naranja 1 c/s</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Para las Naranjas Deshidratadas</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>jarabe TPT 200 g (100 g azúcar + 100 g agua)</li><li>naranjas en rodajas delgadas 2 pzas</li><li>sal 1 g</li></ul></div>
           </div>
         </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
