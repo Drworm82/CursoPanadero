@@ -1,17 +1,37 @@
 import CourseShell from '../components/course/CourseShell';
 
-const lesson = { number: '59', title: 'Tarta de plátano', subtitle: 'Masa sable, ganache, plátano salteado y chiboust reunidos en una tarta de corte contemporáneo.' };
+const lesson = { number: '59', title: 'Tarta de plátano', subtitle: 'Clase 34 · Pastelería Contemporánea I' };
 
 export default function LessonPage() {
   return (
     <CourseShell eyebrow="Módulo 8 · Lección 59" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
-        <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Cómo se apilan preparaciones de distinta textura dentro de una misma tarta?</h2></section>
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 34</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Una secuencia de cuatro componentes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La receta documenta masa sable, ganache de plátano, plátano salteado y chiboust de plátano. El montaje termina con azúcar caramelizada y decoración de chocolate y plátano.</p></section>
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Composición</p><p className="mt-3 max-w-3xl leading-7 text-stone-700"><strong>Sable:</strong> harina 250 g, mantequilla 125 g, azúcar glass 100 g, yemas 40 g, huevo 50 g y sal 1 g. <strong>Ganache:</strong> crema 125 g, chocolate semiamargo 150 g, plátano 120 g, trimoline 12 g y mantequilla 15 g. <strong>Plátano salteado:</strong> 2 piezas, mantequilla 15 g, miel 30 g y ron 20 g. <strong>Chiboust:</strong> puré de plátano 170 g, jugo de limón 15 g, yemas 40 g, azúcar 30 g, crema 200 g, fécula 15 g, grenetina 8 g, claras 70 g y azúcar 140 g.</p></section>
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Procedimiento</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">La masa se realiza por arenado, se enfría, se forra un molde de 20 cm y se da cocción a fondo. Para la ganache se lleva la crema a ebullición con azúcar invertido y se agregan puré de plátano y mantequilla. Los plátanos se cortan en rodajas, se saltean con mantequilla y miel y finalmente se agrega el ron. Para el chiboust se realiza una crema pastelera, se incorpora el puré de plátano con limón, después grenetina y merengue italiano.</p></section>
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Montaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">Dentro de la tarta se colocan los plátanos salteados y se cubren con ganache. Una cinta de acetato permite completar con chiboust. Después se da frío, se espolvorea azúcar sobre la superficie y se carameliza con soplete; se termina con chocolate y plátano.</p></section>
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6"><p className="text-sm font-medium text-amber-800">Práctica</p><p className="mt-2 max-w-3xl leading-7 text-stone-700">Distingue qué componente aporta la base, cuál funciona como ganache y cuál ocupa la parte superior del montaje.</p></section>
+        <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno reforzara técnicas antes vistas, esta vez aplicada a la elaboración de tartas de corte contemporáneo. Conocerá la técnica para elaborar crema chiboust.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
+          <div className="mt-5 grid gap-6 md:grid-cols-2">
+            <div><h3 className="font-semibold">Masa sable</h3><p className="mt-2 leading-7 text-stone-700">Harina 250 g · mantequilla 125 g · azúcar glass 100 g · yemas 40 g · huevo 50 g · sal 1 g.</p></div>
+            <div><h3 className="font-semibold">Ganache de plátano</h3><p className="mt-2 leading-7 text-stone-700">Crema para batir 125 g · chocolate semi amargo 150 g · plátano 120 g · Trimoline 12 g · mantequilla 15 g.</p></div>
+            <div><h3 className="font-semibold">Plátano salteado</h3><p className="mt-2 leading-7 text-stone-700">Plátano 2 pzas · mantequilla 15 g · miel 30 g · ron 20 g.</p></div>
+            <div><h3 className="font-semibold">Chiboust de plátano</h3><p className="mt-2 leading-7 text-stone-700">Puré de plátano 170 g · jugo de limón 15 g · yemas 40 g · azúcar 30 g (crema pastelera) · crema para batir 200 g (crema pastelera) · fécula 15 g (crema pastelera) · grenetina 8 g · claras 70 g (merengue italiano) · azúcar 140 g (merengue italiano) · sal 1 g.</p></div>
+            <div><h3 className="font-semibold">Decoración</h3><p className="mt-2 leading-7 text-stone-700">Plátano en rodajas 1 pza · azúcar 250 g · chocolate semi amargo 100 g.</p></div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Modo de elaboración</h2>
+          <div className="mt-5 space-y-6 leading-7 text-stone-700">
+            <div><h3 className="font-semibold text-stone-900">Para la masa</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Realizar la masa por el método de arenado.</li><li>Enfriar.</li><li>Forrar un molde de 20 cm de diámetro y darle cocción a fondo.</li></ol></div>
+            <div><h3 className="font-semibold text-stone-900">Para la ganache</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Llevar la crema a ebullición junto con el azúcar invertido.</li><li>Agregar el puré de plátano y la mantequilla.</li></ol><p className="mt-2 text-sm text-stone-500">La lista de ingredientes denomina este ingrediente Trimoline.</p></div>
+            <div><h3 className="font-semibold text-stone-900">Para los plátanos salteados</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Cortar los plátanos en rodajas de 1 cm.</li><li>Saltearlas con la mantequilla y la miel.</li><li>Por último agregar el ron.</li></ol></div>
+            <div><h3 className="font-semibold text-stone-900">Para el chiboust de plátano</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Realizar una crema pastelera con las yemas, azúcar, crema y harina.</li><li>Mientras sigue tibia agregarle el puré de plátano con el jugo de limón.</li><li>Por último pero sin dejar que enfríe agregar la grenetina y el merengue italiano.</li></ol><p className="mt-2 text-sm text-stone-500">La lista de ingredientes indica fécula; el procedimiento de la fuente dice «harina». Se conserva esa diferencia.</p></div>
+            <div><h3 className="font-semibold text-stone-900">Para el montaje</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Colocar dentro de la tarta los plátanos salteados.</li><li>Cubrir con la ganache.</li><li>Envolver la tarta con una cinta de acetato y completar con la chiboust.</li><li>Dar frío.</li><li>Espolvorear con azúcar la superficie y caramelizar con el soplete. Decorar con chocolate y plátano.</li></ol></div>
+          </div>
+        </section>
       </div>
     </CourseShell>
   );
