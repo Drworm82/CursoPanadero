@@ -125,6 +125,22 @@ export default function LessonThirtyFourPage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
+          <p className="mt-2 leading-7 text-stone-600">Reconstruye la secuencia de una pieza saborizada desde el mezclado hasta el horneado. Identifica dónde intervienen fermentación, ponchado y formado.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué secuencia documenta la receta de fougasse?</p>
+            <p>2. ¿Qué ocurre entre fermentación y horneado?</p>
+            <p>3. ¿Qué ingredientes o acabados convierten las piezas estudiadas en panes saborizados según la fuente?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Cierre del Módulo 4</h2>
