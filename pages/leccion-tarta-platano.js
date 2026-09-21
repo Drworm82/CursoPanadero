@@ -10,6 +10,9 @@ export default function LessonPage() {
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno reforzara técnicas antes vistas, esta vez aplicada a la elaboración de tartas de corte contemporáneo. Conocerá la técnica para elaborar crema chiboust.</p>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Una tarta puede reunir varias texturas</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La masa sable funciona como estructura y después recibe plátano salteado, ganache y chiboust. El aprendizaje está en comprender cómo esas preparaciones se integran en una sola pieza.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera masa sable y preparaciones de crema. Observa qué componente se hornea como estructura y cuáles se incorporan posteriormente. Práctica: identifica base, capa de ganache y cobertura de chiboust; después reconstruye el montaje sin mirar la receta.</p></section>
+
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
