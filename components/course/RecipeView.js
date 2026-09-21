@@ -1,5 +1,7 @@
 import CourseShell from './CourseShell';
 
+const defaultEquipment = ['Báscula', 'Batidora', 'Tazón', 'Espátula', 'Molde', 'Horno'];
+
 const lessonLinks = {
   'rosca-pina-colada': { href: '/leccion-primer-panque-acremado', label: 'Volver a la lección' },
   'panque-platano-streusel-canela': { href: '/leccion-segunda-ruta-aceite', label: 'Volver a la lección' },
