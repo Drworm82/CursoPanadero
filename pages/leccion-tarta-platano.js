@@ -35,6 +35,9 @@ export default function LessonPage() {
             <div><h3 className="font-semibold text-stone-900">Para el montaje</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Colocar dentro de la tarta los plátanos salteados.</li><li>Cubrir con la ganache.</li><li>Envolver la tarta con una cinta de acetato y completar con la chiboust.</li><li>Dar frío.</li><li>Espolvorear con azúcar la superficie y caramelizar con el soplete. Decorar con chocolate y plátano.</li></ol></div>
           </div>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La masa sable y las preparaciones de crema son técnicas conocidas. La novedad está en coordinarlas dentro de una tarta con varias capas.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder reconstruir el orden del montaje y justificar por qué cada componente entra en ese momento según la receta.</p></section>
+
       </div>
     </CourseShell>
   );
