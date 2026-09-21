@@ -121,6 +121,22 @@ export default function LessonCroissantYPanDanesCompararPage() {
         </section>
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y compara</h2>
+          <p className="mt-2 leading-7 text-stone-600">Sin consultar la tabla, escribe tres coincidencias y tres diferencias entre croissant y pan danés. Después verifica cada una en la receta correspondiente.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica con evidencia de la receta</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué operaciones comparten las dos recetas antes del formado?</p>
+            <p>2. ¿Qué diferencia existe entre sus vueltas?</p>
+            <p>3. ¿Cómo cambia el formado posterior al laminado?</p>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Práctica</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Completa la comparación de memoria</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">
