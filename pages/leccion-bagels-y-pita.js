@@ -116,6 +116,22 @@ export default function LessonThirtyThreePage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
+          <p className="mt-2 leading-7 text-stone-600">Compara las dos secuencias y reconstruye sus etapas en paralelo. Marca qué comparten y en qué momento divergen.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué etapas de fermentación aparecen en cada preparación?</p>
+            <p>2. ¿Cómo cambia el formado entre las dos piezas?</p>
+            <p>3. ¿Qué información específica sobre el proceso de bagel o pita sí está documentada y cuál no?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte de esta lección</h2>
