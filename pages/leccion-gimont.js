@@ -35,10 +35,6 @@ export default function LessonPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Límite de la fuente</p>
-          <p className="mt-3 leading-7 text-stone-700">La fuente describe estas preparaciones mediante «técnica conocida» y no desarrolla aquí todos sus procedimientos internos. Se conserva esa referencia en lugar de sustituirla por una receta externa.</p>
-        </section>
       </div>
     </CourseShell>
   );
