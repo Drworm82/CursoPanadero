@@ -33,6 +33,14 @@ export default function LessonPage() {
         </section>
 <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Aprende mientras haces</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Lee la receta como una secuencia de producción</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Mientras trabajas, identifica qué preparación debe estar lista antes de comenzar la siguiente. Observa la cadena documentada: biscuit → crema → crema mousseline → relleno → segunda capa → congelación → acabado → corte → decoración. La actividad consiste en marcar en tu receta qué operaciones pueden hacerse por separado y cuáles dependen del estado anterior de la pieza. Al terminar, intenta reconstruir la secuencia sin mirar el procedimiento.</p></section>
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Producción en serie]</strong><br />Vista del pastel terminado y esquema de sus componentes para hacer visible la organización del trabajo a gran escala.</p>
+            <p><strong>[VIDEO SUGERIDO — Montaje, alisado y acabado]</strong><br />Demostración del montaje por capas, alisado, congelación, aplicación de pintura y brillo, hasta el corte y decoración documentados.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-6 leading-7 text-stone-700">
