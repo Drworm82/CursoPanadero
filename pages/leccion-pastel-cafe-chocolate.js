@@ -13,11 +13,11 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
-            <p><strong>Dacquoise de chocolate:</strong> claras 105 g · azúcar 52 g · polvo de almendras 90 g · azúcar 30 g · harina 15 g · chocolate semi amargo 30 g · café soluble 3 g · azúcar glass 45 g para espolvorear.</p>
-            <p><strong>Cremoso de café:</strong> leche 110 ml · crema para batir 80 g · yemas 40 g · azúcar mascabado 90 g · café soluble 10 g · grenetina en polvo 12 g · crema para batir 150 g.</p>
-            <p><strong>Bavaresa de chocolate:</strong> leche 100 ml · crema para batir 100 g · yemas 40 g · azúcar 20 g · grenetina en polvo 6 g · chocolate amargo 120 g · crema semi batida 360 g.</p>
-            <p><strong>Glaceo de café:</strong> glucosa 30 g · crema para batir 95 g · chocolate blanco 150 g · café soluble 3 g · grenetina en polvo 5 g · brillo de pastelería 75 g.</p>
-            <p><strong>Decoración:</strong> chocolate blanco 150 g · chocolate amargo 300 g.</p>
+            <div><h3 className="font-semibold text-stone-900">Dacquoise de chocolate</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>claras 105 g</li><li>azúcar 52 g</li><li>polvo de almendras 90 g</li><li>azúcar 30 g</li><li>harina 15 g</li><li>chocolate semi amargo 30 g</li><li>café soluble 3 g</li><li>azúcar glass 45 g para espolvorear</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Cremoso de café</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>leche 110 ml</li><li>crema para batir 80 g</li><li>yemas 40 g</li><li>azúcar mascabado 90 g</li><li>café soluble 10 g</li><li>grenetina en polvo 12 g</li><li>crema para batir 150 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Bavaresa de chocolate</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>leche 100 ml</li><li>crema para batir 100 g</li><li>yemas 40 g</li><li>azúcar 20 g</li><li>grenetina en polvo 6 g</li><li>chocolate amargo 120 g</li><li>crema semi batida 360 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Glaceo de café</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>glucosa 30 g</li><li>crema para batir 95 g</li><li>chocolate blanco 150 g</li><li>café soluble 3 g</li><li>grenetina en polvo 5 g</li><li>brillo de pastelería 75 g</li></ul></div>
+            <div><h3 className="font-semibold text-stone-900">Decoración</h3><ul className="mt-3 list-disc space-y-1.5 pl-5 leading-7"><li>chocolate blanco 150 g</li><li>chocolate amargo 300 g</li></ul></div>
           </div>
         </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
