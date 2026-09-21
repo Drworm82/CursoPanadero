@@ -148,7 +148,17 @@ export default function LessonEighteenPage() {
           </a>
         </section>
 
-        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
+        
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica y reconstruye</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. 1. ¿Cómo se incorporan los huevos según la fuente?</p>
+            <p>2. 2. ¿Qué consistencia debe alcanzar la pasta antes de pasar a la manga?</p>
+            <p>3. 3. ¿Qué observación del formado te permite comprobar que la consistencia alcanzada es manejable?</p>
+          </div>
+        </section>
+<section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte</h2>
           <div className="mt-5 space-y-4 text-stone-100">
