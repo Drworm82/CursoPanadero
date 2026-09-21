@@ -35,6 +35,14 @@ export default function LessonPage() {
         </section>
 <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Aprende mientras haces</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconoce el sistema detrás del montaje</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Durante la preparación, separa las operaciones por componente: biscuit, jarabe, pistache, mousseline y bavaroise. Después sigue el montaje documentado y observa cómo las preparaciones independientes se convierten en una pieza. Antes de terminar, explica qué componentes necesitan estar preparados antes del montaje y qué acabados aparecen al final. El objetivo es leer Gimont como una secuencia organizada, no memorizar una lista aislada de pasos.</p></section>
 
+        <section className="rounded-2xl border border-sky-200 bg-sky-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-sky-700">Medios sugeridos</p>
+          <div className="mt-4 space-y-4 leading-7 text-stone-700">
+            <p><strong>[IMAGEN SUGERIDA — Corte y componentes]</strong><br />Diagrama que permita reconocer biscuit de pistache, mousseline, bavaresa y decoración dentro del montaje individual.</p>
+            <p><strong>[VIDEO SUGERIDO — Montaje en aro]</strong><br />Mostrar el revestimiento del aro, la incorporación de la mousseline y la bavaresa, y el acabado documentado con chocolate.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-6 leading-7 text-stone-700">
