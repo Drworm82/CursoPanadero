@@ -21,7 +21,7 @@ const modules = [
     href: '/modulo-2',
     title: 'Cuando una masa no quiere gluten: masas friables',
     guiding_question: '¿Por qué algunas masas necesitan desarrollar estructura y otras necesitan evitarla?',
-    expected_result: 'Reconocer qué busca una masa friable, entender el papel de la grasa y el reposo, y distinguir el método de arenado del acremado.',
+    expected_result: 'Aplicar los métodos documentados para masas friables, comparar sus efectos sobre la pasta y explicar cómo el trabajo, la grasa y el reposo se relacionan con el resultado.',
   },
   {
     id: 'modulo-3',
