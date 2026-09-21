@@ -42,6 +42,23 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Retoma los batidos y las cremas cocidas. La preparación usa esas técnicas para construir componentes con texturas diferentes.</p></section>
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder distinguir la función de dacquoise, crema de café, bavaresa, glaseado y decoración.</p></section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye el armado invertido</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Ordena los componentes del pastel: dacquoise, cremoso de café, bavaresa y glaseo. Después anota las temperaturas documentadas para el cremoso y el glaseo y ubica en qué momento aparece cada una dentro de la secuencia.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Explica las relaciones entre componentes</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>¿Qué componente se construye a partir de una cocción a 84 °C?</li>
+            <li>¿A qué temperatura se mezcla el cremoso con la crema semi-batida?</li>
+            <li>Reconstruye el armado invertido con los tamaños documentados.</li>
+            <li>Explica la diferencia entre el nombre de la bavaresa en la receta y el nombre que aparece en el paso de montaje.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
