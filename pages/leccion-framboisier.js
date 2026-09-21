@@ -58,6 +58,23 @@ export default function LessonPage() {
           </div>
         </section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Dibuja la línea de producción</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Construye un esquema con cuatro grupos: preparaciones, montaje, frío y acabado. Coloca dentro de cada grupo las operaciones documentadas y conecta cada una con la que le sigue. Después marca qué componentes se preparan antes del montaje y qué operaciones ocurren después de congelar.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye Framboisier sin la receta</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Enumera las preparaciones principales antes del montaje.</li>
+            <li>Ordena el montaje desde la primera placa de bizcocho hasta la decoración.</li>
+            <li>Identifica las dos etapas de congelación documentadas.</li>
+            <li>Explica qué información aporta la receta sobre el corte y qué parte remite a la demostración del chef.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
