@@ -1,0 +1,18 @@
+import CourseShell from '../components/course/CourseShell';
+
+const lesson = { number: '58', title: 'Pastel de yogurt y frutos rojos', subtitle: 'Un pastel contemporáneo construido con una magdalena, una jelly, un mousse y un armado invertido.' };
+
+export default function LessonPage() {
+  return (
+    <CourseShell eyebrow="Módulo 8 · Lección 58" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
+      <div className="space-y-8">
+        <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Pregunta de la lección</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Cómo se construye un pastel cuando cada componente se prepara por separado?</h2></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 34</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Tres preparaciones y un armado invertido</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente trabaja una magdalena de limón y romero, una jelly de frutos rojos y un mousse de yogurt. El montaje usa una pastilla de magdalena y jelly dentro de un molde mayor, al que se incorpora el mousse.</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Composición</p><p className="mt-3 max-w-3xl leading-7 text-stone-700"><strong>Magdalena:</strong> huevo 50 g, azúcar 60 g, ralladura de limón 5 g, crema 12 g, romero 2 g, harina 50 g, fécula 12 g, polvo de hornear 2 g y mantequilla 25 g. <strong>Jelly:</strong> azúcar 40 g, glucosa 15 g, frutos rojos 300 g y grenetina 8 g. <strong>Mousse:</strong> yogurt 250 g, merengue italiano 150 g, vainilla ½ vaina, grenetina 10 g y crema 250 g.</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Procedimiento y montaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">La magdalena se blanquea con azúcar y ralladura, se incorpora crema y romero, después los secos y la mantequilla; se extiende a 4 mm y se cocina a 170 °C. Para la jelly se cocinan frutos rojos, azúcar y glucosa durante 2 minutos y se añade la grenetina al enfriar. El mousse se construye con merengue italiano, yogurt entibiado con vainilla, grenetina y crema semimontada. La pastilla de magdalena y jelly se coloca en un molde de gota de 20 cm; después se prepara un molde de 25 cm, se vierte el mousse para realizar un armado invertido, se refrigera y se desmolda. La decoración documentada incluye cinta de chocolate, enjambre de glucosa con frambuesa y gel de brillo rojo.</p></section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6"><p className="text-sm font-medium text-amber-800">Práctica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Ordena el montaje</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Explica qué componente forma la pastilla, cuál ocupa el molde exterior y en qué momento se realiza el armado invertido.</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6"><p className="text-sm font-medium text-stone-500">Fuente</p><p className="mt-2 leading-7 text-stone-700"><strong>Curso completo Panaderia y reposteria ISMM.pdf</strong>, Clase 34.</p></section>
+      </div>
+    </CourseShell>
+  );
+}
