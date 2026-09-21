@@ -33,10 +33,6 @@ export default function LessonPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Límite de la fuente</p>
-          <p className="mt-3 leading-7 text-stone-700">La fuente no desarrolla paso a paso la elaboración del bizcocho de almendra, la crema pastelera ni la derivación de la mousseline de frambuesa en esta clase; remite a su elaboración y después describe el montaje. No se agregan procedimientos externos.</p>
-        </section>
       </div>
     </CourseShell>
   );
