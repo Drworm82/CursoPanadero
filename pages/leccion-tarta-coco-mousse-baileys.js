@@ -30,6 +30,9 @@ export default function LessonPage() {
             <div><h3 className="font-semibold text-stone-900">Montaje</h3><ol className="mt-2 list-decimal space-y-1 pl-6"><li>Una vez que la tarta esta fría colocar la mousse de Bailey’s sobre esta.</li><li>En caso de tener compresor, pulverizar con cantidades iguales de chocolate amargo y manteca de cacao a 30 °C.</li><li>Colocar las mitades de teja alrededor del mousse. Para decorar hacer alguna decoración con chocolate.</li></ol></div>
           </div>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Vas a reutilizar masa sable, flan, mousse y elementos de decoración. Antes de leer el procedimiento completo, identifica qué técnica corresponde a cada componente.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder separar la preparación en componentes y explicar qué técnica previa recupera cada uno.</p></section>
+
       </div>
     </CourseShell>
   );
