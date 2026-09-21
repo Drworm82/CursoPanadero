@@ -37,7 +37,7 @@ const modules = [
     href: '/modulo-4',
     title: 'Fermentación y panadería',
     guiding_question: '¿Cómo pasa una masa de ingredientes mezclados a una pieza de pan con volumen, estructura y características propias?',
-    expected_result: 'Interpretar el proceso de una masa fermentada y comenzar a comparar diferentes familias de pan.',
+    expected_result: 'Ejecutar y comparar las etapas documentadas de masas fermentadas, reconocer señales de fermentación, amasado, formado y horneado, y explicar cómo cambian los procesos según la receta.',
   },
   {
     id: 'modulo-5',
