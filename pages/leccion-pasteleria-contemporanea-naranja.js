@@ -7,6 +7,9 @@ export default function LessonPage() {
     <CourseShell eyebrow="Módulo 8 · Lección 65" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno aprenderá a ensamblar pasteles con distintas técnicas y texturas. Reforzará técnicas básicas de pastelería.</p></section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cerrar el bloque reconociendo patrones</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La preparación de naranja reúne biscuit, crema, gel y fruta deshidratada. Permite reconocer patrones que se repiten en las composiciones contemporáneas del módulo.</p></section>
+<section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera bizcochos, cremas, gelatina y frutas deshidratadas. Observa cómo vuelven a aparecer en una composición diferente. Práctica: compara esta preparación con el pastel de yogurt y frutos rojos y señala tres técnicas o tipos de componente que se repiten.</p></section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 space-y-5 leading-7 text-stone-700">
