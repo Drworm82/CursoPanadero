@@ -100,6 +100,22 @@ export default function LessonElevenPage() {
             <p className="leading-7"><strong>La receta deja de ser una lista:</strong> si puedes identificar qué está intentando conseguir la masa, puedes interpretar mejor lo que estás viendo durante el proceso.</p>
           </div>
         </section>
+
+
+        <section className="grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
+          <div className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Reto de recuperación</p>
+            <p className="mt-3 leading-7 text-stone-700">Cierra el módulo sin consultar las recetas: explica cómo cambia el objetivo cuando pasas de una masa batida pesada a una masa friable y reconstruye qué decisiones de trabajo apoyan ese objetivo.</p>
+          </div>
+          <div className="rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
+            <p className="text-sm font-medium text-stone-300">Comprueba tu aprendizaje</p>
+            <ul className="mt-3 space-y-3 text-sm leading-6 text-stone-100">
+              <li>• ¿Qué busca limitarse en una masa friable?</li>
+              <li>• ¿Qué relación hay entre grasa, método y reposo?</li>
+              <li>• ¿Cómo distinguirías sablage y acremado por la forma en que se inicia el trabajo?</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </CourseShell>
   );
