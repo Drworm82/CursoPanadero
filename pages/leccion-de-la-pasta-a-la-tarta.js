@@ -92,6 +92,22 @@ export default function LessonNinePage() {
             <p className="leading-7"><strong>El montaje:</strong> cada capa cumple una función y prepara la siguiente.</p>
           </div>
         </section>
+
+
+        <section className="grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
+          <div className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Reconstruye la secuencia</p>
+            <p className="mt-3 leading-7 text-stone-700">Sin mirar la lista completa de pasos, reconstruye el recorrido de la tarta: qué debe ocurrir antes de rellenar, qué operación protege la base y qué componentes aparecen después.</p>
+          </div>
+          <div className="rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
+            <p className="text-sm font-medium text-stone-300">Comprueba tu aprendizaje</p>
+            <ul className="mt-3 space-y-3 text-sm leading-6 text-stone-100">
+              <li>• ¿En qué estado debe estar la base antes de impermeabilizarla?</li>
+              <li>• ¿Qué función cumple el chocolate dentro de la secuencia documentada?</li>
+              <li>• ¿Qué preparación de la crema pastelera está marcada como DEMO?</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </CourseShell>
   );
