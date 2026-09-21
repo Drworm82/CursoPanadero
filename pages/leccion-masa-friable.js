@@ -67,6 +67,22 @@ export default function LessonSevenPage() {
             Ahora que sabes qué queremos evitar, podemos ver cómo el método de arenado produce una pasta concreta: la pasta sablée.
           </p>
         </div>
+
+
+        <section className="grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
+          <div className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Actividad guiada</p>
+            <p className="mt-3 leading-7 text-stone-700">Antes de pasar a una receta, explica con tus propias palabras qué estructura busca una masa friable y qué función cumple la grasa al trabajar la harina.</p>
+          </div>
+          <div className="rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
+            <p className="text-sm font-medium text-stone-300">Comprueba tu aprendizaje</p>
+            <ul className="mt-3 space-y-3 text-sm leading-6 text-stone-100">
+              <li>• ¿Qué diferencia de objetivo hay entre una masa de pan y una pasta friable?</li>
+              <li>• ¿Qué señal visual produce el sablage?</li>
+              <li>• ¿Por qué la fuente indica reposar la pasta en refrigeración?</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </CourseShell>
   );
