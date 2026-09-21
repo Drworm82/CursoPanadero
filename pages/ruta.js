@@ -29,7 +29,7 @@ const modules = [
     href: '/modulo-3',
     title: 'Cuando el aire construye la estructura',
     guiding_question: '¿Cómo conseguimos que una preparación gane volumen y conserve ese volumen hasta convertirse en un producto terminado?',
-    expected_result: 'Reconocer el papel del huevo como agente aireante y relacionarlo con merengues, montaje y pasta choux.',
+    expected_result: 'Aplicar y comparar los principios documentados para construir volumen, conservar aire, trabajar merengues y pasta choux, y relacionar esas estructuras con el montaje y el frío de productos terminados.',
   },
   {
     id: 'modulo-4',
