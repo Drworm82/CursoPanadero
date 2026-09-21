@@ -17,30 +17,7 @@ export default function ModuleNinePage() {
     <CourseShell eyebrow="Módulo 9" title={moduleInfo.title} backHref="/ruta" backLabel="Volver a la ruta">
       <div className="space-y-8">
         <div className="grid gap-4 md:grid-cols-2">
-          <section className="rounded-2xl border border-stone-200 bg-white p-6">
-            <p className="text-sm font-medium text-stone-500">Pregunta guía</p>
-            <p className="mt-3 text-lg leading-8 text-stone-800">{moduleInfo.guiding_question}</p>
-          </section>
-          <section className="rounded-2xl border border-stone-200 bg-white p-6">
-            <p className="text-sm font-medium text-stone-500">Al terminar</p>
-            <p className="mt-3 leading-7 text-stone-700">{moduleInfo.expected_result}</p>
-          </section>
-        </div>
-
-        <section className="rounded-2xl bg-amber-50 p-6">
-          <p className="text-sm font-medium text-amber-900">Clase 38</p>
-          <p className="mt-2 max-w-3xl leading-7 text-amber-950">
-            La fuente presenta pasteles a gran escala y plantea como objetivo aprender a elaborarlos mediante sistemas de producción en serie.
-          </p>
-        </section>
-
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Límite de la fuente</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Dos elaboraciones documentadas</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-            La Clase 38 contiene las recetas Framboisier y Gimont. Las lecciones reproducirán sus ingredientes, procedimientos y montajes según el material disponible, sin completar por cuenta propia los pasos que la fuente no desarrolla.
-          </p>
-        </section>
+          
 
         <section>
           <div className="mb-4 flex items-end justify-between gap-4">
@@ -72,6 +49,7 @@ export default function ModuleNinePage() {
             ))}
           </div>
         </section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">De la receta al sistema de producción</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">En esta etapa no basta con identificar ingredientes. Vas a seguir el orden de producción, distinguir preparaciones base de derivados, reconocer qué componentes necesitan frío y observar cómo el montaje convierte varias elaboraciones en una pieza final.</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">Framboisier y Gimont funcionan como dos casos para practicar esa lectura: primero se entiende cada componente y después se reconstruye la secuencia completa.</p></section>
       </div>
     </CourseShell>
   );
