@@ -136,6 +136,22 @@ export default function LessonTwentySixPage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
+          <p className="mt-2 leading-7 text-stone-600">Observa la masa antes y después del reposo. Registra qué cambió en volumen, textura o manejo y evita usar solamente el tiempo como descripción.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
+          <div className="mt-4 space-y-3 text-stone-700">
+            <p>1. ¿Qué cambio observable relacionas con la fermentación?</p>
+            <p>2. ¿Qué diferencia hay entre dejar reposar una masa y reconocer que ya avanzó la fermentación?</p>
+            <p>3. ¿Qué información aporta la receta para decidir cuándo continuar?</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Al terminar</p>
           <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte de esta lección</h2>
