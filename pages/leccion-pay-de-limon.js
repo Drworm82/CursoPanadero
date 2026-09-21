@@ -92,6 +92,22 @@ export default function LessonTenPage() {
             <p className="leading-7"><strong>La herramienta nueva:</strong> el soplete entra porque ahora el acabado forma parte de la técnica que queremos practicar.</p>
           </div>
         </section>
+
+
+        <section className="grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
+          <div className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Relaciona preparación y señal</p>
+            <p className="mt-3 leading-7 text-stone-700">Mientras trabajas o estudias el pay, identifica una señal observable para cada componente: pasta, crema de limón y merengue suizo. Después relaciona cada señal con la operación que la produjo.</p>
+          </div>
+          <div className="rounded-2xl bg-stone-900 p-6 text-white sm:p-7">
+            <p className="text-sm font-medium text-stone-300">Comprueba tu aprendizaje</p>
+            <ul className="mt-3 space-y-3 text-sm leading-6 text-stone-100">
+              <li>• ¿Qué señal indica que la pasta está lista después de la cocción?</li>
+              <li>• ¿Qué proceso se utiliza para cocinar la crema de limón?</li>
+              <li>• ¿Qué temperatura indica la fuente para el baño María del merengue suizo?</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </CourseShell>
   );
