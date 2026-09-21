@@ -41,6 +41,23 @@ export default function LessonPage() {
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Recupera antes de empezar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Conecta con lo que ya sabes</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Bizcochos, cremas, gelatina y frutas deshidratadas ya aparecieron en las lecciones anteriores. Esta preparación permite reconocerlos en otra composición.</p></section>
 <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Qué debes poder explicar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Cierra la lección con una explicación</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Al terminar, debes poder identificar los patrones comunes entre esta preparación y otras piezas contemporáneas del módulo.</p></section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconoce los patrones acumulados</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Relaciona biscuit de naranja, crema de naranja, gel de naranja y naranjas deshidratadas con las técnicas que ya aparecieron en el módulo. Después reconstruye únicamente el montaje que la fuente documenta: aro de 22 cm y pastilla de 18 cm.</p>
+        </section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Explica qué puedes reconstruir</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
+            <li>Enumera los cuatro componentes documentados de la preparación.</li>
+            <li>Explica cómo se prepara la crema de naranja y cuándo se incorpora la crema batida.</li>
+            <li>Describe el procedimiento documentado para las naranjas deshidratadas.</li>
+            <li>Indica qué información proporciona la fuente sobre el montaje y qué pasos no están documentados.</li>
+          </ol>
+        </section>
+
       </div>
     </CourseShell>
   );
