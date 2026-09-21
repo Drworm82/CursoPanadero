@@ -16,8 +16,12 @@ export default function ModuleNinePage() {
   return (
     <CourseShell eyebrow="Módulo 9" title={moduleInfo.title} backHref="/ruta" backLabel="Volver a la ruta">
       <div className="space-y-8">
-        <div className="grid gap-4 md:grid-cols-2">
-          
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">De la receta al sistema de producción</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">En esta etapa no basta con identificar ingredientes. Vas a seguir el orden de producción, distinguir preparaciones base de derivados, reconocer qué componentes necesitan frío y observar cómo el montaje convierte varias elaboraciones en una pieza final.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Framboisier y Gimont funcionan como dos casos para practicar esa lectura: primero se entiende cada componente y después se reconstruye la secuencia completa.</p>
+        </section>
 
         <section>
           <div className="mb-4 flex items-end justify-between gap-4">
@@ -49,7 +53,6 @@ export default function ModuleNinePage() {
             ))}
           </div>
         </section>
-<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">De la receta al sistema de producción</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">En esta etapa no basta con identificar ingredientes. Vas a seguir el orden de producción, distinguir preparaciones base de derivados, reconocer qué componentes necesitan frío y observar cómo el montaje convierte varias elaboraciones en una pieza final.</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">Framboisier y Gimont funcionan como dos casos para practicar esa lectura: primero se entiende cada componente y después se reconstruye la secuencia completa.</p></section>
       </div>
     </CourseShell>
   );
