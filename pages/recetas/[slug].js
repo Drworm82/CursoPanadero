@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import CourseShell from '../../components/course/CourseShell';
-import { createCourseServerClient, requireCourseAuth } from '../../lib/course';
+import { createCourseServerClient, requireCourseAccess, requireCourseAuth } from '../../lib/course';
 import RecipeProgress from '../../components/course/RecipeProgress';
 
 function isUuid(value) {
@@ -159,6 +159,9 @@ export async function getServerSideProps({ req, res, params }) {
 
   const { supabase, claims } = await requireCourseAuth(req, res);
   if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
+
+  const hasAccess = await requireCourseAccess(supabase);
+  if (!hasAccess) return { notFound: true };
 
   const { data: recipe, error } = await supabase
     .from('recipes')
