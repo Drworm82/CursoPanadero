@@ -38,8 +38,8 @@ export async function getServerSideProps({ req, res }) {
 
   const [{ data: lessons }, { data: progress }, { data: recipeProgress }] = await Promise.all([
     supabase.from('lessons').select('id, title, sort_order').eq('module_id', module.id).order('sort_order'),
-    supabase.from('lesson_progress').select('lesson_id, status').eq('user_id', user.sub),
-    supabase.from('recipe_progress').select('recipe_id, status, current_step').eq('user_id', user.sub),
+    supabase.from('lesson_progress').select('lesson_id, status').eq('user_id', claims.sub),
+    supabase.from('recipe_progress').select('recipe_id, status, current_step').eq('user_id', claims.sub),
   ]);
 
   return { props: { lessons: lessons || [], progress: progress || [], recipeProgress: recipeProgress || [] } };
