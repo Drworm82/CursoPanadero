@@ -12,13 +12,13 @@ export default function LessonTwentyEightPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Una lección con una fuente limitada</p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            La ruta de panificación sí está documentada; la baguette y el greñado todavía no.
+            La baguette sí está documentada; el greñado específico no.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            El material disponible para este curso establece el formado como una etapa del proceso y después
-            indica una segunda fermentación de las piezas formadas. Sin embargo, no contiene una receta de
-            baguette ni desarrolla el procedimiento de greñado. Por eso esta lección distingue lo que sí podemos
-            estudiar de lo que todavía requiere una fuente específica.
+            La Clase 24 del material documenta una Baguette Tradicional con ingredientes, procedimiento y horneado.
+            La misma clase también incluye pan de centeno y chipá o pan de yuca. Esta lección se concentra en la
+            baguette y conserva como límite únicamente aquello que la fuente no desarrolla de manera específica:
+            la técnica detallada de greñado.
           </p>
         </section>
 
@@ -62,6 +62,15 @@ export default function LessonTwentyEightPage() {
               y los acabados, el horneado y el enfriado.
             </p>
           </div>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Baguette Tradicional: lo que indica la fuente</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Fórmula</p><p className="mt-2 leading-7 text-amber-950">La receta declara 500 g de harina de trigo, 350 g de agua, 10 g de sal y 10 g de levadura fresca.</p></div>
+            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Proceso</p><p className="mt-2 leading-7 text-stone-700">La secuencia documentada pasa por mezclar, amasar, fermentar, ponchar, porcionar, formar, fermentar nuevamente, barnizar y hornear.</p></div>
+          </div>
+          <p className="mt-5 leading-7 text-stone-700">La fuente indica además vapor durante la cocción y un horneado a 220 °C. El formado se realiza según la demostración de clase; por eso no debemos reconstruir una técnica de formado que el texto no describe paso por paso.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -114,25 +123,27 @@ export default function LessonTwentyEightPage() {
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
           <h2 className="mt-2 text-xl font-semibold text-amber-950">La baguette no está desarrollada en el material disponible.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            La búsqueda del material del repositorio no encontró una receta, procedimiento o explicación específica
-            para “baguette” ni para “greñado”. La lección conserva esos términos porque forman parte de la ruta
-            pedagógica del Módulo 4, pero no presenta como hechos de la fuente instrucciones que no están allí.
+            La fuente sí proporciona una receta de Baguette Tradicional. Lo que no desarrolla con detalle son los cortes de
+            greñado: no especifica profundidad, ángulo, número de cortes ni herramienta. Esos detalles quedan fuera
+            de esta lección para no completar la fuente con información externa.
           </p>
         </section>
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
-          <p className="mt-2 leading-7 text-stone-600">Reconstruye el proceso del baguette antes de volver a mirar la receta: poolish, mezcla, reposo, porcionado, formado, corte y horneado. Marca qué operaciones están documentadas y cuáles solo se mencionan como demostración.</p>
+          <p className="mt-2 leading-7 text-stone-600">Reconstruye el proceso de la Baguette Tradicional antes de volver a mirar la receta: mezclado, amasado,
+            fermentación, ponchado, porcionado, formado, segunda fermentación, barnizado, vapor y horneado. Marca
+            qué parte del formado está descrita en texto y qué parte queda remitida a la demostración.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
           <div className="mt-4 space-y-3 text-stone-700">
-            <p>1. ¿Qué función cumple el poolish dentro de la secuencia documentada?</p>
-            <p>2. ¿En qué momento aparece el formado y el corte?</p>
-            <p>3. ¿Qué detalle específico sobre el greñado no desarrolla la fuente y, por tanto, no debes inventar?</p>
+            <p>1. ¿Qué ingredientes y cantidades declara la receta de Baguette Tradicional?</p>
+            <p>2. ¿En qué orden aparecen fermentación, ponchado, porcionado, formado y segunda fermentación?</p>
+            <p>3. ¿Qué detalles del greñado no desarrolla la fuente y, por tanto, no debes inventar?</p>
           </div>
         </section>
 
@@ -166,7 +177,7 @@ export default function LessonTwentyEightPage() {
               <strong>El proceso continúa:</strong> después de la segunda fermentación aparecen terminado, horneado y enfriado.
             </p>
             <p className="leading-7">
-              <strong>El greñado queda pendiente:</strong> el material disponible no explica todavía cómo realizarlo en una baguette.
+              <strong>El greñado detallado queda pendiente:</strong> la receta existe, pero la fuente no explica profundidad, ángulo, número de cortes ni herramienta.
             </p>
           </div>
         </section>
@@ -176,7 +187,7 @@ export default function LessonTwentyEightPage() {
           <p className="mt-2 leading-7 text-stone-700">
             El contenido documentado procede de «Proceso para elaborar una masa» en data/curso.js, especialmente
             las etapas de desgasificado, porcionado, formado, segunda fermentación, terminado, horneado y enfriado.
-            La búsqueda del repositorio no encontró contenido específico sobre baguette o greñado. La organización
+            El contenido específico de Baguette Tradicional procede de la Clase 24 del PDF. La fuente remite el formado a la demostración y no desarrolla en texto la técnica detallada de greñado. La organización
             de esta lección y su práctica son organización pedagógica del curso.
           </p>
         </section>
