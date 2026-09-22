@@ -68,7 +68,7 @@ export async function middleware(request) {
 
 export const config = {
   matcher: [
-    '/curso/:path*',
+    '/curso/:path+',
     '/ruta/:path*',
     '/modulos/:path*',
     '/modulo-:path*',
