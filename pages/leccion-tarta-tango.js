@@ -1,10 +1,10 @@
 import CourseShell from '../components/course/CourseShell';
 
-const lesson = { number: '64', title: 'Tarta Tango', subtitle: 'Clase 36 · Pastelería Contemporánea' };
+const lesson = { number: '67', title: 'Tarta Tango', subtitle: 'Clase 36 · Pastelería Contemporánea' };
 
 export default function LessonPage() {
   return (
-    <CourseShell eyebrow="Módulo 8 · Lección 64" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
+    <CourseShell eyebrow="Módulo 8 · Lección 67" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno confeccionara una tarta contemporánea con técnicas conocidas, descubrirá el uso de ingredientes no típicos para repostería.</p></section>
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Los sabores cambian; la lógica de construcción permanece</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Tango combina ajonjolí, frambuesa, pimiento rojo y parmesano dentro de técnicas conocidas. La lección enseña a analizar la pieza por componentes aunque la combinación sea poco habitual.</p></section>
