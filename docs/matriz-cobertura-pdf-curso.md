@@ -28,8 +28,8 @@ Criterio: Completa = las preparaciones documentadas de la clase están represent
 | 21 | Chocolatería III | M7 | Completa | Contenido integrado. |
 | 22 | Chocolates rellenos; ganaches avanzadas | M7, L54–57 | Completa | Se incluyen trimolina, sorbitol y emulsión donde la fuente las documenta. |
 | 23 | Petit fours frescos: café y mango | M7, L58 | Completa | Delicias de café y Bocadito de Mango; se conserva el límite del glacage de mango. |
-| 24 | Baguette; pan de centeno; chipá/pan de yuca | M4, L28 | Parcial | Baguette y otras preparaciones están cubiertas, pero merece una comprobación receta por receta. |
-| 25 | Focaccia; ciabatta; pan de ajo; grissini | M4, L29–30 y material relacionado | Parcial | Focaccia y ciabatta fueron corregidos con sus fórmulas; conviene cerrar la verificación individual. |
+| 24 | Baguette; pan de centeno; chipá/pan de yuca | M4, L28 | Completa | Las tres preparaciones están representadas con cantidades, procedimiento y límites de fuente. |
+| 25 | Focaccia; ciabatta; pan de ajo; grissini | M4, L29–30 y material relacionado | Completa | Las cuatro preparaciones están representadas; Focaccia y Ciabatta conservan sus fórmulas y límites documentados. |
 | 26 | Conchas; mantecadas; bisquets; donas | M5 / L39 | Completa | Las cuatro preparaciones están documentadas; L39 las compara. |
 | 27 | Brioche; bagels; pan pita | M4, L32–33 | Completa | Fórmulas y procedimientos documentados. |
 | 28 | Croissant; pan danés | M6, L40–44 | Completa | Preparaciones documentadas; se mantienen referencias a demostración. |
@@ -44,12 +44,11 @@ Criterio: Completa = las preparaciones documentadas de la clase están represent
 | 37 | Camejía | M8, L68 | Completa | Preparación integrada. |
 | 38 | Pastelería contemporánea IV | M8, L69 | Completa | Preparación integrada. |
 
-## Pendientes antes de la revisión pedagógica
+## Estado de cobertura tras la verificación
 
-1. Clases 24 y 25: cerrar la verificación receta por receta para pasar de Parcial a Completa si toda la fuente ya está representada.
-2. Clase 16: mantenerla fuera de la ruta mientras el PDF siga sin contener una clase con ese número.
-3. Lección 40: corregido el límite de fuente que afirmaba que no existía receta de hojaldre. El PDF sí contiene hojaldre clásico en las Clases 12 y 13.
-4. Clases 2 y 3: las recetas ya están en la capa de datos y vinculadas a la ruta de cierre del Módulo 1; la revisión pedagógica deberá decidir si conviene distribuirlas mejor entre las lecciones del módulo.
+1. Clase 16: mantenerla fuera de la ruta mientras el PDF siga sin contener una clase con ese número.
+2. Lección 40: corregido el límite de fuente que afirmaba que no existía receta de hojaldre. El PDF sí contiene hojaldre clásico en las Clases 12 y 13.
+3. Clases 2 y 3: las recetas ya están en la capa de datos y vinculadas a la ruta de cierre del Módulo 1; la revisión pedagógica deberá decidir si conviene distribuirlas mejor entre las lecciones del módulo.
 
 ## Siguiente fase
 
