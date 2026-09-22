@@ -1,10 +1,10 @@
 import CourseShell from '../components/course/CourseShell';
 
-const lesson = { number: '68', title: 'Gimont', subtitle: 'Clase 38 · Pasteles a Gran Escala' };
+const lesson = { number: '71', title: 'Gimont', subtitle: 'Clase 38 · Pasteles a Gran Escala' };
 
 export default function LessonPage() {
   return (
-    <CourseShell eyebrow="Módulo 9 · Lección 68" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-9" backLabel="Volver al módulo">
+    <CourseShell eyebrow="Módulo 9 · Lección 71" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-9" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
           <div className="grid gap-4 sm:grid-cols-2">
