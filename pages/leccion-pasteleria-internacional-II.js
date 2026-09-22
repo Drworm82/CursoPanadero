@@ -12,6 +12,12 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">La comparación conceptual ya se trabajó en la Lección 23. Aquí no se repite esa explicación: se reconstruyen las dos recetas de la Clase 15 con sus cantidades, temperaturas, montaje y terminación.</p>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Recupera y decide</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de cocinar, predice la ruta</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera la comparación de la Lección 23 y escribe, sin mirar esta receta, qué preparación esperarías que pase por horno y cuál se construye mediante refrigeración. Después verifica tu predicción con las dos recetas y anota qué cantidades, temperaturas, tiempos y condiciones confirman o contradicen tu primera respuesta.</p>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Cheesecake de frutos rojos</h2>
           <p className="mt-2 text-sm text-stone-500">24 cm · 3 h</p>
