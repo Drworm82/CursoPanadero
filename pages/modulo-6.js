@@ -44,6 +44,11 @@ export default function ModuleSixPage() {
             internacional, pasteles de fiesta y postres mexicanos. La Clase 16 no se incluye porque no forma parte
             del material disponible.
           </p>
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl bg-white/70 p-4"><p className="font-semibold text-amber-950">1. Construye</p><p className="mt-1 text-sm leading-6 text-amber-950">Relaciona masa, empaste, vueltas, reposos y formado en las preparaciones laminadas.</p></div>
+            <div className="rounded-xl bg-white/70 p-4"><p className="font-semibold text-amber-950">2. Reconoce</p><p className="mt-1 text-sm leading-6 text-amber-950">Distingue batidos, cremas, estabilización, coberturas, fritura y cocción según la preparación.</p></div>
+            <div className="rounded-xl bg-white/70 p-4"><p className="font-semibold text-amber-950">3. Transfiere</p><p className="mt-1 text-sm leading-6 text-amber-950">Compara preparaciones y reconstruye sus operaciones sin depender de memorizar listas aisladas.</p></div>
+          </div>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
