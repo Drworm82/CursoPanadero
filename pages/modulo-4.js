@@ -11,12 +11,12 @@ const lessons = [
   ['25', 'El proceso completo de una masa', 'Reconoce la secuencia desde el pesado y mezclado hasta el enfriado.', '/leccion-el-proceso-completo-de-una-masa'],
   ['26', 'Fermentar es transformar', 'Observa qué cambia en una masa durante la fermentación y qué señales indican su avance.', '/leccion-fermentar-es-transformar'],
   ['27', 'Amasado, estructura y tensión', 'Relaciona el trabajo de la masa con la condición que debe alcanzar antes de la fermentación.', '/leccion-amasado-estructura-y-tension'],
-  ['28', 'Baguette: estructura, formado y greñado', 'Ubica el formado y la segunda fermentación dentro del proceso, y distingue qué información sobre greñado todavía falta en la fuente.', '/leccion-baguette-estructura-formado-greñado'],
-  ['29', 'Focaccia: otra forma de entender la hidratación', 'Compara cantidades de harina y agua en distintas recetas y distingue qué información sobre focaccia e hidratación todavía falta en la fuente.', '/leccion-focaccia-otra-forma-hidratacion'],
-  ['30', 'Ciabatta y biga', 'Reconoce la definición de biga y distingue qué información sobre biga y ciabatta todavía falta en la fuente.', '/leccion-ciabatta-y-biga'],
+  ['28', 'Baguette: estructura, formado y greñado', 'Trabaja la Baguette Tradicional documentada y distingue qué detalles del greñado sí aparecen y cuáles no se desarrollan.', '/leccion-baguette-estructura-formado-greñado'],
+  ['29', 'Focaccia: otra forma de entender la hidratación', 'Trabaja la Focaccia documentada y compara sus cantidades con otras masas sin atribuir a la fuente una teoría general de hidratación que no desarrolla.', '/leccion-focaccia-otra-forma-hidratacion'],
+  ['30', 'Ciabatta y biga', 'Trabaja la Ciabatta documentada como demostración y reconoce qué partes del procedimiento están descritas y cuáles se remiten a la demostración.', '/leccion-ciabatta-y-biga'],
   ['31', 'Panes enriquecidos', 'Compara cómo distintas recetas incorporan grasa, azúcar y huevo y cómo cambia su manejo.', '/leccion-panes-enriquecidos'],
-  ['32', 'Brioche: grasa, azúcar y fermentación', 'Compara masas enriquecidas documentadas y distingue qué información específica de brioche todavía falta en la fuente.', '/leccion-brioche-grasa-azucar-fermentacion'],
-  ['33', 'Bagels y pita: el formato cambia el proceso', 'Distingue el proceso general documentado de la información específica que falta sobre bagels y pita.', '/leccion-bagels-y-pita'],
+  ['32', 'Brioche: grasa, azúcar y fermentación', 'Analiza la receta de Brioche y compárala con otras masas enriquecidas documentadas.', '/leccion-brioche-grasa-azucar-fermentacion'],
+  ['33', 'Bagels y pita: el formato cambia el proceso', 'Compara las recetas documentadas de Bagels y Pan Pita y observa cómo cambian formado y cocción.', '/leccion-bagels-y-pita'],
   ['34', 'Fougasse y panes saborizados', 'Integra formado, acabado y adición de ingredientes a partir de panes saborizados que sí están documentados.', '/leccion-fougasse-y-panes-saborizados'],
 ];
 
