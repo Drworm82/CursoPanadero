@@ -98,10 +98,9 @@ export default function LessonThirtyPage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">Tampoco establece un procedimiento de ciabatta</p>
+              <p className="font-semibold text-stone-900">El procedimiento está documentado como demostración</p>
               <p className="mt-2 leading-7 text-stone-700">
-                El repositorio no contiene instrucciones específicas de mezclado, reposo, formado, acabado o
-                horneado de una ciabatta.
+                La Clase 25 sí indica mezclar la biga con los demás ingredientes, fermentar, desgasificar, moldear según demostración, pasar por aceite de oliva, espolvorear la cubierta, fermentar y hornear a 220 °C.
               </p>
             </div>
           </div>
@@ -119,10 +118,10 @@ export default function LessonThirtyPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">No hay una receta de biga ni de ciabatta en el material consultado.</h2>
+          <h2 className="mt-2 text-xl font-semibold text-amber-950">La fuente documenta una Ciabatta como demostración.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
             La lección no añade cantidades, temperaturas, tiempos ni técnica de elaboración que no aparezcan en la
-            fuente. Para estudiar una ciabatta completa o preparar una biga con precisión haría falta incorporar
+            fuente. El texto remite el moldeado de la ciabatta a la demostración; no debemos reconstruir ese moldeado a partir de conocimiento externo. Para
             una fuente específica adicional.
           </p>
         </section>
@@ -170,10 +169,10 @@ export default function LessonThirtyPage() {
               <strong>Se puede comparar con otros prefermentos:</strong> la fuente también define masa madre, poolish y masa vieja.
             </p>
             <p className="leading-7">
-              <strong>Una definición no equivale a una receta:</strong> faltan cantidades y condiciones específicas para elaborar la biga.
+              <strong>La demostración sí proporciona una fórmula:</strong> la biga lleva 2 kg de harina, 1.3 L de agua y 20 g de levadura fresca, con 8 horas de reposo.
             </p>
             <p className="leading-7">
-              <strong>La ciabatta queda pendiente:</strong> el repositorio no contiene todavía su receta o procedimiento.
+              <strong>La ciabatta está documentada como demostración:</strong> la fórmula y la secuencia general aparecen en la Clase 25.
             </p>
           </div>
         </section>
@@ -183,7 +182,7 @@ export default function LessonThirtyPage() {
           <p className="mt-2 leading-7 text-stone-700">
             Las definiciones de masa madre, poolish, biga y masa vieja proceden de la lección “Masa madre, poolish,
             biga, masa vieja” en data/curso.js. El proceso general de panificación procede de “Proceso para elaborar
-            una masa”. La búsqueda del repositorio no encontró contenido específico sobre ciabatta ni una receta
+            una masa”. La receta de Ciabatta y su biga proceden de la Clase 25 del PDF; el moldeado se remite a la demostración.
             detallada de biga. La organización comparativa de esta lección es organización pedagógica del curso.
           </p>
         </section>
