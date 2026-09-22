@@ -40,6 +40,14 @@ const products = [
     unknown: 'La fuente no especifica la cantidad de canela y azúcar del acabado para las donas que no llevan glaseado.',
   },
   {
+    name: 'Garibaldis',
+    classLabel: 'Clase 29',
+    formula: '150 g de mantequilla, 100 g de azúcar, 4 yemas, 50 g de mermelada de chabacano, 150 g de harina, 10 g de polvo de hornear, 50 ml de leche y 4 claras. Acabado: 200 g de gragea blanca, 150 g de mermelada de chabacano y capacillos rojos c/s.',
+    process: 'Acremar mantequilla con azúcar; agregar yemas y 50 g de mermelada; integrar secos alternando con leche. Aparte montar las claras a punto de turrón e incorporarlas de forma envolvente. Vaciar en moldes de mantecada previamente engrasados y enharinados hasta ¾ de su capacidad.',
+    finish: 'Hornear 15 minutos a 190 °C. Batir la mermelada hasta suavizarla; si es necesario agregar un poco de jarabe. Desmoldar, barnizar con mermelada y cubrir inmediatamente con gragea blanca.',
+    unknown: 'La fuente no especifica la cantidad de piezas por peso individual más allá del rendimiento de 12 piezas.',
+  },
+  {
     name: 'Pan de pulque',
     classLabel: 'Clase 29',
     formula: '7 huevos, 150 ml de pulque natural, 250 g de azúcar moscabado, 500 g de harina cernida 3 veces, 300 g de mantequilla fundida fría y 15 g de levadura fresca.',
