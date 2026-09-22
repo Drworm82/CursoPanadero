@@ -51,9 +51,9 @@ const modules = [
     id: 'modulo-6',
     sort_order: 6,
     href: '/modulo-6',
-    title: 'Laminados',
-    guiding_question: '¿Cómo se construyen capas de masa y grasa y qué hace que se separen durante el horneado?',
-    expected_result: 'Reconstruir y comparar las secuencias documentadas de croissant y pan danés, identificando empaste, refrigeración, vueltas y formado en cada receta.'
+    title: 'Laminados y pastelería clásica',
+    guiding_question: '¿Cómo se construyen capas, masas y preparaciones clásicas hasta convertirse en piezas terminadas?',
+    expected_result: 'Reconstruir y comparar las secuencias documentadas de laminado, pastelería internacional, pasteles de fiesta y postres mexicanos, identificando las operaciones y señales que aparecen en cada receta.'
   },
   {
     id: 'modulo-7',
@@ -104,11 +104,8 @@ export default function RutaPage() {
           </div>
         </section>
       </div>
-
       <div className="grid gap-5">
-        {modules.map((module) => (
-          <ModuleCard key={module.id} module={module} />
-        ))}
+        {modules.map((module) => <ModuleCard key={module.id} module={module} />)}
       </div>
     </CourseShell>
   );
