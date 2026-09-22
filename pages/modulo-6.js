@@ -92,13 +92,12 @@ export default function ModuleSixPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-900">Integración del módulo</p>
-          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Compara familias de preparaciones</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            Construye una tabla con cuatro grupos: laminados, pastelería internacional, pasteles de fiesta y
-            postres mexicanos. Para cada preparación registra la técnica principal, las cantidades que no debes
-            perder, la temperatura o tiempo documentados y la señal de finalización. No completes la tabla con
-            reglas externas a la fuente.
-          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Clasifica → reconstruye → explica</h2>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            <div className="rounded-xl bg-white/70 p-4"><p className="font-semibold text-amber-950">1. Clasifica</p><p className="mt-1 text-sm leading-6 text-amber-950">Construye una tabla con cuatro grupos: laminados, pastelería internacional, pasteles de fiesta y postres mexicanos. Para cada preparación registra la técnica principal.</p></div>
+            <div className="rounded-xl bg-white/70 p-4"><p className="font-semibold text-amber-950">2. Reconstruye</p><p className="mt-1 text-sm leading-6 text-amber-950">Sin mirar la receta, ordena las operaciones principales y recupera las cantidades, temperaturas, tiempos o señales que la fuente documenta.</p></div>
+            <div className="rounded-xl bg-white/70 p-4"><p className="font-semibold text-amber-950">3. Explica</p><p className="mt-1 text-sm leading-6 text-amber-950">Elige dos preparaciones y explica qué operación o condición cambia entre ellas. No completes la explicación con reglas externas a la fuente.</p></div>
+          </div>
         </section>
       </div>
     </CourseShell>
