@@ -139,8 +139,8 @@ export default function RecipePage({ communityRecipe, recipe, ingredients, steps
 export async function getServerSideProps({ req, res, params }) {
   if (isUuid(params.slug)) {
     const supabase = createCourseServerClient(req, res);
-    const { data: { claims } } = await supabase.auth.getClaims();
-    const userId = claims?.sub || null;
+    const { data: authData } = await supabase.auth.getClaims();
+    const userId = authData?.claims?.sub || null;
 
     const { data: communityRecipe, error } = await supabase
       .from('community_recipes')
