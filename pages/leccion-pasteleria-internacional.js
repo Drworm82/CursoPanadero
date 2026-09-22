@@ -11,6 +11,12 @@ export default function LessonPage() {
           <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Aprender Pâte à Bombe y biscuit, y reconocer sus diferencias con la génoise mediante dos preparaciones documentadas.</p>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Cambia de familia</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Del laminado al batido</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de entrar en las recetas, recupera qué problema resolvía el laminado en las lecciones anteriores. Ahora observa qué tipo de preparación aparece en esta clase y qué operaciones nuevas o distintas tendrás que seguir. Usa el objetivo y la receta para comprobar la diferencia.</p>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Tiramisú</h2>
           <p className="mt-2 text-sm text-stone-500">Rinde para un pastel de 30 × 20 cm · 2 h</p>
