@@ -70,6 +70,12 @@ export default function LessonPage() {
         </section>
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium text-amber-800">Compara las rutas</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Cuatro preparaciones, cuatro operaciones dominantes</h2>
+          <p className="mt-3 leading-7 text-stone-700">Antes de comprobar, reconstruye de memoria una ruta para cada preparación: buñuelos, Torta de Cielo, gaznates y rompope. Después verifica en la fuente qué operaciones, temperaturas, reposos o señales de finalización aparecen realmente. No agregues criterios externos.</p>
+        </section>
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Actividad</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Clasifica por ruta de elaboración</h2>
           <p className="mt-3 leading-7 text-stone-700">Coloca las cuatro preparaciones en una tabla con estas columnas: fritura, horneado, cocción sobre fuego, formado, relleno y señal de finalización. Completa solamente con lo que aparece en la clase.</p>
