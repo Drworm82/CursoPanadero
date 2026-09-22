@@ -74,6 +74,40 @@ export default function LessonTwentyEightPage() {
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Otras preparaciones de la Clase 24</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Pan de centeno y Chipá</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La misma clase documenta otras dos preparaciones. Se incorporan aquí para cerrar la cobertura de la clase completa, sin atribuirles técnicas que la fuente no desarrolla.</p>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <article className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+              <h3 className="text-xl font-semibold text-amber-950">Pan de centeno</h3>
+              <p className="mt-3 text-sm leading-6 text-amber-950">Harina de fuerza 550 g, harina de centeno 220 g, sal 10 g, levadura fresca 50 g, agua 450 ml y mejorante para pan 10 g.</p>
+              <ol className="mt-4 list-decimal space-y-1.5 pl-5 text-sm leading-6 text-amber-950">
+                <li>Preparar una masa base con levadura, una cuarta parte de la harina de fuerza y un poco de agua; reposar 20 minutos.</li>
+                <li>Mezclar el resto de las harinas, el mejorante y el agua; reposar 5 minutos.</li>
+                <li>Añadir la masa base y amasar con fuerza hasta obtener una masa elástica.</li>
+                <li>Agregar finalmente la sal y terminar de amasar.</li>
+                <li>Dejar reposar hasta doblar tamaño, quitar el gas y hacer una segunda fermentación.</li>
+                <li>Cortar en bollos de 60 g y bolear.</li>
+                <li>Hornear a 220 °C durante 20 minutos y enfriar.</li>
+              </ol>
+            </article>
+            <article className="rounded-2xl border border-stone-200 bg-white p-5">
+              <h3 className="text-xl font-semibold text-stone-900">Chipá o Pao de Quijo o Pan de Yuca</h3>
+              <p className="mt-3 text-sm leading-6 text-stone-700">Fécula de mandioca o yuca 500 g, leche 100 ml, agua c/s, huevo 3 piezas, sal 10 g, mantequilla 200 g y queso tipo Chihuahua 500 g.</p>
+              <ol className="mt-4 list-decimal space-y-1.5 pl-5 text-sm leading-6 text-stone-700">
+                <li>Hacer un volcán con la fécula y agregar al centro sal y leche.</li>
+                <li>Mezclar los ingredientes.</li>
+                <li>Incorporar la mantequilla y amasar hasta que quede lisa y homogénea.</li>
+                <li>Incorporar por último los huevos.</li>
+                <li>Agregar el queso rallado y trabajar hasta incorporarlo.</li>
+                <li>Realizar bolitas de aproximadamente 20 g y ponerlas en una charola aceitada.</li>
+                <li>Hornear a 200 °C durante 15 minutos.</li>
+              </ol>
+            </article>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">¿Qué debes observar?</h2>
 
           <div className="mt-5 space-y-5">
