@@ -1,4 +1,4 @@
-import CourseShell from '../components/course/CourseShell';
+import CourseShell from '../../components/course/CourseShell';
 
 const recipes = [
   { href: '/receta-genoise-punto-liston', title: 'Genoise punto listón', description: 'Preparación guiada del genoise y reconocimiento del punto de batido.' },
