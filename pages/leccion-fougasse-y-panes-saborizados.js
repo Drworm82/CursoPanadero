@@ -12,14 +12,22 @@ export default function LessonThirtyFourPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cerrar el módulo sin rellenar los huecos</p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            La ruta propone fougasse y panes saborizados, pero la fuente no contiene una receta de fougasse.
+            La Clase 30 documenta Fougasse y dos panes saborizados.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            La búsqueda del repositorio no encuentra contenido específico de fougasse. Sí aparecen preparaciones
-            donde se incorporan ingredientes que aportan sabor o identidad: pan de ajo, pan danés de varios sabores
-            y diferentes acabados. Esta lección usa esos ejemplos documentados para cerrar el recorrido sobre formado,
-            acabado y adición de ingredientes, sin presentar una técnica de fougasse que la fuente no proporciona.
+            La Clase 30 contiene una receta de Fougasse, además de Pan con aceitunas y tomate seco y Pan de vegetales. Esta
+            lección integra esas preparaciones con los ejemplos de pan de ajo y grissini ya estudiados.
           </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Fougasse: receta documentada</h2>
+          <p className="mt-5 leading-7 text-stone-700">La fórmula de la Clase 30 contiene 500 g de harina de trigo, 5 g de levadura seca, 275 g de agua, 6 g de sal, 5 g de azúcar y 75 g de aceite de oliva. El procedimiento indica mezclar harina y levadura, añadir agua y azúcar, amasar, incorporar sal y aceite, fermentar, ponchar, formar y hornear a 200 °C durante 12 minutos.</p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Pan con aceitunas y tomate seco</h2>
+          <p className="mt-5 leading-7 text-stone-700">La receta utiliza 420 g de harina, 10 g de sal, 10 g de levadura fresca, 5 g de tomillo, 15 ml de aceite de oliva, 220 ml de agua más 20 g, 4 aceitunas negras picadas y 3 tomates secos (30 g), con sal gruesa c/s. La masa se forma según demostración y se hornea a 180 °C durante 35 minutos.</p>
         </section>
 
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
@@ -96,10 +104,9 @@ export default function LessonThirtyFourPage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">4. Fougasse queda como tema pendiente</p>
+              <p className="font-semibold text-stone-900">4. El formado de Fougasse está remitido al proceso de clase</p>
               <p className="mt-2 leading-7 text-stone-700">
-                El nombre aparece en la ruta, pero no hay receta ni procedimiento específico en los archivos consultados.
-                No debemos completar ese vacío con una técnica externa y atribuirla al material del curso.
+                La fuente sí proporciona fórmula y secuencia de elaboración, pero no desarrolla por escrito el detalle del formado. Ese detalle debe conservarse como demostración, no reconstruirse con información externa.
               </p>
             </div>
           </div>
@@ -117,11 +124,10 @@ export default function LessonThirtyFourPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">Fougasse no está documentada.</h2>
+          <h2 className="mt-2 text-xl font-semibold text-amber-950">Fougasse sí está documentada en la Clase 30.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            La fuente permite estudiar panes con ingredientes y acabados diferenciados, pero no proporciona una
-            fórmula, un formado, un greñado ni un horneado específico de fougasse. El título de la lección pertenece
-            a la ruta pedagógica del módulo; los ejemplos desarrollados proceden de recetas que sí están documentadas.
+            La fuente proporciona fórmula, fermentación, ponchado, formado y horneado de Fougasse. El detalle del formado no
+            está desarrollado por escrito y queda remitido a la ejecución de clase.
           </p>
         </section>
 
@@ -135,9 +141,9 @@ export default function LessonThirtyFourPage() {
           <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
           <div className="mt-4 space-y-3 text-stone-700">
-            <p>1. ¿Qué secuencia documenta la receta de fougasse?</p>
-            <p>2. ¿Qué ocurre entre fermentación y horneado?</p>
-            <p>3. ¿Qué ingredientes o acabados convierten las piezas estudiadas en panes saborizados según la fuente?</p>
+            <p>1. ¿Qué ingredientes y cantidades declara la receta de Fougasse?</p>
+            <p>2. ¿Qué operaciones aparecen entre la fermentación y el horneado?</p>
+            <p>3. ¿Qué diferencias observas entre Fougasse, pan con aceitunas y tomate seco, pan de ajo y grissini?</p>
           </div>
         </section>
 
@@ -158,9 +164,7 @@ export default function LessonThirtyFourPage() {
               la masa, utilizarse en el formado o aparecer como acabado.
             </p>
             <p className="leading-7">
-              <strong>La fuente también tiene límites:</strong> baguette, focaccia, ciabatta, brioche, bagels, pita
-              y fougasse aparecen como temas de la ruta, pero no todos cuentan con recetas o explicaciones específicas
-              en el material disponible.
+              <strong>La fuente también tiene límites:</strong> algunas preparaciones remiten partes del formado a demostraciones y no todos los conceptos cuentan con una explicación teórica desarrollada; eso no impide que las recetas documentadas se estudien directamente.
             </p>
           </div>
         </section>
@@ -168,10 +172,7 @@ export default function LessonThirtyFourPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Nota sobre la fuente</p>
           <p className="mt-2 leading-7 text-stone-700">
-            Los ejemplos de pan de ajo, grissini y pan danés proceden de data/recetas.js. La secuencia general de
-            panificación procede de data/curso.js. La organización integradora de esta lección sigue la ruta del
-            Módulo 4 y es organización pedagógica del curso. La búsqueda del repositorio no encontró contenido
-            específico de fougasse.
+            Las recetas de Fougasse, Pan con aceitunas y tomate seco y Pan de vegetales proceden de la Clase 30 del PDF. Los ejemplos de pan de ajo y grissini proceden del material de panadería ya integrado. La organización integradora de esta lección es organización pedagógica del curso.
           </p>
         </section>
 
