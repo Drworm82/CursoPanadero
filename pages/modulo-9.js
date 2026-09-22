@@ -8,8 +8,8 @@ const moduleInfo = {
 };
 
 const lessons = [
-  ['70', 'Framboisier', 'Clase 38 · Pasteles a Gran Escala', '/leccion-framboisier', true],
-  ['71', 'Gimont', 'Clase 38 · Pasteles a Gran Escala', '/leccion-gimont', true],
+  ['70', 'Framboisier', 'Clase 38 · Pasteles a Gran Escala · Modelo guiado', '/leccion-framboisier', true],
+  ['71', 'Gimont', 'Clase 38 · Pasteles a Gran Escala · Transferencia y comparación', '/leccion-gimont', true],
 ];
 
 export default function ModuleNinePage() {
@@ -29,13 +29,11 @@ export default function ModuleNinePage() {
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">De la receta al sistema de producción</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">En esta etapa no basta con identificar ingredientes. Vas a seguir el orden de producción, distinguir preparaciones base de derivados y observar cómo varias elaboraciones se coordinan hasta convertirse en una pieza final.</p>
-          <div className="mt-5 grid gap-4 md:grid-cols-4">
-            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica los componentes y el resultado documentado.</p></div>
-            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Ejecuta cada preparación respetando la secuencia de la fuente.</p></div>
-            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Registra qué componentes dependen de otros y dónde aparece el frío.</p></div>
-            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Reconstruye el sistema de producción sin mirar la receta.</p></div>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Primero modela; después transfiere</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La Lección 70 funciona como caso modelo: descompón Framboisier y reconstruye su secuencia documentada. En la Lección 71 cambia la tarea: usa lo aprendido para comparar Gimont con Framboisier y reconstruir un segundo sistema sin depender de la misma guía.</p>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <div><p className="font-semibold text-stone-900">70 · Modela</p><p className="mt-1 text-sm leading-6 text-stone-600">Descompón componentes, dependencias, frío y acabado de un caso completo.</p></div>
+            <div><p className="font-semibold text-stone-900">71 · Transfiere</p><p className="mt-1 text-sm leading-6 text-stone-600">Compara dos sistemas y reconstruye Gimont a partir de sus relaciones.</p></div>
           </div>
         </section>
 
