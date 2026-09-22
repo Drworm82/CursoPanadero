@@ -41,8 +41,8 @@ export default function LessonPage({ lesson, recipes, progress }) {
 }
 
 export async function getServerSideProps({ req, res, params }) {
-  const { supabase, user } = await requireCourseAuth(req, res);
-  if (!user) return { redirect: { destination: '/acceso', permanent: false } };
+  const { supabase, claims } = await requireCourseAuth(req, res);
+  if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
 
   const { data: lesson, error } = await supabase
     .from('lessons')
