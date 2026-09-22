@@ -16,6 +16,8 @@ export default function LessonPage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Reconstruye el orden</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Preparar no es lo mismo que montar</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de leer el montaje, separa las preparaciones que deben estar listas —dacquoise, Diplomat, mousse, bavaroise y brillo— y luego intenta ordenar el montaje documentado. Verifica después qué preparación aparece como componente de otra.</p></section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 grid gap-5 md:grid-cols-2">
