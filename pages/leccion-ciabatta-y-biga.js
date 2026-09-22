@@ -12,14 +12,23 @@ export default function LessonThirtyPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Un concepto que sí está en la fuente</p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            La biga aparece definida; la ciabatta todavía no está desarrollada.
+            La Clase 25 documenta una Ciabatta (únicamente demo) y su biga.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            El material del curso incluye una lista de prefermentos y define explícitamente la biga como
-            “pre-fermento denso y poco hidratado”. También establece el proceso general de elaboración de una masa.
-            En cambio, el repositorio no contiene una receta ni un procedimiento específico de ciabatta. Esta lección
-            usa la biga como concepto documentado y mantiene separada la parte que todavía requiere una fuente.
+            La Clase 25 presenta una Ciabatta marcada como “UNICAMENTE DEMO”, con una fórmula de biga, fórmula de masa,
+            cubierta y procedimiento. Además, la fuente define la biga como un pre-fermento denso y poco hidratado.
+            Esta lección puede distinguir lo que está documentado en la demostración de aquello que el texto deja
+            remitido al procedimiento mostrado en clase.
           </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Ciabatta: fórmula y procedimiento de la demostración</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Biga</p><p className="mt-2 leading-7 text-amber-950">2 kg de harina, 1.3 L de agua y 20 g de levadura fresca. La fuente indica prepararla 8 horas antes.</p></div>
+            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Masa y cubierta</p><p className="mt-2 leading-7 text-stone-700">440 g de harina, 200 ml de agua, 45 g de sal, 20 g de malta y 50 ml de aceite de oliva. La cubierta lleva 100 g de harina y 100 g de sémola.</p></div>
+          </div>
+          <p className="mt-5 leading-7 text-stone-700">Para la biga, la fuente indica mezclar y dejar reposar 8 horas. Para la masa: mezclar la biga con los demás ingredientes hasta obtener una masa suave, fermentar, desgasificar, moldear según demostración, pasar por aceite de oliva, espolvorear la cubierta, fermentar y hornear a 220 °C. Al final se espolvorean harina y sémola.</p>
         </section>
 
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
@@ -82,10 +91,9 @@ export default function LessonThirtyPage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">La fuente no establece una fórmula</p>
+              <p className="font-semibold text-stone-900">La fuente sí proporciona una fórmula para la biga de esta demostración</p>
               <p className="mt-2 leading-7 text-stone-700">
-                No aparecen porcentajes, cantidades de harina y agua, proporción de levadura, tiempo de fermentación
-                ni temperatura específica para preparar una biga.
+                Para esta demostración sí aparecen cantidades: 2 kg de harina, 1.3 L de agua y 20 g de levadura fresca, con 8 horas de reposo.
               </p>
             </div>
 
