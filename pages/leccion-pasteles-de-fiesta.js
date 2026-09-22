@@ -26,6 +26,12 @@ export default function LessonPage() {
           </ol>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Lee el sistema</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Una pieza, varios componentes</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de estudiar las tres preparaciones de acabado, identifica la función que ocupa cada componente dentro de la clase: panqué como base, fondant, betún de manteca y royal icing como preparaciones de cobertura o decoración según lo documentado. Después explica qué componente trabajarías primero si tuvieras que reconstruir la clase en orden, sin inventar un montaje que la fuente no especifica.</p>
+        </section>
+
         <section className="grid gap-4 md:grid-cols-3">
           <article className="rounded-2xl border border-stone-200 bg-white p-6">
             <h2 className="text-xl font-semibold text-stone-900">Fondant</h2>
