@@ -113,9 +113,9 @@ export default function LessonPrincipioDelLaminadoPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Límite de la fuente</p>
           <p className="mt-2 leading-7 text-stone-700">
-            La fuente documenta las operaciones de empaste, refrigeración y vueltas, pero no define de forma
+            La fuente documenta las operaciones de empaste, refrigeración y vueltas en Croissant y Pan Danés, pero no define de forma
             teórica la laminación ni explica el mecanismo físico de separación de capas durante el horneado.
-            Tampoco aporta una receta de hojaldre.
+            Sí aporta recetas de hojaldre clásico en las Clases 12 y 13, que se estudian posteriormente en el Módulo 6.
           </p>
         </section>
 
