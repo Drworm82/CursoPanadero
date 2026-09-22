@@ -30,8 +30,8 @@ export default function ProgressPage({ lessons, progress, recipeProgress }) {
 }
 
 export async function getServerSideProps({ req, res }) {
-  const { supabase, user } = await requireCourseAuth(req, res);
-  if (!user) return { redirect: { destination: '/acceso', permanent: false } };
+  const { supabase, claims } = await requireCourseAuth(req, res);
+  if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
 
   const { data: module } = await supabase.from('modules').select('id').eq('slug', 'modulo-1-masas-batidas-pesadas').single();
   if (!module) return { props: { lessons: [], progress: [] } };
