@@ -16,9 +16,7 @@ export default function LessonThirtyTwoPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
             La Clase 27 identifica explícitamente la preparación como BRIOCHE y señala como objetivo conocer una masa rica en grasa y azúcar y realizar un fermentado prolongado en refrigeración.
-            Por eso esta lección no inventa una fórmula ni un procedimiento. En su lugar, utiliza las masas
-            enriquecidas que sí están documentadas para precisar qué podemos aprender de ellas y qué información
-            todavía falta para estudiar brioche de manera específica.
+            Por eso esta lección puede estudiar directamente la fórmula y el procedimiento de Brioche y, además, compararlos con otras masas enriquecidas documentadas.
           </p>
         </section>
 
@@ -35,9 +33,8 @@ export default function LessonThirtyTwoPage() {
           <p className="text-sm font-medium text-stone-300">La idea central</p>
           <h2 className="mt-2 text-2xl font-semibold">La fuente sí permite estudiar grasa, azúcar y fermentación en otras masas.</h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-100">
-            Las conchas, el pan de ajo y el pan de pulque incorporan azúcar y grasa y pasan por fermentación.
-            El pan danés añade además huevo, mantequilla, leche y un empaste con margarina. Estas recetas permiten
-            observar combinaciones concretas sin convertirlas en una definición técnica de brioche.
+            La receta de Brioche contiene 250 g de mantequilla y 250 g de huevo por 500 g de harina, además de azúcar y leche.
+            Las conchas, el pan de ajo y el pan de pulque sirven como comparación de otras masas enriquecidas.
           </p>
         </section>
 
@@ -125,8 +122,7 @@ export default function LessonThirtyTwoPage() {
             <div className="rounded-2xl bg-stone-100 p-5">
               <p className="font-semibold text-stone-900">4. Distingue la receta de brioche de las demás masas enriquecidas</p>
               <p className="mt-2 leading-7 text-stone-700">
-                Una masa enriquecida puede servir como comparación pedagógica, pero el material no identifica ninguna
-                de estas preparaciones como brioche; ahora la Clase 27 permite estudiar una receta identificada explícitamente como tal.
+                La receta de Brioche está identificada explícitamente en la Clase 27; las otras preparaciones se mantienen como comparaciones y no se rebautizan como brioche.
               </p>
             </div>
           </div>
@@ -136,11 +132,9 @@ export default function LessonThirtyTwoPage() {
           <p className="text-sm font-medium text-amber-800">Práctica de comparación</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Compara la fórmula y el manejo del brioche</h2>
           <p className="mt-2 leading-7 text-stone-600">
-            Compara conchas, pan de ajo y pan de pulque. Para cada una registra harina, azúcar, huevo, mantequilla
-            u otra grasa, líquido adicional, levadura y etapas de fermentación. Después escribe qué características
-            compara con la receta documentada: ingredientes, cantidades, orden de incorporación y el reposo prolongado en refrigeración. Observa especialmente
-            incorporación, tiempos de fermentación, formado, temperatura y horneado. Marca esas casillas como
-            “no documentadas” cuando la fuente no las proporcione.
+            Compara la receta de Brioche con conchas, pan de ajo y pan de pulque. Registra harina, azúcar, huevo, mantequilla
+            u otra grasa, líquido adicional, levadura y etapas de fermentación. Después identifica qué elementos son
+            específicos de cada receta. Marca como “no documentado” únicamente aquello que la fuente no proporcione.
           </p>
         </section>
 
@@ -149,9 +143,8 @@ export default function LessonThirtyTwoPage() {
           <h2 className="mt-2 text-xl font-semibold text-amber-950">La receta de Brioche sí está documentada.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
             La Clase 27 proporciona receta, cantidades y procedimiento. El formado se remite a la demostración de clase.
-            Tampoco hay una explicación que establezca que la fermentación prolongada en refrigeración sea el principio
-            característico de esta preparación. La lección conserva el título previsto por la ruta, pero deja explícito
-            que su contenido específico queda pendiente de una fuente que lo documente.
+            El objetivo de la clase menciona un fermentado prolongado en refrigeración y la receta indica 12 horas
+            de reposo en refrigerador; la fuente no desarrolla una explicación teórica adicional sobre ese manejo.
           </p>
         </section>
 
@@ -188,7 +181,7 @@ export default function LessonThirtyTwoPage() {
               concretas de su proceso.
             </p>
             <p className="leading-7">
-              <strong>Brioche está documentado:</strong> la fuente proporciona una fórmula y un procedimiento, aunque el formado se remite a la demostración
+              <strong>Brioche está documentado:</strong> la fuente proporciona fórmula, reposo refrigerado, porcionado, fermentación, barnizado y horneado; el formado se remite a la demostración.
               en una receta o teoría de brioche que la fuente no contiene.
             </p>
           </div>
