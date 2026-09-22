@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import CourseShell from '../../components/course/CourseShell';
 import { supabase } from '../../lib/supabase';
-import { getSession } from '../../lib/supabaseAuth';
 
 export default function RecetasPage() {
   const [recetas, setRecetas] = useState([]);
@@ -13,7 +12,7 @@ export default function RecetasPage() {
   useEffect(() => {
     const fetchRecetas = async () => {
       setLoading(true);
-      const currentSession = await getSession();
+      const { data: { session: currentSession } } = await supabase.auth.getSession();
       setSession(currentSession);
 
       let allRecetas = [];
