@@ -12,13 +12,12 @@ export default function LessonTwentyNinePage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Una comparación antes de avanzar</p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            La focaccia está en la ruta, pero no aparece desarrollada en la fuente disponible.
+            La focaccia sí está documentada en la Clase 25 del material.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            El repositorio no contiene una receta ni un procedimiento específico para focaccia. Sí contiene varias
-            recetas de pan con cantidades explícitas de harina y líquidos. Eso permite empezar a observar cómo cambia
-            una masa cuando cambian sus proporciones, sin inventar una receta de focaccia ni atribuir al material una
-            definición técnica que no presenta.
+            La Clase 25 documenta una Focaccia de 1 pieza de 20 × 30 cm. La receta proporciona fórmula, guarnición y
+            procedimiento. Esta lección puede estudiar directamente esa preparación y después compararla con otras
+            masas del curso.
           </p>
         </section>
 
@@ -30,6 +29,15 @@ export default function LessonTwentyNinePage() {
             observar que no todas las masas parten de la misma proporción. La fuente no desarrolla todavía una teoría
             de hidratación; aquí la usamos como una forma de leer y comparar los datos de las recetas.
           </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Focaccia: fórmula y procedimiento documentados</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Masa</p><p className="mt-2 leading-7 text-amber-950">1 kg de harina, 700 ml de agua, 30 g de levadura fresca, 10 g de malta, 30 ml de aceite de oliva y 20 g de sal.</p></div>
+            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Guarnición</p><p className="mt-2 leading-7 text-stone-700">80 g de aceite de oliva extra virgen, 20 g de sal de humo o flor de sal, 8 dientes de ajo y romero c/s.</p></div>
+          </div>
+          <p className="mt-5 leading-7 text-stone-700">La fuente indica pesar los ingredientes, formar una fuente con la harina, incorporar levadura, malta, sal y 30 ml de aceite, agregar el agua poco a poco y trabajar hasta obtener una masa homogénea. Después se deja reposar en aceite de oliva, se da forma según la demostración y se añade la guarnición elegida.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -105,10 +113,9 @@ export default function LessonTwentyNinePage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">4. Focaccia queda pendiente como preparación específica</p>
+              <p className="font-semibold text-stone-900">4. La guarnición forma parte de la preparación</p>
               <p className="mt-2 leading-7 text-stone-700">
-                El material disponible no indica ingredientes, formado, fermentación, acabado ni horneado de una focaccia.
-                No debemos completar esos datos con una receta externa dentro de esta lección.
+                La fuente separa los ingredientes de la masa de la guarnición: aceite de oliva extra virgen, sal de humo o flor de sal, ajo y romero. El formado se realiza según la demostración de clase.
               </p>
             </div>
           </div>
@@ -126,11 +133,10 @@ export default function LessonTwentyNinePage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">La hidratación no está definida como concepto técnico en el material consultado.</h2>
+          <h2 className="mt-2 text-xl font-semibold text-amber-950">La receta permite observar directamente una masa con 1 kg de harina y 700 ml de agua, pero la fuente no desarrolla aquí una teoría general de hidratación.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            La lección utiliza la relación entre cantidades de harina y agua como una herramienta de lectura de las
-            recetas, pero no presenta una fórmula, clasificación de porcentajes ni explicación técnica sobre cómo
-            cambia una masa con distintos niveles de hidratación. Esos contenidos requerirían una fuente adicional.
+            La comparación de harina y agua es una herramienta pedagógica de esta lección. La fuente proporciona las cantidades
+            de la Focaccia, pero no desarrolla una clasificación general de porcentajes de hidratación.
           </p>
         </section>
 
@@ -179,11 +185,10 @@ export default function LessonTwentyNinePage() {
               lisa y homogénea.
             </p>
             <p className="leading-7">
-              <strong>La hidratación queda como herramienta de comparación:</strong> la fuente no desarrolla todavía
-              una definición técnica completa del concepto.
+              <strong>La Focaccia sí está documentada:</strong> la Clase 25 proporciona fórmula, guarnición y procedimiento.
             </p>
             <p className="leading-7">
-              <strong>La focaccia queda pendiente:</strong> el repositorio no contiene todavía su receta o procedimiento.
+              <strong>La hidratación queda como herramienta de comparación:</strong> la receta proporciona cantidades concretas, pero no desarrolla una teoría general del concepto.
             </p>
           </div>
         </section>
