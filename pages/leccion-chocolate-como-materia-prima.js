@@ -26,9 +26,12 @@ export default function LessonPage() {
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Antes de trabajar</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">La fuente empieza por identificar la cobertura</h2>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Historia, origen y clasificación antes de trabajar</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">La Clase 19 presenta una introducción histórica al chocolate y después pasa a su origen, variedades y clasificación de coberturas. Para este curso interesa conservar esa progresión: primero reconocer el material; después aprender a controlarlo.</p>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente distingue tres coberturas principales: chocolate oscuro, chocolate de leche y chocolate blanco.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La Clase 19 comienza con una breve historia del chocolate: el material menciona el cultivo del cacao por los mayas, la bebida de cacao asociada a Mesoamérica, la introducción del chocolate en Francia, la clasificación botánica del cacao y varios hitos del desarrollo de su transformación hasta el conchado.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Después describe el origen y las variedades del cacao y distingue tres grupos: <strong>Criollo</strong>, <strong>Forastero</strong> y <strong>Trinitarios</strong>. El Forastero aparece en la fuente como el más cultivado, mientras que los Trinitarios se describen como híbridos de Forastero y Criollo.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente también incluye una tabla de principales países productores y sus porcentajes de producción. Estos datos forman parte del material de la Clase 19 y se conservan como información de la fuente, sin convertirlos en una clasificación actual.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">A partir de ahí, la fuente distingue tres coberturas principales: chocolate oscuro, chocolate de leche y chocolate blanco.</p>
           
         </section>
 
@@ -50,8 +53,8 @@ export default function LessonPage() {
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Lo que aparece después en la misma clase</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Tres ejercicios de aplicación</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La Clase 19 no se queda en la clasificación. Presenta Mendiants, Enjambres de chocolate, Fresas cubiertas y Chocolate amargo con cardamomo.</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Cuatro ejercicios de aplicación</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La Clase 19 no se queda en la clasificación. Presenta cuatro aplicaciones: Mendiants, Enjambres de chocolate, Fresas cubiertas y Chocolate amargo con cardamomo.</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Mendiants: cobertura semi amarga, almendra, avellana, arándano seco, cáscara de naranja confitada y limón confitado.</p></div>
             <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Enjambres: 300 g de cobertura de leche, 130 g de hojuelas de maíz y 20 g de manteca de cacao opcional.</p></div>
@@ -71,6 +74,14 @@ export default function LessonPage() {
           <p className="mt-2 leading-7 text-stone-600">Clasifica tres coberturas —oscuro, leche y blanco— a partir de las descripciones de la lección. Después elige una y explica qué información de su composición estás usando para identificarla.</p>
         </section>
 
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cuidado y conservación</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">El almacenamiento también forma parte de la materia prima</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente indica una temperatura ideal de conservación de <strong>18 °C</strong>. Señala que temperaturas superiores pueden hacer que el chocolate se derrita, salga del temperado y se vuelva blancuzco; también explica que temperaturas inferiores pueden favorecer el cuarteado y la separación de grasa o azúcar.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">El material establece además una humedad correcta de <strong>60 %</strong>, advierte que las manchas producidas por un almacenamiento incorrecto son irreversibles y señala que el chocolate debe protegerse de olores externos porque absorbe olores por la cantidad de grasa que contiene. También indica respetar la fecha de caducidad y señala que el chocolate blanco requiere una conservación más complicada.</p>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Responde con evidencia de la fuente</h2>
@@ -78,6 +89,7 @@ export default function LessonPage() {
             <p>1. ¿Qué tres tipos de cobertura distingue la fuente?</p>
             <p>2. ¿Qué relación establece la fuente entre el porcentaje indicado y la pasta de cacao?</p>
             <p>3. ¿Qué debes reconocer antes de pasar al temperado?</p>
+            <p>4. ¿Qué condiciones de temperatura, humedad y protección frente a olores documenta la fuente para conservar el chocolate?</p>
           </div>
         </section>
 
