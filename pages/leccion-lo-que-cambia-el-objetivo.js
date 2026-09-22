@@ -102,6 +102,69 @@ export default function LessonElevenPage() {
         </section>
 
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 7 · Pays</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Tres pays documentados</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+            La Clase 7 presenta tres preparaciones con la misma pasta base de mantequilla, harina, sal, azúcar y
+            agua fría. Lo que cambia es el relleno y, en el caso del durazno, el crumble de macadamias.
+          </p>
+
+          <div className="mt-6 space-y-5">
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-xl font-semibold text-stone-900">Pay de manzana</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Pasta:</strong> 115 g de mantequilla, 250 g de harina, 4 g de sal, 15 g de azúcar y 90 ml de agua fría.
+                <strong> Relleno:</strong> 7 manzanas, 200 g de azúcar, 50 g de harina, canela c/s y 30 g de mantequilla.
+              </p>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Procedimiento:</strong> mezclar harina, sal, azúcar y mantequilla en cubos; humectar con agua sin
+                sobre trabajar la pasta y refrigerar. Para el armado, forrar el molde de tarta, rellenar y tapar, hacer
+                una chimenea, barnizar con leche y azúcar, hornear a 180 °C durante 30 minutos y desmoldar.
+              </p>
+            </article>
+
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-xl font-semibold text-stone-900">Pay de durazno</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Pasta:</strong> 115 g de mantequilla, 250 g de harina, 4 g de sal, 15 g de azúcar y 90 ml de agua fría;
+                harina c/s para extender. <strong>Relleno:</strong> 90 g de azúcar, 30 g de fécula de maíz, 50 g de tapioca de
+                cocimiento rápido, 2 g de canela, 1 pizca de sal, 300 g de duraznos frescos pelados y rebanados a 1 cm,
+                30 g de mantequilla, agua c/s y 50 g de azúcar. <strong>Crumble:</strong> 50 g de harina de trigo,
+                50 g de azúcar moscabada, 2 g de nuez moscada, 50 g de mantequilla y 50 g de macadamias.
+              </p>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Procedimiento:</strong> preparar y refrigerar la pasta. Mezclar azúcar, fécula, tapioca, canela y sal;
+                espolvorear sobre los duraznos y colocarlos en el molde con la mantequilla. Cubrir con el disco superior,
+                formar la orilla, hacer cortes en la superficie y hornear 50 minutos a 180 °C hasta dorar. Enfriar antes
+                de desmoldar y servir a temperatura ambiente o tibio. Para el crumble, mezclar harina, azúcar moscabada y
+                nuez moscada, arenar con mantequilla, incorporar las macadamias troceadas y refrigerar.
+              </p>
+            </article>
+
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-xl font-semibold text-stone-900">Pay de blueberry</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Pasta:</strong> 115 g de mantequilla, 250 g de harina, 4 g de sal, 15 g de azúcar y 90 ml de agua fría;
+                harina c/s para extender. <strong>Relleno:</strong> 185 g de azúcar, 50 g de fécula de maíz, 70 g de tapioca,
+                2 g de canela, 1 pizca de sal, 500 g de blueberries, 30 g de mantequilla, agua c/s y 50 g de azúcar.
+              </p>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Procedimiento:</strong> mezclar la pasta y refrigerar. Mezclar azúcar, fécula, tapioca, canela y sal;
+                espolvorear sobre las blueberries y colocarlas en el molde con cubos de mantequilla. Cubrir con el disco
+                reservado, dejar 2.5 cm de orilla colgando, doblar y presionar las orillas, formar la orilla decorativa con
+                tenedor o dedos y hacer cortes en la superficie. Hornear 50 minutos a 180 °C hasta dorar y enfriar antes
+                de desmoldar. Servir a temperatura ambiente o tibio.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-5 text-sm leading-6 text-stone-600">
+            En los tres casos, la fuente documenta una pasta que no debe sobre trabajarse y conservarse en refrigeración.
+            Las diferencias de relleno, armado y cocción se mantienen tal como aparecen en cada preparación.
+          </p>
+        </section>
+
         <section className="grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
           <div className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
             <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Reto de recuperación</p>
