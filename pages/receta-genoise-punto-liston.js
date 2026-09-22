@@ -1,3 +1,5 @@
+import { createCourseServerClient, requireCourseAccess } from '../lib/course';
+
 import CourseShell from '../components/course/CourseShell';
 
 const ingredients = [
@@ -73,4 +75,17 @@ export default function GenoisePracticePage() {
       </div>
     </CourseShell>
   );
+}
+
+
+export async function getServerSideProps({ req, res }) {
+  const supabase = createCourseServerClient(req, res);
+  const { data: { claims } } = await supabase.auth.getClaims();
+
+  if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
+
+  const hasAccess = await requireCourseAccess(supabase);
+  if (!hasAccess) return { notFound: true };
+
+  return { props: {} };
 }
