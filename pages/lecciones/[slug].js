@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import CourseShell from '../../components/course/CourseShell';
-import { requireCourseAuth } from '../../lib/course';
+import { requireCourseAuth, requireCourseAccess } from '../../lib/course';
 import LessonProgress from '../../components/course/LessonProgress';
 
 export default function LessonPage({ lesson, recipes, progress }) {
@@ -44,6 +44,9 @@ export async function getServerSideProps({ req, res, params }) {
   const { supabase, claims } = await requireCourseAuth(req, res);
   if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
 
+  const hasAccess = await requireCourseAccess(supabase);
+  if (!hasAccess) return { notFound: true };
+
   const { data: lesson, error } = await supabase
     .from('lessons')
     .select('id, module_id, slug, title, sort_order, lesson_type, objective')
@@ -58,7 +61,7 @@ export async function getServerSideProps({ req, res, params }) {
       .select('sort_order, recipes (id, slug, title, pedagogical_role)')
       .eq('lesson_id', lesson.id)
       .order('sort_order'),
-    supabase.from('lesson_progress').select('status, started_at, completed_at').eq('lesson_id', lesson.id).eq('user_id', user.sub).maybeSingle(),
+    supabase.from('lesson_progress').select('status, started_at, completed_at').eq('lesson_id', lesson.id).eq('user_id', claims.sub).maybeSingle(),
   ]);
 
   if (linksError) return { notFound: true };
