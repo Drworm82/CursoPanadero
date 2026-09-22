@@ -155,6 +155,63 @@ export default function LessonTwentyFourPage() {
           </div>
         </section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 10 · Preparaciones completas</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Sacher y Selva Negra</h2>
+
+          <div className="mt-6 space-y-6">
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-xl font-semibold text-stone-900">Sachertorte (Austria)</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Biscuit Sacher:</strong> 180 g de chocolate semi amargo, 150 g de mantequilla, 7 yemas,
+                150 g de azúcar glass, 75 g de polvo de almendra, 5 ml de esencia de vainilla, 100 g de harina,
+                7 claras y 30 g de azúcar. <strong>Mermelada:</strong> 250 g de mermelada de chabacano y 50 ml de licor
+                de chabacano. <strong>Ganache:</strong> 150 g de chocolate semi amargo, 150 g de crema para batir y 10 g
+                de mantequilla. <strong>Glaseado:</strong> 125 g de azúcar, 125 ml de agua, 125 g de crema para batir,
+                50 g de cocoa y 10 g de grenetina en polvo.
+              </p>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Procedimiento:</strong> fundir chocolate y mantequilla a baño María; batir yemas con polvo de
+                almendra y azúcar glass a punto de listón; batir claras con 30 g de azúcar a punto de nieve; mezclar
+                envolventemente chocolate y yemas, incorporar harina y vainilla y después las claras. Vaciar en molde
+                engrasado y enharinado y hornear a 160 °C durante 25–30 minutos. Licuar la mermelada con el licor.
+                Para la ganache, hervir la crema sobre el chocolate picado y agregar la mantequilla; enfriar en baño
+                María inverso y batir para que tome consistencia. Para el glaseado, hervir azúcar, agua y crema,
+                incorporar la cocoa y llevar nuevamente al hervor; retirar, esperar que baje la temperatura, agregar
+                la grenetina disuelta, colar y enfriar hasta obtener la consistencia deseada.
+              </p>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Montaje:</strong> rebanar el pan en 3 o 4 capas; barnizar con la mermelada tibia; apilar las
+                capas y barnizar todo el pan para evitar que se seque; cubrir con la ganache y dejar enfriar; sobre una
+                rejilla vaciar el glaseado de chocolate y terminar escribiendo «SACHER» en el centro.
+              </p>
+            </article>
+
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-xl font-semibold text-stone-900">Selva Negra</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Genoise de chocolate:</strong> 7 huevos, 180 g de azúcar, 5 ml de esencia de vainilla, 150 g de harina
+                y 20 g de cocoa oscura. <strong>Cobertura:</strong> 300 g de crema para batir y 300 g de crema vegetal.
+                <strong> Otros:</strong> 15 cerezas negras o Amarenas, 200 ml de almíbar tanto por tanto (100 ml de agua +
+                100 g de azúcar), 40 ml de Kirsch y 200 g de chocolate amargo.
+              </p>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Genoise:</strong> batir huevos y azúcar hasta punto listón; incorporar vainilla; cernir harina y
+                agregarla suavemente y de forma envolvente fuera de la batidora; colocar en molde de 24 cm engrasado y
+                enharinado y hornear a 160 °C aproximadamente 30 minutos. Los bordes contraídos ligeramente indican,
+                según la fuente, que terminó la cocción.
+              </p>
+              <p className="mt-3 leading-7 text-stone-700">
+                <strong>Almíbar de Kirsch:</strong> colocar partes iguales de azúcar y agua, llevar a hervor y cocinar
+                3 minutos; dejar bajar un poco la temperatura y agregar el licor. La fuente documenta después el montaje
+                del producto: el genoise se corta en tres discos, se aplica el almíbar y el relleno en espiral, se agregan
+                cerezas, se cubre el pastel con crema y se termina con nueve copos hechos con duya, además de cerezas y
+                chocolate. La fuente indica refrigerar 4–5 horas antes de cortar.
+              </p>
+            </article>
+          </div>
+        </section>
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">La misma pregunta sirve para productos diferentes</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
