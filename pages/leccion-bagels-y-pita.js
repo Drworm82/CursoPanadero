@@ -72,8 +72,7 @@ export default function LessonThirtyThreePage() {
             <div className="rounded-2xl bg-amber-50 p-5">
               <p className="font-semibold text-amber-900">1. No conviertas el título en una receta</p>
               <p className="mt-2 leading-7 text-amber-950">
-                Que la ruta mencione bagels y pita no significa que el repositorio contenga sus ingredientes,
-                cantidades o procedimiento.
+                La Clase 27 sí documenta Bagels y Pan Pita con ingredientes, cantidades y procedimiento.
               </p>
             </div>
 
@@ -110,9 +109,10 @@ export default function LessonThirtyThreePage() {
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
           <h2 className="mt-2 text-xl font-semibold text-amber-950">Bagels y pita no están documentados en el material disponible.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            No hay receta, cantidades, procedimiento, formado específico ni método de cocción para estos productos
-            en los archivos consultados. Por lo tanto, esta lección conserva la pregunta pedagógica de la ruta,
-            pero no presenta como hechos técnicas que la fuente no contiene.
+            La fuente proporciona recetas para ambos productos. En Bagels documenta fermentación, porcionado, formado,
+            pochado en agua hirviendo durante 15 segundos, barnizado, acabado y horneado a 200 °C durante 20 minutos.
+            En Pan Pita documenta reposo de 1:30 h, porcionado de 50 g, formado, extensión a ½ cm, fermentación,
+            horno a 220 °C con charolas calientes y horneado sin dejar que tomen color.
           </p>
         </section>
 
@@ -141,11 +141,10 @@ export default function LessonThirtyThreePage() {
               porcionado, formado, segunda fermentación, horneado y enfriado.
             </p>
             <p className="leading-7">
-              <strong>El producto específico no:</strong> el repositorio no documenta recetas de bagel ni de pita.
+              <strong>Los productos específicos sí están documentados:</strong> la Clase 27 contiene recetas de Bagels y Pan Pita.
             </p>
             <p className="leading-7">
-              <strong>La comparación queda planteada como pregunta:</strong> para responderla hacen falta datos
-              específicos de ingredientes, formado y cocción.
+              <strong>La comparación puede hacerse con la fuente:</strong> ambos productos tienen fórmulas y secuencias documentadas, y difieren en operaciones como el pochado del bagel y la cocción del pita sobre charolas calientes.
             </p>
             <p className="leading-7">
               <strong>La ausencia también es información:</strong> saber qué no está en la fuente evita convertir
@@ -157,9 +156,7 @@ export default function LessonThirtyThreePage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Nota sobre la fuente</p>
           <p className="mt-2 leading-7 text-stone-700">
-            La secuencia general de panificación procede de data/curso.js. La organización de esta lección sigue
-            la ruta del Módulo 4 y es organización pedagógica del curso. La búsqueda del repositorio no encontró
-            contenido específico de bagels, pita o pan árabe.
+            Las recetas de Bagels y Pan Pita proceden de la Clase 27 del PDF. La secuencia general de panificación y la organización comparativa de esta lección sirven como estructura pedagógica del curso.
           </p>
         </section>
 
