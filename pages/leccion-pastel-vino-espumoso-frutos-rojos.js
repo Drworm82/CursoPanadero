@@ -16,6 +16,8 @@ export default function LessonPage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Dependencias</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">¿Qué debe estar listo antes?</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Sin mirar el procedimiento, identifica qué elementos dependen de enfriado, congelación o temperatura antes de entrar al montaje. Después verifica la secuencia documentada, incluida la gelée, el biscuit impreso y la mousse de vino espumoso.</p></section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ingredientes</h2>
           <div className="mt-5 grid gap-5 md:grid-cols-2">
