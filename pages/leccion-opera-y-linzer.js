@@ -16,6 +16,8 @@ export default function LessonPage() {
           </p>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Modelo inicial</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Primero lee la arquitectura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de entrar en cantidades, dibuja dos esquemas: Ópera como capas y Linzer como masa, relleno y elementos de acabado documentados. Después verifica cada esquema con la receta.</p></section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Ópera · ingredientes</h2>
           <div className="mt-5 grid gap-5 md:grid-cols-2">
