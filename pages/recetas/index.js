@@ -18,8 +18,8 @@ export default function RecetasPage() {
       let allRecetas = [];
 
       const { data: publicData, error: publicError } = await supabase
-        .from('recetas_usuarios')
-        .select('*, autor_id(*)')
+        .from('community_recipes')
+        .select('id, title, description, image_url, created_at')
         .eq('is_public', true)
         .order('created_at', { ascending: false });
 
@@ -27,28 +27,6 @@ export default function RecetasPage() {
         console.error('Error fetching public recipes:', publicError);
       } else {
         allRecetas = publicData || [];
-      }
-
-      if (currentSession) {
-        const { data: userAccess } = await supabase
-          .from('users_with_access')
-          .select('user_id')
-          .eq('user_id', currentSession.user.id)
-          .single();
-
-        if (userAccess) {
-          const { data: privateData, error: privateError } = await supabase
-            .from('recetas_usuarios')
-            .select('*, autor_id(*)')
-            .eq('is_public', false)
-            .order('created_at', { ascending: false });
-
-          if (privateError) {
-            console.error('Error fetching private recipes:', privateError);
-          } else {
-            allRecetas = [...allRecetas, ...(privateData || [])];
-          }
-        }
       }
 
       const uniqueRecetas = allRecetas.filter(
@@ -65,7 +43,7 @@ export default function RecetasPage() {
   const filteredRecetas = useMemo(() => {
     if (!searchTerm) return recetas;
     return recetas.filter((receta) =>
-      (receta.titulo || '').toLowerCase().includes(searchTerm.toLowerCase())
+      (receta.title || '').toLowerCase().includes(searchTerm.toLowerCase())
     );
   }, [recetas, searchTerm]);
 
@@ -119,9 +97,9 @@ export default function RecetasPage() {
               href={`/recetas/${receta.id}`}
               className="block rounded-2xl border border-stone-200 bg-white p-6 transition hover:border-stone-400 hover:shadow-sm"
             >
-              <h2 className="text-xl font-semibold text-stone-900">{receta.titulo}</h2>
+              <h2 className="text-xl font-semibold text-stone-900">{receta.title}</h2>
               <p className="mt-2 line-clamp-3 leading-7 text-stone-600">
-                {receta.descripcion || 'Sin descripción.'}
+                {receta.description || 'Sin descripción.'}
               </p>
               <p className="mt-4 text-sm font-medium text-amber-700">Ver receta →</p>
             </Link>
