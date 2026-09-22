@@ -197,9 +197,9 @@ export default function LessonTwentyTwoPage() {
           <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica y reconstruye</h2>
           <div className="mt-4 space-y-3 text-stone-700">
-            <p>1. 1. ¿Por qué la consistencia de una preparación importa para decidir cómo utilizarla?</p>
-            <p>2. 2. ¿Qué diferencias debes observar entre una preparación destinada a rellenar, cubrir o decorar?</p>
-            <p>3. 3. Da un ejemplo documentado en la lección y explica qué uso corresponde a su consistencia.</p>
+            <p>1. ¿Por qué la consistencia de una preparación importa para decidir cómo utilizarla?</p>
+            <p>2. ¿Qué diferencias debes observar entre una preparación destinada a rellenar, cubrir o decorar?</p>
+            <p>3. Da un ejemplo documentado en la lección y explica qué uso corresponde a su consistencia.</p>
           </div>
         </section>
 <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
