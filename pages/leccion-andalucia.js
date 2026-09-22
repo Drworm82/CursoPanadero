@@ -1,10 +1,10 @@
 import CourseShell from '../components/course/CourseShell';
 
-const lesson = { number: '62', title: 'Andalucía', subtitle: 'Clase 35 · Pastelería Contemporánea II' };
+const lesson = { number: '65', title: 'Andalucía', subtitle: 'Clase 35 · Pastelería Contemporánea II' };
 
 export default function LessonPage() {
   return (
-    <CourseShell eyebrow="Módulo 8 · Lección 62" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
+    <CourseShell eyebrow="Módulo 8 · Lección 65" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno reforzara la técnica de cocción en crema inglesa y la aplicara en la realización de una mousse.</p></section>
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Una técnica previa puede convertirse en estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">En Andalucía, la cocción inglesa aparece como base de preparaciones que después reciben otros componentes. La lección enseña a reconocer esa continuidad técnica dentro de un pastel contemporáneo.</p></section>
