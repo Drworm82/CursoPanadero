@@ -1,10 +1,10 @@
 import CourseShell from '../components/course/CourseShell';
 
-const lesson = { number: '61', title: 'Tarta de coco con mousse de Bailey’s', subtitle: 'Clase 35 · Pastelería Contemporánea II' };
+const lesson = { number: '64', title: 'Tarta de coco con mousse de Bailey’s', subtitle: 'Clase 35 · Pastelería Contemporánea II' };
 
 export default function LessonPage() {
   return (
-    <CourseShell eyebrow="Módulo 8 · Lección 61" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
+    <CourseShell eyebrow="Módulo 8 · Lección 64" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno aplicara técnicas antes vistas, para la confección de tartas contemporáneas.</p></section>
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Separar componentes para entender el montaje</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">La tarta reúne sable de chocolate y especias, flan de coco, mousse y tejas. Cada componente usa una técnica diferente y después se integra en una misma preparación.</p></section>
