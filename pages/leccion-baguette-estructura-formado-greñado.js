@@ -67,10 +67,10 @@ export default function LessonTwentyEightPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Baguette Tradicional: lo que indica la fuente</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Fórmula</p><p className="mt-2 leading-7 text-amber-950">La receta declara 500 g de harina de trigo, 350 g de agua, 10 g de sal y 10 g de levadura fresca.</p></div>
-            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Proceso</p><p className="mt-2 leading-7 text-stone-700">La secuencia documentada pasa por mezclar, amasar, fermentar, ponchar, porcionar, formar, fermentar nuevamente, barnizar y hornear.</p></div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Fórmula</p><p className="mt-2 leading-7 text-amber-950">La receta declara 500 g de harina, 150 g de poolish, 325 ml de agua, 12 g de levadura fresca, 14 g de sal y 5 g de mejorante para pan. El poolish de mise en place se prepara con 1 kg de harina, 1 litro de agua y 5 g de levadura, y reposa al menos 8 horas.</p></div>
+            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Proceso</p><p className="mt-2 leading-7 text-stone-700">La secuencia documentada pasa por un reposo inicial de harina y agua, incorporación de levadura, poolish, mejorante y sal, amasado, reposo hasta duplicar volumen, porcionado de 450 g, formado según demostración, cortes transversales con navaja, reposo adicional, barnizado con agua y horneado con vapor.</p></div>
           </div>
-          <p className="mt-5 leading-7 text-stone-700">La fuente indica además vapor durante la cocción y un horneado a 220 °C. El formado se realiza según la demostración de clase; por eso no debemos reconstruir una técnica de formado que el texto no describe paso por paso.</p>
+          <p className="mt-5 leading-7 text-stone-700">La fuente indica vapor durante la cocción y un horneado a 220 °C durante 18 minutos. El formado se realiza de acuerdo con la demostración y el texto sí indica hacer cortes transversales con una navaja.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
