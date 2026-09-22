@@ -29,7 +29,7 @@ export default function LessonTwentyEightPage() {
             En la secuencia general de la fuente, después de la primera fermentación vienen el desgasificado
             o ponchado, el porcionado y el formado. Las piezas formadas pasan después a una segunda fermentación,
             seguida por terminado, horneado y enfriado. Esa estructura permite estudiar dónde encajaría una pieza
-            como una baguette, aunque la fuente no describa todavía su técnica particular.
+            como una baguette, La fuente no desarrolla aquí una técnica detallada de greñado específica de baguette; por ello esta lección no añade una técnica externa como si fuera parte del material fuente.
           </p>
         </section>
 
@@ -155,7 +155,7 @@ export default function LessonTwentyEightPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">La baguette no está desarrollada en el material disponible.</h2>
+          <h2 className="mt-2 text-xl font-semibold text-amber-950">La baguette sí está desarrollada en el material disponible; el límite está únicamente en la descripción detallada del greñado.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
             La fuente sí proporciona una receta de Baguette Tradicional. Lo que no desarrolla con detalle son los cortes de
             greñado: no especifica profundidad, ángulo, número de cortes ni herramienta. Esos detalles quedan fuera
