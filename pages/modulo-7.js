@@ -43,13 +43,13 @@ export default function ModuleSevenPage() {
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">La autonomía aumenta durante el módulo</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Empieza por reconocer la cobertura. Después reconstruye el temperado, sigue una preparación documentada, observa cómo cambian las operaciones cuando aparece un molde, un relleno o un acabado y explica la secuencia con evidencia de la receta.</p>
           <div className="mt-5 grid gap-3 md:grid-cols-4">
-            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica cobertura, formulación y objetivo.</p></div>
-            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Sigue el temperado y las preparaciones documentadas.</p></div>
-            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Relaciona temperatura, forma, relleno y acabado con cada secuencia.</p></div>
-            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Reconstruye el proceso sin convertirlo en una regla no documentada.</p></div>
+            <div><p className="font-semibold text-stone-900">51 · Reconoce</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica la materia prima y sus variantes documentadas.</p></div>
+            <div><p className="font-semibold text-stone-900">52–54 · Recupera y aplica</p><p className="mt-1 text-sm leading-6 text-stone-600">Recupera el temperado y úsalo para leer piezas, moldes, rellenos y ganaches.</p></div>
+            <div><p className="font-semibold text-stone-900">55–57 · Compara y reconstruye</p><p className="mt-1 text-sm leading-6 text-stone-600">Distingue formatos, ordena operaciones y compara formulaciones documentadas.</p></div>
+            <div><p className="font-semibold text-stone-900">58 · Integra</p><p className="mt-1 text-sm leading-6 text-stone-600">Reconstruye dos petit fours y distingue lo que la fuente sí documenta de lo que deja abierto.</p></div>
           </div>
         </section>
 
