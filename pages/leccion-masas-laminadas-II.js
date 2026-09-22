@@ -25,6 +25,12 @@ export default function LessonPage() {
           </ol>
         </section>
 
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Compara</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Mismo laminado, otra construcción</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de leer la Tarta Tatin, recupera el hojaldre de la Lección 45 y señala qué dato cambia en el empaste de esta clase. Después identifica qué parte de la preparación de Tatin ocurre antes de colocar el hojaldre y cuál ocurre después. Usa solamente las operaciones documentadas.</p>
+        </section>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-stone-900">Tarta Tatin</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
