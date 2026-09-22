@@ -12,10 +12,9 @@ const lessons = [
   ['8', 'Sablée y sucrée', 'Conoce el método de arenado y compara dos pastas friables de la fuente.', '/leccion-sablee-y-sucree'],
   ['9', 'De la pasta a la tarta', 'Aplica la pasta, cocínala, impermeabilízala y entiende cómo se construye una tarta de frutas.', '/leccion-de-la-pasta-a-la-tarta'],
   ['10', 'Pay de limón', 'Integra una pasta sucrée con crema de limón y merengue suizo.', '/leccion-pay-de-limon'],
-  ['11', 'Lo que cambia cuando cambia el objetivo', 'Cierra el módulo relacionando gluten, grasa, reposo y método.', '/leccion-lo-que-cambia-el-objetivo'],
+  ['11', 'Lo que cambia cuando cambia el objetivo', 'Cierra el recorrido por las masas friables relacionando gluten, grasa, reposo y método.', '/leccion-lo-que-cambia-el-objetivo'],
+  ['12', 'Petit fours secos: precisión, concentración y acabado', 'Integra las preparaciones documentadas de las Clases 5 y 8 y compara macaron, galletas, masas friables y brigadeiro.', '/leccion-petit-fours-secos'],
 ];
-
-
 
 export default function ModuleTwoPage() {
   return (
@@ -46,13 +45,23 @@ export default function ModuleTwoPage() {
           </div>
         </section>
 
+        <section className="rounded-2xl border border-stone-200 bg-white p-6">
+          <p className="text-sm font-medium text-stone-500">Cómo leer las últimas preparaciones</p>
+          <p className="mt-2 leading-7 text-stone-700">
+            Las Clases 5 y 8 amplían el recorrido hacia petit fours secos. No todas las piezas siguen el mismo método:
+            el macaron integra un merengue italiano con TpT de almendra; otras preparaciones parten de masas friables;
+            el brigadeiro concentra la preparación mediante cocción. La comparación sirve para reconocer el proceso
+            documentado sin convertir todas las piezas pequeñas en una sola categoría técnica.
+          </p>
+        </section>
+
         <section>
           <div className="mb-4 flex items-end justify-between gap-4">
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Ruta de aprendizaje</p>
               <h2 className="mt-1 text-2xl font-semibold text-stone-900">Lecciones</h2>
             </div>
-            <span className="text-sm text-stone-500">5 lecciones</span>
+            <span className="text-sm text-stone-500">6 lecciones</span>
           </div>
 
           <div className="grid gap-3">
@@ -60,8 +69,7 @@ export default function ModuleTwoPage() {
               <a
                 key={number}
                 href={href}
-                className={`group flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition ${href === '#' ? 'cursor-default opacity-65' : 'hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md'}`}
-                onClick={(event) => href === '#' && event.preventDefault()}
+                className="group flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
                   {number}
@@ -70,7 +78,7 @@ export default function ModuleTwoPage() {
                   <span className="block font-semibold text-stone-900">{title}</span>
                   <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
                 </span>
-                <span className="shrink-0 text-sm text-stone-400">{href === '#' ? 'Próximamente' : 'Abrir →'}</span>
+                <span className="shrink-0 text-sm text-stone-400">Abrir →</span>
               </a>
             ))}
           </div>
@@ -85,6 +93,7 @@ export default function ModuleTwoPage() {
             <li>• Por qué la fuente indica mezclar sin amasar y dejar reposar en refrigeración.</li>
             <li>• Qué diferencia hay entre trabajar una pasta por sablage y por acremado.</li>
             <li>• Cómo se relacionan la base, la impermeabilización y el montaje en las tartas trabajadas.</li>
+            <li>• Cómo cambia la técnica cuando pasas de masas friables a petit fours con merengue o cocción de concentración.</li>
           </ul>
         </section>
       </div>
