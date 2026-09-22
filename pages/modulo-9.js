@@ -75,6 +75,18 @@ export default function ModuleNinePage() {
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Compara dos sistemas de producción</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Construye una tabla con Framboisier y Gimont. Para cada pastel, separa preparaciones base, derivados, componentes de relleno, etapas de frío y acabados. Después reconstruye la secuencia de producción de cada uno y señala qué tienen en común y qué cambia. Usa únicamente las operaciones documentadas en las lecciones.</p>
         </section>
+
+        <section className="rounded-2xl border border-amber-300 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Cierre del curso</p>
+          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Recupera, descompón, reconstruye y transfiere</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-amber-950">Sin volver a estudiar las recetas completas, elige una preparación de cualquier módulo anterior y otra de este módulo. Para cada una identifica la estructura o componente principal, reconstruye las operaciones documentadas y señala una condición observable que indique el avance. Después compáralas: qué técnica recuperan, qué cambia y qué información deja la fuente sin especificar. El objetivo es demostrar que puedes leer una preparación nueva como un sistema de operaciones, no repetir una fórmula de memoria.</p>
+          <ol className="mt-5 list-decimal space-y-2 pl-6 leading-7 text-amber-950">
+            <li>Recupera una técnica de un módulo anterior sin consultar la receta.</li>
+            <li>Descompón una preparación compleja en componentes y operaciones.</li>
+            <li>Reconstruye el orden documentado y separa lo explícito de lo que la fuente no especifica.</li>
+            <li>Compara dos preparaciones y explica qué cambia entre ellas.</li>
+          </ol>
+        </section>
       </div>
     </CourseShell>
   );
