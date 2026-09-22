@@ -1,48 +1,133 @@
+import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import CourseShell from '../../components/course/CourseShell';
-
-const recipes = [
-  { href: '/receta-genoise-punto-liston', title: 'Genoise punto listón', description: 'Preparación guiada del genoise y reconocimiento del punto de batido.' },
-  { href: '/receta-honguitos-merengue', title: 'Honguitos de merengue', description: 'Preparación y formado de merengue para una pieza decorativa.' },
-  { href: '/receta-marmoleado-intenso-cafe', title: 'Marmoleado intenso de café', description: 'Receta disponible mediante el sistema público de recetas.' },
-  { href: '/receta-panque-citricos', title: 'Panqué de cítricos', description: 'Receta disponible mediante el sistema público de recetas.' },
-  { href: '/receta-panque-platano-streusel-canela', title: 'Panqué de plátano, streusel y canela', description: 'Receta disponible mediante el sistema público de recetas.' },
-  { href: '/receta-pasta-choux', title: 'Pasta choux', description: 'Preparación de la masa cocida y su incorporación de huevo.' },
-  { href: '/receta-pasta-sablee', title: 'Pasta sablée', description: 'Masa friable trabajada mediante el método de arenado.' },
-  { href: '/receta-pasta-sucree', title: 'Pasta sucrée', description: 'Comparación de otra formulación de pasta friable.' },
-  { href: '/receta-pay-de-limon', title: 'Pay de limón', description: 'Base de pasta, crema de limón y merengue suizo.' },
-  { href: '/receta-pionono', title: 'Pionono', description: 'Batido aireado, incorporación envolvente y horneado.' },
-  { href: '/receta-rosca-pina-colada', title: 'Rosca piña colada', description: 'Receta disponible mediante el sistema público de recetas.' },
-  { href: '/receta-tarta-de-frutas', title: 'Tarta de frutas', description: 'Base de pasta, crema pastelera y acabado con fruta.' },
-  { href: '/receta-tres-leches', title: 'Tres leches', description: 'Genoise, jarabe de tres leches y acabado.' },
-];
+import { supabase } from '../../lib/supabase';
+import { getSession } from '../../lib/supabaseAuth';
 
 export default function RecetasPage() {
+  const [recetas, setRecetas] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [session, setSession] = useState(null);
+
+  useEffect(() => {
+    const fetchRecetas = async () => {
+      setLoading(true);
+      const currentSession = await getSession();
+      setSession(currentSession);
+
+      let allRecetas = [];
+
+      const { data: publicData, error: publicError } = await supabase
+        .from('recetas_usuarios')
+        .select('*, autor_id(*)')
+        .eq('is_public', true)
+        .order('created_at', { ascending: false });
+
+      if (publicError) {
+        console.error('Error fetching public recipes:', publicError);
+      } else {
+        allRecetas = publicData || [];
+      }
+
+      if (currentSession) {
+        const { data: userAccess } = await supabase
+          .from('users_with_access')
+          .select('user_id')
+          .eq('user_id', currentSession.user.id)
+          .single();
+
+        if (userAccess) {
+          const { data: privateData, error: privateError } = await supabase
+            .from('recetas_usuarios')
+            .select('*, autor_id(*)')
+            .eq('is_public', false)
+            .order('created_at', { ascending: false });
+
+          if (privateError) {
+            console.error('Error fetching private recipes:', privateError);
+          } else {
+            allRecetas = [...allRecetas, ...(privateData || [])];
+          }
+        }
+      }
+
+      const uniqueRecetas = allRecetas.filter(
+        (receta, index, self) => index === self.findIndex((r) => r.id === receta.id)
+      );
+
+      setRecetas(uniqueRecetas);
+      setLoading(false);
+    };
+
+    fetchRecetas();
+  }, []);
+
+  const filteredRecetas = useMemo(() => {
+    if (!searchTerm) return recetas;
+    return recetas.filter((receta) =>
+      (receta.titulo || '').toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [recetas, searchTerm]);
+
   return (
     <CourseShell
-      eyebrow="Preparaciones"
-      title="Recetas del curso"
-      description="Accede directamente a las preparaciones disponibles desde la ruta actual del curso."
+      eyebrow="Comunidad"
+      title="Recetas compartidas"
+      description="Descubre recetas publicadas por otros usuarios de la comunidad y comparte tus propias preparaciones."
     >
-      <section className="mb-8 rounded-2xl bg-amber-50 p-6">
-        <p className="text-sm font-medium text-amber-900">Cómo usar esta sección</p>
-        <p className="mt-2 max-w-3xl leading-7 text-amber-950">
-          Usa las recetas como espacio de práctica. La lección correspondiente aporta el contexto
-          y la receta concentra los ingredientes, pasos y señales que están documentados para cada preparación.
-        </p>
-      </section>
+      <div className="mb-8 flex flex-col gap-4 rounded-2xl border border-stone-200 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h2 className="text-lg font-semibold text-stone-900">Buscar recetas</h2>
+          <p className="mt-1 text-sm leading-6 text-stone-600">
+            Busca por título entre las recetas compartidas.
+          </p>
+        </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        {recipes.map((recipe) => (
-          <a
-            key={recipe.href}
-            href={recipe.href}
-            className="block rounded-2xl border border-stone-200 bg-white p-6 transition hover:border-stone-400 hover:shadow-sm"
-          >
-            <h2 className="text-xl font-semibold text-stone-900">{recipe.title}</h2>
-            <p className="mt-2 leading-7 text-stone-600">{recipe.description}</p>
-            <span className="mt-4 inline-block text-sm font-medium text-amber-700">Abrir receta →</span>
-          </a>
-        ))}
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <input
+            type="text"
+            placeholder="Buscar por título..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="rounded-lg border border-stone-300 px-4 py-2.5 text-sm shadow-sm outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-100"
+          />
+          {session && (
+            <Link
+              href="/recetas/nueva"
+              className="rounded-lg bg-amber-600 px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-amber-700"
+            >
+              Compartir receta
+            </Link>
+          )}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {loading ? (
+          <p className="col-span-full py-10 text-center text-stone-500">Cargando recetas...</p>
+        ) : filteredRecetas.length === 0 ? (
+          <div className="col-span-full rounded-2xl border border-dashed border-stone-300 p-10 text-center">
+            <h2 className="text-xl font-semibold text-stone-900">Todavía no hay recetas compartidas</h2>
+            <p className="mt-2 text-stone-600">
+              Cuando la comunidad publique recetas, aparecerán aquí.
+            </p>
+          </div>
+        ) : (
+          filteredRecetas.map((receta) => (
+            <Link
+              key={receta.id}
+              href={`/recetas/${receta.id}`}
+              className="block rounded-2xl border border-stone-200 bg-white p-6 transition hover:border-stone-400 hover:shadow-sm"
+            >
+              <h2 className="text-xl font-semibold text-stone-900">{receta.titulo}</h2>
+              <p className="mt-2 line-clamp-3 leading-7 text-stone-600">
+                {receta.descripcion || 'Sin descripción.'}
+              </p>
+              <p className="mt-4 text-sm font-medium text-amber-700">Ver receta →</p>
+            </Link>
+          ))
+        )}
       </div>
     </CourseShell>
   );
