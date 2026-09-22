@@ -1,6 +1,6 @@
 # Matriz de cobertura — PDF → CursoPanadero
 
-Fuente principal: ISMM Sábados.pdf (138 páginas).
+Fuentes de verificación: ISMM Sábados.pdf (138 páginas) y Curso completo Panaderia y reposteria ISMM.pdf (146 páginas). Para esta matriz se toma como referencia el contenido coincidente entre ambas versiones; cuando exista una diferencia, deberá conservarse explícitamente la versión que se haya validado para el curso.
 Criterio: Completa = las preparaciones documentadas de la clase están representadas con cantidades/procedimientos o equivalencia actual. Parcial = queda alguna preparación, procedimiento o bloque de contenido por cerrar. Sin fuente = la clase no aparece en el PDF.
 
 | Clase | Contenido principal | Ubicación actual | Estado | Nota |
@@ -23,7 +23,7 @@ Criterio: Completa = las preparaciones documentadas de la clase están represent
 | 16 | — | — | Sin fuente | No aparece una Clase 16 en el PDF; no se inventó contenido. |
 | 17 | Panqué de aceite; fondant; betún de manteca; Royal Icing | M6, L49 | Completa | Preparaciones documentadas. |
 | 18 | Buñuelos; Torta de Cielo; gaznates; rompope | M6, L50 | Completa | Preparaciones documentadas. |
-| 19 | Chocolatería I | M7, L51 | Completa | Preparaciones y fundamentos documentados. |
+| 19 | Chocolatería I | M7, L51–52 | Completa tras revisión | Se integran historia, origen y variedades del cacao, clasificación, coberturas, conservación, temperado y las cuatro aplicaciones documentadas. |
 | 20 | Chocolatería II | M7 | Completa | Contenido integrado. |
 | 21 | Chocolatería III | M7 | Completa | Contenido integrado. |
 | 22 | Chocolates rellenos; ganaches avanzadas | M7, L54–57 | Completa | Se incluyen trimolina, sorbitol y emulsión donde la fuente las documenta. |
@@ -49,6 +49,13 @@ Criterio: Completa = las preparaciones documentadas de la clase están represent
 1. Clase 16: mantenerla fuera de la ruta mientras el PDF siga sin contener una clase con ese número.
 2. Lección 40: corregido el límite de fuente que afirmaba que no existía receta de hojaldre. El PDF sí contiene hojaldre clásico en las Clases 12 y 13.
 3. Clases 2 y 3: las recetas ya están en la capa de datos y vinculadas a la ruta de cierre del Módulo 1; la revisión pedagógica deberá decidir si conviene distribuirlas mejor entre las lecciones del módulo.
+
+## Correcciones de auditoría
+
+- Clase 19: se amplió L51 para recuperar los bloques de historia, origen y variedades, clasificación del cacao y conservación que forman parte del PDF; también se corrigió el conteo de aplicaciones.
+- L52: se ajustó la presentación de la tabla térmica para no convertir su disposición ambigua en una secuencia no explícita.
+- L28: se eliminó la contradicción sobre la baguette; el límite real se mantiene únicamente en el detalle específico del greñado.
+- L22: se corrigió la numeración duplicada de las preguntas.
 
 ## Siguiente fase
 
