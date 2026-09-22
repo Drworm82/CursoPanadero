@@ -14,14 +14,14 @@ export default function LessonPage() {
           <p className="mt-6 text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno aprenderá a elaborar pasteles a gran escala, mediante sistemas de producción en serie.</p>
         </section>
-<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">La producción a gran escala exige pensar en componentes y orden</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Gimont reúne biscuit cuillere de pistache, jarabe, pistache caramelizado, mousseline, bavaroise y acabados. La dificultad no está solamente en cada receta, sino en coordinar componentes diferentes para llegar al montaje final.</p></section>
+<section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Transferencia</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Usa el modelo anterior para leer un sistema nuevo</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Gimont reúne biscuit cuillere de pistache, jarabe, pistache caramelizado, mousseline, bavaroise y acabados. Ahora la tarea cambia: identifica por ti mismo las relaciones entre componentes y compáralas con Framboisier, sin convertir esas semejanzas en reglas generales.</p></section>
 <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Transfiere</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Ahora cambia la pregunta</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">Sin mirar Framboisier, identifica qué elementos de Gimont pertenecen también a la lógica de producción por componentes y cuáles son específicos de esta preparación. Después reconstruye Gimont por dependencias: qué debe existir antes de cada componente y qué puede esperar hasta el acabado. La comparación debe basarse en las dos recetas documentadas, no en reglas generales.</p>
         </section>
 
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Observa y practica</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de repetir la receta, explica su estructura</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Recupera biscuit, jarabes, crema pastelera, mousseline, bavaroise, frío y chocolate temperado. Identifica cuáles son preparaciones base y cuáles aparecen como derivados o acabados. Práctica: ordena los componentes desde la primera preparación hasta el montaje individual y explica por qué el orden de producción importa.</p></section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Transfiere sin mirar</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye Gimont y luego compáralo</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Primero, sin consultar el procedimiento, escribe el orden que recuerdes para las preparaciones y el montaje. Después verifica con la fuente y corrige solo lo que no corresponda. Finalmente, compáralo con Framboisier: identifica una semejanza documentada, una diferencia documentada y un punto que la fuente no desarrolla.</p></section>
 
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
@@ -68,18 +68,18 @@ export default function LessonPage() {
 
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad guiada</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Separa base, derivado y acabado</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Haz tres columnas y clasifica las elaboraciones de Gimont: biscuit, jarabe, pistache dragee, crema pastelera, mousseline, bavaroise y decoración. Después reconstruye el orden documentado hasta el montaje individual y marca qué preparaciones se derivan de otra.</p>
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Actividad de transferencia</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Compara Gimont con Framboisier</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Construye una tabla con cuatro filas: componentes, dependencias, frío y acabado. Completa primero Gimont sin consultar Framboisier; después usa la lección anterior para contrastar. Conserva únicamente diferencias y semejanzas que puedan sostenerse con las dos recetas documentadas.</p>
         </section>
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu aprendizaje</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Explica el sistema de producción</h2>
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Comprueba tu transferencia</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Explica un sistema que no es idéntico al modelo</h2>
           <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-stone-700">
-            <li>Explica cómo se relacionan la crema pastelera y la mousseline de pistache.</li>
-            <li>Ordena las preparaciones documentadas antes del montaje.</li>
-            <li>Reconstruye los cuatro pasos del montaje individual.</li>
-            <li>Identifica qué elementos pertenecen al acabado final y cuáles forman parte de la estructura del pastel.</li>
+            <li>Reconstruye las preparaciones documentadas de Gimont sin mirar el procedimiento.</li>
+            <li>Ordena el montaje individual en sus cuatro pasos documentados.</li>
+            <li>Compara Gimont con Framboisier e identifica una semejanza y una diferencia sustentadas por las recetas.</li>
+            <li>Señala un punto que la fuente no desarrolla en detalle, sin completarlo por inferencia.</li>
           </ol>
         </section>
 
