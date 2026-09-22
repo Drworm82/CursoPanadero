@@ -182,7 +182,7 @@ export default function LessonThirtyTwoPage() {
             </p>
             <p className="leading-7">
               <strong>Brioche está documentado:</strong> la fuente proporciona fórmula, reposo refrigerado, porcionado, fermentación, barnizado y horneado; el formado se remite a la demostración.
-              en una receta o teoría de brioche que la fuente no contiene.
+              La lección no convierte las comparaciones con otras masas en una receta o teoría que la fuente no desarrolla.
             </p>
           </div>
         </section>
