@@ -12,14 +12,23 @@ export default function LessonThirtyTwoPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Una lección que exige distinguir la ruta del material</p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            El programa propone brioche, pero la fuente disponible no contiene una receta de brioche.
+            La Clase 27 del material documenta una receta de Brioche.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            La búsqueda del material del curso no encuentra “brioche” ni una receta identificada como tal.
+            La Clase 27 identifica explícitamente la preparación como BRIOCHE y señala como objetivo conocer una masa rica en grasa y azúcar y realizar un fermentado prolongado en refrigeración.
             Por eso esta lección no inventa una fórmula ni un procedimiento. En su lugar, utiliza las masas
             enriquecidas que sí están documentadas para precisar qué podemos aprender de ellas y qué información
             todavía falta para estudiar brioche de manera específica.
           </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Brioche: fórmula y procedimiento documentados</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Fórmula</p><p className="mt-2 leading-7 text-amber-950">500 g de harina, 25 g de leche, 20 g de levadura fresca, 10 g de sal, 50 g de azúcar, 250 g de mantequilla y 250 g de huevo.</p></div>
+            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Proceso</p><p className="mt-2 leading-7 text-stone-700">La masa reposa 12 horas en refrigerador; después se poncha, se porciona en 65 g, se forma según demostración, fermenta, se barniza y se hornea a 180 °C durante aproximadamente 25 minutos.</p></div>
+          </div>
+          <p className="mt-5 leading-7 text-stone-700">La fuente indica mezclar secos, agregar huevo y leche, trabajar hasta obtener una masa lisa, incorporar la mantequilla pomada y amasar hasta que la masa se despegue de la mesa y no se pegue a los dedos.</p>
         </section>
 
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
@@ -114,10 +123,10 @@ export default function LessonThirtyTwoPage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">4. No atribuyas estas recetas a brioche</p>
+              <p className="font-semibold text-stone-900">4. Distingue la receta de brioche de las demás masas enriquecidas</p>
               <p className="mt-2 leading-7 text-stone-700">
                 Una masa enriquecida puede servir como comparación pedagógica, pero el material no identifica ninguna
-                de estas preparaciones como brioche.
+                de estas preparaciones como brioche; ahora la Clase 27 permite estudiar una receta identificada explícitamente como tal.
               </p>
             </div>
           </div>
@@ -125,11 +134,11 @@ export default function LessonThirtyTwoPage() {
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Práctica de comparación</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Construye el puente hacia brioche sin inventarlo</h2>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Compara la fórmula y el manejo del brioche</h2>
           <p className="mt-2 leading-7 text-stone-600">
             Compara conchas, pan de ajo y pan de pulque. Para cada una registra harina, azúcar, huevo, mantequilla
             u otra grasa, líquido adicional, levadura y etapas de fermentación. Después escribe qué características
-            necesitarías conocer para poder estudiar una receta de brioche: ingredientes, cantidades, orden de
+            compara con la receta documentada: ingredientes, cantidades, orden de incorporación y el reposo prolongado en refrigeración. Observa especialmente
             incorporación, tiempos de fermentación, formado, temperatura y horneado. Marca esas casillas como
             “no documentadas” cuando la fuente no las proporcione.
           </p>
@@ -137,9 +146,9 @@ export default function LessonThirtyTwoPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">Brioche no está documentado en el material disponible.</h2>
+          <h2 className="mt-2 text-xl font-semibold text-amber-950">La receta de Brioche sí está documentada.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            No hay receta, cantidades, procedimiento ni explicación específica de brioche en los archivos consultados.
+            La Clase 27 proporciona receta, cantidades y procedimiento. El formado se remite a la demostración de clase.
             Tampoco hay una explicación que establezca que la fermentación prolongada en refrigeración sea el principio
             característico de esta preparación. La lección conserva el título previsto por la ruta, pero deja explícito
             que su contenido específico queda pendiente de una fuente que lo documente.
@@ -179,7 +188,7 @@ export default function LessonThirtyTwoPage() {
               concretas de su proceso.
             </p>
             <p className="leading-7">
-              <strong>Brioche queda sin documentar:</strong> no debemos convertir una comparación de masas enriquecidas
+              <strong>Brioche está documentado:</strong> la fuente proporciona una fórmula y un procedimiento, aunque el formado se remite a la demostración
               en una receta o teoría de brioche que la fuente no contiene.
             </p>
           </div>
