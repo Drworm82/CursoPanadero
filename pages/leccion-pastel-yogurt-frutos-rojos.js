@@ -1,10 +1,10 @@
 import CourseShell from '../components/course/CourseShell';
 
-const lesson = { number: '58', title: 'Pastel de yogurt y frutos rojos', subtitle: 'Clase 34 · Pastelería Contemporánea I' };
+const lesson = { number: '59', title: 'Pastel de yogurt y frutos rojos', subtitle: 'Clase 34 · Pastelería Contemporánea I' };
 
 export default function LessonPage() {
   return (
-    <CourseShell eyebrow="Módulo 8 · Lección 58" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
+    <CourseShell eyebrow="Módulo 8 · Lección 59" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p>
