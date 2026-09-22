@@ -16,6 +16,17 @@ export default function ModuleNinePage() {
   return (
     <CourseShell eyebrow="Módulo 9" title={moduleInfo.title} backHref="/ruta" backLabel="Volver a la ruta">
       <div className="space-y-8">
+        <section className="grid gap-4 md:grid-cols-2">
+          <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+            <p className="text-sm font-medium text-stone-500">Pregunta guía</p>
+            <p className="mt-3 text-lg leading-8 text-stone-800">{moduleInfo.guiding_question}</p>
+          </section>
+          <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+            <p className="text-sm font-medium text-stone-500">Al terminar</p>
+            <p className="mt-3 leading-7 text-stone-700">{moduleInfo.expected_result}</p>
+          </section>
+        </div>
+
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cómo estudiar este módulo</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">De la receta al sistema de producción</h2>
