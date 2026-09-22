@@ -1,9 +1,71 @@
 import Link from 'next/link';
 import CourseShell from '../../components/course/CourseShell';
-import { requireCourseAuth } from '../../lib/course';
+import { createCourseServerClient, requireCourseAuth } from '../../lib/course';
 import RecipeProgress from '../../components/course/RecipeProgress';
 
-export default function RecipePage({ recipe, ingredients, steps, progress }) {
+function isUuid(value) {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value || '');
+}
+
+function CommunityRecipeView({ recipe }) {
+  return (
+    <CourseShell
+      eyebrow="Comunidad"
+      title={recipe.title}
+      description={recipe.description || 'Receta compartida por la comunidad.'}
+    >
+      <div className="mx-auto max-w-4xl space-y-8">
+        {recipe.image_url && (
+          <img
+            src={recipe.image_url}
+            alt={recipe.title}
+            className="w-full rounded-2xl border border-stone-200 object-cover"
+          />
+        )}
+
+        <section>
+          <h2 className="mb-4 text-2xl font-semibold text-stone-900">Ingredientes</h2>
+          <div className="rounded-2xl border border-stone-200 bg-white p-6">
+            {recipe.ingredients.length > 0 ? (
+              <ul className="list-disc space-y-2 pl-5 text-stone-700">
+                {recipe.ingredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-stone-500">No se especificaron ingredientes.</p>
+            )}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="mb-4 text-2xl font-semibold text-stone-900">Preparación</h2>
+          <ol className="space-y-4">
+            {recipe.steps.map((step, index) => (
+              <li key={index} className="rounded-2xl border border-stone-200 bg-white p-6">
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-stone-900 text-sm font-semibold text-white">
+                    {index + 1}
+                  </span>
+                  <p className="leading-7 text-stone-700">{step}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <Link
+          href="/recetas"
+          className="inline-flex rounded-full border border-stone-300 px-5 py-3 text-sm font-medium text-stone-700"
+        >
+          ← Volver a recetas
+        </Link>
+      </div>
+    </CourseShell>
+  );
+}
+
+function CourseRecipeView({ recipe, ingredients, steps, progress }) {
   return (
     <CourseShell eyebrow="Receta" title={recipe.title} description={recipe.source_objective}>
       <div className="grid gap-6 lg:grid-cols-[.65fr_1.35fr]">
@@ -69,9 +131,34 @@ export default function RecipePage({ recipe, ingredients, steps, progress }) {
   );
 }
 
+export default function RecipePage({ communityRecipe, recipe, ingredients, steps, progress }) {
+  if (communityRecipe) return <CommunityRecipeView recipe={communityRecipe} />;
+  return <CourseRecipeView recipe={recipe} ingredients={ingredients} steps={steps} progress={progress} />;
+}
+
 export async function getServerSideProps({ req, res, params }) {
-  const { supabase, user } = await requireCourseAuth(req, res);
-  if (!user) return { redirect: { destination: '/acceso', permanent: false } };
+  if (isUuid(params.slug)) {
+    const supabase = createCourseServerClient(req, res);
+    const { data: { claims } } = await supabase.auth.getClaims();
+    const userId = claims?.sub || null;
+
+    const { data: communityRecipe, error } = await supabase
+      .from('community_recipes')
+      .select('id, author_id, title, description, ingredients, steps, image_url, is_public, created_at')
+      .eq('id', params.slug)
+      .maybeSingle();
+
+    if (error || !communityRecipe) return { notFound: true };
+
+    if (!communityRecipe.is_public && communityRecipe.author_id !== userId) {
+      return { notFound: true };
+    }
+
+    return { props: { communityRecipe, recipe: null, ingredients: [], steps: [], progress: null } };
+  }
+
+  const { supabase, claims } = await requireCourseAuth(req, res);
+  if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
 
   const { data: recipe, error } = await supabase
     .from('recipes')
@@ -84,10 +171,10 @@ export async function getServerSideProps({ req, res, params }) {
   const [{ data: ingredients, error: ingredientsError }, { data: steps, error: stepsError }, { data: progress }] = await Promise.all([
     supabase.from('recipe_ingredients').select('id, sort_order, name, quantity, unit, notes').eq('recipe_id', recipe.id).order('sort_order'),
     supabase.from('recipe_steps').select('id, sort_order, title, instruction, observation, time_text, temperature_text').eq('recipe_id', recipe.id).order('sort_order'),
-    supabase.from('recipe_progress').select('status, current_step, completed_at').eq('recipe_id', recipe.id).eq('user_id', user.sub).maybeSingle(),
+    supabase.from('recipe_progress').select('status, current_step, completed_at').eq('recipe_id', recipe.id).eq('user_id', claims.sub).maybeSingle(),
   ]);
 
   if (ingredientsError || stepsError) return { notFound: true };
 
-  return { props: { recipe, ingredients: ingredients || [], steps: steps || [], progress: progress || null } };
+  return { props: { communityRecipe: null, recipe, ingredients: ingredients || [], steps: steps || [], progress: progress || null } };
 }
