@@ -1,4 +1,4 @@
-import { createCourseServerClient, requireCourseAccess } from '../lib/course';
+import { requireCourseAuth, requireCourseAccess } from '../lib/course';
 
 import CourseShell from '../components/course/CourseShell';
 
@@ -100,8 +100,7 @@ export default function FruitTartPage() {
 }
 
 export async function getServerSideProps({ req, res }) {
-  const supabase = createCourseServerClient(req, res);
-  const { data: { claims } } = await supabase.auth.getClaims();
+  const { supabase, claims } = await requireCourseAuth(req, res);
 
   if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
 
