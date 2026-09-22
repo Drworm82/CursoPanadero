@@ -196,10 +196,9 @@ export default function LessonTwentyNinePage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="text-sm font-medium text-stone-500">Nota sobre la fuente</p>
           <p className="mt-2 leading-7 text-stone-700">
-            Los datos de comparación proceden de las recetas de pan de ajo, grissini, conchas y croissant en
-            data/recetas.js. La ruta general de panificación y sus etapas proceden de data/curso.js. La búsqueda
-            del repositorio no encontró contenido específico sobre focaccia ni una definición técnica desarrollada
-            de hidratación. La organización comparativa de esta lección es organización pedagógica del curso.
+            La receta de Focaccia procede de la Clase 25 del PDF. Los datos de comparación proceden además de las recetas
+            de pan de ajo, grissini, conchas y croissant. La organización comparativa de esta lección y el uso de la
+            relación harina/agua como herramienta de lectura son organización pedagógica del curso.
           </p>
         </section>
 
