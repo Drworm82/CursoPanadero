@@ -16,7 +16,7 @@ export default function ModuleNinePage() {
   return (
     <CourseShell eyebrow="Módulo 9" title={moduleInfo.title} backHref="/ruta" backLabel="Volver a la ruta">
       <div className="space-y-8">
-        <section className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
             <p className="text-sm font-medium text-stone-500">Pregunta guía</p>
             <p className="mt-3 text-lg leading-8 text-stone-800">{moduleInfo.guiding_question}</p>
