@@ -42,11 +42,11 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Temperaturas indicadas</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Oscuro, leche y blanco</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La tabla de la fuente presenta como temperaturas de trabajo 30 °C para oscuro, 29 °C para leche y 27 °C para blanco. También aparecen temperaturas de 45 °C para oscuro, 31 °C para leche y 29 °C para blanco en la secuencia térmica.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La fuente presenta una tabla de temperaturas con varios valores asociados a los distintos tipos de chocolate. Entre ellos aparecen 30 °C para oscuro, 29 °C para leche y 27 °C para blanco como temperaturas de trabajo. También aparecen 45 °C para oscuro, 31 °C para leche y 29 °C para blanco, además de 28 °C, 27 °C y 26 °C en el bloque siguiente. La disposición del PDF no permite atribuir todos esos valores a una única secuencia por tipo de chocolate sin interpretar la tabla; por eso aquí se conserva la información tal como está presentada.</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate oscuro: 45 °C → 28 °C en la parte enfriada → 30 °C de trabajo.</p></div>
-            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate de leche: 45 °C → 28 °C en la parte enfriada → 29 °C de trabajo.</p></div>
-            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate blanco: 45 °C → 28 °C en la parte enfriada → 27 °C de trabajo.</p></div>
+            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate oscuro: la fuente documenta 45 °C para fundir, 28 °C para enfriar el 50 % y 30 °C como temperatura de trabajo.</p></div>
+            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate de leche: la fuente documenta 29 °C como temperatura de trabajo; el bloque térmico también contiene otros valores que no deben convertirse en una secuencia no explícita.</p></div>
+            <div className="rounded-xl bg-stone-50 p-4"><p className="font-semibold text-stone-900">Chocolate blanco: la fuente documenta 27 °C como temperatura de trabajo; el bloque térmico también contiene otros valores que no deben convertirse en una secuencia no explícita.</p></div>
           </div>
         </section>
 
@@ -60,7 +60,7 @@ export default function LessonPage() {
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Práctica</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye la secuencia térmica</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Escribe sin mirar la receta: 45 °C para fundir, 28 °C para enfriar la mitad y después la temperatura de trabajo correspondiente al tipo de chocolate.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Escribe sin mirar la receta: 45 °C para fundir, 28 °C para enfriar el 50 % y después identifica en la tabla de la fuente la temperatura de trabajo que corresponde a cada cobertura. No completes los valores intermedios por inferencia.</p>
         </section>
         
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
