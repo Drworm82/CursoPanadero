@@ -1,10 +1,10 @@
 import CourseShell from '../components/course/CourseShell';
 
-const lesson = { number: '64', title: 'Camejía', subtitle: 'Clase 37 · Pastelería Contemporánea IV' };
+const lesson = { number: '65', title: 'Camejía', subtitle: 'Clase 37 · Pastelería Contemporánea IV' };
 
 export default function LessonPage() {
   return (
-    <CourseShell eyebrow="Módulo 8 · Lección 64" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
+    <CourseShell eyebrow="Módulo 8 · Lección 65" title={lesson.title} subtitle={lesson.subtitle} backHref="/modulo-8" backLabel="Volver al módulo">
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo del aprendizaje</p><p className="mt-3 max-w-3xl leading-7 text-stone-700">El alumno aprenderá a ensamblar pasteles con distintas técnicas y texturas. Reforzará técnicas básicas de pastelería.</p></section>
 <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Idea central</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">Comparar dos mousses revela la estructura de una fórmula</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">Camejía reúne un bizcocho de chocolate y avellana, mousse de té, mousse de naranja y naranjas deshidratadas. Las dos mousses permiten comparar una misma estructura con distinto componente aromático.</p></section>
