@@ -30,6 +30,44 @@ export default function LessonThirtyFourPage() {
           <p className="mt-5 leading-7 text-stone-700">La receta utiliza 420 g de harina, 10 g de sal, 10 g de levadura fresca, 5 g de tomillo, 15 ml de aceite de oliva, 220 ml de agua más 20 g, 4 aceitunas negras picadas y 3 tomates secos (30 g), con sal gruesa c/s. La masa se forma según demostración y se hornea a 180 °C durante 35 minutos.</p>
         </section>
 
+
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Clase 30 · Pan de vegetales</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Tres pastas, un pan de tres colores</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+            La fuente documenta una preparación en tres colores: pan blanco, pan de tomate y pan de espinaca.
+            El objetivo declarado es aprender a formar y hornear panes de gran tamaño y en tres colores.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-lg font-semibold text-stone-900">Pan blanco</h3>
+              <p className="mt-3 text-sm leading-6 text-stone-700">
+                7 g de levadura seca, 4 g de azúcar, 80 g de agua tibia, 500 g de harina, 12 g de sal,
+                30 g de mantequilla, 30 g de leche, 50 g de huevo y 150 g de agua.
+              </p>
+            </article>
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-lg font-semibold text-stone-900">Pan de tomate</h3>
+              <p className="mt-3 text-sm leading-6 text-stone-700">
+                7 g de levadura seca, 4 g de azúcar, 15 g de agua tibia, 500 g de harina, 12 g de sal,
+                30 g de mantequilla, 30 g de leche, 50 g de huevo y 240 g de salsa de tomate sazonado.
+              </p>
+            </article>
+            <article className="rounded-2xl bg-white p-5">
+              <h3 className="text-lg font-semibold text-stone-900">Pan de espinaca</h3>
+              <p className="mt-3 text-sm leading-6 text-stone-700">
+                130 g de espinaca, 90 g de agua fría, 7 g de levadura seca, 5 g de azúcar, 15 g de agua tibia,
+                500 g de harina, 12 g de sal, 30 g de mantequilla, 60 g de leche y 50 g de huevo.
+              </p>
+            </article>
+          </div>
+          <p className="mt-5 leading-7 text-stone-700">
+            <strong>Procedimiento:</strong> preparar las tres pastas; dejarlas doblar su volumen, ponchar y dividir
+            cada una en tres partes iguales. Extenderlas en rectángulos de 38 × 18 × 6 cm, empezando con el rectángulo
+            blanco; empalmar los tres colores y enrollarlos en forma de cilindro. Colocarlos en charolas, hacer tres
+            cortes con navaja en la parte superior, dejar fermentar y hornear a 190 °C durante 35–40 minutos.
+          </p>
+        </section>
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">La idea central</p>
           <h2 className="mt-2 text-2xl font-semibold">Un ingrediente añadido puede formar parte de la masa, del formado o del acabado.</h2>
