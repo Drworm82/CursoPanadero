@@ -8,14 +8,14 @@ const moduleInfo = {
 };
 
 const lessons = [
-  ['58', 'Pastel de yogurt y frutos rojos', 'Reconoce la relación entre una magdalena, una jelly, un mousse de yogurt y un armado invertido.', '/leccion-pastel-yogurt-frutos-rojos', true],
-  ['59', 'Tarta de plátano', 'Relaciona masa sable, ganache de plátano, plátano salteado y chiboust en un mismo montaje.', '/leccion-tarta-platano', true],
-  ['60', 'Tarta de coco con mousse de Bailey’s', 'Observa cómo se integran sable de chocolate, flan, mousse, tejas y acabado de chocolate.', '/leccion-tarta-coco-mousse-baileys', true],
-  ['61', 'Andalucía', 'Identifica la combinación de biscuit de almendra, crema de naranja, mousse de chocolate y praliné y glaseado oscuro.', '/leccion-andalucia', true],
-  ['62', 'Pastel café y chocolate', 'Relaciona dacquoise, cremoso de café, bavaresa de chocolate y glaseo de café en un armado invertido.', '/leccion-pastel-cafe-chocolate', true],
-  ['63', 'Tarta Tango', 'Reconoce la construcción de una tarta con sucrée de ajonjolí, biscuit joconde, compota de frambuesa y pimiento, crema de parmesano y teja.', '/leccion-tarta-tango', true],
-  ['64', 'Camejía', 'Analiza un ensamblaje de bizcocho de chocolate y avellana con mousses de té y naranja y naranjas deshidratadas.', '/leccion-camejia', true],
-  ['65', 'Pastelería Contemporánea IV', 'Clase 37 · preparación documentada de biscuit, crema, gel y naranjas deshidratadas.', '/leccion-pasteleria-contemporanea-naranja', true],
+  ['59', 'Pastel de yogurt y frutos rojos', 'Reconoce la relación entre una magdalena, una jelly, un mousse de yogurt y un armado invertido.', '/leccion-pastel-yogurt-frutos-rojos', true],
+  ['60', 'Tarta de plátano', 'Relaciona masa sable, ganache de plátano, plátano salteado y chiboust en un mismo montaje.', '/leccion-tarta-platano', true],
+  ['61', 'Tarta de coco con mousse de Bailey’s', 'Observa cómo se integran sable de chocolate, flan, mousse, tejas y acabado de chocolate.', '/leccion-tarta-coco-mousse-baileys', true],
+  ['62', 'Andalucía', 'Identifica la combinación de biscuit de almendra, crema de naranja, mousse de chocolate y praliné y glaseado oscuro.', '/leccion-andalucia', true],
+  ['63', 'Pastel café y chocolate', 'Relaciona dacquoise, cremoso de café, bavaresa de chocolate y glaseo de café en un armado invertido.', '/leccion-pastel-cafe-chocolate', true],
+  ['64', 'Tarta Tango', 'Reconoce la construcción de una tarta con sucrée de ajonjolí, biscuit joconde, compota de frambuesa y pimiento, crema de parmesano y teja.', '/leccion-tarta-tango', true],
+  ['65', 'Camejía', 'Analiza un ensamblaje de bizcocho de chocolate y avellana con mousses de té y naranja y naranjas deshidratadas.', '/leccion-camejia', true],
+  ['66', 'Pastelería Contemporánea IV', 'Clase 37 · preparación documentada de biscuit, crema, gel y naranjas deshidratadas.', '/leccion-pasteleria-contemporanea-naranja', true],
 ];
 
 export default function ModuleEightPage() {
