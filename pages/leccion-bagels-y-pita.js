@@ -10,26 +10,33 @@ export default function LessonThirtyThreePage() {
     >
       <div className="space-y-8">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Cuando el producto previsto no está documentado</p>
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Dos productos sí documentados en la Clase 27</p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            La ruta propone bagels y pita, pero la fuente disponible no contiene esas recetas.
+            Bagels y Pan Pita tienen fórmulas y procedimientos en la fuente.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            La búsqueda del repositorio no encuentra contenido específico sobre bagels, pita ni pan árabe.
-            Tampoco aparece un procedimiento que permita comparar sus formas o sus métodos de cocción.
-            Por eso esta lección no atribuye técnicas concretas a ninguno de los dos productos.
+            La Clase 27 documenta ambos productos. Esta lección los compara a partir de sus ingredientes y secuencias,
+            conservando los detalles que la fuente proporciona y sin completar con técnicas externas aquello que el texto remite a demostración.
           </p>
         </section>
 
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">La idea central</p>
-          <h2 className="mt-2 text-2xl font-semibold">La forma puede ser una pregunta de proceso, pero aquí falta la evidencia para desarrollarla.</h2>
+          <h2 className="mt-2 text-2xl font-semibold">La forma modifica la secuencia documentada: el bagel incorpora un pochado antes del horneado, mientras el Pan Pita se extiende y se hornea sobre charolas calientes.</h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-100">
-            El programa plantea comparar dos panes cuya forma y cocción producen resultados distintos. Sin embargo,
-            el material disponible solo documenta de manera general las etapas de una masa fermentada: fermentación,
-            ponchado, porcionado, formado, segunda fermentación, terminado, horneado y enfriado. No asigna esas etapas
-            a bagels o pita de manera específica.
+            La Clase 27 asigna procedimientos concretos a ambos productos. El bagel se porciona en bollos de 80 g, se forma,
+            se pochea en agua hirviendo durante 15 segundos, se barniza, se termina y se hornea a 200 °C por 20 minutos.
+            El Pan Pita se porciona en 50 g, se extiende a ½ cm, fermenta y se hornea a 220 °C sobre charolas calientes,
+            sin dejar que tome color.
           </p>
+        </section>
+
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-stone-900">Datos de las dos preparaciones</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <article className="rounded-2xl border border-amber-200 bg-amber-50 p-6"><p className="font-semibold text-amber-900">Bagels</p><p className="mt-2 leading-7 text-amber-950">1 kg de harina, 25 g de sal, 30 g de levadura, 500 g de agua, 14 g de azúcar, 80 g de mantequilla y 80 ml de claras. La cobertura lleva ajonjolí, cebolla, ajo, parmesano y melasa para el agua de pochado.</p></article>
+            <article className="rounded-2xl border border-stone-200 bg-white p-6"><p className="font-semibold text-stone-900">Pan Pita</p><p className="mt-2 leading-7 text-stone-700">500 g de harina, 300 g de agua, 20 g de aceite de oliva, 8 g de sal, 15 g de levadura y 100 g de sémola para extender.</p></article>
+          </div>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -70,25 +77,23 @@ export default function LessonThirtyThreePage() {
 
           <div className="mt-5 space-y-5">
             <div className="rounded-2xl bg-amber-50 p-5">
-              <p className="font-semibold text-amber-900">1. No conviertas el título en una receta</p>
+              <p className="font-semibold text-amber-900">1. El bagel tiene una operación que el pita no presenta</p>
               <p className="mt-2 leading-7 text-amber-950">
-                La Clase 27 sí documenta Bagels y Pan Pita con ingredientes, cantidades y procedimiento.
+                La receta de Bagels indica pochearlos en agua hirviendo durante 15 segundos antes del horneado.
               </p>
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">2. Separa proceso general de producto específico</p>
+              <p className="font-semibold text-stone-900">2. El formato cambia</p>
               <p className="mt-2 leading-7 text-stone-700">
-                Podemos estudiar la secuencia general de panificación, pero no debemos atribuir cada etapa a un bagel
-                o una pita sin una fuente que lo documente.
+                El bagel se forma antes del pochado; el pita se extiende redondo a ½ cm después de porcionar y reposar los bollos.
               </p>
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">3. La comparación propuesta necesita datos que todavía no tenemos</p>
+              <p className="font-semibold text-stone-900">3. La cocción también cambia</p>
               <p className="mt-2 leading-7 text-stone-700">
-                Para comparar los dos productos harían falta, como mínimo, sus fórmulas, forma de formado,
-                fermentaciones y método de cocción documentados en el material del curso.
+                El bagel se pochea y después se hornea; el pita se coloca sobre charolas calientes y se hornea sin dejar que tome color.
               </p>
             </div>
           </div>
@@ -98,21 +103,18 @@ export default function LessonThirtyThreePage() {
           <p className="text-sm font-medium text-amber-800">Práctica de lectura de fuente</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Distingue dato, pregunta y ausencia</h2>
           <p className="mt-2 leading-7 text-stone-600">
-            Escribe tres columnas: “documentado”, “pregunta que queremos responder” y “no documentado”. En
-            “documentado”, coloca las etapas generales de una masa fermentada. En “pregunta”, coloca las diferencias
-            de formado y cocción que la ruta pretende estudiar. En “no documentado”, registra todo lo que necesitarías
-            para explicar específicamente bagels y pita sin recurrir a una fuente externa.
+            Haz una tabla con dos columnas, Bagels y Pan Pita. Para cada uno registra fórmula, porcionado, formado, fermentación,
+            cocción y acabado. Después señala la operación que distingue más claramente cada secuencia.
           </p>
         </section>
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">Bagels y pita no están documentados en el material disponible.</h2>
+          <h2 className="mt-2 text-xl font-semibold text-amber-950">La Clase 27 documenta ambos productos.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            La fuente proporciona recetas para ambos productos. En Bagels documenta fermentación, porcionado, formado,
-            pochado en agua hirviendo durante 15 segundos, barnizado, acabado y horneado a 200 °C durante 20 minutos.
-            En Pan Pita documenta reposo de 1:30 h, porcionado de 50 g, formado, extensión a ½ cm, fermentación,
-            horno a 220 °C con charolas calientes y horneado sin dejar que tomen color.
+            La fuente proporciona las fórmulas y procedimientos de ambos productos. El texto remite el formado de los Bagels
+            al procedimiento de clase y no desarrolla una explicación teórica adicional sobre por qué el pochado produce
+            el resultado final; esta lección conserva esos límites sin añadirlos.
           </p>
         </section>
 
