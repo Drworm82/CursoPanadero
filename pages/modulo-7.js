@@ -15,6 +15,7 @@ const lessons = [
   ['55', 'Bombonería, trufas, rochers y cortes', 'Distingue diferentes formas de trabajar, porcionar y terminar preparaciones de chocolate documentadas.', '/leccion-bomboneria-trufas-rochers-cortes', true],
   ['56', 'Transfer y acabado', 'Reconoce el uso del transfer y otras operaciones de acabado documentadas en la fuente.', '/leccion-transfer-y-acabado', true],
   ['57', 'Ganaches avanzadas: trimolina, sorbitol y emulsión', 'Integra los ingredientes y operaciones específicos de las ganaches avanzadas que aparecen en la fuente.', '/leccion-ganaches-avanzadas', true],
+  ['58', 'Petit fours frescos: café y mango', 'Clase 23 · Reconstruye Delicias de café y Bocadito de Mango a partir de sus componentes, temperaturas y secuencias documentadas.', '/leccion-petit-fours-frescos', true],
 ];
 
 export default function ModuleSevenPage() {
@@ -64,7 +65,7 @@ export default function ModuleSevenPage() {
               <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Ruta de aprendizaje</p>
               <h2 className="mt-1 text-2xl font-semibold text-stone-900">Lecciones</h2>
             </div>
-            <span className="text-sm text-stone-500">7 lecciones</span>
+            <span className="text-sm text-stone-500">8 lecciones</span>
           </div>
 
           <div className="grid gap-3">
