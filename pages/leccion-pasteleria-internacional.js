@@ -8,13 +8,13 @@ export default function LessonPage() {
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo de la clase</p>
-          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Aprender Pâte à Bombe y biscuit, y reconocer sus diferencias con la génoise mediante dos preparaciones documentadas.</p>
+          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Reconocer Pâte à Bombe y biscuit como operaciones centrales de la clase y compararlos mediante dos preparaciones documentadas. Las recetas funcionan como casos de aplicación, no como dos contenidos independientes que debas memorizar por separado.</p>
         </section>
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Cambia de familia</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Del laminado al batido</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de entrar en las recetas, recupera qué problema resolvía el laminado en las lecciones anteriores. Ahora observa qué tipo de preparación aparece en esta clase y qué operaciones nuevas o distintas tendrás que seguir. Usa el objetivo y la receta para comprobar la diferencia.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de entrar en las recetas, recupera el trabajo del laminado y cambia la pregunta: ¿qué operación nueva organiza esta clase? Identifica Pâte à Bombe y los dos tipos de biscuit como el foco. Después usa tiramisú y pastel de zanahoria como casos para observar dónde aparecen esas operaciones y qué cambia entre ellos.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -60,8 +60,8 @@ export default function LessonPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Actividad</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Distingue las estructuras</h2>
-          <p className="mt-3 leading-7 text-stone-700">Compara el biscuit del tiramisú con el del pastel de zanahoria. Después identifica qué preparación usa Pâte à Bombe y en qué momento aparece dentro del montaje.</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Compara los dos casos a partir de las técnicas centrales</h2>
+          <p className="mt-3 leading-7 text-stone-700">Compara el biscuit del tiramisú con el del pastel de zanahoria. Después identifica qué preparación usa Pâte à Bombe, en qué momento aparece y qué parte de la clase corresponde a esa técnica. Finalmente señala una diferencia entre los dos casos que puedas demostrar directamente con las recetas.</p>
         </section>
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
