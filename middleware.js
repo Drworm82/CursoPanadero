@@ -31,8 +31,13 @@ export async function middleware(request) {
     }
   );
 
-  const { data } = await supabase.auth.getClaims();
-  const claims = data?.claims || null;
+  let claims = null;
+  try {
+    const { data, error } = await supabase.auth.getClaims();
+    if (!error) claims = data?.claims || null;
+  } catch (error) {
+    console.error('Error reading auth claims in middleware:', error);
+  }
 
   if (!claims) {
     const url = request.nextUrl.clone();
