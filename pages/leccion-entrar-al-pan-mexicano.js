@@ -2,7 +2,7 @@ import CourseShell from '../components/course/CourseShell';
 
 const lesson = {
   number: '35',
-  title: 'Entrar al pan mexicano',
+  title: 'Leer el pan mexicano desde la receta',
   eyebrow: 'Módulo 5 · Lección 35',
   backHref: '/modulo-5',
 };
