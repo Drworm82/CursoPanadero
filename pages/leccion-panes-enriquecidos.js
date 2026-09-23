@@ -4,7 +4,7 @@ export default function LessonThirtyOnePage() {
   return (
     <CourseShell
       eyebrow="Lección 31"
-      title="Panes enriquecidos"
+      title="Panes con grasa, azúcar y huevo"
       backHref="/modulo-4"
       backLabel="Volver al módulo"
     >
