@@ -8,7 +8,7 @@ export default function LessonPage() {
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo de la clase</p>
-          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Trabajar un batido para pastel de fiesta y las preparaciones de cobertura y decoración documentadas: fondant, betún de manteca y royal icing. La clase también aborda la técnica para crear flores y hojas.</p>
+          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Reconocer cómo una base de pastel se relaciona con distintas preparaciones de cobertura y decoración documentadas. El panqué de aceite es el caso base; fondant, betún de manteca, royal icing y las flores/hojas funcionan como repertorio de acabado.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -28,8 +28,8 @@ export default function LessonPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Lee el sistema</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Una pieza, varios componentes</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Antes de estudiar las tres preparaciones de acabado, identifica la función que ocupa cada componente dentro de la clase: panqué como base, fondant, betún de manteca y royal icing como preparaciones de cobertura o decoración según lo documentado. Después explica qué componente trabajarías primero si tuvieras que reconstruir la clase en orden, sin inventar un montaje que la fuente no especifica.</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Una base, varias rutas de acabado</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Estudia primero el panqué como caso base. Después clasifica fondant, betún de manteca y royal icing según el uso que la fuente documenta. No necesitas memorizar las tres formulaciones con el mismo nivel de detalle: identifica qué cambia en la preparación y qué función cumple cada una. La creación de flores y hojas queda como demostración, tal como indica la fuente.</p>
         </section>
 
         <section className="grid gap-4 md:grid-cols-3">
@@ -62,7 +62,7 @@ export default function LessonPage() {
             <li>¿Qué temperatura y tiempo se documentan para el panqué de aceite?</li>
             <li>¿Qué ingredientes forman el fondant?</li>
             <li>¿Qué ingrediente aparece como opcional en el fondant?</li>
-            <li>¿Qué diferencia de preparación se documenta entre betún de manteca y royal icing?</li>
+            <li>¿Qué diferencia de preparación puedes demostrar entre betún de manteca y royal icing?</li>
             <li>¿Qué parte de la decoración depende de la demostración?</li>
           </ol>
         </section>
