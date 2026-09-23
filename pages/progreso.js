@@ -34,7 +34,7 @@ export async function getServerSideProps({ req, res }) {
   if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
 
   const { data: module } = await supabase.from('modules').select('id').eq('slug', 'modulo-1-masas-batidas-pesadas').single();
-  if (!module) return { props: { lessons: [], progress: [] } };
+  if (!module) return { props: { lessons: [], progress: [], recipeProgress: [] } };
 
   const [{ data: lessons }, { data: progress }, { data: recipeProgress }] = await Promise.all([
     supabase.from('lessons').select('id, title, sort_order').eq('module_id', module.id).order('sort_order'),
