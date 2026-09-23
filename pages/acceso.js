@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '../lib/supabase';
-import { getUi } from '../lib/i18n';
 
 export default function AccesoPage() {
   const router = useRouter();
   const [mode, setMode] = useState('login');
   const locale = router.locale || 'es';
   const isEnglish = locale === 'en';
-  const t = getUi(locale);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -70,7 +68,7 @@ export default function AccesoPage() {
     }
 
     if (mode === 'signup') {
-      setMessage('{isEnglish ? 'Account created. If Supabase asks for email confirmation, check your inbox before signing in.' : 'Cuenta creada. Si Supabase solicita confirmación por correo, revisa tu bandeja antes de iniciar sesión.'}');
+      setMessage(isEnglish ? 'Account created. If Supabase asks for email confirmation, check your inbox before signing in.' : 'Cuenta creada. Si Supabase solicita confirmación por correo, revisa tu bandeja antes de iniciar sesión.');
       setLoading(false);
       return;
     }
