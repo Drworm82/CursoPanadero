@@ -201,6 +201,9 @@ export async function getServerSideProps({ req, res, params }) {
     };
   }
 
+  const hasAccess = await requireCourseAccess(supabase);
+  if (!hasAccess) return { notFound: true };
+
   const { data: receta, error } = await supabase
     .from('recipes')
     .select(`
@@ -244,11 +247,7 @@ export async function getServerSideProps({ req, res, params }) {
   if (error) {
     console.error('Error cargando la receta:', error);
 
-    return {
-      props: {
-        receta: null,
-      },
-    };
+    return { notFound: true };
   }
 
   const ingredients = (receta.recipe_ingredients || []).sort(
