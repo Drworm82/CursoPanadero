@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { createServerClient } from '@supabase/ssr';
 import { parse, serialize } from 'cookie';
+import { requireCourseAccess } from '../../../lib/course';
 
 export default function RecetaPage({ receta }) {
   if (!receta) {
