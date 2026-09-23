@@ -41,7 +41,7 @@ export async function middleware(request) {
 
   if (!claims) {
     const url = request.nextUrl.clone();
-    url.pathname = '/acceso';
+    url.pathname = request.nextUrl.pathname.startsWith('/en/') ? '/en/acceso' : '/acceso';
 
     const redirect = NextResponse.redirect(url);
 
