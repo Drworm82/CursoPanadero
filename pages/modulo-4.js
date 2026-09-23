@@ -14,7 +14,7 @@ const lessons = [
   ['28', 'Baguette: estructura, formado y greñado', 'Trabaja la Baguette Tradicional documentada y distingue qué detalles del greñado sí aparecen y cuáles no se desarrollan.', '/leccion-baguette-estructura-formado-greñado'],
   ['29', 'Focaccia: otra forma de entender la hidratación', 'Trabaja la Focaccia documentada y compara sus cantidades con otras masas sin atribuir a la fuente una teoría general de hidratación que no desarrolla.', '/leccion-focaccia-otra-forma-hidratacion'],
   ['30', 'Ciabatta y biga', 'Trabaja la Ciabatta documentada como demostración y reconoce qué partes del procedimiento están descritas y cuáles se remiten a la demostración.', '/leccion-ciabatta-y-biga'],
-  ['31', 'Panes enriquecidos', 'Compara cómo distintas recetas incorporan grasa, azúcar y huevo y cómo cambia su manejo.', '/leccion-panes-enriquecidos'],
+  ['31', 'Panes con grasa, azúcar y huevo', 'Compara, dentro de las recetas documentadas, cómo aparecen grasa, azúcar y huevo y cómo cambia el manejo de esas masas.', '/leccion-panes-enriquecidos'],
   ['32', 'Brioche: grasa, azúcar y fermentación', 'Analiza la receta de Brioche y compárala con otras masas enriquecidas documentadas.', '/leccion-brioche-grasa-azucar-fermentacion'],
   ['33', 'Bagels y pita: el formato cambia el proceso', 'Compara las recetas documentadas de Bagels y Pan Pita y observa cómo cambian formado y cocción.', '/leccion-bagels-y-pita'],
   ['34', 'Fougasse y panes saborizados', 'Integra formado, acabado y adición de ingredientes a partir de panes saborizados que sí están documentados.', '/leccion-fougasse-y-panes-saborizados'],
