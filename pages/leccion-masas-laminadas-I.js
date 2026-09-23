@@ -8,13 +8,13 @@ export default function LessonPage() {
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo de la clase</p>
-          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Aprender diferentes tipos de hojaldre, elaborar el hojaldre clásico y reconocer por qué se utiliza para obtener productos que crecen y forman capas.</p>
+          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Construir y reconstruir el hojaldre clásico mediante amasijo, empaste, vueltas y reposos; después reconocer cómo esa misma preparación aparece en mil hojas, orejas y rehiletes documentados.</p>
         </section>
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-800">Recupera</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Antes de trabajar, identifica la estructura</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Sin mirar la receta, escribe qué partes esperas encontrar en un hojaldre de esta clase y qué operación del laminado ya conoces de las lecciones anteriores. Después verifica tu respuesta con la receta: esta recuperación debe servir para detectar lo nuevo, no para sustituir la fuente.</p>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">El hojaldre clásico es el caso principal de esta lección. Sin mirar la receta, reconstruye sus etapas a partir de lo que ya sabes del laminado. Después verifica con la fuente qué es nuevo. Las otras tres preparaciones funcionan como aplicaciones para reconocer cómo una misma base cambia de formato y acabado.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -40,8 +40,8 @@ export default function LessonPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Actividad</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Reconstruye el hojaldre antes de usarlo</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Dibuja el recorrido desde el amasijo hasta las vueltas. Marca en qué momentos aparece el reposo y distingue claramente una vuelta sencilla de una doble según la secuencia de la fuente.</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Construye la base y reconoce sus aplicaciones</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-stone-700">Dibuja el recorrido del hojaldre clásico desde el amasijo hasta las vueltas. Marca los reposos y distingue una vuelta sencilla de una doble según la fuente. Después elige dos aplicaciones —mil hojas, orejas o rehiletes— y señala qué cambia respecto de la base.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -76,7 +76,7 @@ export default function LessonPage() {
           <ol className="mt-4 list-decimal space-y-2 pl-6 leading-7 text-stone-700">
             <li>¿Qué cantidades forman el amasijo y cuáles forman el empaste?</li>
             <li>¿Cuánto reposo se documenta entre las vueltas?</li>
-            <li>¿Qué cambia entre el formado de orejas y rehiletes?</li>
+            <li>¿Qué cambia entre el formado de dos aplicaciones y qué permanece igual de la base de hojaldre?</li>
             <li>¿Qué temperatura de horneado aparece en las preparaciones de esta clase?</li>
           </ol>
         </section>
