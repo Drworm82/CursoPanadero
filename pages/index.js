@@ -1,17 +1,21 @@
+import { useRouter } from 'next/router';
+
 export default function Home() {
+  const { locale = 'es' } = useRouter();
+  const isEnglish = locale === 'en';
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gray-50 p-6">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-extrabold text-gray-800 mb-4">La Masa en Casa</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Aprende panadería y pastelería desde cero, paso a paso, y guarda tus recetas favoritas para siempre.
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-6 text-center">
+      <div className="mx-auto max-w-4xl">
+        <h1 className="mb-4 text-6xl font-extrabold text-gray-800">{isEnglish ? 'Baking at Home' : 'La Masa en Casa'}</h1>
+        <p className="mb-8 text-xl text-gray-600">
+          {isEnglish ? 'Learn baking and pastry from the ground up, step by step, and keep your favorite recipes.' : 'Aprende panadería y pastelería desde cero, paso a paso, y guarda tus recetas favoritas para siempre.'}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/curso" className="bg-yellow-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300">
-            Ir al curso
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <a href={isEnglish ? '/en/ruta' : '/ruta'} className="rounded-full bg-yellow-500 px-8 py-3 font-bold text-white shadow-lg transition-colors duration-300 hover:bg-yellow-600">
+            {isEnglish ? 'Go to course' : 'Ir al curso'}
           </a>
-          <a href="/recetas" className="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
-            Ver recetas
+          <a href={isEnglish ? '/en/recetas' : '/recetas'} className="rounded-full bg-green-500 px-8 py-3 font-bold text-white shadow-lg transition-colors duration-300 hover:bg-green-600">
+            {isEnglish ? 'View recipes' : 'Ver recetas'}
           </a>
         </div>
       </div>
