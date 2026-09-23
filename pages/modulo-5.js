@@ -2,8 +2,8 @@ import CourseShell from '../components/course/CourseShell';
 
 const moduleInfo = {
   sort_order: 5,
-  title: 'Pan mexicano y tradición',
-  guiding_question: '¿Cómo se traducen las técnicas de panificación en productos mexicanos con identidad propia?',
+  title: 'Pan mexicano: fórmulas, procesos y acabados',
+  guiding_question: '¿Cómo cambian la fórmula, el proceso, el formado y el acabado entre las preparaciones mexicanas documentadas?',
   expected_result: 'Comparar las preparaciones mexicanas documentadas y explicar cómo sus ingredientes, proceso, formado y acabado construyen diferencias observables entre las piezas.'
 };
 
@@ -45,8 +45,7 @@ export default function ModuleFivePage() {
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
             Estudia cada pieza desde lo que la fuente permite observar. Identifica la fórmula y la secuencia,
             realiza o reconstruye las operaciones documentadas, observa el resultado y explica qué diferencia
-            encuentras frente a las otras preparaciones. La información histórica o cultural no se completa
-            por inferencia cuando la fuente no la desarrolla.
+            encuentras frente a las otras preparaciones. El módulo estudia las preparaciones desde la fórmula, el proceso, el formado y el acabado. No añade información histórica o cultural cuando la fuente no la desarrolla.
           </p>
         </section>
 
@@ -116,7 +115,7 @@ export default function ModuleFivePage() {
 
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
           <p className="text-sm font-medium text-stone-300">Cómo leer este módulo</p>
-          <h2 className="mt-2 text-2xl font-semibold">La identidad también puede observarse en el proceso.</h2>
+          <h2 className="mt-2 text-2xl font-semibold">Las diferencias también pueden observarse en el proceso.</h2>
           <div className="mt-5 space-y-4 text-stone-100">
             <p className="leading-7">
               <strong>Conchas:</strong> una masa fermentada se combina con una pasta de cobertura que se coloca,
