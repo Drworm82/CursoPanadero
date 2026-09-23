@@ -14,7 +14,7 @@ export default function LessonTwelvePage() {
             Clases 5 y 8 · Petit four
           </p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            Varias piezas pequeñas pueden exigir técnicas muy diferentes.
+            Varias piezas pequeñas pueden exigir técnicas muy diferentes; aquí aprenderás a compararlas, no a memorizar seis recetas.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
             Las Clases 5 y 8 reúnen preparaciones de petit four con rutas distintas: macaron de almendra,
@@ -28,9 +28,7 @@ export default function LessonTwelvePage() {
           <p className="text-sm font-medium text-amber-900">Cómo estudiar</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            En cada preparación identifica primero el método. Después reconstruye la secuencia exactamente como
-            aparece en la fuente, observa la señal que permite continuar y explica qué diferencia encuentras
-            frente a otra pieza.
+            No necesitas estudiar las seis preparaciones con el mismo nivel de detalle. Trabaja cuatro como casos de comparación y usa las restantes como repertorio de consulta. En cada caso elegido identifica el método, reconstruye la secuencia documentada, observa la señal que permite continuar y explica qué diferencia encuentras frente a otra pieza.
           </p>
           <div className="mt-5 grid gap-3 md:grid-cols-4">
             <div className="rounded-xl bg-white/70 p-4">
@@ -293,9 +291,7 @@ export default function LessonTwelvePage() {
           <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
           <h2 className="mt-2 text-xl font-semibold text-stone-900">Construye una tabla de observación</h2>
           <p className="mt-2 leading-7 text-stone-600">
-            Elige cuatro preparaciones de esta lección. Para cada una registra: método inicial, señal que permite
-            continuar, temperatura o tiempo documentado y acabado final. Después compara qué operación distingue
-            a cada pieza.
+            Elige cuatro preparaciones representativas de esta lección: incluye el macaron y el brigadeiro y añade dos de las preparaciones restantes. Para cada una registra método inicial, señal que permite continuar, temperatura o tiempo documentado y acabado final. Las otras dos quedan como repertorio de consulta. Después compara qué operación distingue a cada pieza.
           </p>
         </section>
 
