@@ -74,7 +74,7 @@ export default function ModuleOnePage() {
   const localizedHref = (href) => locale === 'en' ? `/en${href}` : href;
 
   return (
-    <CourseShell eyebrow={`${content.sort_order === 1 ? content.sort_order : ''}${locale === 'en' ? 'Module' : 'Módulo'} 1`} title={content.title} backHref={locale === 'en' ? '/en/ruta' : '/ruta'} backLabel={locale === 'en' ? 'Back to course' : 'Volver a la ruta'}>
+    <CourseShell eyebrow={`${locale === 'en' ? 'Module' : 'Módulo'} 1`} title={content.title} backHref={locale === 'en' ? '/en/ruta' : '/ruta'} backLabel={locale === 'en' ? 'Back to course' : 'Volver a la ruta'}>
       <div className="space-y-8">
         <div className="grid gap-4 md:grid-cols-2">
           <section className="rounded-2xl border border-stone-200 bg-white p-6">
