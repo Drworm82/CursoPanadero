@@ -74,7 +74,6 @@ export const config = {
     '/modulo-:path*',
     '/lecciones/:path*',
     '/leccion-:path*',
-    '/recetas/:path*',
     '/receta-:path*',
     '/progreso',
   ],
