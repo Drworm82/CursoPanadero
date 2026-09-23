@@ -136,7 +136,7 @@ export default function RecipePage({ communityRecipe, recipe, ingredients, steps
   return <CourseRecipeView recipe={recipe} ingredients={ingredients} steps={steps} progress={progress} />;
 }
 
-export async function getServerSideProps({ req, res, params }) {
+export async function getServerSideProps({ req, res, params, locale }) {
   if (isUuid(params.slug)) {
     const supabase = createCourseServerClient(req, res);
     const { data: authData } = await supabase.auth.getClaims();
@@ -171,6 +171,18 @@ export async function getServerSideProps({ req, res, params }) {
 
   if (error || !recipe) return { notFound: true };
 
+  let localizedRecipe = recipe;
+  if (locale && locale !== 'es') {
+    const { data: translation } = await supabase
+      .from('recipe_translations')
+      .select('title, source_objective, pedagogical_role')
+      .eq('recipe_id', recipe.id)
+      .eq('locale', locale)
+      .maybeSingle();
+
+    if (translation) localizedRecipe = { ...recipe, ...translation };
+  }
+
   const [{ data: ingredients, error: ingredientsError }, { data: steps, error: stepsError }, { data: progress }] = await Promise.all([
     supabase.from('recipe_ingredients').select('id, sort_order, name, quantity, unit, notes').eq('recipe_id', recipe.id).order('sort_order'),
     supabase.from('recipe_steps').select('id, sort_order, title, instruction, observation, time_text, temperature_text').eq('recipe_id', recipe.id).order('sort_order'),
@@ -179,5 +191,5 @@ export async function getServerSideProps({ req, res, params }) {
 
   if (ingredientsError || stepsError) return { notFound: true };
 
-  return { props: { communityRecipe: null, recipe, ingredients: ingredients || [], steps: steps || [], progress: progress || null } };
+  return { props: { communityRecipe: null, recipe: localizedRecipe, ingredients: ingredients || [], steps: steps || [], progress: progress || null, locale: locale || 'es' } };
 }
