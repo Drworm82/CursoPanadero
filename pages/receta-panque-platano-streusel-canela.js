@@ -4,7 +4,7 @@ import { getPublicRecipe } from '../lib/publicCourse';
 
 export default function RecipePage(props) { return <RecipeView {...props} />; }
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps({ req, res, locale }) {
   const { supabase, claims } = await requireCourseAuth(req, res);
 
   if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
@@ -12,8 +12,8 @@ export async function getServerSideProps({ req, res }) {
   const hasAccess = await requireCourseAccess(supabase);
   if (!hasAccess) return { notFound: true };
 
-  const data = await getPublicRecipe('panque-platano-streusel-canela', supabase);
+  const data = await getPublicRecipe('panque-platano-streusel-canela', supabase, locale || 'es');
   if (!data) return { notFound: true };
 
-  return { props: data };
+  return { props: { ...data, locale: locale || 'es' } };
 }
