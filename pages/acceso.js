@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '../lib/supabase';
+import { getUi } from '../lib/i18n';
 
 export default function AccesoPage() {
   const router = useRouter();
   const [mode, setMode] = useState('login');
+  const locale = router.locale || 'es';
+  const isEnglish = locale === 'en';
+  const t = getUi(locale);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -25,11 +29,11 @@ export default function AccesoPage() {
     });
 
     if (!error && accessData === true) {
-      window.location.replace('/ruta');
+      window.location.replace(locale === 'en' ? '/en/ruta' : '/ruta');
       return;
     }
 
-    window.location.replace('/comprar');
+    window.location.replace(locale === 'en' ? '/en/comprar' : '/comprar');
   }
 
   useEffect(() => {
@@ -66,7 +70,7 @@ export default function AccesoPage() {
     }
 
     if (mode === 'signup') {
-      setMessage('Cuenta creada. Si Supabase solicita confirmación por correo, revisa tu bandeja antes de iniciar sesión.');
+      setMessage('{isEnglish ? 'Account created. If Supabase asks for email confirmation, check your inbox before signing in.' : 'Cuenta creada. Si Supabase solicita confirmación por correo, revisa tu bandeja antes de iniciar sesión.'}');
       setLoading(false);
       return;
     }
@@ -80,15 +84,15 @@ export default function AccesoPage() {
     <div className="flex justify-center items-center p-8">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
         <h1 className="text-3xl font-bold mb-2">
-          {mode === 'login' ? 'Iniciar sesión' : 'Crear cuenta'}
+          {mode === 'login' ? (isEnglish ? 'Sign in' : 'Iniciar sesión') : (isEnglish ? 'Create account' : 'Crear cuenta')}
         </h1>
         <p className="text-gray-600 mb-6">
-          Accede a tu ruta de aprendizaje de panadería.
+          {isEnglish ? 'Access your baking learning path.' : 'Accede a tu ruta de aprendizaje de panadería.'}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <label className="block">
-            <span className="text-sm font-medium text-gray-700">Correo</span>
+            <span className="text-sm font-medium text-gray-700">{isEnglish ? 'Email' : 'Correo'}</span>
             <input
               type="email"
               required
@@ -100,7 +104,7 @@ export default function AccesoPage() {
           </label>
 
           <label className="block">
-            <span className="text-sm font-medium text-gray-700">Contraseña</span>
+            <span className="text-sm font-medium text-gray-700">{isEnglish ? 'Password' : 'Contraseña'}</span>
             <input
               type="password"
               required
@@ -117,7 +121,7 @@ export default function AccesoPage() {
             disabled={loading}
             className="w-full rounded bg-yellow-500 px-4 py-3 font-bold text-white disabled:opacity-50"
           >
-            {loading ? 'Procesando...' : mode === 'login' ? 'Entrar' : 'Crear cuenta'}
+            {loading ? (isEnglish ? 'Processing...' : 'Procesando...') : mode === 'login' ? (isEnglish ? 'Sign in' : 'Entrar') : (isEnglish ? 'Create account' : 'Crear cuenta')}
           </button>
         </form>
 
@@ -136,8 +140,8 @@ export default function AccesoPage() {
           className="mt-6 text-sm text-blue-600 hover:underline"
         >
           {mode === 'login'
-            ? '¿Todavía no tienes cuenta? Crear una'
-            : 'Ya tengo una cuenta. Iniciar sesión'}
+            ? (isEnglish ? 'Do not have an account yet? Create one' : '¿Todavía no tienes cuenta? Crear una')
+            : (isEnglish ? 'I already have an account. Sign in' : 'Ya tengo una cuenta. Iniciar sesión')}
         </button>
       </div>
     </div>
