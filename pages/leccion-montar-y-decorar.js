@@ -14,13 +14,10 @@ export default function LessonTwentyTwoPage() {
             Ya tienes la pieza y el relleno
           </p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            Ahora importa cómo se comporta lo que vas a poner encima.
+            Ahora importa cómo se comporta la preparación cuando la vas a aplicar.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            En las clases anteriores viste que una preparación puede adquirir estructura durante la cocción y
-            que una pieza de choux puede recibir distintos rellenos. La siguiente decisión es el acabado:
-            cubrir, rellenar o decorar requiere que la preparación tenga una consistencia adecuada para el uso
-            que le vas a dar.
+            La lección anterior estudió qué puede recibir una pieza de choux después del horno. Aquí la pregunta cambia: ¿qué estado debe tener una preparación para poder rellenar, cubrir o decorar? El foco ya no es elegir el relleno, sino observar y acondicionar la consistencia con la que se aplica.
           </p>
         </section>
 
@@ -178,7 +175,7 @@ export default function LessonTwentyTwoPage() {
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Práctica guiada</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Acondicionar y aplicar una crema</h2>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Acondicionar y aplicar una preparación</h2>
           <p className="mt-2 leading-7 text-stone-600">
             Trabaja con la crema de la práctica que estés preparando. Antes de llenar la manga, observa su
             consistencia. Haz una primera aplicación, comprueba cómo se comporta y acondiciónala si es necesario.
