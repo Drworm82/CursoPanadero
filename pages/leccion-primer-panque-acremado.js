@@ -11,5 +11,5 @@ export async function getServerSideProps({ req, res, locale }) {
   if (!hasAccess) return { notFound: true };
   const data = await getPublicLesson('primer-panque-acremado', supabase, locale);
   if (!data) return { notFound: true };
-  return { props: data };
+  return { props: { ...data, locale: locale || 'es' } };
 }
