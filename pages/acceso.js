@@ -10,19 +10,44 @@ export default function AccesoPage() {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
+  async function redirectAfterAuth() {
+    const next = typeof router.query.next === 'string' && router.query.next.startsWith('/')
+      ? router.query.next
+      : null;
+
+    if (next) {
+      window.location.replace(next);
+      return;
+    }
+
+    const { data: accessData, error } = await supabase.rpc('has_active_course_access', {
+      target_course_slug: 'curso-panaderia',
+    });
+
+    if (!error && accessData === true) {
+      window.location.replace('/ruta');
+      return;
+    }
+
+    window.location.replace('/comprar');
+  }
+
   useEffect(() => {
     let mounted = true;
 
-    supabase.auth.getClaims().then(({ data }) => {
+    async function checkSession() {
+      const { data } = await supabase.auth.getClaims();
       if (mounted && data?.claims) {
-        window.location.replace('/ruta');
+        await redirectAfterAuth();
       }
-    });
+    }
+
+    checkSession();
 
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [router.query.next]);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -48,7 +73,7 @@ export default function AccesoPage() {
 
     // Do a full navigation only after the browser client has persisted
     // the session cookies. This avoids Next.js route-prefetch races.
-    window.location.replace('/ruta');
+    await redirectAfterAuth();
   }
 
   return (
