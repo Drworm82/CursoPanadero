@@ -8,7 +8,7 @@ export default function LessonPage() {
       <div className="space-y-8">
         <section className="rounded-2xl bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Objetivo</p>
-          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Reconocer cuatro preparaciones de postres mexicanos y seguir sus diferentes rutas: fritura, horneado, formado de una masa y cocción de una preparación de leche y yemas.</p>
+          <p className="mt-3 max-w-3xl text-lg leading-8 text-stone-800">Comparar cuatro preparaciones de postres mexicanos a partir de sus rutas de elaboración documentadas. La tarea central es distinguir las operaciones dominantes, las señales de finalización y los cambios de formado, no memorizar cuatro recetas aisladas.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
@@ -71,14 +71,14 @@ export default function LessonPage() {
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Compara las rutas</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Cuatro preparaciones, cuatro operaciones dominantes</h2>
-          <p className="mt-3 leading-7 text-stone-700">Antes de comprobar, reconstruye de memoria una ruta para cada preparación: buñuelos, Torta de Cielo, gaznates y rompope. Después verifica en la fuente qué operaciones, temperaturas, reposos o señales de finalización aparecen realmente. No agregues criterios externos.</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Cuatro casos para comparar rutas de elaboración</h2>
+          <p className="mt-3 leading-7 text-stone-700">Elige dos preparaciones para reconstruir de memoria y usa las otras dos como contraste. Después verifica en la fuente qué operaciones, temperaturas, reposos o señales de finalización aparecen realmente. Completa la comparación con las cuatro preparaciones, pero no necesitas memorizar las cuatro secuencias completas.</p>
         </section>
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
           <p className="text-sm font-medium text-amber-800">Actividad</p>
           <h2 className="mt-2 text-2xl font-semibold text-stone-900">Clasifica por ruta de elaboración</h2>
-          <p className="mt-3 leading-7 text-stone-700">Coloca las cuatro preparaciones en una tabla con estas columnas: fritura, horneado, cocción sobre fuego, formado, relleno y señal de finalización. Completa solamente con lo que aparece en la clase.</p>
+          <p className="mt-3 leading-7 text-stone-700">Coloca las cuatro preparaciones en una tabla con estas columnas: fritura, horneado, cocción sobre fuego, formado, relleno y señal de finalización. Completa solamente con lo que aparece en la clase. Después elige dos diferencias que puedas justificar directamente con la tabla.</p>
         </section>
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
