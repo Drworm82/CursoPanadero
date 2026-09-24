@@ -13,8 +13,11 @@ export default function AccesoPage() {
   const [loading, setLoading] = useState(false);
 
   async function redirectAfterAuth() {
-    const next = typeof router.query.next === 'string' && router.query.next.startsWith('/')
-      ? router.query.next
+    const requestedNext = typeof router.query.next === 'string' ? router.query.next : '';
+    const next = requestedNext.startsWith('/')
+      && !requestedNext.startsWith('//')
+      && !requestedNext.includes('\\')
+      ? requestedNext
       : null;
 
     if (next) {
