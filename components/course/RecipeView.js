@@ -386,7 +386,7 @@ export default function RecipeView({ recipe, ingredients, steps, locale = 'es' }
           <h2 className="mt-1 text-2xl font-semibold text-stone-900">{ui.beforeNext}</h2>
           <div className="mt-4 space-y-4 text-stone-600">
             <div className="space-y-3">
-              {(recipeClosingGuides[recipe.slug] || []).map(([title, text]) => (
+              {(locale === 'en' ? [] : (recipeClosingGuides[recipe.slug] || [])).map(([title, text]) => (
                 <div key={title} className="rounded-xl bg-stone-50 p-4">
                   <p className="font-medium text-stone-900">{title}</p>
                   <p className="mt-1 leading-7">{text}</p>
