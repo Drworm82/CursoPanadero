@@ -1,136 +1,32 @@
+import { useRouter } from 'next/router';
 import CourseShell from '../components/course/CourseShell';
 
-const moduleInfo = {
-  sort_order: 5,
-  title: 'Pan mexicano: fórmulas, procesos y acabados',
-  guiding_question: '¿Cómo cambian la fórmula, el proceso, el formado y el acabado entre las preparaciones mexicanas documentadas?',
-  expected_result: 'Comparar las preparaciones mexicanas documentadas y explicar cómo sus ingredientes, proceso, formado y acabado construyen diferencias observables entre las piezas.'
-};
+const moduleInfo = {"title":["Pan mexicano: fórmulas, procesos y acabados","Mexican Bread: Formulas, Processes, and Finishes"],"q":["¿Cómo cambian la fórmula, el proceso, el formado y el acabado entre las preparaciones mexicanas documentadas?","How do formula, process, shaping, and finishing change among the documented Mexican preparations?"],"result":["Comparar las preparaciones mexicanas documentadas y explicar cómo sus ingredientes, proceso, formado y acabado construyen diferencias observables entre las piezas.","Compare the documented Mexican preparations and explain how their ingredients, process, shaping, and finishing create observable differences between the pieces."],"lessons":[["35","Entrar al pan mexicano","Identifica qué productos mexicanos están realmente documentados y qué aspectos de su elaboración pueden compararse.","Identify which Mexican products are actually documented and which aspects of their preparation can be compared.","/leccion-entrar-al-pan-mexicano"],["36","Conchas: una masa, dos preparaciones","Analiza la masa fermentada y la pasta de cobertura de las conchas como partes distintas del mismo producto.","Analyze the fermented dough and topping paste of conchas as distinct parts of the same product.","/leccion-conchas-una-masa-dos-preparaciones"],["37","Pan de pulque: otra ruta de fermentación","Reconoce la secuencia particular del pan de pulque y compara su fórmula con otras masas enriquecidas.","Recognize the particular sequence of pan de pulque and compare its formula with other enriched doughs.","/leccion-pan-de-pulque-otra-ruta-fermentacion"],["38","Garibaldis: estructura, acabado e identidad","Observa cómo una preparación horneada se completa con mermelada y gragea blanca.","Observe how a baked preparation is completed with jam and white sprinkles.","/leccion-garibaldis-estructura-acabado-identidad"],["39","Comparar para reconocer","Integra conchas, pan de pulque y garibaldis y distingue qué cambia en ingredientes, proceso, formado y acabado.","Integrate conchas, pan de pulque, and garibaldis and distinguish what changes in ingredients, process, shaping, and finishing.","/leccion-comparar-para-reconocer"]]};
 
-const lessons = [
-  ['35', 'Entrar al pan mexicano', 'Identifica qué productos mexicanos están realmente documentados y qué aspectos de su elaboración pueden compararse.', '/leccion-entrar-al-pan-mexicano', true],
-  ['36', 'Conchas: una masa, dos preparaciones', 'Analiza la masa fermentada y la pasta de cobertura de las conchas como partes distintas del mismo producto.', '/leccion-conchas-una-masa-dos-preparaciones', true],
-  ['37', 'Pan de pulque: otra ruta de fermentación', 'Reconoce la secuencia particular del pan de pulque y compara su fórmula con otras masas enriquecidas.', '/leccion-pan-de-pulque-otra-ruta-fermentacion', true],
-  ['38', 'Garibaldis: estructura, acabado e identidad', 'Observa cómo una preparación horneada se completa con mermelada y gragea blanca.', '/leccion-garibaldis-estructura-acabado-identidad', true],
-  ['39', 'Comparar para reconocer', 'Integra conchas, pan de pulque y garibaldis y distingue qué cambia en ingredientes, proceso, formado y acabado.', '/leccion-comparar-para-reconocer', true],
-];
+export default function Module5Page() {
+  const { locale = 'es' } = useRouter();
+  const en = locale === 'en';
+  const t = {
+    title: moduleInfo.title[en ? 1 : 0],
+    question: moduleInfo.q[en ? 1 : 0],
+    result: moduleInfo.result[en ? 1 : 0],
+    next: ["En el módulo anterior trabajaste el proceso general de las masas fermentadas y comparaste distintas formas de incorporar ingredientes. Ahora vamos a observar cómo esas decisiones aparecen en productos mexicanos que sí están documentados en el material disponible.","In the previous module you worked with the general process of fermented doughs and compared different ways of incorporating ingredients. Now we observe how those decisions appear in documented Mexican products."][en ? 1 : 0],
+    study: ["Estudia cada pieza desde lo que la fuente permite observar. Identifica la fórmula y la secuencia, realiza o reconstruye las operaciones documentadas, observa el resultado y explica qué diferencia encuentras frente a las otras preparaciones. El módulo estudia las preparaciones desde la fórmula, el proceso, el formado y el acabado. No añade información histórica o cultural cuando la fuente no la desarrolla.","Study each piece from what the source allows you to observe. Identify the formula and sequence, perform or reconstruct the documented operations, observe the result, and explain what difference you find compared with the other preparations. The module studies the preparations through formula, process, shaping, and finishing. It does not add historical or cultural information when the source does not develop it."][en ? 1 : 0],
+    integration: ["Haz una tabla con Conchas, Pan de pulque y Garibaldis. Para cada pieza registra ingredientes que distinguen la fórmula, etapas antes del horno, formado o preparación de la pieza y acabado. Después escribe dos diferencias que puedas demostrar directamente con las recetas.","Make a table with Conchas, Pan de pulque, and Garibaldis. For each piece, record ingredients that distinguish the formula, stages before the oven, shaping or preparation of the piece, and finishing. Then write two differences that you can demonstrate directly from the recipes."][en ? 1 : 0],
+  };
+  const lessons = moduleInfo.lessons.map(([number, title, es, english, href]) => [number, en ? english : title, en ? english : es, href]);
 
-export default function ModuleFivePage() {
   return (
-    <CourseShell eyebrow="Módulo 5" title={moduleInfo.title} backHref="/ruta" backLabel="Volver a la ruta">
+    <CourseShell eyebrow={en ? 'Module 5' : 'Módulo 5'} title={t.title} backHref={en ? '/en/ruta' : '/ruta'} backLabel={en ? 'Back to course' : 'Volver a la ruta'}>
       <div className="space-y-8">
         <div className="grid gap-4 md:grid-cols-2">
-          <section className="rounded-2xl border border-stone-200 bg-white p-6">
-            <p className="text-sm font-medium text-stone-500">Pregunta guía</p>
-            <p className="mt-3 text-lg leading-8 text-stone-800">{moduleInfo.guiding_question}</p>
-          </section>
-          <section className="rounded-2xl border border-stone-200 bg-white p-6">
-            <p className="text-sm font-medium text-stone-500">Al terminar</p>
-            <p className="mt-3 leading-7 text-stone-700">{moduleInfo.expected_result}</p>
-          </section>
+          <section className="rounded-2xl border border-stone-200 bg-white p-6"><p className="text-sm font-medium text-stone-500">{en ? 'Guiding question' : 'Pregunta guía'}</p><p className="mt-3 text-lg leading-8 text-stone-800">{t.question}</p></section>
+          <section className="rounded-2xl border border-stone-200 bg-white p-6"><p className="text-sm font-medium text-stone-500">{en ? 'By the end' : 'Al terminar'}</p><p className="mt-3 leading-7 text-stone-700">{t.result}</p></section>
         </div>
-
-        <section className="rounded-2xl bg-amber-50 p-6">
-          <p className="text-sm font-medium text-amber-900">El siguiente cambio</p>
-          <p className="mt-2 max-w-3xl leading-7 text-amber-950">
-            En el módulo anterior trabajaste el proceso general de las masas fermentadas y comparaste distintas
-            formas de incorporar ingredientes. Ahora vamos a observar cómo esas decisiones aparecen en productos
-            mexicanos que sí están documentados en el material disponible.
-          </p>
-        </section>
-
-        <section className="rounded-2xl bg-amber-50 p-6">
-          <p className="text-sm font-medium text-amber-900">Cómo estudiar este módulo</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Comprende → Haz → Observa → Explica</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            Estudia cada pieza desde lo que la fuente permite observar. Identifica la fórmula y la secuencia,
-            realiza o reconstruye las operaciones documentadas, observa el resultado y explica qué diferencia
-            encuentras frente a las otras preparaciones. El módulo estudia las preparaciones desde la fórmula, el proceso, el formado y el acabado. No añade información histórica o cultural cuando la fuente no la desarrolla.
-          </p>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6">
-          <div className="grid gap-3 md:grid-cols-4">
-            <div><p className="font-semibold text-stone-900">1. Comprende</p><p className="mt-1 text-sm leading-6 text-stone-600">Identifica ingredientes, operaciones y objetivo de la pieza.</p></div>
-            <div><p className="font-semibold text-stone-900">2. Haz</p><p className="mt-1 text-sm leading-6 text-stone-600">Ejecuta o reconstruye la secuencia documentada.</p></div>
-            <div><p className="font-semibold text-stone-900">3. Observa</p><p className="mt-1 text-sm leading-6 text-stone-600">Registra diferencias visibles de estructura y acabado.</p></div>
-            <div><p className="font-semibold text-stone-900">4. Explica</p><p className="mt-1 text-sm leading-6 text-stone-600">Compara las decisiones de cada receta.</p></div>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-900">Integración del módulo</p>
-          <h2 className="mt-2 text-2xl font-semibold text-amber-950">Construye una comparación final</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            Haz una tabla con Conchas, Pan de pulque y Garibaldis. Para cada pieza registra ingredientes que
-            distinguen la fórmula, etapas antes del horno, formado o preparación de la pieza y acabado.
-            Después escribe dos diferencias que puedas demostrar directamente con las recetas.
-          </p>
-        </section>
-
-        <section>
-          <div className="mb-4 flex items-end justify-between gap-4">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Ruta de aprendizaje</p>
-              <h2 className="mt-1 text-2xl font-semibold text-stone-900">Lecciones</h2>
-            </div>
-            <span className="text-sm text-stone-500">5 lecciones</span>
-          </div>
-
-          <div className="grid gap-3">
-            {lessons.map(([number, title, description, href, active]) => (
-              active ? (
-                <a
-                  key={number}
-                  href={href}
-                  className="flex items-center gap-4 rounded-2xl border border-amber-300 bg-white p-5 shadow-sm transition hover:border-amber-500 hover:shadow-md"
-                >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-semibold text-amber-900">
-                    {number}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-semibold text-stone-900">{title}</span>
-                    <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
-                  </span>
-                  <span className="shrink-0 text-sm font-medium text-amber-800">Abrir lección →</span>
-                </a>
-              ) : (
-                <div
-                  key={number}
-                  className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm opacity-70"
-                >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-stone-700">
-                    {number}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-semibold text-stone-900">{title}</span>
-                    <span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span>
-                  </span>
-                  <span className="shrink-0 text-sm text-stone-400">En preparación</span>
-                </div>
-              )
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
-          <p className="text-sm font-medium text-stone-300">Cómo leer este módulo</p>
-          <h2 className="mt-2 text-2xl font-semibold">Las diferencias también pueden observarse en el proceso.</h2>
-          <div className="mt-5 space-y-4 text-stone-100">
-            <p className="leading-7">
-              <strong>Conchas:</strong> una masa fermentada se combina con una pasta de cobertura que se coloca,
-              marca y hornea junto con la pieza.
-            </p>
-            <p className="leading-7">
-              <strong>Pan de pulque:</strong> la fuente presenta una fórmula con huevo, pulque, azúcar, harina,
-              mantequilla y levadura, seguida de una fermentación antes del horneado.
-            </p>
-            <p className="leading-7">
-              <strong>Garibaldis:</strong> una preparación con mantequilla, azúcar, yemas, mermelada, harina,
-              polvo de hornear, leche y claras se termina, una vez fría, con mermelada y gragea blanca.
-            </p>
-          </div>
-        </section>
+        <section className="rounded-2xl bg-amber-50 p-6"><p className="text-sm font-medium text-amber-900">{en ? 'The next change' : 'El siguiente cambio'}</p><p className="mt-2 max-w-3xl leading-7 text-amber-950">{t.next}</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{en ? 'How to study this module' : 'Cómo estudiar este módulo'}</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">{en ? 'Understand → Do → Observe → Explain' : 'Comprende → Haz → Observa → Explica'}</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">{t.study}</p><div className="mt-5 grid gap-3 md:grid-cols-4">{(en ? [['1. Understand','Identify the stage, objective, or component.'],['2. Do','Follow the documented sequence.'],['3. Observe','Record visible signals, consistency, temperature, or structure.'],['4. Explain','Relate the signal to the operation.']] : [['1. Comprende','Identifica la etapa, objetivo o componente.'],['2. Haz','Sigue la secuencia documentada.'],['3. Observa','Registra señales visibles, consistencia, temperatura o estructura.'],['4. Explica','Relaciona la señal con la operación.']]).map(([a,b]) => <div key={a}><p className="font-semibold text-stone-900">{a}</p><p className="mt-1 text-sm leading-6 text-stone-600">{b}</p></div>)}</div></section>
+        <section><div className="mb-4 flex items-end justify-between gap-4"><div><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{en ? 'Learning path' : 'Ruta de aprendizaje'}</p><h2 className="mt-1 text-2xl font-semibold text-stone-900">{en ? 'Lessons' : 'Lecciones'}</h2></div><span className="text-sm text-stone-500">{lessons.length} {en ? 'lessons' : 'lecciones'}</span></div><div className="grid gap-3">{lessons.map(([number,title,description,href]) => <a key={number} href={(en ? '/en' : '') + href} className="flex items-center gap-4 rounded-2xl border border-amber-300 bg-white p-5 shadow-sm transition hover:border-amber-500 hover:shadow-md"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-semibold text-amber-900">{number}</span><span className="min-w-0 flex-1"><span className="block font-semibold text-stone-900">{title}</span><span className="mt-1 block text-sm leading-6 text-stone-600">{description}</span></span><span className="shrink-0 text-sm font-medium text-amber-800">{en ? 'Open lesson →' : 'Abrir lección →'}</span></a>)}</div></section>
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium text-amber-900">{en ? 'Module integration' : 'Integración del módulo'}</p><h2 className="mt-2 text-2xl font-semibold text-amber-950">{en ? 'Classify → reconstruct → explain' : 'Clasifica → reconstruye → explica'}</h2><p className="mt-3 max-w-3xl leading-7 text-amber-950">{t.integration}</p></section>
       </div>
     </CourseShell>
   );
