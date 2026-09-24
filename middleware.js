@@ -89,6 +89,8 @@ export const config = {
     '/en/leccion-:path*',
     '/en/recetas/:path*',
     '/en/receta-:path*',
+    '/_next/static/chunks/pages/leccion-:path*',
+    '/_next/static/chunks/pages/receta-:path*',
     '/en/progreso',
   ],
 };
