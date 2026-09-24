@@ -14,11 +14,16 @@ export default function AccesoPage() {
 
   async function redirectAfterAuth() {
     const requestedNext = typeof router.query.next === 'string' ? router.query.next : '';
-    const next = requestedNext.startsWith('/')
-      && !requestedNext.startsWith('//')
-      && !requestedNext.includes('\\')
-      ? requestedNext
-      : null;
+    let next = null;
+
+    try {
+      const parsedNext = new URL(requestedNext, window.location.origin);
+      if (parsedNext.origin === window.location.origin && parsedNext.pathname.startsWith('/')) {
+        next = parsedNext.pathname + parsedNext.search + parsedNext.hash;
+      }
+    } catch {
+      next = null;
+    }
 
     if (next) {
       window.location.replace(next);
