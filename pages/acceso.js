@@ -18,8 +18,14 @@ export default function AccesoPage() {
 
     try {
       const parsedNext = new URL(requestedNext, window.location.origin);
-      if (parsedNext.origin === window.location.origin && parsedNext.pathname.startsWith('/')) {
-        next = parsedNext.pathname + parsedNext.search + parsedNext.hash;
+      const normalizedNext = parsedNext.pathname + parsedNext.search + parsedNext.hash;
+
+      if (
+        parsedNext.origin === window.location.origin
+        && parsedNext.pathname.startsWith('/')
+        && !normalizedNext.startsWith('//')
+      ) {
+        next = normalizedNext;
       }
     } catch {
       next = null;
