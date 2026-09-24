@@ -48,7 +48,7 @@ export default async function handler(req, res) {
 
     const { data: access, error: accessError } = await supabaseAdmin
       .from('course_access')
-      .select('id')
+      .select('user_id')
       .eq('user_id', claims.sub)
       .eq('course_id', course.id)
       .is('revoked_at', null)
