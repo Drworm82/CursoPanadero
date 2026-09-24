@@ -1,12 +1,12 @@
 import CourseShell from '../components/course/CourseShell';
 
-export default function LessonTwentySevenPage() {
+export default function LessonTwentySevenPage() {\n  const { locale = 'es' } = require('next/router').useRouter();
   return (
     <CourseShell
-      eyebrow="Lección 27"
-      title="Amasado, estructura y tensión"
-      backHref="/modulo-4"
-      backLabel="Volver al módulo"
+      eyebrow={locale === 'en' ? 'Lesson 27' : 'Lección 27'}
+      title={locale === 'en' ? 'Mixing, Structure, and Tension' : 'Amasado, estructura y tensión'}
+      backHref={locale === 'en' ? '/en/modulo-4' : '/modulo-4'}
+      backLabel={locale === 'en' ? 'Back to module' : 'Volver al módulo'}
     >
       <div className="space-y-8">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
