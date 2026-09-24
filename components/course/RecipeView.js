@@ -1,6 +1,6 @@
 import CourseShell from './CourseShell';
 
-const defaultEquipment = ['Báscula', 'Batidora', 'Tazón', 'Espátula', 'Molde', 'Horno'];
+const defaultEquipment = { es: ['Báscula', 'Batidora', 'Tazón', 'Espátula', 'Molde', 'Horno'], en: ['Scale', 'Mixer', 'Bowl', 'Spatula', 'Pan', 'Oven'] };
 
 const lessonLinks = {
   'rosca-pina-colada': { href: '/leccion-primer-panque-acremado', label: 'Volver a la lección' },
@@ -251,8 +251,9 @@ const recipeUi = {
 
 export default function RecipeView({ recipe, ingredients, steps, locale = 'es' }) {
   const ui = recipeUi[locale] || recipeUi.es;
-  const guides = recipeObservationGuides[recipe.slug] || [];
+  const guides = locale === 'en' ? [] : (recipeObservationGuides[recipe.slug] || []);
   const lessonLink = lessonLinks[recipe.slug];
+  const equipment = defaultEquipment[locale] || defaultEquipment.es;
   const lessonHref = lessonLink?.href
     ? `/${locale === 'en' ? 'en/' : ''}${lessonLink.href.slice(1)}`
     : `/${locale === 'en' ? 'en/' : ''}modulo-1`;
@@ -271,12 +272,12 @@ export default function RecipeView({ recipe, ingredients, steps, locale = 'es' }
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">{ui.beforeStart}</p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{ui.doObserve}</h2>
             <p className="mt-3 text-base leading-7 text-stone-300 sm:text-lg sm:leading-8">
-              No necesitas memorizar todos los pasos. Trabaja uno, observa qué ocurrió y después continúa.
+              {ui.doObserveText}
             </p>
           </div>
         </section>
 
-        <section className="grid gap-3 sm:grid-cols-2" aria-label="Datos de la preparación">
+        <section className="grid gap-3 sm:grid-cols-2" aria-label={ui.preparation}>
           <div className="rounded-xl bg-stone-50 px-4 py-3">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">{ui.difficulty}</p>
             <p className="mt-1 font-medium text-stone-900">{recipe.difficulty || '—'}</p>
@@ -292,11 +293,11 @@ export default function RecipeView({ recipe, ingredients, steps, locale = 'es' }
             <div className="rounded-2xl border border-stone-200 bg-white p-6">
               <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{ui.equipment}</p>
               <p className="mt-2 text-sm leading-6 text-stone-600">
-                Empieza con equipo doméstico. El curso irá introduciendo herramientas nuevas cuando realmente aporten algo a lo que estás aprendiendo.
+                {ui.equipmentText}
               </p>
               <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">{ui.needNow}</p>
               <ul className="mt-3 space-y-2 text-sm text-stone-700">
-                {defaultEquipment.map((item) => <li key={item}>• {item}</li>)}
+                {equipment.map((item) => <li key={item}>• {item}</li>)}
               </ul>
               <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">{ui.notYet}</p>
               <p className="mt-2 text-sm leading-6 text-stone-600">{ui.professionalEquipment}</p>
