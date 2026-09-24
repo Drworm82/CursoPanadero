@@ -190,23 +190,86 @@ const recipeObservationGuides = {
   ]
 };
 
-export default function RecipeView({ recipe, ingredients, steps }) {
+const recipeUi = {
+  es: {
+    backLesson: 'Volver a la lección',
+    backModule: 'Volver al módulo',
+    preparation: 'Preparación',
+    beforeStart: 'Antes de empezar',
+    doObserve: 'Haz, observa y continúa.',
+    doObserveText: 'No necesitas memorizar todos los pasos. Trabaja uno, observa qué ocurrió y después continúa.',
+    difficulty: 'Dificultad',
+    yield: 'Rendimiento',
+    equipment: 'Equipo',
+    equipmentText: 'Empieza con equipo doméstico. El curso irá introduciendo herramientas nuevas cuando realmente aporten algo a lo que estás aprendiendo.',
+    needNow: 'Necesitas ahora',
+    notYet: 'Todavía no necesitas',
+    professionalEquipment: 'Equipo profesional o especializado para comenzar esta preparación.',
+    ingredients: 'Ingredientes',
+    stepByStep: 'Paso a paso',
+    workObserve: 'Trabaja, observa y entiende',
+    observe: 'Observa',
+    whatHappening: 'Qué está ocurriendo',
+    whyItMatters: '¿Por qué importa?',
+    chibi: 'Chibi',
+    finish: 'Al terminar',
+    beforeNext: 'Antes de pasar a la siguiente preparación',
+    return: 'Volver a la lección',
+    returnModule: 'Volver al módulo',
+    time: 'Tiempo',
+    temperature: 'Temperatura',
+  },
+  en: {
+    backLesson: 'Back to lesson',
+    backModule: 'Back to module',
+    preparation: 'Preparation',
+    beforeStart: 'Before you start',
+    doObserve: 'Do, observe, and continue.',
+    doObserveText: 'You do not need to memorize every step. Work through one step, observe what happened, and then continue.',
+    difficulty: 'Difficulty',
+    yield: 'Yield',
+    equipment: 'Equipment',
+    equipmentText: 'Start with household equipment. The course will introduce new tools when they actually add something to what you are learning.',
+    needNow: 'You need now',
+    notYet: 'You do not need yet',
+    professionalEquipment: 'Professional or specialized equipment is not needed to start this preparation.',
+    ingredients: 'Ingredients',
+    stepByStep: 'Step by step',
+    workObserve: 'Work, observe, and understand',
+    observe: 'Observe',
+    whatHappening: 'What is happening',
+    whyItMatters: 'Why does it matter?',
+    chibi: 'Chibi',
+    finish: 'When you finish',
+    beforeNext: 'Before moving to the next preparation',
+    return: 'Back to lesson',
+    returnModule: 'Back to module',
+    time: 'Time',
+    temperature: 'Temperature',
+  },
+};
+
+export default function RecipeView({ recipe, ingredients, steps, locale = 'es' }) {
+  const ui = recipeUi[locale] || recipeUi.es;
   const guides = recipeObservationGuides[recipe.slug] || [];
   const lessonLink = lessonLinks[recipe.slug];
+  const lessonHref = lessonLink?.href
+    ? `/${locale === 'en' ? 'en/' : ''}${lessonLink.href.slice(1)}`
+    : `/${locale === 'en' ? 'en/' : ''}modulo-1`;
 
   return (
     <CourseShell
-      eyebrow="Preparación"
+      eyebrow={ui.preparation}
       title={recipe.title}
       description={recipe.source_objective}
-      backHref={lessonLink?.href || '/modulo-1'}
-      backLabel={lessonLink?.label || 'Volver al módulo'}
+      backHref={lessonHref}
+      backLabel={lessonLink ? ui.backLesson : ui.backModule}
     >
       <div className="space-y-8">
         <section className="relative overflow-hidden rounded-3xl bg-stone-900 p-6 text-white shadow-sm sm:p-8">
           <div className="relative max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">Antes de empezar</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Haz, observa y continúa.</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">{ui.beforeStart}</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{ui.doObserve}</h2>
             <p className="mt-3 text-base leading-7 text-stone-300 sm:text-lg sm:leading-8">
               No necesitas memorizar todos los pasos. Trabaja uno, observa qué ocurrió y después continúa.
             </p>
@@ -215,11 +278,11 @@ export default function RecipeView({ recipe, ingredients, steps }) {
 
         <section className="grid gap-3 sm:grid-cols-2" aria-label="Datos de la preparación">
           <div className="rounded-xl bg-stone-50 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">Dificultad</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">{ui.difficulty}</p>
             <p className="mt-1 font-medium text-stone-900">{recipe.difficulty || '—'}</p>
           </div>
           <div className="rounded-xl bg-stone-50 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">Rendimiento</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">{ui.yield}</p>
             <p className="mt-1 font-medium text-stone-900">{recipe.source_yield || '—'}</p>
           </div>
         </section>
@@ -227,21 +290,21 @@ export default function RecipeView({ recipe, ingredients, steps }) {
         <div className="grid gap-8 lg:grid-cols-[minmax(240px,.7fr)_minmax(0,1.3fr)] lg:items-start">
           <aside className="space-y-5">
             <div className="rounded-2xl border border-stone-200 bg-white p-6">
-              <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Equipo</p>
+              <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{ui.equipment}</p>
               <p className="mt-2 text-sm leading-6 text-stone-600">
                 Empieza con equipo doméstico. El curso irá introduciendo herramientas nuevas cuando realmente aporten algo a lo que estás aprendiendo.
               </p>
-              <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">Necesitas ahora</p>
+              <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">{ui.needNow}</p>
               <ul className="mt-3 space-y-2 text-sm text-stone-700">
                 {defaultEquipment.map((item) => <li key={item}>• {item}</li>)}
               </ul>
-              <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">Todavía no necesitas</p>
-              <p className="mt-2 text-sm leading-6 text-stone-600">Equipo profesional o especializado para comenzar esta preparación.</p>
+              <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">{ui.notYet}</p>
+              <p className="mt-2 text-sm leading-6 text-stone-600">{ui.professionalEquipment}</p>
             </div>
           </aside>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-stone-900">Ingredientes</h2>
+            <h2 className="mb-4 text-2xl font-semibold text-stone-900">{ui.ingredients}</h2>
             <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
               {ingredients.map((item) => (
                 <div key={item.id} className="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-3 border-b border-stone-100 px-5 py-3 text-sm last:border-0">
@@ -256,8 +319,8 @@ export default function RecipeView({ recipe, ingredients, steps }) {
 
         <section>
           <div className="mb-5">
-            <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Paso a paso</p>
-            <h2 className="mt-1 text-2xl font-semibold text-stone-900">Trabaja, observa y entiende</h2>
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{ui.stepByStep}</p>
+            <h2 className="mt-1 text-2xl font-semibold text-stone-900">{ui.workObserve}</h2>
           </div>
 
           <ol className="space-y-4">
@@ -277,35 +340,35 @@ export default function RecipeView({ recipe, ingredients, steps }) {
 
                       {(step.time_text || step.temperature_text) && (
                         <div className="mt-4 flex flex-wrap gap-2">
-                          {step.time_text && <span className="rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-600">Tiempo: {step.time_text}</span>}
-                          {step.temperature_text && <span className="rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-600">Temperatura: {step.temperature_text}</span>}
+                          {step.time_text && <span className="rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-600">{ui.time}: {step.time_text}</span>}
+                          {step.temperature_text && <span className="rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-600">{ui.temperature}: {step.temperature_text}</span>}
                         </div>
                       )}
 
                       {observation && (
                         <div className="mt-5 rounded-xl bg-amber-50 p-4">
-                          <p className="text-sm font-medium text-amber-900">Observa</p>
+                          <p className="text-sm font-medium text-amber-900">{ui.observe}</p>
                           <p className="mt-1 text-sm leading-6 text-amber-950">{observation}</p>
                         </div>
                       )}
 
                       {guide?.phenomenon && (
                         <div className="mt-3 rounded-xl bg-stone-50 p-4">
-                          <p className="text-sm font-medium text-stone-800">Qué está ocurriendo</p>
+                          <p className="text-sm font-medium text-stone-800">{ui.whatHappening}</p>
                           <p className="mt-1 text-sm leading-6 text-stone-700">{guide.phenomenon}</p>
                         </div>
                       )}
 
                       {guide?.importance && (
                         <div className="mt-3 rounded-xl border border-stone-200 bg-white p-4">
-                          <p className="text-sm font-medium text-stone-800">¿Por qué importa?</p>
+                          <p className="text-sm font-medium text-stone-800">{ui.whyItMatters}</p>
                           <p className="mt-1 text-sm leading-6 text-stone-700">{guide.importance}</p>
                         </div>
                       )}
 
                       {guide?.chibi && (
                         <div className="mt-3 rounded-xl border border-amber-200 bg-white p-4">
-                          <p className="text-xs font-bold uppercase tracking-[0.12em] text-amber-700">Chibi</p>
+                          <p className="text-xs font-bold uppercase tracking-[0.12em] text-amber-700">{ui.chibi}</p>
                           <p className="mt-1 text-sm leading-6 text-stone-700">{guide.chibi}</p>
                         </div>
                       )}
@@ -318,8 +381,8 @@ export default function RecipeView({ recipe, ingredients, steps }) {
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-7">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Al terminar</p>
-          <h2 className="mt-1 text-2xl font-semibold text-stone-900">Antes de pasar a la siguiente preparación</h2>
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{ui.finish}</p>
+          <h2 className="mt-1 text-2xl font-semibold text-stone-900">{ui.beforeNext}</h2>
           <div className="mt-4 space-y-4 text-stone-600">
             <div className="space-y-3">
               {(recipeClosingGuides[recipe.slug] || []).map(([title, text]) => (
@@ -333,10 +396,10 @@ export default function RecipeView({ recipe, ingredients, steps }) {
         </section>
 
         <a
-          href={lessonLink?.href || '/modulo-1'}
+          href={lessonHref}
           className="inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white"
         >
-          {lessonLink?.href ? 'Volver a la lección' : 'Volver al módulo'}
+          {lessonLink ? ui.return : ui.returnModule}
         </a>
       </div>
     </CourseShell>
