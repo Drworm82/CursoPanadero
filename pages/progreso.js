@@ -1,26 +1,50 @@
+import { useRouter } from 'next/router';
 import CourseShell from '../components/course/CourseShell';
 import { requireCourseAuth } from '../lib/course';
 
 export default function ProgressPage({ lessons, progress, recipeProgress }) {
+  const { locale = 'es' } = useRouter();
+  const isEnglish = locale === 'en';
   const completed = progress.filter((item) => item.status === 'completed').length;
+
   return (
-    <CourseShell eyebrow="Seguimiento" title="Mi progreso" description="El progreso se irá construyendo a medida que completes lecciones y preparaciones.">
+    <CourseShell
+      eyebrow={isEnglish ? 'Progress' : 'Seguimiento'}
+      title={isEnglish ? 'My progress' : 'Mi progreso'}
+      description={
+        isEnglish
+          ? 'Your progress will build as you complete lessons and preparations.'
+          : 'El progreso se irá construyendo a medida que completes lecciones y preparaciones.'
+      }
+      backHref={isEnglish ? '/en/ruta' : '/ruta'}
+      backLabel={isEnglish ? 'Back to course' : 'Volver a la ruta'}
+    >
       <div className="rounded-2xl border border-stone-200 bg-white p-6">
-        <p className="text-sm font-medium text-stone-500">Módulo 1</p>
+        <p className="text-sm font-medium text-stone-500">{isEnglish ? 'Module 1' : 'Módulo 1'}</p>
         <p className="mt-2 text-4xl font-semibold text-stone-900">{completed} / {lessons.length}</p>
-        <p className="mt-2 text-stone-600">Lecciones completadas</p>
+        <p className="mt-2 text-stone-600">{isEnglish ? 'Lessons completed' : 'Lecciones completadas'}</p>
       </div>
+
       <div className="mt-6 rounded-2xl border border-stone-200 bg-white p-6">
-        <p className="text-sm font-medium text-stone-500">Preparaciones</p>
-        <p className="mt-2 text-stone-600">{recipeProgress.length} receta(s) con progreso guardado.</p>
+        <p className="text-sm font-medium text-stone-500">{isEnglish ? 'Preparations' : 'Preparaciones'}</p>
+        <p className="mt-2 text-stone-600">
+          {isEnglish
+            ? `${recipeProgress.length} preparation(s) with saved progress.`
+            : `${recipeProgress.length} receta(s) con progreso guardado.`}
+        </p>
       </div>
+
       <div className="mt-6 space-y-3">
         {lessons.map((lesson) => {
           const item = progress.find((p) => p.lesson_id === lesson.id);
           return (
             <div key={lesson.id} className="flex items-center justify-between rounded-2xl border border-stone-200 bg-white p-5">
               <span className="font-medium text-stone-900">{lesson.title}</span>
-              <span className="text-sm text-stone-500">{item?.status === 'completed' ? 'Completada' : 'Pendiente'}</span>
+              <span className="text-sm text-stone-500">
+                {item?.status === 'completed'
+                  ? (isEnglish ? 'Completed' : 'Completada')
+                  : (isEnglish ? 'Pending' : 'Pendiente')}
+              </span>
             </div>
           );
         })}
