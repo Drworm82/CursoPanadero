@@ -11,11 +11,9 @@ export default function ProgressPage({ lessons, progress, recipeProgress }) {
     <CourseShell
       eyebrow={isEnglish ? 'Progress' : 'Seguimiento'}
       title={isEnglish ? 'My progress' : 'Mi progreso'}
-      description={
-        isEnglish
-          ? 'Your progress will build as you complete lessons and preparations.'
-          : 'El progreso se irá construyendo a medida que completes lecciones y preparaciones.'
-      }
+      description={isEnglish
+        ? 'Your progress will build as you complete lessons and preparations.'
+        : 'El progreso se irá construyendo a medida que completes lecciones y preparaciones.'}
       backHref={isEnglish ? '/en/ruta' : '/ruta'}
       backLabel={isEnglish ? 'Back to course' : 'Volver a la ruta'}
     >
@@ -53,9 +51,9 @@ export default function ProgressPage({ lessons, progress, recipeProgress }) {
   );
 }
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps({ req, res, locale }) {
   const { supabase, claims } = await requireCourseAuth(req, res);
-  if (!claims) return { redirect: { destination: '/acceso', permanent: false } };
+  if (!claims) return { redirect: { destination: locale === 'en' ? '/en/acceso' : '/acceso', permanent: false } };
 
   const { data: module } = await supabase.from('modules').select('id').eq('slug', 'modulo-1-masas-batidas-pesadas').single();
   if (!module) return { props: { lessons: [], progress: [], recipeProgress: [] } };
@@ -66,5 +64,17 @@ export async function getServerSideProps({ req, res }) {
     supabase.from('recipe_progress').select('recipe_id, status, current_step').eq('user_id', claims.sub),
   ]);
 
-  return { props: { lessons: lessons || [], progress: progress || [], recipeProgress: recipeProgress || [] } };
+  let localizedLessons = lessons || [];
+  if (locale === 'en' && localizedLessons.length) {
+    const { data: translations } = await supabase
+      .from('lesson_translations')
+      .select('lesson_id, title')
+      .in('lesson_id', localizedLessons.map((lesson) => lesson.id))
+      .eq('locale', 'en');
+
+    const translationMap = Object.fromEntries((translations || []).map((item) => [item.lesson_id, item.title]));
+    localizedLessons = localizedLessons.map((lesson) => ({ ...lesson, title: translationMap[lesson.id] || lesson.title }));
+  }
+
+  return { props: { lessons: localizedLessons, progress: progress || [], recipeProgress: recipeProgress || [] } };
 }
