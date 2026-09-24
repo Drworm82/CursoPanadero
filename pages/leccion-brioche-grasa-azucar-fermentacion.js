@@ -1,50 +1,53 @@
+import { useRouter } from 'next/router';
 import CourseShell from '../components/course/CourseShell';
 
 export default function LessonThirtyTwoPage() {
+  const { locale = 'es' } = useRouter();
+  const isEn = locale === 'en';
   return (
     <CourseShell
-      eyebrow="Lección 32"
-      title="Brioche: grasa, azúcar y fermentación"
-      backHref="/modulo-4"
-      backLabel="Volver al módulo"
+      eyebrow={isEn ? "Lesson 32" : "Lección 32"}
+      title={isEn ? "Brioche: fat, sugar, and fermentation" : "Brioche: grasa, azúcar y fermentación"}
+      backHref={isEn ? "/en/modulo-4" : "/modulo-4"}
+      backLabel="Back to module"
     >
       <div className="space-y-8">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Una lección que exige distinguir la ruta del material</p>
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">A lesson that requires distinguishing the material's route</p>
           <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            La Clase 27 del material documenta una receta de Brioche.
+            Class 27 of the material documents a Brioche recipe.
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            La Clase 27 identifica explícitamente la preparación como BRIOCHE y señala como objetivo conocer una masa rica en grasa y azúcar y realizar un fermentado prolongado en refrigeración.
-            Por eso esta lección puede estudiar directamente la fórmula y el procedimiento de Brioche y, además, compararlos con otras masas enriquecidas documentadas.
+            Class 27 explicitly identifies the preparation as BRIOCHE and states its objective as understanding a dough rich in fat and sugar and carrying out prolonged fermentation under refrigeration.
+            This lesson can therefore study the Brioche formula and procedure directly and compare them with other documented enriched doughs.
           </p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">Brioche: fórmula y procedimiento documentados</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">Brioche: documented formula and procedure</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Fórmula</p><p className="mt-2 leading-7 text-amber-950">500 g de harina, 25 g de leche, 20 g de levadura fresca, 10 g de sal, 50 g de azúcar, 250 g de mantequilla y 250 g de huevo.</p></div>
-            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Proceso</p><p className="mt-2 leading-7 text-stone-700">La masa reposa 12 horas en refrigerador; después se poncha, se porciona en 65 g, se forma según demostración, fermenta, se barniza y se hornea a 180 °C durante aproximadamente 25 minutos.</p></div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Formula</p><p className="mt-2 leading-7 text-amber-950">500 g flour, 25 g milk, 20 g fresh yeast, 10 g salt, 50 g sugar, 250 g butter, and 250 g egg.</p></div>
+            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Process</p><p className="mt-2 leading-7 text-stone-700">The dough rests for 12 hours in the refrigerator; it is then punched down, divided into 65 g portions, shaped as shown in the demonstration, fermented, brushed, and baked at 180 °C for approximately 25 minutes.</p></div>
           </div>
-          <p className="mt-5 leading-7 text-stone-700">La fuente indica mezclar secos, agregar huevo y leche, trabajar hasta obtener una masa lisa, incorporar la mantequilla pomada y amasar hasta que la masa se despegue de la mesa y no se pegue a los dedos.</p>
+          <p className="mt-5 leading-7 text-stone-700">The source says to mix the dry ingredients, add egg and milk, work until a smooth dough forms, incorporate softened butter, and knead until the dough releases from the table and no longer sticks to the fingers.</p>
         </section>
 
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
-          <p className="text-sm font-medium text-stone-300">La idea central</p>
-          <h2 className="mt-2 text-2xl font-semibold">La fuente sí permite estudiar grasa, azúcar y fermentación en otras masas.</h2>
+          <p className="text-sm font-medium text-stone-300">The central idea</p>
+          <h2 className="mt-2 text-2xl font-semibold">The source does allow us to study fat, sugar, and fermentation in other doughs.</h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-100">
-            La receta de Brioche contiene 250 g de mantequilla y 250 g de huevo por 500 g de harina, además de azúcar y leche.
-            Las conchas, el pan de ajo y el pan de pulque sirven como comparación de otras masas enriquecidas.
+            The Brioche recipe contains 250 g butter and 250 g egg per 500 g flour, in addition to sugar and milk.
+            Conchas, garlic bread, and pulque bread provide comparisons with other enriched doughs.
           </p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">Lo que sí está documentado</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">What is actually documented</h2>
 
           <div className="mt-6 space-y-4">
             <article className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-              <p className="text-sm font-medium text-amber-800">Pan de pulque</p>
-              <h3 className="mt-2 text-xl font-semibold text-amber-950">Huevo + azúcar + mantequilla + levadura</h3>
+              <p className="text-sm font-medium text-amber-800">Pulque bread</p>
+              <h3 className="mt-2 text-xl font-semibold text-amber-950">Egg + sugar + butter + yeast</h3>
               <p className="mt-3 leading-7 text-amber-950">
                 La receta contiene 7 huevos, 250 g de azúcar moscabado, 500 g de harina, 300 g de mantequilla
                 fundida y 15 g de levadura fresca, además de 150 ml de pulque. Después de mezclar, la preparación
@@ -54,19 +57,19 @@ export default function LessonThirtyTwoPage() {
 
             <article className="rounded-2xl border border-stone-200 bg-white p-6">
               <p className="text-sm font-medium text-stone-500">Conchas</p>
-              <h3 className="mt-2 text-xl font-semibold text-stone-900">Una masa enriquecida con dos fermentaciones</h3>
+              <h3 className="mt-2 text-xl font-semibold text-stone-900">An enriched dough with two fermentations</h3>
               <p className="mt-3 leading-7 text-stone-700">
-                La receta utiliza 550 g de harina, 130 g de azúcar, 200 g de huevo y 80 g de mantequilla.
+                The recipe uses 550 g flour, 130 g sugar, 200 g egg, and 80 g butter.
                 Después de incorporar el agua hasta obtener una masa suave y lisa, fermenta por 1 hora, se poncha,
                 se porciona y fermenta de nuevo por 1 hora.
               </p>
             </article>
 
             <article className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-              <p className="text-sm font-medium text-amber-800">Pan de ajo</p>
-              <h3 className="mt-2 text-xl font-semibold text-amber-950">Azúcar + mantequilla + aceite</h3>
+              <p className="text-sm font-medium text-amber-800">Garlic bread</p>
+              <h3 className="mt-2 text-xl font-semibold text-amber-950">Sugar + butter + oil</h3>
               <p className="mt-3 leading-7 text-amber-950">
-                La receta contiene 70 g de azúcar, 50 g de mantequilla y 20 ml de aceite de oliva por 500 g de harina.
+                The recipe contains 70 g sugar, 50 g butter, and 20 ml olive oil per 500 g flour.
                 La masa se amasa hasta quedar suave y homogénea, fermenta hasta duplicar su volumen, se poncha,
                 se forma y vuelve a fermentar.
               </p>
@@ -75,7 +78,7 @@ export default function LessonThirtyTwoPage() {
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">¿Dónde aparece la refrigeración?</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">Where does refrigeration appear?</h2>
           <p className="mt-4 leading-7 text-stone-700">
             La fuente sí documenta refrigeración en otras masas, pero no la presenta como una fermentación prolongada
             de brioche. En el croissant, la masa fermenta 45 minutos, se poncha y se refrigera 20 minutos antes del
@@ -83,7 +86,7 @@ export default function LessonThirtyTwoPage() {
             empaste y las vueltas.
           </p>
           <div className="mt-5 rounded-2xl bg-stone-100 p-5">
-            <p className="font-semibold text-stone-900">Distinción importante</p>
+            <p className="font-semibold text-stone-900">Important distinction</p>
             <p className="mt-2 leading-7 text-stone-700">
               La presencia de refrigeración en estas recetas no permite afirmar, a partir de esta fuente, que exista
               una técnica general de “fermentación prolongada en refrigeración” para masas enriquecidas.
@@ -92,11 +95,11 @@ export default function LessonThirtyTwoPage() {
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">¿Qué debes observar?</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">What should you observe?</h2>
 
           <div className="mt-5 space-y-5">
             <div className="rounded-2xl bg-amber-50 p-5">
-              <p className="font-semibold text-amber-900">1. La cantidad no es la misma en todas las recetas</p>
+              <p className="font-semibold text-amber-900">1. The quantity is not the same in every recipe</p>
               <p className="mt-2 leading-7 text-amber-950">
                 Conchas, pan de ajo y pan de pulque incorporan azúcar y grasa, pero sus cantidades y demás
                 ingredientes son diferentes.
@@ -104,7 +107,7 @@ export default function LessonThirtyTwoPage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">2. La fermentación se describe mediante señales y tiempos concretos</p>
+              <p className="font-semibold text-stone-900">2. Fermentation is described through concrete signals and times</p>
               <p className="mt-2 leading-7 text-stone-700">
                 La fuente utiliza tanto tiempos definidos —por ejemplo, 1 hora en cada fermentación de las conchas—
                 como señales de volumen, como “hasta que duplique su tamaño” en el pan de pulque y el pan de ajo.
@@ -112,7 +115,7 @@ export default function LessonThirtyTwoPage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">3. Refrigerar no significa automáticamente fermentar durante más tiempo</p>
+              <p className="font-semibold text-stone-900">3. Refrigerating does not automatically mean fermenting for longer</p>
               <p className="mt-2 leading-7 text-stone-700">
                 En las recetas documentadas, la refrigeración aparece como una etapa concreta dentro del manejo del
                 croissant y del pan danés. La fuente no explica una teoría general de fermentación en frío.
@@ -120,17 +123,17 @@ export default function LessonThirtyTwoPage() {
             </div>
 
             <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">4. Distingue la receta de brioche de las demás masas enriquecidas</p>
+              <p className="font-semibold text-stone-900">4. Distinguish the Brioche recipe from the other enriched doughs</p>
               <p className="mt-2 leading-7 text-stone-700">
-                La receta de Brioche está identificada explícitamente en la Clase 27; las otras preparaciones se mantienen como comparaciones y no se rebautizan como brioche.
+                The Brioche recipe is explicitly identified in Class 27; the other preparations remain comparisons and are not renamed as Brioche.
               </p>
             </div>
           </div>
         </section>
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-800">Práctica de comparación</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Compara la fórmula y el manejo del brioche</h2>
+          <p className="text-sm font-medium text-amber-800">Comparison practice</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Compare Brioche formula and handling</h2>
           <p className="mt-2 leading-7 text-stone-600">
             Compara la receta de Brioche con conchas, pan de ajo y pan de pulque. Registra harina, azúcar, huevo, mantequilla
             u otra grasa, líquido adicional, levadura y etapas de fermentación. Después identifica qué elementos son
@@ -139,34 +142,34 @@ export default function LessonThirtyTwoPage() {
         </section>
 
         <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">La receta de Brioche sí está documentada.</h2>
+          <p className="text-sm font-medium text-amber-900">Source boundary</p>
+          <h2 className="mt-2 text-xl font-semibold text-amber-950">The Brioche recipe is documented.</h2>
           <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            La Clase 27 proporciona receta, cantidades y procedimiento. El formado se remite a la demostración de clase.
+            Class 27 provides the recipe, quantities, and procedure. Shaping is referred to the class demonstration.
             El objetivo de la clase menciona un fermentado prolongado en refrigeración y la receta indica 12 horas
             de reposo en refrigerador; la fuente no desarrolla una explicación teórica adicional sobre ese manejo.
           </p>
         </section>
 
         <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
-          <p className="mt-2 leading-7 text-stone-600">Antes de mirar el procedimiento, predice qué etapas serán especialmente importantes en una masa con mantequilla y azúcar. Después contrasta tu predicción con la secuencia documentada.</p>
+          <p className="text-sm font-medium text-amber-800">Guided activity</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Do, observe, and record</h2>
+          <p className="mt-2 leading-7 text-stone-600">Before looking at the procedure, predict which stages will be especially important in a dough with butter and sugar. Then compare your prediction with the documented sequence.</p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
+          <p className="text-sm font-medium text-stone-500">Check your learning</p>
+          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explain the sequence</h2>
           <div className="mt-4 space-y-3 text-stone-700">
-            <p>1. ¿Qué ocurre antes de incorporar la mantequilla pomada?</p>
-            <p>2. ¿Cuánto dura el reposo refrigerado indicado por la fuente?</p>
-            <p>3. ¿Qué operaciones siguen al reposo y antes del horneado?</p>
+            <p>1. What happens before the softened butter is incorporated?</p>
+            <p>2. How long is the refrigerated rest specified by the source?</p>
+            <p>3. What operations follow the rest and occur before baking?</p>
           </div>
         </section>
 
         <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
-          <p className="text-sm font-medium text-stone-300">Al terminar</p>
-          <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte de esta lección</h2>
+          <p className="text-sm font-medium text-stone-300">At the end</p>
+          <h2 className="mt-2 text-2xl font-semibold">What you should take away from this lesson</h2>
           <div className="mt-5 space-y-4 text-stone-100">
             <p className="leading-7">
               <strong>Las masas enriquecidas del curso sí están documentadas:</strong> conchas, pan de ajo y pan de
@@ -181,14 +184,14 @@ export default function LessonThirtyTwoPage() {
               concretas de su proceso.
             </p>
             <p className="leading-7">
-              <strong>Brioche está documentado:</strong> la fuente proporciona fórmula, reposo refrigerado, porcionado, fermentación, barnizado y horneado; el formado se remite a la demostración.
-              La lección no convierte las comparaciones con otras masas en una receta o teoría que la fuente no desarrolla.
+              <strong>Brioche está documentado:</strong> the source provides the formula, refrigerated rest, portioning, fermentation, brushing, and baking; shaping is referred to the demonstration.
+              The lesson does not turn comparisons with other doughs into a recipe or theory that the source does not develop.
             </p>
           </div>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6">
-          <p className="text-sm font-medium text-stone-500">Nota sobre la fuente</p>
+          <p className="text-sm font-medium text-stone-500">Source note</p>
           <p className="mt-2 leading-7 text-stone-700">
             Los datos de composición y procedimiento proceden de las recetas de pan de pulque, conchas, pan de ajo,
             croissant y pan danés en data/recetas.js. La organización comparativa de esta lección sigue la ruta del
@@ -198,8 +201,8 @@ export default function LessonThirtyTwoPage() {
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Siguiente lección</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Bagels y pita: el formato cambia el proceso</h2>
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Next lesson</p>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Bagels and pita: format changes the process</h2>
           <p className="mt-3 max-w-3xl leading-7 text-stone-700">
             La siguiente lección deberá comprobar primero qué información existe realmente sobre bagels y pita antes
             de atribuirles procedimientos o técnicas específicas.
@@ -208,7 +211,7 @@ export default function LessonThirtyTwoPage() {
             href="/modulo-4"
             className="mt-5 inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white hover:bg-stone-800"
           >
-            Volver al Módulo 4 →
+            Back to Module 4 →
           </a>
         </section>
       </div>
