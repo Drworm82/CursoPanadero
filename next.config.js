@@ -4,7 +4,7 @@ const nextConfig = {
   i18n: {
     locales: ['es', 'en'],
     defaultLocale: 'es',
-    localeDetection: true,
+    localeDetection: false,
   },
   webpack: (config) => {
     config.resolve.fallback = {
