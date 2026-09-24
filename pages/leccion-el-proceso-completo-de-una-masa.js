@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import CourseShell from '../components/course/CourseShell';
 
 const es = {
