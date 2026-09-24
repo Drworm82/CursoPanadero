@@ -1,244 +1,100 @@
+import { useRouter } from 'next/router';
 import CourseShell from '../components/course/CourseShell';
 
-export default function LessonTwentyEightPage() {\n  const { locale = 'es' } = require('next/router').useRouter();
+const content = {
+  es: {
+    eyebrow:'Lección 28', title:'Baguette: estructura, formado y greñado', back:'Volver al módulo',
+    introEyebrow:'Una lección con una fuente limitada', introTitle:'La baguette sí está documentada; el greñado específico no.',
+    intro:'La Clase 24 del material documenta una Baguette Tradicional con ingredientes, procedimiento y horneado. La misma clase también incluye pan de centeno y chipá o pan de yuca. Esta lección se concentra en la baguette y conserva como límite únicamente aquello que la fuente no desarrolla de manera específica: la técnica detallada de greñado.',
+    central:'La idea central', centralTitle:'Una pieza formada sigue siendo parte de una secuencia.',
+    centralText:'En la secuencia general de la fuente, después de la primera fermentación vienen el desgasificado o ponchado, el porcionado y el formado. Las piezas formadas pasan después a una segunda fermentación, seguida por terminado, horneado y enfriado. Esa estructura permite estudiar dónde encajaría una pieza como una baguette. La fuente no desarrolla aquí una técnica detallada de greñado específica de baguette; por ello esta lección no añade una técnica externa como si fuera parte del material fuente.',
+    documented:'Lo que sí está documentado', afterFerment:'Después de fermentar', punch:'Ponchar y porcionar', punchText:'La fuente coloca el desgasificado o ponchado después de la primera fermentación y luego divide la masa en piezas.',
+    shapeLabel:'La pieza toma forma', shaping:'Formado', shapingText:'El formado aparece como una etapa propia. Después de él, las piezas formadas pasan a la segunda fermentación.',
+    afterShape:'Después del formado', afterShapeText:'La fuente indica dejar las piezas formadas hasta que doblen su volumen. Después aparecen el terminado y los acabados, el horneado y el enfriado.',
+    baguetteTitle:'Baguette Tradicional: lo que indica la fuente', formula:'Fórmula', formulaText:'La receta declara 500 g de harina, 150 g de poolish, 325 ml de agua, 12 g de levadura fresca, 14 g de sal y 5 g de mejorante para pan. El poolish de mise en place se prepara con 1 kg de harina, 1 litro de agua y 5 g de levadura, y reposa al menos 8 horas.',
+    process:'Proceso', processText:'La secuencia documentada pasa por un reposo inicial de harina y agua, incorporación de levadura, poolish, mejorante y sal, amasado, reposo hasta duplicar volumen, porcionado de 450 g, formado según demostración, cortes transversales con navaja, reposo adicional, barnizado con agua y horneado con vapor.',
+    bake:'La fuente indica vapor durante la cocción y un horneado a 220 °C durante 18 minutos. El formado se realiza de acuerdo con la demostración y el texto sí indica hacer cortes transversales con una navaja.',
+    others:'Otras preparaciones de la Clase 24', othersTitle:'Pan de centeno y Chipá',
+    othersText:'La misma clase documenta otras dos preparaciones. Se incorporan aquí para cerrar la cobertura de la clase completa, sin atribuirles técnicas que la fuente no desarrolla.',
+    rye:'Pan de centeno', ryeIngredients:'Harina de fuerza 550 g, harina de centeno 220 g, sal 10 g, levadura fresca 50 g, agua 450 ml y mejorante para pan 10 g.',
+    ryeSteps:['Preparar una masa base con levadura, una cuarta parte de la harina de fuerza y un poco de agua; reposar 20 minutos.','Mezclar el resto de las harinas, el mejorante y el agua; reposar 5 minutos.','Añadir la masa base y amasar con fuerza hasta obtener una masa elástica.','Agregar finalmente la sal y terminar de amasar.','Dejar reposar hasta doblar tamaño, quitar el gas y hacer una segunda fermentación.','Cortar en bollos de 60 g y bolear.','Hornear a 220 °C durante 20 minutos y enfriar.'],
+    chipa:'Chipá o Pao de Quijo o Pan de Yuca', chipaIngredients:'Fécula de mandioca o yuca 500 g, leche 100 ml, agua c/s, huevo 3 piezas, sal 10 g, mantequilla 200 g y queso tipo Chihuahua 500 g.',
+    chipaSteps:['Hacer un volcán con la fécula y agregar al centro sal y leche.','Mezclar los ingredientes.','Incorporar la mantequilla y amasar hasta que quede lisa y homogénea.','Incorporar por último los huevos.','Agregar el queso rallado y trabajar hasta incorporarlo.','Realizar bolitas de aproximadamente 20 g y ponerlas en una charola aceitada.','Hornear a 200 °C durante 15 minutos.'],
+    observe:'¿Qué debes observar?', o1:'1. La transformación de masa a pieza', o1t:'La fuente separa el porcionado del formado. Observa que primero se divide la masa y después se trabaja cada pieza.',
+    o2:'2. La segunda fermentación ocurre después del formado', o2t:'No confundas la primera fermentación de la masa completa con la segunda fermentación de las piezas ya formadas.',
+    o3:'3. El volumen vuelve a ser una señal', o3t:'La fuente utiliza nuevamente el doble de volumen como referencia para decidir cuándo avanzar después del formado.',
+    o4:'4. No atribuyas al material una técnica que no contiene', o4t:'En el material consultado no aparecen instrucciones sobre cortes, profundidad, ángulo, número de cortes o herramienta de greñado para baguette.',
+    practice:'Práctica de secuencia', practiceTitle:'Ubica la pieza dentro del proceso', practiceText:'Sin añadir una técnica externa, escribe la secuencia que la fuente sí permite establecer: primera fermentación → ponchado → porcionado → formado → segunda fermentación → terminado → horneado → enfriado. Después señala en qué punto necesitarías una fuente específica para estudiar el greñado de una baguette.',
+    limit:'Límite de esta fuente', limitTitle:'La baguette sí está desarrollada en el material disponible; el límite está únicamente en la descripción detallada del greñado.',
+    limitText:'La fuente sí proporciona una receta de Baguette Tradicional. Lo que no desarrolla con detalle son los cortes de greñado: no especifica profundidad, ángulo, número de cortes ni herramienta. Esos detalles quedan fuera de esta lección para no completar la fuente con información externa.',
+    activity:'Actividad guiada', activityTitle:'Haz, observa y registra', activityText:'Reconstruye el proceso de la Baguette Tradicional antes de volver a mirar la receta: mezclado, amasado, fermentación, ponchado, porcionado, formado, segunda fermentación, barnizado, vapor y horneado. Marca qué parte del formado está descrita en texto y qué parte queda remitida a la demostración.',
+    check:'Comprueba tu aprendizaje', checkTitle:'Explica la secuencia', q1:'1. ¿Qué ingredientes y cantidades declara la receta de Baguette Tradicional?', q2:'2. ¿En qué orden aparecen fermentación, ponchado, porcionado, formado y segunda fermentación?', q3:'3. ¿Qué detalles del greñado no desarrolla la fuente y, por tanto, no debes inventar?',
+    activity2:'Actividad guiada', activity2Title:'Haz, observa y registra', activity2Text:'Reconstruye el proceso del baguette antes de volver a mirar la receta: poolish, mezcla, reposo, porcionado, formado, corte y horneado. Marca qué operaciones están documentadas y cuáles solo se mencionan como demostración.',
+    check2:'Comprueba tu aprendizaje', check2Title:'Explica la secuencia', q4:'1. ¿Qué función cumple el poolish dentro de la secuencia documentada?', q5:'2. ¿En qué momento aparece el formado y el corte?', q6:'3. ¿Qué detalle específico sobre el greñado no desarrolla la fuente y, por tanto, no debes inventar?',
+    finish:'Al terminar', finishTitle:'Lo que debes llevarte de esta lección',
+    t1:'El formado es una etapa propia: ocurre después del ponchado y del porcionado.', t2:'La segunda fermentación pertenece a las piezas: la fuente indica dejar las piezas formadas hasta que doblen su volumen.', t3:'El proceso continúa: después de la segunda fermentación aparecen terminado, horneado y enfriado.', t4:'El greñado detallado queda pendiente: la receta existe, pero la fuente no explica profundidad, ángulo, número de cortes ni herramienta.',
+    source:'Nota sobre la fuente', sourceText:'El contenido documentado procede de «Proceso para elaborar una masa» en data/curso.js, especialmente las etapas de desgasificado, porcionado, formado, segunda fermentación, terminado, horneado y enfriado. El contenido específico de Baguette Tradicional procede de la Clase 24 del PDF. La fuente remite el formado a la demostración y no desarrolla en texto la técnica detallada de greñado. La organización de esta lección y su práctica son organización pedagógica del curso.',
+    next:'Siguiente lección', nextTitle:'Focaccia: otra forma de entender la hidratación', nextText:'La siguiente lección cambia el foco hacia otra familia de pan y hacia la comparación de masas con diferentes características.', nextButton:'Volver al Módulo 4 →'
+  },
+  en: {
+    eyebrow:'Lesson 28', title:'Baguette: Structure, Shaping, and Scoring', back:'Back to module',
+    introEyebrow:'A lesson with a limited source', introTitle:'The baguette is documented; the specific scoring technique is not.',
+    intro:'Class 24 of the material documents a Traditional Baguette with ingredients, procedure, and baking. The same class also includes rye bread and chipá or cassava bread. This lesson focuses on the baguette and keeps only what the source does not specifically develop as a boundary: the detailed scoring technique.',
+    central:'The central idea', centralTitle:'A shaped piece remains part of a sequence.',
+    centralText:'In the source’s general sequence, degassing or punching down, portioning, and shaping follow first fermentation. The shaped pieces then undergo a second fermentation, followed by finishing, baking, and cooling. This structure lets us study where a piece such as a baguette fits. The source does not develop a detailed baguette-specific scoring technique here, so this lesson does not add an external technique as if it were part of the source material.',
+    documented:'What is documented', afterFerment:'After fermentation', punch:'Punch down and portion', punchText:'The source places degassing or punching down after first fermentation and then divides the dough into pieces.',
+    shapeLabel:'The piece takes shape', shaping:'Shaping', shapingText:'Shaping appears as its own stage. After it, the shaped pieces move to second fermentation.',
+    afterShape:'After shaping', afterShapeText:'The source says to leave the shaped pieces until they double in volume. Finishing and decoration, baking, and cooling follow.',
+    baguetteTitle:'Traditional Baguette: what the source states', formula:'Formula', formulaText:'The recipe lists 500 g flour, 150 g poolish, 325 ml water, 12 g fresh yeast, 14 g salt, and 5 g bread improver. The mise en place poolish is prepared with 1 kg flour, 1 liter water, and 5 g yeast, and rests for at least 8 hours.',
+    process:'Process', processText:'The documented sequence includes an initial rest of flour and water, incorporation of yeast, poolish, improver, and salt, kneading, resting until volume doubles, portioning at 450 g, shaping according to the demonstration, crosswise cuts with a blade, an additional rest, water brushing, and steam baking.',
+    bake:'The source specifies steam during baking and baking at 220 °C for 18 minutes. Shaping is performed according to the demonstration, and the text does specify making crosswise cuts with a blade.',
+    others:'Other preparations from Class 24', othersTitle:'Rye Bread and Chipá',
+    othersText:'The same class documents two other preparations. They are included here to cover the full class without attributing techniques that the source does not develop.',
+    rye:'Rye Bread', ryeIngredients:'Strong flour 550 g, rye flour 220 g, salt 10 g, fresh yeast 50 g, water 450 ml, and bread improver 10 g.',
+    ryeSteps:['Prepare a base dough with yeast, one quarter of the strong flour, and a little water; rest for 20 minutes.','Mix the remaining flours, improver, and water; rest for 5 minutes.','Add the base dough and knead firmly until an elastic dough is obtained.','Finally add the salt and finish kneading.','Let rest until doubled in size, degas, and perform a second fermentation.','Cut into 60 g rolls and round them.','Bake at 220 °C for 20 minutes and cool.'],
+    chipa:'Chipá or Pao de Quijo or Cassava Bread', chipaIngredients:'Cassava starch 500 g, milk 100 ml, water as needed, 3 eggs, salt 10 g, butter 200 g, and Chihuahua-style cheese 500 g.',
+    chipaSteps:['Make a well with the starch and add salt and milk to the center.','Mix the ingredients.','Add the butter and knead until smooth and homogeneous.','Add the eggs last.','Add the grated cheese and work until incorporated.','Make approximately 20 g balls and place them on an oiled tray.','Bake at 200 °C for 15 minutes.'],
+    observe:'What should you observe?', o1:'1. The transformation from dough to piece', o1t:'The source separates portioning from shaping. Observe that the dough is divided first and each piece is worked afterward.',
+    o2:'2. Second fermentation occurs after shaping', o2t:'Do not confuse the first fermentation of the whole dough with the second fermentation of the shaped pieces.',
+    o3:'3. Volume is a signal again', o3t:'The source again uses doubled volume as the reference for deciding when to move forward after shaping.',
+    o4:'4. Do not attribute a technique to the material that it does not contain', o4t:'The material consulted does not provide instructions about cuts, depth, angle, number of cuts, or a scoring tool for baguette.',
+    practice:'Sequence practice', practiceTitle:'Place the piece within the process', practiceText:'Without adding an external technique, write the sequence the source allows us to establish: first fermentation → punching down → portioning → shaping → second fermentation → finishing → baking → cooling. Then identify where you would need a specific source to study baguette scoring.',
+    limit:'Source boundary', limitTitle:'The baguette is developed in the available material; the boundary is only the detailed description of scoring.',
+    limitText:'The source does provide a Traditional Baguette recipe. What it does not develop in detail are the scoring cuts: it does not specify depth, angle, number of cuts, or tool. Those details remain outside this lesson so the source is not supplemented with external information.',
+    activity:'Guided activity', activityTitle:'Do, observe, and record', activityText:'Reconstruct the Traditional Baguette process before looking back at the recipe: mixing, kneading, fermentation, punching down, portioning, shaping, second fermentation, brushing, steam, and baking. Mark which part of shaping is described in text and which part is referred to the demonstration.',
+    check:'Check your learning', checkTitle:'Explain the sequence', q1:'1. What ingredients and quantities does the Traditional Baguette recipe state?', q2:'2. In what order do fermentation, punching down, portioning, shaping, and second fermentation appear?', q3:'3. Which scoring details does the source not develop and therefore should not be invented?',
+    activity2:'Guided activity', activity2Title:'Do, observe, and record', activity2Text:'Reconstruct the baguette process before looking back at the recipe: poolish, mixing, resting, portioning, shaping, cutting, and baking. Mark which operations are documented and which are only mentioned as a demonstration.',
+    check2:'Check your learning', check2Title:'Explain the sequence', q4:'1. What role does the poolish play within the documented sequence?', q5:'2. At what point do shaping and cutting appear?', q6:'3. What specific scoring detail does the source not develop and therefore should not be invented?',
+    finish:'When you finish', finishTitle:'What you should take away from this lesson',
+    t1:'Shaping is its own stage: it occurs after punching down and portioning.', t2:'Second fermentation belongs to the pieces: the source says to leave the shaped pieces until they double in volume.', t3:'The process continues: after second fermentation come finishing, baking, and cooling.', t4:'Detailed scoring remains unresolved: the recipe exists, but the source does not explain depth, angle, number of cuts, or tool.',
+    source:'Source note', sourceText:'The documented content comes from “Proceso para elaborar una masa” in data/curso.js, especially degassing, portioning, shaping, second fermentation, finishing, baking, and cooling. The specific Traditional Baguette content comes from Class 24 of the PDF. The source refers shaping to the demonstration and does not develop the detailed scoring technique in text. The organization and practice in this lesson are pedagogical organization by the course.',
+    next:'Next lesson', nextTitle:'Focaccia: Another Way to Understand Hydration', nextText:'The next lesson shifts the focus to another bread family and to comparing doughs with different characteristics.', nextButton:'Back to Module 4 →'
+  }
+};
+
+export default function LessonTwentyEightPage() {
+  const { locale = 'es' } = useRouter();
+  const t = locale === 'en' ? content.en : content.es;
+  const observations = [[t.o1,t.o1t,'amber'],[t.o2,t.o2t,'stone'],[t.o3,t.o3t,'stone'],[t.o4,t.o4t,'stone']];
+
   return (
-    <CourseShell
-      eyebrow={locale === 'en' ? 'Lesson 28' : 'Lección 28'}
-      title={locale === 'en' ? 'Baguette: Structure, Shaping, and Scoring' : 'Baguette: estructura, formado y greñado'}
-      backHref={locale === 'en' ? '/en/modulo-4' : '/modulo-4'}
-      backLabel={locale === 'en' ? 'Back to module' : 'Volver al módulo'}
-    >
+    <CourseShell eyebrow={t.eyebrow} title={t.title} backHref={locale === 'en' ? '/en/modulo-4' : '/modulo-4'} backLabel={t.back}>
       <div className="space-y-8">
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Una lección con una fuente limitada</p>
-          <h2 className="mt-3 text-2xl font-semibold text-stone-900">
-            La baguette sí está documentada; el greñado específico no.
-          </h2>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">
-            La Clase 24 del material documenta una Baguette Tradicional con ingredientes, procedimiento y horneado.
-            La misma clase también incluye pan de centeno y chipá o pan de yuca. Esta lección se concentra en la
-            baguette y conserva como límite únicamente aquello que la fuente no desarrolla de manera específica:
-            la técnica detallada de greñado.
-          </p>
-        </section>
-
-        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
-          <p className="text-sm font-medium text-stone-300">La idea central</p>
-          <h2 className="mt-2 text-2xl font-semibold">Una pieza formada sigue siendo parte de una secuencia.</h2>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-100">
-            En la secuencia general de la fuente, después de la primera fermentación vienen el desgasificado
-            o ponchado, el porcionado y el formado. Las piezas formadas pasan después a una segunda fermentación,
-            seguida por terminado, horneado y enfriado. Esa estructura permite estudiar dónde encajaría una pieza
-            como una baguette, La fuente no desarrolla aquí una técnica detallada de greñado específica de baguette; por ello esta lección no añade una técnica externa como si fuera parte del material fuente.
-          </p>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">Lo que sí está documentado</h2>
-
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-              <p className="text-sm font-medium text-amber-800">Después de fermentar</p>
-              <h3 className="mt-2 text-xl font-semibold text-amber-950">Ponchar y porcionar</h3>
-              <p className="mt-3 leading-7 text-amber-950">
-                La fuente coloca el desgasificado o ponchado después de la primera fermentación y luego divide
-                la masa en piezas.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border border-stone-200 bg-white p-6">
-              <p className="text-sm font-medium text-stone-500">La pieza toma forma</p>
-              <h3 className="mt-2 text-xl font-semibold text-stone-900">Formado</h3>
-              <p className="mt-3 leading-7 text-stone-700">
-                El formado aparece como una etapa propia. Después de él, las piezas formadas pasan a la segunda fermentación.
-              </p>
-            </article>
-          </div>
-
-          <div className="mt-4 rounded-2xl bg-stone-100 p-6">
-            <p className="font-semibold text-stone-900">Después del formado</p>
-            <p className="mt-2 leading-7 text-stone-700">
-              La fuente indica dejar las piezas formadas hasta que doblen su volumen. Después aparecen el terminado
-              y los acabados, el horneado y el enfriado.
-            </p>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">Baguette Tradicional: lo que indica la fuente</h2>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">Fórmula</p><p className="mt-2 leading-7 text-amber-950">La receta declara 500 g de harina, 150 g de poolish, 325 ml de agua, 12 g de levadura fresca, 14 g de sal y 5 g de mejorante para pan. El poolish de mise en place se prepara con 1 kg de harina, 1 litro de agua y 5 g de levadura, y reposa al menos 8 horas.</p></div>
-            <div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">Proceso</p><p className="mt-2 leading-7 text-stone-700">La secuencia documentada pasa por un reposo inicial de harina y agua, incorporación de levadura, poolish, mejorante y sal, amasado, reposo hasta duplicar volumen, porcionado de 450 g, formado según demostración, cortes transversales con navaja, reposo adicional, barnizado con agua y horneado con vapor.</p></div>
-          </div>
-          <p className="mt-5 leading-7 text-stone-700">La fuente indica vapor durante la cocción y un horneado a 220 °C durante 18 minutos. El formado se realiza de acuerdo con la demostración y el texto sí indica hacer cortes transversales con una navaja.</p>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Otras preparaciones de la Clase 24</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Pan de centeno y Chipá</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">La misma clase documenta otras dos preparaciones. Se incorporan aquí para cerrar la cobertura de la clase completa, sin atribuirles técnicas que la fuente no desarrolla.</p>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
-              <h3 className="text-xl font-semibold text-amber-950">Pan de centeno</h3>
-              <p className="mt-3 text-sm leading-6 text-amber-950">Harina de fuerza 550 g, harina de centeno 220 g, sal 10 g, levadura fresca 50 g, agua 450 ml y mejorante para pan 10 g.</p>
-              <ol className="mt-4 list-decimal space-y-1.5 pl-5 text-sm leading-6 text-amber-950">
-                <li>Preparar una masa base con levadura, una cuarta parte de la harina de fuerza y un poco de agua; reposar 20 minutos.</li>
-                <li>Mezclar el resto de las harinas, el mejorante y el agua; reposar 5 minutos.</li>
-                <li>Añadir la masa base y amasar con fuerza hasta obtener una masa elástica.</li>
-                <li>Agregar finalmente la sal y terminar de amasar.</li>
-                <li>Dejar reposar hasta doblar tamaño, quitar el gas y hacer una segunda fermentación.</li>
-                <li>Cortar en bollos de 60 g y bolear.</li>
-                <li>Hornear a 220 °C durante 20 minutos y enfriar.</li>
-              </ol>
-            </article>
-            <article className="rounded-2xl border border-stone-200 bg-white p-5">
-              <h3 className="text-xl font-semibold text-stone-900">Chipá o Pao de Quijo o Pan de Yuca</h3>
-              <p className="mt-3 text-sm leading-6 text-stone-700">Fécula de mandioca o yuca 500 g, leche 100 ml, agua c/s, huevo 3 piezas, sal 10 g, mantequilla 200 g y queso tipo Chihuahua 500 g.</p>
-              <ol className="mt-4 list-decimal space-y-1.5 pl-5 text-sm leading-6 text-stone-700">
-                <li>Hacer un volcán con la fécula y agregar al centro sal y leche.</li>
-                <li>Mezclar los ingredientes.</li>
-                <li>Incorporar la mantequilla y amasar hasta que quede lisa y homogénea.</li>
-                <li>Incorporar por último los huevos.</li>
-                <li>Agregar el queso rallado y trabajar hasta incorporarlo.</li>
-                <li>Realizar bolitas de aproximadamente 20 g y ponerlas en una charola aceitada.</li>
-                <li>Hornear a 200 °C durante 15 minutos.</li>
-              </ol>
-            </article>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold text-stone-900">¿Qué debes observar?</h2>
-
-          <div className="mt-5 space-y-5">
-            <div className="rounded-2xl bg-amber-50 p-5">
-              <p className="font-semibold text-amber-900">1. La transformación de masa a pieza</p>
-              <p className="mt-2 leading-7 text-amber-950">
-                La fuente separa el porcionado del formado. Observa que primero se divide la masa y después se trabaja cada pieza.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">2. La segunda fermentación ocurre después del formado</p>
-              <p className="mt-2 leading-7 text-stone-700">
-                No confundas la primera fermentación de la masa completa con la segunda fermentación de las piezas ya formadas.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">3. El volumen vuelve a ser una señal</p>
-              <p className="mt-2 leading-7 text-stone-700">
-                La fuente utiliza nuevamente el doble de volumen como referencia para decidir cuándo avanzar después del formado.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-stone-100 p-5">
-              <p className="font-semibold text-stone-900">4. No atribuyas al material una técnica que no contiene</p>
-              <p className="mt-2 leading-7 text-stone-700">
-                En el material consultado no aparecen instrucciones sobre cortes, profundidad, ángulo, número de cortes
-                o herramienta de greñado para baguette.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-800">Práctica de secuencia</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Ubica la pieza dentro del proceso</h2>
-          <p className="mt-2 leading-7 text-stone-600">
-            Sin añadir una técnica externa, escribe la secuencia que la fuente sí permite establecer:
-            primera fermentación → ponchado → porcionado → formado → segunda fermentación → terminado →
-            horneado → enfriado. Después señala en qué punto necesitarías una fuente específica para estudiar
-            el greñado de una baguette.
-          </p>
-        </section>
-
-        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-900">Límite de esta fuente</p>
-          <h2 className="mt-2 text-xl font-semibold text-amber-950">La baguette sí está desarrollada en el material disponible; el límite está únicamente en la descripción detallada del greñado.</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-amber-950">
-            La fuente sí proporciona una receta de Baguette Tradicional. Lo que no desarrolla con detalle son los cortes de
-            greñado: no especifica profundidad, ángulo, número de cortes ni herramienta. Esos detalles quedan fuera
-            de esta lección para no completar la fuente con información externa.
-          </p>
-        </section>
-
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
-          <p className="mt-2 leading-7 text-stone-600">Reconstruye el proceso de la Baguette Tradicional antes de volver a mirar la receta: mezclado, amasado,
-            fermentación, ponchado, porcionado, formado, segunda fermentación, barnizado, vapor y horneado. Marca
-            qué parte del formado está descrita en texto y qué parte queda remitida a la demostración.</p>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
-          <div className="mt-4 space-y-3 text-stone-700">
-            <p>1. ¿Qué ingredientes y cantidades declara la receta de Baguette Tradicional?</p>
-            <p>2. ¿En qué orden aparecen fermentación, ponchado, porcionado, formado y segunda fermentación?</p>
-            <p>3. ¿Qué detalles del greñado no desarrolla la fuente y, por tanto, no debes inventar?</p>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8">
-          <p className="text-sm font-medium text-amber-800">Actividad guiada</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Haz, observa y registra</h2>
-          <p className="mt-2 leading-7 text-stone-600">Reconstruye el proceso del baguette antes de volver a mirar la receta: poolish, mezcla, reposo, porcionado, formado, corte y horneado. Marca qué operaciones están documentadas y cuáles solo se mencionan como demostración.</p>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium text-stone-500">Comprueba tu aprendizaje</p>
-          <h2 className="mt-2 text-xl font-semibold text-stone-900">Explica la secuencia</h2>
-          <div className="mt-4 space-y-3 text-stone-700">
-            <p>1. ¿Qué función cumple el poolish dentro de la secuencia documentada?</p>
-            <p>2. ¿En qué momento aparece el formado y el corte?</p>
-            <p>3. ¿Qué detalle específico sobre el greñado no desarrolla la fuente y, por tanto, no debes inventar?</p>
-          </div>
-        </section>
-
-        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8">
-          <p className="text-sm font-medium text-stone-300">Al terminar</p>
-          <h2 className="mt-2 text-2xl font-semibold">Lo que debes llevarte de esta lección</h2>
-          <div className="mt-5 space-y-4 text-stone-100">
-            <p className="leading-7">
-              <strong>El formado es una etapa propia:</strong> ocurre después del ponchado y del porcionado.
-            </p>
-            <p className="leading-7">
-              <strong>La segunda fermentación pertenece a las piezas:</strong> la fuente indica dejar las piezas formadas hasta que doblen su volumen.
-            </p>
-            <p className="leading-7">
-              <strong>El proceso continúa:</strong> después de la segunda fermentación aparecen terminado, horneado y enfriado.
-            </p>
-            <p className="leading-7">
-              <strong>El greñado detallado queda pendiente:</strong> la receta existe, pero la fuente no explica profundidad, ángulo, número de cortes ni herramienta.
-            </p>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6">
-          <p className="text-sm font-medium text-stone-500">Nota sobre la fuente</p>
-          <p className="mt-2 leading-7 text-stone-700">
-            El contenido documentado procede de «Proceso para elaborar una masa» en data/curso.js, especialmente
-            las etapas de desgasificado, porcionado, formado, segunda fermentación, terminado, horneado y enfriado.
-            El contenido específico de Baguette Tradicional procede de la Clase 24 del PDF. La fuente remite el formado a la demostración y no desarrolla en texto la técnica detallada de greñado. La organización
-            de esta lección y su práctica son organización pedagógica del curso.
-          </p>
-        </section>
-
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">Siguiente lección</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Focaccia: otra forma de entender la hidratación</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-            La siguiente lección cambia el foco hacia otra familia de pan y hacia la comparación de masas con diferentes características.
-          </p>
-          <a
-            href="/modulo-4"
-            className="mt-5 inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white hover:bg-stone-800"
-          >
-            Volver al Módulo 4 →
-          </a>
-        </section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{t.introEyebrow}</p><h2 className="mt-3 text-2xl font-semibold text-stone-900">{t.introTitle}</h2><p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">{t.intro}</p></section>
+        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8"><p className="text-sm font-medium text-stone-300">{t.central}</p><h2 className="mt-2 text-2xl font-semibold">{t.centralTitle}</h2><p className="mt-4 max-w-3xl text-lg leading-8 text-stone-100">{t.centralText}</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><h2 className="text-2xl font-semibold text-stone-900">{t.documented}</h2><div className="mt-6 grid gap-4 md:grid-cols-2"><article className="rounded-2xl border border-amber-200 bg-amber-50 p-6"><p className="text-sm font-medium text-amber-800">{t.afterFerment}</p><h3 className="mt-2 text-xl font-semibold text-amber-950">{t.punch}</h3><p className="mt-3 leading-7 text-amber-950">{t.punchText}</p></article><article className="rounded-2xl border border-stone-200 bg-white p-6"><p className="text-sm font-medium text-stone-500">{t.shapeLabel}</p><h3 className="mt-2 text-xl font-semibold text-stone-900">{t.shaping}</h3><p className="mt-3 leading-7 text-stone-700">{t.shapingText}</p></article></div><div className="mt-4 rounded-2xl bg-stone-100 p-6"><p className="font-semibold text-stone-900">{t.afterShape}</p><p className="mt-2 leading-7 text-stone-700">{t.afterShapeText}</p></div></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><h2 className="text-2xl font-semibold text-stone-900">{t.baguetteTitle}</h2><div className="mt-6 grid gap-4 md:grid-cols-2"><div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="font-semibold text-amber-900">{t.formula}</p><p className="mt-2 leading-7 text-amber-950">{t.formulaText}</p></div><div className="rounded-2xl border border-stone-200 bg-white p-5"><p className="font-semibold text-stone-900">{t.process}</p><p className="mt-2 leading-7 text-stone-700">{t.processText}</p></div></div><p className="mt-5 leading-7 text-stone-700">{t.bake}</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{t.others}</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">{t.othersTitle}</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">{t.othersText}</p><div className="mt-6 grid gap-4 md:grid-cols-2"><article className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><h3 className="text-xl font-semibold text-amber-950">{t.rye}</h3><p className="mt-3 text-sm leading-6 text-amber-950">{t.ryeIngredients}</p><ol className="mt-4 list-decimal space-y-1.5 pl-5 text-sm leading-6 text-amber-950">{t.ryeSteps.map(step=><li key={step}>{step}</li>)}</ol></article><article className="rounded-2xl border border-stone-200 bg-white p-5"><h3 className="text-xl font-semibold text-stone-900">{t.chipa}</h3><p className="mt-3 text-sm leading-6 text-stone-700">{t.chipaIngredients}</p><ol className="mt-4 list-decimal space-y-1.5 pl-5 text-sm leading-6 text-stone-700">{t.chipaSteps.map(step=><li key={step}>{step}</li>)}</ol></article></div></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><h2 className="text-2xl font-semibold text-stone-900">{t.observe}</h2><div className="mt-5 space-y-5">{observations.map(([title,text,tone])=><div key={title} className={`rounded-2xl p-5 ${tone==='amber'?'bg-amber-50':'bg-stone-100'}`}><p className={`font-semibold ${tone==='amber'?'text-amber-900':'text-stone-900'}`}>{title}</p><p className={`mt-2 leading-7 ${tone==='amber'?'text-amber-950':'text-stone-700'}`}>{text}</p></div>)}</div></section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium text-amber-800">{t.practice}</p><h2 className="mt-2 text-xl font-semibold text-stone-900">{t.practiceTitle}</h2><p className="mt-2 leading-7 text-stone-600">{t.practiceText}</p></section>
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8"><p className="text-sm font-medium text-amber-900">{t.limit}</p><h2 className="mt-2 text-xl font-semibold text-amber-950">{t.limitTitle}</h2><p className="mt-3 max-w-3xl leading-7 text-amber-950">{t.limitText}</p></section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium text-amber-800">{t.activity}</p><h2 className="mt-2 text-xl font-semibold text-stone-900">{t.activityTitle}</h2><p className="mt-2 leading-7 text-stone-600">{t.activityText}</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium text-stone-500">{t.check}</p><h2 className="mt-2 text-xl font-semibold text-stone-900">{t.checkTitle}</h2><div className="mt-4 space-y-3 text-stone-700"><p>{t.q1}</p><p>{t.q2}</p><p>{t.q3}</p></div></section>
+        <section className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-6 sm:p-8"><p className="text-sm font-medium text-amber-800">{t.activity2}</p><h2 className="mt-2 text-xl font-semibold text-stone-900">{t.activity2Title}</h2><p className="mt-2 leading-7 text-stone-600">{t.activity2Text}</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium text-stone-500">{t.check2}</p><h2 className="mt-2 text-xl font-semibold text-stone-900">{t.check2Title}</h2><div className="mt-4 space-y-3 text-stone-700"><p>{t.q4}</p><p>{t.q5}</p><p>{t.q6}</p></div></section>
+        <section className="rounded-2xl bg-stone-900 p-6 text-white sm:p-8"><p className="text-sm font-medium text-stone-300">{t.finish}</p><h2 className="mt-2 text-2xl font-semibold">{t.finishTitle}</h2><div className="mt-5 space-y-4 text-stone-100">{[t.t1,t.t2,t.t3,t.t4].map(item=>{const [lead,...rest]=item.split(':');return <p key={item} className="leading-7"><strong>{lead}:</strong>{rest.join(':')}</p>;})}</div></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6"><p className="text-sm font-medium text-stone-500">{t.source}</p><p className="mt-2 leading-7 text-stone-700">{t.sourceText}</p></section>
+        <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8"><p className="text-sm font-medium uppercase tracking-[0.14em] text-amber-700">{t.next}</p><h2 className="mt-2 text-2xl font-semibold text-stone-900">{t.nextTitle}</h2><p className="mt-3 max-w-3xl leading-7 text-stone-700">{t.nextText}</p><a href={locale === 'en' ? '/en/modulo-4' : '/modulo-4'} className="mt-5 inline-flex rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-white hover:bg-stone-800">{t.nextButton}</a></section>
       </div>
     </CourseShell>
   );
