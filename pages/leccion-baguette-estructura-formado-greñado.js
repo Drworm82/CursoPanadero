@@ -1,12 +1,12 @@
 import CourseShell from '../components/course/CourseShell';
 
-export default function LessonTwentyEightPage() {
+export default function LessonTwentyEightPage() {\n  const { locale = 'es' } = require('next/router').useRouter();
   return (
     <CourseShell
-      eyebrow="Lección 28"
-      title="Baguette: estructura, formado y greñado"
-      backHref="/modulo-4"
-      backLabel="Volver al módulo"
+      eyebrow={locale === 'en' ? 'Lesson 28' : 'Lección 28'}
+      title={locale === 'en' ? 'Baguette: Structure, Shaping, and Scoring' : 'Baguette: estructura, formado y greñado'}
+      backHref={locale === 'en' ? '/en/modulo-4' : '/modulo-4'}
+      backLabel={locale === 'en' ? 'Back to module' : 'Volver al módulo'}
     >
       <div className="space-y-8">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
