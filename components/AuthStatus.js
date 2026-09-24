@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { supabase } from '../lib/supabase';
 
 export default function AuthStatus() {
   const [user, setUser] = useState(null);
+  const router = useRouter();
+  const isEnglish = router.locale === 'en';
 
   useEffect(() => {
     let mounted = true;
@@ -26,20 +29,20 @@ export default function AuthStatus() {
 
   async function handleSignOut() {
     await supabase.auth.signOut();
-    window.location.assign('/acceso');
+    window.location.assign(isEnglish ? '/en/acceso' : '/acceso');
   }
 
   if (!user) {
     return (
-      <Link href="/acceso" className="hover:underline">
-        Acceso
+      <Link href={isEnglish ? '/en/acceso' : '/acceso'} className="hover:underline">
+        {isEnglish ? 'Sign in' : 'Acceso'}
       </Link>
     );
   }
 
   return (
     <button type="button" onClick={handleSignOut} className="hover:underline">
-      Cerrar sesión
+      {isEnglish ? 'Sign out' : 'Cerrar sesión'}
     </button>
   );
 }
