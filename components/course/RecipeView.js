@@ -190,6 +190,177 @@ const recipeObservationGuides = {
   ]
 };
 
+const recipeClosingGuidesEn = {
+  'rosca-pina-colada': [
+    ['Recognize the creaming signal', 'Before moving to the next preparation, identify the change in texture you obtained when creaming the butter with powdered sugar.'],
+    ['Check the structure', 'After cooling and unmolding, observe the firmness of the ring cake before covering it with the glaze.'],
+  ],
+  'panque-platano-streusel-canela': [
+    ['Compare the technique', 'Relate the result of the pound cake to the technique used: here the main fat is oil and the mixture is combined without overmixing.'],
+    ['Observe the streusel', 'After cooling and unmolding, observe how the streusel topping changed during baking.'],
+  ],
+  'marmoleado-intenso-cafe': [
+    ['Compare the two mixtures', 'Observe the marbling result and relate the two mixtures to the texture they had before entering the oven.'],
+    ['Check the structure', 'After cooling and unmolding, observe the firmness of the piece and the pattern formed during marbling.'],
+  ],
+  'panque-citricos': [
+    ['Observe the baking result', 'Check the volume, color, and structure of the pound cake after cooling and unmolding.'],
+    ['Check the glaze', 'Observe the consistency of the glaze and how it spreads over the finished piece.'],
+  ],
+};
+
+const recipeObservationGuidesEn = {
+  'rosca-pina-colada': [
+    {
+      observation: 'Pay attention to the texture of the butter and sugar: look for a mixture that is softer, creamier, and more homogeneous than at the beginning.',
+      phenomenon: 'As you beat, the sugar crystals rub against and fragment the butter structure while mixing favors the incorporation of small air bubbles.',
+      importance: 'That is why the mixture changes texture, may look paler, and increases in volume. These signals indicate that creaming is taking place.',
+    },
+    {
+      observation: 'Pay attention to the appearance of the mixture after each egg: notice whether it remains uniform and how its texture changes.',
+      phenomenon: 'Egg adds a significant amount of water to a mixture whose base is fat. When it is incorporated gradually, the fat and aqueous phase can remain integrated during mixing.',
+      importance: 'That is why the eggs are incorporated one at a time, waiting for each addition to integrate before continuing.',
+      chibi: 'Why one at a time? Because we are not simply adding liquid: we are incorporating a new phase into a fat-based mixture.',
+    },
+    {
+      observation: 'Pay attention to how the toasted coconut is distributed in the mixture before adding the dry ingredients.',
+      phenomenon: 'Coconut adds solid particles that need to be distributed throughout the mixture.',
+      importance: 'An even distribution helps the coconut flavor and texture appear throughout the piece instead of being concentrated in one place.',
+    },
+    {
+      observation: 'Pay attention to the dry ingredients after sifting: look for a loose mixture without lumps before incorporating them.',
+      phenomenon: 'Sifting separates lumps and helps distribute the dry ingredients among themselves.',
+      importance: 'This allows you to incorporate them more evenly and avoid concentrations of flour or baking powder.',
+    },
+    {
+      observation: 'Pay attention to the texture while alternating the coconut milk and dry ingredients. Notice when everything is integrated and stop mixing.',
+      phenomenon: 'When flour comes into contact with liquids and receives mechanical work, its proteins can form gluten.',
+      importance: 'In a heavy batter we are not trying to develop a gluten network as we would in bread. The flour is incorporated and mixing stops once the batter is unified.',
+      chibi: 'Here is an idea that will return later: in some preparations we want to develop structure, while in others we want to limit that development.',
+    },
+    {
+      observation: 'Pay attention to how the candied pineapple is distributed: it should remain spread through the batter while you use folding motions.',
+      phenomenon: 'Pineapple is a solid ingredient incorporated once the batter has already formed.',
+      importance: 'Folding motions allow you to distribute it without subjecting the whole batter to the mechanical work of the mixer again.',
+    },
+    {
+      observation: 'During baking, pay attention to volume, the change in surface color, and how the ring cake structure develops.',
+      phenomenon: 'Heat causes simultaneous changes in the batter: gases expand, steam is produced, leavening agents act, and the batter structure becomes fixed.',
+      importance: 'That is why the oven does not simply “cook” the mixture: it transforms the structure you built during preparation.',
+    },
+    {
+      observation: 'Pay attention to the firmness and structure of the ring cake after cooling and unmolding, before covering it.',
+      phenomenon: 'As it cools, the structure formed during baking finishes stabilizing and the fat becomes firmer.',
+      importance: 'This is the moment to check the structure obtained before adding the glaze.',
+    },
+    {
+      observation: 'Pay attention to the glaze consistency while adding the coconut milk: it should be fluid but consistent.',
+      phenomenon: 'Powdered sugar is mixed with a limited amount of liquid; as the amount of liquid increases, the mixture viscosity changes.',
+      importance: 'That is why the coconut milk is added gradually: you are looking for a specific consistency, not simply using all the liquid at once.',
+    },
+    {
+      observation: 'Pay attention to how the glaze spreads over the ring cake and how the coconut is distributed over the coating.',
+      phenomenon: 'The consistency of the glaze determines how it moves and remains on the surface.',
+      importance: 'The finish allows you to check whether you reached the appropriate consistency and whether you can distribute the coating evenly.',
+    },
+  ],
+  'panque-platano-streusel-canela': [
+    {
+      observation: 'Pay attention to the dry ingredients after sifting: look for a loose, lump-free mixture with the cinnamon distributed.',
+      phenomenon: 'Sifting separates lumps and helps distribute the flour, salt, baking powder, and cinnamon.',
+      importance: 'This allows the dry ingredients to be incorporated more evenly into the wet mixture.',
+    },
+    {
+      observation: 'Pay attention to the oil, banana, sugar, egg, and vanilla mixture: it should be homogeneous and lump-free, as the recipe indicates.',
+      phenomenon: 'Here the main fat is oil, which is already liquid. We do not need to beat butter with sugar to create a creamed structure.',
+      importance: 'This is the difference you should begin to recognize: we are making a heavy batter using a technique different from creaming.',
+      chibi: 'In the previous ring cake you worked with butter and sugar to cream them. Here the fat is already liquid, so the process starts from a different structure.',
+    },
+    {
+      observation: 'When comparing this preparation with the previous ring cake, pay attention to the texture you want after the pound cake cools: it should remain moist and soft.',
+      phenomenon: 'Oil remains liquid at room temperature, while butter contains fat, water, and milk solids and changes state as it cools.',
+      importance: 'In this pound cake we choose oil because we want a moist, soft crumb and a sensation that remains after cooling. Butter also provides fat, but it behaves differently and adds its own flavor.',
+      chibi: 'It is not that one fat is “better” than the other. The fat is chosen according to the result we want to obtain.',
+    },
+    {
+      observation: 'When mixing the blended mixture with the dry ingredients, pay attention to how the traces of flour gradually disappear and when the mixture becomes integrated. Then notice how the walnuts and raisins are distributed.',
+      phenomenon: 'As soon as flour receives liquid and mechanical work, its proteins can begin to form gluten. The walnuts and raisins are then incorporated as solid ingredients.',
+      importance: 'That is why the recipe calls for folding and avoiding overmixing: we want to incorporate the flour and distribute the solids without developing excessive structure.',
+      chibi: 'The key word here is “integrate.” Once you no longer see dry flour, continuing to work the mixture does not necessarily improve it.',
+    },
+    {
+      observation: 'Before baking, pay attention to how the streusel is distributed over the surface.',
+      phenomenon: 'The streusel is made by forming a sandy mixture with cold butter, sugar, flour, and cinnamon. During baking, that mixture transforms and takes on color.',
+      importance: 'The streusel layer adds a different texture and finish to the pound-cake batter.',
+    },
+    {
+      observation: 'During baking, pay attention to volume, surface color, and how the batter structure changes.',
+      phenomenon: 'Heat transforms the mixture: gases and steam expand, baking powder acts, and the structure eventually sets.',
+      importance: 'The oven result depends on the structure you built before baking and on the baking conditions specified by the recipe.',
+    },
+    {
+      observation: 'As the piece cools and is unmolded, pay attention to its firmness and how the structure holds when handled.',
+      phenomenon: 'The structure stabilizes as the temperature drops and the piece becomes less fragile than immediately after leaving the oven.',
+      importance: 'Cooling is part of the final result: it allows the piece to stabilize before handling and unmolding.',
+    },
+    {
+      observation: 'When preparing the streusel, pay attention to the cold butter being distributed through the dry ingredients as a sandy mixture, not a smooth dough.',
+      phenomenon: 'The cold butter remains in small pieces among the dry ingredients while the mixture is worked.',
+      importance: 'That structure is what allows the characteristic sandy and crisp streusel finish after baking.',
+    },
+  ],
+  'marmoleado-intenso-cafe': [
+    {
+      observation: 'Pay attention to the butter after incorporating the brown sugar and honey: look for a cream that is softer, lighter, and more spreadable than at the beginning.',
+      phenomenon: 'Mixing changes the structure of the butter and favors the incorporation of air. The sugar adds solid particles that participate in this mechanical work, and the honey is incorporated gradually as the recipe indicates.',
+      importance: 'The recipe explicitly aims for a soft, smooth, creamy mixture and continued mixing until light. That texture is the signal you should recognize before continuing.',
+      chibi: 'You already saw creaming in the ring cake. Here the important signal is the same idea: do not rely only on time; learn to recognize the change in texture.',
+    },
+    {
+      observation: 'Pay attention to the mixture after each egg: make sure it integrates before adding the next one.',
+      phenomenon: 'Egg adds an aqueous phase to a mixture whose base is fat. Gradual incorporation helps mixing maintain a uniform mixture.',
+      importance: 'That is why the eggs are added one at a time. The goal is for each addition to integrate before introducing the next.',
+    },
+    {
+      observation: 'Pay attention to the two groups you are preparing: the milk with vanilla should be ready, and the dry ingredients should be sifted and lump-free.',
+      phenomenon: 'The milk provides the liquid phase to be incorporated later, while sifting helps distribute the flour and baking powder.',
+      importance: 'Having both parts prepared allows you to incorporate them alternately without stopping the process to prepare ingredients in the middle of mixing.',
+    },
+    {
+      observation: 'Pay attention to the texture while alternating the milk and dry ingredients. Look for the point when everything is integrated and stop mixing.',
+      phenomenon: 'Flour comes into contact with liquid and mechanical work, so its proteins can begin to form gluten.',
+      importance: 'The recipe explicitly says not to overmix. In this batter we want to integrate the ingredients and maintain an appropriate texture, not develop a gluten network as in bread.',
+      chibi: 'You already know this signal from the banana pound cake: once the flour is integrated, continuing to work the batter does not mean improving it.',
+    },
+    {
+      observation: 'After dividing the batter, check that both portions have a similar texture before modifying one of them.',
+      phenomenon: 'Dividing the batter creates two preparations that will later be combined in the same pound cake: one remains vanilla and the other receives the coffee.',
+      importance: 'If both portions start with a similar texture, the marbling can be distributed without one mixture being much heavier or more fluid than the other.',
+    },
+    {
+      observation: 'Pay attention to the coffee mixture: dissolve the instant coffee in the milk and add only the amount needed to keep a texture similar to the vanilla mixture.',
+      phenomenon: 'The milk adds liquid to the coffee preparation. The recipe indicates that you do not need to use all the specified amount because the necessary quantity depends on the desired texture.',
+      importance: 'Here is an important idea: an amount written in a recipe does not always mean you must use all of it if the procedure itself tells you to adjust according to texture.',
+      chibi: 'You are not changing the recipe at random. You are following a criterion established by the recipe itself: add the amount needed to match the textures.',
+    },
+    {
+      observation: 'Pay attention to how you place the two mixtures in the pan and to the depth of the skewer movements. Look for visible streaks, not a completely unified mixture.',
+      phenomenon: 'The two batters remain different and the skewer passes through them to create the marbled pattern.',
+      importance: 'The purpose of the movement is not to mix the two batters completely, but to create the pattern without losing the separation between vanilla and coffee.',
+    },
+    {
+      observation: 'During baking, pay attention to volume, surface color, and how the pound-cake structure sets.',
+      phenomenon: 'Heat causes gases and steam to expand, baking powder acts, and the mixture progressively transforms until its structure is set.',
+      importance: 'The oven transforms the structure you built during mixing. The result you observe is a consequence of both stages.',
+    },
+    {
+      observation: 'As the piece cools and is unmolded, pay attention to its firmness and the marbled pattern before cutting it.',
+      phenomenon: 'As the temperature drops, the pound-cake structure stabilizes and the fat becomes firmer.',
+      importance: 'Cooling allows you to handle the piece without compromising its structure and check the final marbling result.',
+    },
+  ],
+};
+
 const recipeUi = {
   es: {
     backLesson: 'Volver a la lección',
@@ -251,7 +422,7 @@ const recipeUi = {
 
 export default function RecipeView({ recipe, ingredients, steps, locale = 'es' }) {
   const ui = recipeUi[locale] || recipeUi.es;
-  const guides = locale === 'en' ? [] : (recipeObservationGuides[recipe.slug] || []);
+  const guides = locale === 'en' ? (recipeObservationGuidesEn[recipe.slug] || []) : (recipeObservationGuides[recipe.slug] || []);
   const lessonLink = lessonLinks[recipe.slug];
   const equipment = defaultEquipment[locale] || defaultEquipment.es;
   const lessonHref = lessonLink?.href
@@ -386,7 +557,7 @@ export default function RecipeView({ recipe, ingredients, steps, locale = 'es' }
           <h2 className="mt-1 text-2xl font-semibold text-stone-900">{ui.beforeNext}</h2>
           <div className="mt-4 space-y-4 text-stone-600">
             <div className="space-y-3">
-              {(locale === 'en' ? [] : (recipeClosingGuides[recipe.slug] || [])).map(([title, text]) => (
+              {((locale === 'en' ? recipeClosingGuidesEn[recipe.slug] : recipeClosingGuides[recipe.slug]) || []).map(([title, text]) => (
                 <div key={title} className="rounded-xl bg-stone-50 p-4">
                   <p className="font-medium text-stone-900">{title}</p>
                   <p className="mt-1 leading-7">{text}</p>
